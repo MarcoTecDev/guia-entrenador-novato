@@ -503,13 +503,15 @@ h3,
   height: 240px;
 }
 
-/* object-fit: contain encaja la carátula entera dentro de la caja
-   sin deformarla, aunque unas sean más altas que otras. */
+/* Todas las carátulas son imágenes cuadradas del mismo tamaño (440x440).
+   width: 100% + height: auto = ocupan todo el ancho de la tarjeta
+   y, como son cuadradas, salen igual de altas que de anchas.
+   border-radius redondea las esquinas como las de la tarjeta. */
 .caratula {
   display: block;
   width: 100%;
-  height: 240px;
-  object-fit: contain;
+  height: auto;
+  border-radius: 12px;
 }
 
 .juego h4 {
@@ -552,17 +554,24 @@ h3,
   font-size: 0.6rem;
 }
 
-/* Sprite pixel art del inicial, dentro de un cuadro gris claro.
-   image-rendering: pixelated hace que al agrandarse se vean los
-   píxeles nítidos en vez de borrosos. */
+/* Icono de menú del inicial (de Escarlata y Púrpura), dentro de un
+   cuadro gris claro. La imagen original es más grande y el navegador
+   la reduce, así que se ve nítida y sin deformarse. */
 .mini-imagen {
   display: block;
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   margin: 0 auto;
-  padding: 2px;
+  padding: 3px;
   border-radius: 8px;
   background-color: #f4f5f7;
+}
+
+/* Sprites pixel art (los de la generación 10).
+   Ya miden justo lo que el hueco (50x50), así que no se reescalan.
+   image-rendering: pixelated los mantiene nítidos en pantallas
+   de alta resolución, que los amplían al doble. */
+.mini-pixel {
   image-rendering: pixelated;
 }
 
@@ -599,7 +608,7 @@ h3,
   border-radius: 50%;
 }
 
-/* Modelo 3D del Pokémon (de Escarlata y Púrpura).
+/* Ilustración oficial del Pokémon.
    display: block + margin: 0 auto lo centran en la tarjeta. */
 .inicial-imagen {
   display: block;
@@ -758,9 +767,15 @@ h3,
     height: 220px;
   }
 
-  .hueco-caratula,
-  .caratula {
+  .hueco-caratula {
     height: 180px;
+  }
+
+  /* En móvil la tarjeta ocupa todo el ancho: limitamos la carátula
+     a 220px y la centramos para que no sea enorme */
+  .caratula {
+    max-width: 220px;
+    margin: 0 auto;
   }
 
   /* Los juegos, los iniciales y las imágenes del DLC, uno debajo de otro */
