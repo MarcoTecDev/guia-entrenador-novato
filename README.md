@@ -27,10 +27,11 @@ guia-entrenador-novato/
 │   ├── estilos.css          Hoja de estilos de toda la web
 │   └── fuentes/             Fuente pixel Press Start 2P
 ├── img/
+│   ├── caratulas/           Carátulas de los juegos, una carpeta por generación (gen1... gen10)
 │   ├── consolas/            Imágenes de las consolas de cada generación
 │   ├── pokemon/
-│   │   ├── modelos/         Modelos 3D de los iniciales (Escarlata y Púrpura)
-│   │   └── sprites/         Sprites pixel art de los iniciales
+│   │   ├── ilustraciones/   Ilustraciones oficiales de los iniciales
+│   │   └── iconos/          Iconos de menú de los iniciales (Escarlata y Púrpura)
 │   ├── regiones/            Una carpeta por región (1-kanto, 2-johto... 10-por-descubrir)
 │   │   ├── 1-kanto/mapa.png      Mapa de la región (aquí van también sus carátulas e iniciales)
 │   │   ├── ...
@@ -57,7 +58,10 @@ No usa JavaScript ni librerías externas: todo funciona en local, sin conexión 
 ## Créditos
 
 - **Fuente:** [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P), de CodeMan38, licencia SIL Open Font License.
-- **Imágenes de los Pokémon:** [PokeAPI/sprites](https://github.com/PokeAPI/sprites): modelos de Escarlata y Púrpura y sprites pixel art, recortados y redimensionados.
+- **Imágenes de los Pokémon:** [PokeAPI/sprites](https://github.com/PokeAPI/sprites): ilustraciones oficiales e iconos de menú de Escarlata y Púrpura, recortados y redimensionados.
+- **Iniciales de la generación 10** (Browt, Pombon y Gecqua): ilustraciones oficiales tomadas de [WikiDex](https://www.wikidex.net/wiki/Pok%C3%A9mon_Viento_y_Pok%C3%A9mon_Oleaje).
+- **Sprites de la generación 10:** hechos por [CarnekVT](https://www.deviantart.com/carnekvt/art/Pokemon-Winds-and-Waves-Starters-in-Sprite-version-1303886486) en DeviantArt (aún no hay sprites oficiales).
+- **Carátulas de los juegos:** [WikiDex](https://www.wikidex.net), ajustadas a un mismo tamaño cuadrado (440 × 440).
 - **Imágenes de consolas:** tema «Systematic» de [RetroArch Assets](https://github.com/libretro/retroarch-assets) (libretro), licencia [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Recortadas y redimensionadas.
 - **Pokémon** y sus personajes son © Nintendo, Game Freak y The Pokémon Company. Este es un proyecto educativo sin ánimo de lucro y no tiene relación oficial con ellos.
 
