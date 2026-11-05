@@ -28,7 +28,10 @@ guia-entrenador-novato/
 │   └── fuentes/             Fuente pixel Press Start 2P
 ├── img/
 │   ├── consolas/            Imágenes de las consolas de cada generación
-│   ├── mapaRegiones/        Mapas de cada región e imágenes de los DLC
+│   ├── regiones/            Una carpeta por región (1-kanto, 2-johto... 10-por-descubrir)
+│   │   ├── 1-kanto/mapa.png      Mapa de la región (aquí van también sus carátulas e iniciales)
+│   │   ├── ...
+│   │   └── 9-paldea/             Mapa e imágenes de los DLC (dlc1-..., dlc2-...)
 │   └── en-construccion.jpg  Imagen de las páginas en construcción
 └── media/                   Audio y vídeo (vacía de momento)
 ```
