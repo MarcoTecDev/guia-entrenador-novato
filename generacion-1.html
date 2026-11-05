@@ -4,41 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Generación 1 · Pocket Monster</title>
-  <!-- El ?v=2 obliga al navegador a descargar el CSS nuevo. Súbelo (v=3, v=4...) cada vez que cambies el CSS -->
-  <link rel="stylesheet" href="css/estilos.css?v=2">
+  <!-- El ?v=2 obliga al navegador a descargar el CSS nuevo. Súbelo (v=4, v=5...) cada vez que cambies el CSS -->
+  <link rel="stylesheet" href="css/estilos.css?v=3">
 </head>
 <body>
-  <!-- Cabecera: logo a la izquierda; botón día/noche y menú a la derecha -->
+  <!-- Cabecera: logo a la izquierda y menú a la derecha -->
   <header class="cabecera">
     <a class="logo" href="index.html">Pocket Monster</a>
 
-    <div class="cabecera-acciones">
-      <!-- Huecos para las imágenes de día y noche (cambia cada span por un img) -->
-      <button class="modo" type="button" title="Modo día / noche">
-        <span class="modo-imagen modo-dia">☀</span>
-        <span class="modo-imagen modo-noche">☾</span>
+    <!-- Menú: se abre al pasar el ratón por la pokéball -->
+    <nav class="menu">
+      <button class="pokeball" type="button" title="Menú">
+        <span class="pokeball-centro"></span>
       </button>
-
-      <!-- Menú: se abre al pasar el ratón por la pokéball -->
-      <nav class="menu">
-        <button class="pokeball" type="button" title="Menú">
-          <span class="pokeball-centro"></span>
-        </button>
-        <ul class="menu-lista">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="generacion-1.html" class="activo">Generación 1</a></li>
-          <li><a href="generacion-2.html">Generación 2</a></li>
-          <li><a href="generacion-3.html">Generación 3</a></li>
-          <li><a href="generacion-4.html">Generación 4</a></li>
-          <li><a href="generacion-5.html">Generación 5</a></li>
-          <li><a href="generacion-6.html">Generación 6</a></li>
-          <li><a href="generacion-7.html">Generación 7</a></li>
-          <li><a href="generacion-8.html">Generación 8</a></li>
-          <li><a href="generacion-9.html">Generación 9</a></li>
-          <li><a href="generacion-10.html">Generación 10</a></li>
-        </ul>
-      </nav>
-    </div>
+      <ul class="menu-lista">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="generacion-1.html" class="activo">Generación 1</a></li>
+        <li><a href="generacion-2.html">Generación 2</a></li>
+        <li><a href="generacion-3.html">Generación 3</a></li>
+        <li><a href="generacion-4.html">Generación 4</a></li>
+        <li><a href="generacion-5.html">Generación 5</a></li>
+        <li><a href="generacion-6.html">Generación 6</a></li>
+        <li><a href="generacion-7.html">Generación 7</a></li>
+        <li><a href="generacion-8.html">Generación 8</a></li>
+        <li><a href="generacion-9.html">Generación 9</a></li>
+        <li><a href="generacion-10.html">Generación 10</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>

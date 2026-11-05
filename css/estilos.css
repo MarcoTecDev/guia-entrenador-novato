@@ -94,51 +94,6 @@ h3,
   text-shadow: 3px 3px 0 #222224;
 }
 
-/* Contenedor del botón día/noche y de la pokéball,
-   para que estén uno al lado del otro. */
-.cabecera-acciones {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-
-/* ==========================================================
-   BOTÓN MODO DÍA / NOCHE
-   (de momento solo tiene los huecos para las dos imágenes)
-   ========================================================== */
-
-/* border-radius muy grande = forma de píldora */
-.modo {
-  display: flex;
-  gap: 4px;
-  padding: 4px;
-  border: 3px solid #222224;
-  border-radius: 50px;
-  background-color: #ffffff;
-  cursor: pointer;
-}
-
-/* Cada hueco es un círculo de 32x32.
-   text-align + line-height centran el emoji dentro. */
-.modo-imagen {
-  width: 32px;
-  height: 32px;
-  border: 2px dashed #b9bcc2;
-  border-radius: 50%;
-  font-size: 16px;
-  line-height: 28px;
-  text-align: center;
-}
-
-.modo-dia {
-  background-color: #fff4c2;
-}
-
-.modo-noche {
-  background-color: #dfe3f5;
-}
-
 
 /* ==========================================================
    POKÉBALL (botón del menú)
