@@ -212,6 +212,16 @@ h3,
   color: #6b6f76;
 }
 
+/* Nombre de los juegos (Pokémon Rojo y Azul...) */
+.version {
+  font-weight: bold;
+}
+
+/* Año, debajo del nombre de los juegos */
+.anio {
+  margin-top: 4px;
+}
+
 /* Imagen de la consola, en la esquina de arriba a la derecha.
    position: absolute la coloca respecto a la tarjeta (que es relative).
    Todas las imágenes tienen el mismo tamaño (72x60), con la consola
