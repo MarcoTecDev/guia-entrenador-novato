@@ -28,6 +28,9 @@ guia-entrenador-novato/
 │   └── fuentes/             Fuente pixel Press Start 2P
 ├── img/
 │   ├── consolas/            Imágenes de las consolas de cada generación
+│   ├── pokemon/
+│   │   ├── modelos/         Modelos 3D de los iniciales (Escarlata y Púrpura)
+│   │   └── sprites/         Sprites pixel art de los iniciales
 │   ├── regiones/            Una carpeta por región (1-kanto, 2-johto... 10-por-descubrir)
 │   │   ├── 1-kanto/mapa.png      Mapa de la región (aquí van también sus carátulas e iniciales)
 │   │   ├── ...
@@ -54,6 +57,7 @@ No usa JavaScript ni librerías externas: todo funciona en local, sin conexión 
 ## Créditos
 
 - **Fuente:** [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P), de CodeMan38, licencia SIL Open Font License.
+- **Imágenes de los Pokémon:** [PokeAPI/sprites](https://github.com/PokeAPI/sprites): modelos de Escarlata y Púrpura y sprites pixel art, recortados y redimensionados.
 - **Imágenes de consolas:** tema «Systematic» de [RetroArch Assets](https://github.com/libretro/retroarch-assets) (libretro), licencia [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Recortadas y redimensionadas.
 - **Pokémon** y sus personajes son © Nintendo, Game Freak y The Pokémon Company. Este es un proyecto educativo sin ánimo de lucro y no tiene relación oficial con ellos.
 
