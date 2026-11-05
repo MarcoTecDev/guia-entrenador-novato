@@ -312,15 +312,29 @@ h3,
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
 }
 
-/* Sprite de la consola en la esquina superior derecha de la tarjeta */
+/* Hueco reservado para la imagen de la consola (esquina superior derecha).
+   Cuando tengas la imagen, cambia el <span> por un <img class="consola">. */
 .consola {
   position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  width: 64px;
-  height: 64px;
-  image-rendering: pixelated;
+  top: 1rem;
+  right: 1rem;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px dashed var(--color, var(--rojo));
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--color, var(--rojo)) 10%, transparent);
+  object-fit: contain;
   transition: transform 0.2s;
+}
+
+/* Interrogación en el centro del hueco */
+span.consola::after {
+  content: "?";
+  font-family: var(--fuente-pixel);
+  font-size: 0.7rem;
+  color: var(--color, var(--rojo));
 }
 
 .tarjeta:hover .consola {
@@ -329,7 +343,7 @@ h3,
 
 .tarjeta .numero {
   display: block;
-  min-height: 64px;  /* misma altura que la consola, para que no se monten */
+  min-height: 40px;  /* misma altura que el hueco de la consola, para que no se monten */
   font-size: 1.8rem;
   line-height: 1;
   color: var(--color, var(--rojo));
