@@ -523,6 +523,45 @@ h3,
   color: #6b6f76;
 }
 
+/* Fila con los iniciales de cada juego, debajo de su nombre.
+   border-top: línea gris que la separa de los datos del juego.
+   justify-content: center los centra (útil cuando solo hay uno, como en Amarillo). */
+.juego-iniciales {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e3e5e8;
+}
+
+/* Cada inicial: el cuadro arriba y el nombre debajo.
+   width: 33% hace que quepan tres por fila. */
+.mini-inicial {
+  width: 33%;
+  text-align: center;
+}
+
+/* Cuadro pequeño para la imagen del inicial.
+   margin: 0 auto lo centra encima del nombre. */
+.hueco-mini,
+.mini-imagen {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  border-radius: 8px;
+  font-size: 0.6rem;
+}
+
+/* Nombre del inicial, en letra pequeña */
+.mini-inicial span {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.7rem;
+  color: #6b6f76;
+}
+
 /* ---------- 4. Iniciales ---------- */
 
 /* Cuadrícula de 3 columnas, una por inicial */
@@ -704,7 +743,8 @@ h3,
     height: 180px;
   }
 
-  /* Los iniciales y las imágenes del DLC, uno debajo de otro */
+  /* Los juegos, los iniciales y las imágenes del DLC, uno debajo de otro */
+  .juegos,
   .iniciales,
   .galeria {
     grid-template-columns: 1fr;
