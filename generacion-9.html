@@ -4,13 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Generación 9 · Pocket Monster</title>
-  <!-- El ?v=7 obliga al navegador a descargar el CSS nuevo. Súbelo (v=8, v=9...) cada vez que cambies el CSS -->
-  <link rel="stylesheet" href="css/estilos.css?v=7">
+  <!-- El ?v=8 obliga al navegador a descargar el CSS nuevo. Súbelo (v=9, v=10...) cada vez que cambies el CSS -->
+  <link rel="stylesheet" href="css/estilos.css?v=8">
 </head>
 <body>
-  <!-- Cabecera con el logo, que lleva al inicio -->
+  <!-- Cabecera: logo a la izquierda y enlaces a la derecha -->
   <header class="cabecera">
     <a class="logo" href="index.html">Pocket Monster</a>
+    <nav class="nav-cabecera">
+      <a href="contacto.html">Contacto</a>
+    </nav>
   </header>
 
   <main>
@@ -20,18 +23,124 @@
       <p>Región de Paldea · Escarlata y Púrpura (2022)</p>
     </section>
 
-    <section class="contenido">
-      <div class="aviso">
-        <img src="img/en-construccion.jpg" alt="Un Steelix ayuda a unos obreros a levantar un edificio en una obra">
-        <p>Esta página está en construcción. ¡Pronto habrá contenido!</p>
-      </div>
+    <div class="contenido">
+
+      <!-- ========== 1. HISTORIA DE LA REGIÓN ========== -->
+      <section class="seccion">
+        <h2>Historia de Paldea</h2>
+        <div class="lore">
+          <!-- Cambia estos párrafos por tu texto y quita class="texto-ejemplo" -->
+          <p class="texto-ejemplo">Aquí va la introducción a la región de Paldea: dónde está, cómo es y qué la hace especial.</p>
+          <p class="texto-ejemplo">Aquí puedes contar la historia de la región: su pasado, sus leyendas, sus villanos, la Liga Pokémon...</p>
+          <p class="texto-ejemplo">Y aquí lo que vive el protagonista: sale de su pueblo, recibe su primer Pokémon de la Profesora Olim o el Profesor Turo y empieza su viaje.</p>
+        </div>
+      </section>
+
+      <!-- ========== 2. MAPA DE LA REGIÓN ========== -->
+      <section class="seccion">
+        <h2>Mapa de Paldea</h2>
+        <figure class="mapa">
+          <img class="mapa-imagen" src="img/mapaRegiones/Paldea_artwork.png" alt="Mapa de la región de Paldea">
+          <figcaption>Mapa de la región de Paldea.</figcaption>
+        </figure>
+      </section>
+
+      <!-- ========== 3. JUEGOS ========== -->
+      <section class="seccion">
+        <h2>Juegos</h2>
+
+        <h3 class="subtitulo">Juegos originales</h3>
+        <div class="juegos">
+          <!-- Cambia cada div.hueco por: <img class="caratula" src="img/caratulas/juego.jpg" alt="Carátula de ..."> -->
+          <article class="juego">
+            <div class="hueco hueco-caratula">Carátula</div>
+            <h4>Pokémon Escarlata</h4>
+            <p>Nintendo Switch · 2022</p>
+          </article>
+          <article class="juego">
+            <div class="hueco hueco-caratula">Carátula</div>
+            <h4>Pokémon Púrpura</h4>
+            <p>Nintendo Switch · 2022</p>
+          </article>
+        </div>
+
+        <h3 class="subtitulo">Contenido descargable</h3>
+        <div class="juegos">
+          <article class="juego">
+            <div class="hueco hueco-caratula">Carátula</div>
+            <h4>La máscara turquesa</h4>
+            <p>Nintendo Switch · 2023</p>
+          </article>
+          <article class="juego">
+            <div class="hueco hueco-caratula">Carátula</div>
+            <h4>El disco índigo</h4>
+            <p>Nintendo Switch · 2023</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ========== 3b. CONTENIDO DESCARGABLE ========== -->
+      <section class="seccion">
+        <h2>El tesoro oculto del Área Cero</h2>
+        <h3 class="subtitulo">Parte 1: La máscara turquesa</h3>
+        <p class="descripcion">La primera parte del DLC transcurre en Noroteo (Kitakami), una tierra rural con festivales y leyendas propias.</p>
+        <div class="galeria">
+          <figure>
+            <img src="img/mapaRegiones/noroteo_kitakami_dlc1.jpg" alt="Ilustración de Noroteo">
+            <figcaption>Ilustración de Noroteo.</figcaption>
+          </figure>
+          <figure>
+            <img src="img/mapaRegiones/mapakitakami.png" alt="Mapa de Noroteo">
+            <figcaption>Mapa de Noroteo.</figcaption>
+          </figure>
+        </div>
+        <h3 class="subtitulo">Parte 2: El disco índigo</h3>
+        <p class="descripcion">La segunda parte transcurre en la Academia Arándano, una escuela en mitad del mar con un gran hábitat interior: el Terario.</p>
+        <div class="galeria">
+          <figure>
+            <img src="img/mapaRegiones/Academia_Arándano_EP.jpg" alt="La Academia Arándano">
+            <figcaption>La Academia Arándano.</figcaption>
+          </figure>
+          <figure>
+            <img src="img/mapaRegiones/Mapa_Academia_Arándano.png" alt="Ilustración de la Academia Arándano">
+            <figcaption>Ilustración de la Academia Arándano.</figcaption>
+          </figure>
+          <figure>
+            <img src="img/mapaRegiones/blueberrydlc2.png" alt="Mapa del Terario">
+            <figcaption>Mapa del Terario.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ========== 4. POKÉMON INICIALES ========== -->
+      <section class="seccion">
+        <h2>Pokémon iniciales</h2>
+        <div class="iniciales">
+          <!-- Cambia cada div.hueco por: <img class="inicial-imagen" src="img/iniciales/sprigatito.png" alt="Sprigatito"> -->
+          <article class="inicial">
+            <div class="hueco hueco-inicial">Imagen</div>
+            <h4>Sprigatito</h4>
+            <span class="tipo tipo-planta">Planta</span>
+          </article>
+          <article class="inicial">
+            <div class="hueco hueco-inicial">Imagen</div>
+            <h4>Fuecoco</h4>
+            <span class="tipo tipo-fuego">Fuego</span>
+          </article>
+          <article class="inicial">
+            <div class="hueco hueco-inicial">Imagen</div>
+            <h4>Quaxly</h4>
+            <span class="tipo tipo-agua">Agua</span>
+          </article>
+        </div>
+      </section>
 
       <!-- Enlaces a la generación anterior y a la siguiente -->
       <nav class="navegacion-gen">
         <a href="generacion-8.html">← Generación 8</a>
         <a href="generacion-10.html">Generación 10 →</a>
       </nav>
-    </section>
+    </div>
   </main>
 
   <footer class="pie">
