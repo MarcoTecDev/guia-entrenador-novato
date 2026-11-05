@@ -367,6 +367,187 @@ h3,
 
 
 /* ==========================================================
+   SECCIONES DE CADA GENERACIÓN
+   (historia, mapa, juegos e iniciales)
+   ========================================================== */
+
+/* Separación entre una sección y la siguiente */
+.seccion {
+  margin-bottom: 56px;
+}
+
+/* Título de cada sección con una línea negra debajo */
+.seccion h2 {
+  padding-bottom: 12px;
+  border-bottom: 4px solid #222224;
+}
+
+/* Títulos pequeños dentro de una sección ("Juegos originales", "Remakes") */
+.subtitulo {
+  margin: 32px 0 16px 0;
+  font-size: 0.75rem;
+  color: #6b6f76;
+}
+
+/* ---------- Huecos para imágenes (placeholders) ----------
+   Cajas con borde discontinuo que marcan dónde irá cada imagen.
+   display: flex + align-items + justify-content centran el texto
+   en horizontal y en vertical. */
+.hueco {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px dashed #b9bcc2;
+  border-radius: 12px;
+  background-color: #fafafa;
+  color: #9a9ea6;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.65rem;
+  text-align: center;
+}
+
+/* ---------- 1. Historia ---------- */
+.lore {
+  padding: 24px 32px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  font-size: 1.05rem;
+}
+
+/* Texto de ejemplo en cursiva y gris, para que se note que hay que cambiarlo.
+   Cuando escribas tu texto, quita class="texto-ejemplo" de los <p>. */
+.texto-ejemplo {
+  font-style: italic;
+  color: #9a9ea6;
+}
+
+/* ---------- 2. Mapa ---------- */
+
+/* <figure> trae márgenes por defecto; los quitamos */
+.mapa {
+  margin: 0;
+}
+
+.hueco-mapa {
+  height: 420px;
+}
+
+/* La imagen del mapa ocupa todo el ancho sin deformarse */
+.mapa-imagen {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 4px solid #222224;
+  border-radius: 12px;
+}
+
+/* Pie de foto debajo del mapa */
+.mapa figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #6b6f76;
+  text-align: center;
+}
+
+/* ---------- 3. Juegos ---------- */
+
+/* Cuadrícula de 4 columnas para las carátulas */
+.juegos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.juego {
+  padding: 12px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.hueco-caratula {
+  height: 240px;
+}
+
+/* object-fit: contain encaja la carátula entera dentro de la caja
+   sin deformarla, aunque unas sean más altas que otras. */
+.caratula {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+}
+
+.juego h4 {
+  margin: 12px 0 4px 0;
+  font-size: 0.95rem;
+}
+
+.juego p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #6b6f76;
+}
+
+/* ---------- 4. Iniciales ---------- */
+
+/* Cuadrícula de 3 columnas, una por inicial */
+.iniciales {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.inicial {
+  padding: 24px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+/* Hueco redondo y centrado (margin auto) para la imagen del Pokémon */
+.hueco-inicial,
+.inicial-imagen {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.inicial h4 {
+  margin: 16px 0 8px 0;
+  font-size: 1.1rem;
+}
+
+/* Etiqueta del tipo del Pokémon.
+   display: inline-block deja ponerle padding sin ocupar toda la línea. */
+.tipo {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 50px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+/* Color de cada tipo */
+.tipo-planta {
+  background-color: #3fa129;
+}
+
+.tipo-fuego {
+  background-color: #e62829;
+}
+
+.tipo-agua {
+  background-color: #2980ef;
+}
+
+
+/* ==========================================================
    PIE DE PÁGINA
    ========================================================== */
 
@@ -385,10 +566,14 @@ h3,
    mide como máximo el ancho indicado.
    ========================================================== */
 
-/* Tablets: 3 tarjetas por fila */
+/* Tablets: 3 tarjetas por fila y 2 carátulas por fila */
 @media (max-width: 900px) {
   .generaciones {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .juegos {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -427,5 +612,24 @@ h3,
 
   .numero {
     min-height: 40px;
+  }
+
+  /* Páginas de generación en móvil */
+  .lore {
+    padding: 16px 20px;
+  }
+
+  .hueco-mapa {
+    height: 220px;
+  }
+
+  .hueco-caratula,
+  .caratula {
+    height: 180px;
+  }
+
+  /* Los iniciales, uno debajo de otro */
+  .iniciales {
+    grid-template-columns: 1fr;
   }
 }
