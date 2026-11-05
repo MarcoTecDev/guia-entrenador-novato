@@ -542,16 +542,28 @@ h3,
   text-align: center;
 }
 
-/* Cuadro pequeño para la imagen del inicial.
+/* Cuadro pequeño para cuando no hay imagen (generación 10).
    margin: 0 auto lo centra encima del nombre. */
-.hueco-mini,
-.mini-imagen {
-  display: flex;
+.hueco-mini {
   width: 48px;
   height: 48px;
   margin: 0 auto;
   border-radius: 8px;
   font-size: 0.6rem;
+}
+
+/* Sprite pixel art del inicial, dentro de un cuadro gris claro.
+   image-rendering: pixelated hace que al agrandarse se vean los
+   píxeles nítidos en vez de borrosos. */
+.mini-imagen {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  padding: 2px;
+  border-radius: 8px;
+  background-color: #f4f5f7;
+  image-rendering: pixelated;
 }
 
 /* Nombre del inicial, en letra pequeña */
@@ -579,13 +591,21 @@ h3,
   text-align: center;
 }
 
-/* Hueco redondo y centrado (margin auto) para la imagen del Pokémon */
-.hueco-inicial,
-.inicial-imagen {
+/* Hueco redondo y centrado (margin auto) para cuando no hay imagen (generación 10) */
+.hueco-inicial {
   width: 140px;
   height: 140px;
   margin: 0 auto;
   border-radius: 50%;
+}
+
+/* Modelo 3D del Pokémon (de Escarlata y Púrpura).
+   display: block + margin: 0 auto lo centran en la tarjeta. */
+.inicial-imagen {
+  display: block;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
 }
 
 .inicial h4 {
