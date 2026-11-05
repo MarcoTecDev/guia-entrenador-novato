@@ -7,29 +7,42 @@
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+  <!-- Cabecera: logo a la izquierda; botón día/noche y menú a la derecha -->
   <header class="cabecera">
     <a class="logo" href="index.html">Pocket Monster</a>
 
-    <nav class="menu">
-      <button class="pokeball" type="button" aria-label="Abrir menú"></button>
-      <ul class="menu-lista">
-        <li style="--i: 0"><a href="index.html">Inicio</a></li>
-        <li style="--i: 1"><a href="generacion-1.html">Generación 1</a></li>
-        <li style="--i: 2"><a href="generacion-2.html">Generación 2</a></li>
-        <li style="--i: 3"><a href="generacion-3.html">Generación 3</a></li>
-        <li style="--i: 4"><a href="generacion-4.html" aria-current="page">Generación 4</a></li>
-        <li style="--i: 5"><a href="generacion-5.html">Generación 5</a></li>
-        <li style="--i: 6"><a href="generacion-6.html">Generación 6</a></li>
-        <li style="--i: 7"><a href="generacion-7.html">Generación 7</a></li>
-        <li style="--i: 8"><a href="generacion-8.html">Generación 8</a></li>
-        <li style="--i: 9"><a href="generacion-9.html">Generación 9</a></li>
-        <li style="--i: 10"><a href="generacion-10.html">Generación 10</a></li>
-      </ul>
-    </nav>
+    <div class="cabecera-acciones">
+      <!-- Huecos para las imágenes de día y noche (cambia cada span por un img) -->
+      <button class="modo" type="button" title="Modo día / noche">
+        <span class="modo-imagen modo-dia">☀</span>
+        <span class="modo-imagen modo-noche">☾</span>
+      </button>
+
+      <!-- Menú: se abre al pasar el ratón por la pokéball -->
+      <nav class="menu">
+        <button class="pokeball" type="button" title="Menú">
+          <span class="pokeball-centro"></span>
+        </button>
+        <ul class="menu-lista">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="generacion-1.html">Generación 1</a></li>
+          <li><a href="generacion-2.html">Generación 2</a></li>
+          <li><a href="generacion-3.html">Generación 3</a></li>
+          <li><a href="generacion-4.html" class="activo">Generación 4</a></li>
+          <li><a href="generacion-5.html">Generación 5</a></li>
+          <li><a href="generacion-6.html">Generación 6</a></li>
+          <li><a href="generacion-7.html">Generación 7</a></li>
+          <li><a href="generacion-8.html">Generación 8</a></li>
+          <li><a href="generacion-9.html">Generación 9</a></li>
+          <li><a href="generacion-10.html">Generación 10</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section class="hero-generacion" style="--color: #5c6bc0">
+    <!-- La clase fondo-gen-4 pone el color de esta generación -->
+    <section class="hero-generacion fondo-gen-4">
       <h1>Generación 4</h1>
       <p>Región de Sinnoh · Diamante y Perla (2006)</p>
     </section>
@@ -40,6 +53,7 @@
         <p>Esta página está en construcción. ¡Pronto habrá contenido!</p>
       </div>
 
+      <!-- Enlaces a la generación anterior y a la siguiente -->
       <nav class="navegacion-gen">
         <a href="generacion-3.html">← Generación 3</a>
         <a href="generacion-5.html">Generación 5 →</a>
