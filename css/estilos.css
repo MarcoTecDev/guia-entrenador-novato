@@ -49,7 +49,7 @@ a {
   color: inherit;
 }
 
-/* Títulos, logo, botones y menú usan la fuente pixel.
+/* Títulos, logo, botones y enlaces de navegación usan la fuente pixel.
    Si no carga, se usa monospace. */
 h1,
 h2,
@@ -57,7 +57,6 @@ h3,
 .logo,
 .boton,
 .numero,
-.menu-lista a,
 .navegacion-gen a,
 .aviso p {
   font-family: "Press Start 2P", monospace;
@@ -77,10 +76,7 @@ h3,
   position: sticky;
   top: 0;
   z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 24px;
+  padding: 24px;
   background-color: #e3350d;
   color: #ffffff;
   border-bottom: 6px solid #222224;
@@ -92,100 +88,6 @@ h3,
   text-decoration: none;
   text-transform: uppercase;
   text-shadow: 3px 3px 0 #222224;
-}
-
-
-/* ==========================================================
-   POKÉBALL (botón del menú)
-   ========================================================== */
-
-/* El fondo de la pokéball es un degradado (linear-gradient) "con cortes":
-   de 0% a 45% rojo, de 45% a 55% negro (la franja) y de 55% a 100% blanco.
-   Como los colores empiezan justo donde acaba el anterior, no se mezclan.
-   position: relative sirve para poder colocar el botón central encima. */
-.pokeball {
-  position: relative;
-  width: 52px;
-  height: 52px;
-  padding: 0;
-  border: 4px solid #222224;
-  border-radius: 50%;
-  outline: 3px solid #ffffff;
-  cursor: pointer;
-  background: linear-gradient(#e3350d 45%, #222224 45%, #222224 55%, #ffffff 55%);
-  transition: transform 0.4s;
-}
-
-/* Botón blanco del centro de la pokéball.
-   position: absolute lo coloca respecto a la pokéball (que es relative).
-   top y left de 10px lo dejan justo en el centro. */
-.pokeball-centro {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 24px;
-  height: 24px;
-  border: 4px solid #222224;
-  border-radius: 50%;
-  background-color: #ffffff;
-}
-
-
-/* ==========================================================
-   MENÚ DESPLEGABLE
-   ========================================================== */
-
-.menu {
-  position: relative;
-}
-
-/* Al pasar el ratón por el menú, la pokéball da una vuelta.
-   transform: rotate gira el elemento; la transition de .pokeball
-   hace que el giro sea suave en vez de instantáneo. */
-.menu:hover .pokeball {
-  transform: rotate(360deg);
-}
-
-/* La lista está oculta (display: none) y colocada debajo de la pokéball.
-   top: 100% = justo debajo; right: 0 = alineada por la derecha.
-   El padding-top deja un hueco invisible para que el ratón no "pierda"
-   el menú al bajar desde la pokéball hasta los enlaces. */
-.menu-lista {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 230px;
-  margin: 0;
-  padding: 16px 0 0 0;
-  list-style: none;
-}
-
-/* Al pasar el ratón por el menú, la lista aparece. */
-.menu:hover .menu-lista {
-  display: block;
-}
-
-.menu-lista a {
-  display: block;
-  margin-bottom: 6px;
-  padding: 10px 16px;
-  border: 3px solid #222224;
-  border-radius: 50px;
-  background-color: #ffffff;
-  color: #2b2d31;
-  font-size: 0.65rem;
-  text-decoration: none;
-  transition: background-color 0.2s, transform 0.2s;
-}
-
-/* El enlace bajo el ratón y el de la página actual (.activo) se ven en rojo.
-   translateX(-6px) mueve el enlace 6px a la izquierda. */
-.menu-lista a:hover,
-.menu-lista a.activo {
-  background-color: #e3350d;
-  color: #ffffff;
-  transform: translateX(-6px);
 }
 
 
@@ -291,10 +193,10 @@ h3,
 }
 
 /* display: block + min-height para que el número ocupe el mismo alto
-   que el hueco de la consola y no se monten. */
+   que la imagen de la consola y el título no se meta debajo de ella. */
 .numero {
   display: block;
-  min-height: 40px;
+  min-height: 52px;
   font-size: 1.8rem;
   line-height: 1;
 }
@@ -310,22 +212,16 @@ h3,
   color: #6b6f76;
 }
 
-/* Hueco para la imagen de la consola, en la esquina de arriba a la derecha.
-   position: absolute lo coloca respecto a la tarjeta (que es relative).
-   Cuando tengas la imagen, cambia el <span> por <img class="consola">. */
+/* Imagen de la consola, en la esquina de arriba a la derecha.
+   position: absolute la coloca respecto a la tarjeta (que es relative).
+   Todas las imágenes tienen el mismo tamaño (72x60), con la consola
+   centrada dentro, así que todas ocupan lo mismo. */
 .consola {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 40px;
-  height: 40px;
-  border: 2px dashed #b9bcc2;
-  border-radius: 8px;
-  color: #9a9ea6;
-  font-family: "Press Start 2P", monospace;
-  font-size: 0.7rem;
-  line-height: 36px;
-  text-align: center;
+  top: 12px;
+  right: 12px;
+  width: 72px;
+  height: 60px;
 }
 
 
@@ -510,5 +406,16 @@ h3,
 
   .tarjeta h3 {
     font-size: 0.65rem;
+  }
+
+  /* En móvil las tarjetas son estrechas: consolas más pequeñas
+     para que no se monten encima del número */
+  .consola {
+    width: 54px;
+    height: 45px;
+  }
+
+  .numero {
+    min-height: 40px;
   }
 }
