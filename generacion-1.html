@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Generación 1 · Pocket Monster</title>
-  <!-- El ?v=2 obliga al navegador a descargar el CSS nuevo. Súbelo (v=7, v=8...) cada vez que cambies el CSS -->
-  <link rel="stylesheet" href="css/estilos.css?v=6">
+  <!-- El ?v=7 obliga al navegador a descargar el CSS nuevo. Súbelo (v=8, v=9...) cada vez que cambies el CSS -->
+  <link rel="stylesheet" href="css/estilos.css?v=7">
 </head>
 <body>
   <!-- Cabecera con el logo, que lleva al inicio -->
@@ -20,18 +20,107 @@
       <p>Región de Kanto · Rojo y Azul (1996)</p>
     </section>
 
-    <section class="contenido">
-      <div class="aviso">
-        <img src="img/en-construccion.jpg" alt="Un Steelix ayuda a unos obreros a levantar un edificio en una obra">
-        <p>Esta página está en construcción. ¡Pronto habrá contenido!</p>
-      </div>
+    <div class="contenido">
+
+      <!-- ========== 1. HISTORIA DE LA REGIÓN ========== -->
+      <section class="seccion">
+        <h2>Historia de Kanto</h2>
+        <div class="lore">
+          <!-- Cambia estos párrafos por tu texto. Puedes poner tantos <p> como quieras -->
+          <p class="texto-ejemplo">Aquí va la introducción a la región de Kanto: dónde está, cómo es y por qué es la región donde empezó todo.</p>
+          <p class="texto-ejemplo">Aquí puedes contar la historia de la región: su pasado, sus leyendas, el Team Rocket, la Liga Pokémon...</p>
+          <p class="texto-ejemplo">Y aquí lo que vive el protagonista: sale de Pueblo Paleta, recibe su primer Pokémon del Profesor Oak y empieza su viaje.</p>
+        </div>
+      </section>
+
+      <!-- ========== 2. MAPA DE LA REGIÓN ========== -->
+      <section class="seccion">
+        <h2>Mapa de Kanto</h2>
+        <figure class="mapa">
+          <!-- Cambia este div por: <img class="mapa-imagen" src="img/kanto/mapa.png" alt="Mapa de la región de Kanto"> -->
+          <div class="hueco hueco-mapa">Imagen del mapa de Kanto</div>
+          <figcaption>Mapa de la región de Kanto.</figcaption>
+        </figure>
+      </section>
+
+      <!-- ========== 3. JUEGOS ========== -->
+      <section class="seccion">
+        <h2>Juegos</h2>
+
+        <h3 class="subtitulo">Juegos originales</h3>
+        <div class="juegos">
+          <!-- Cambia cada div.hueco por: <img class="caratula" src="img/kanto/rojo.jpg" alt="Carátula de Pokémon Rojo"> -->
+          <article class="juego">
+            <div class="hueco hueco-caratula">Carátula</div>
+            <h4>Pokémon Rojo</h4>
+            <p>Game Boy · 1996</p>
+          </article>
+          <article class="juego">
+            <div class="hueco hueco-caratula">Carátula</div>
+            <h4>Pokémon Azul</h4>
+            <p>Game Boy · 1996</p>
+          </article>
+          <article class="juego">
+            <div class="hueco hueco-caratula">Carátula</div>
+            <h4>Pokémon Amarillo</h4>
+            <p>Game Boy · 1998</p>
+          </article>
+        </div>
+
+        <h3 class="subtitulo">Remakes</h3>
+        <div class="juegos">
+          <article class="juego">
+            <div class="hueco hueco-caratula">Carátula</div>
+            <h4>Pokémon Rojo Fuego</h4>
+            <p>Game Boy Advance · 2004</p>
+          </article>
+          <article class="juego">
+            <div class="hueco hueco-caratula">Carátula</div>
+            <h4>Pokémon Verde Hoja</h4>
+            <p>Game Boy Advance · 2004</p>
+          </article>
+          <article class="juego">
+            <div class="hueco hueco-caratula">Carátula</div>
+            <h4>Pokémon Let's Go, Pikachu!</h4>
+            <p>Nintendo Switch · 2018</p>
+          </article>
+          <article class="juego">
+            <div class="hueco hueco-caratula">Carátula</div>
+            <h4>Pokémon Let's Go, Eevee!</h4>
+            <p>Nintendo Switch · 2018</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ========== 4. POKÉMON INICIALES ========== -->
+      <section class="seccion">
+        <h2>Pokémon iniciales</h2>
+        <div class="iniciales">
+          <!-- Cambia cada div.hueco por: <img class="inicial-imagen" src="img/kanto/bulbasaur.png" alt="Bulbasaur"> -->
+          <article class="inicial">
+            <div class="hueco hueco-inicial">Imagen</div>
+            <h4>Bulbasaur</h4>
+            <span class="tipo tipo-planta">Planta</span>
+          </article>
+          <article class="inicial">
+            <div class="hueco hueco-inicial">Imagen</div>
+            <h4>Charmander</h4>
+            <span class="tipo tipo-fuego">Fuego</span>
+          </article>
+          <article class="inicial">
+            <div class="hueco hueco-inicial">Imagen</div>
+            <h4>Squirtle</h4>
+            <span class="tipo tipo-agua">Agua</span>
+          </article>
+        </div>
+      </section>
 
       <!-- Enlaces a la generación anterior y a la siguiente -->
       <nav class="navegacion-gen">
         <a href="index.html">← Inicio</a>
         <a href="generacion-2.html">Generación 2 →</a>
       </nav>
-    </section>
+    </div>
   </main>
 
   <footer class="pie">
