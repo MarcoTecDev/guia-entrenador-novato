@@ -71,11 +71,16 @@ h3,
 
 /* position: sticky + top: 0 hace que la cabecera se quede
    pegada arriba de la pantalla al hacer scroll.
-   z-index: 10 la pone por encima del resto del contenido. */
+   z-index: 10 la pone por encima del resto del contenido.
+   display: flex + justify-content: space-between ponen el logo
+   a la izquierda y los enlaces a la derecha. */
 .cabecera {
   position: sticky;
   top: 0;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 24px;
   background-color: #e3350d;
   color: #ffffff;
@@ -88,6 +93,25 @@ h3,
   text-decoration: none;
   text-transform: uppercase;
   text-shadow: 3px 3px 0 #222224;
+}
+
+/* Enlaces de la cabecera (Contacto): botón blanco con borde negro */
+.nav-cabecera a {
+  padding: 10px 16px;
+  border: 3px solid #222224;
+  border-radius: 50px;
+  background-color: #ffffff;
+  color: #222224;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.65rem;
+  text-decoration: none;
+}
+
+/* Al pasar el ratón o si estamos en esa página (.activo), se pone negro */
+.nav-cabecera a:hover,
+.nav-cabecera a.activo {
+  background-color: #222224;
+  color: #ffffff;
 }
 
 
@@ -292,6 +316,9 @@ h3,
 .gen-10 .numero { color: #00897b; }
 .fondo-gen-10 { background-color: #00897b; }
 
+/* Página de contacto (rojo Pokémon) */
+.fondo-contacto { background-color: #e3350d; }
+
 
 /* ==========================================================
    PÁGINAS DE CADA GENERACIÓN
@@ -434,10 +461,15 @@ h3,
 }
 
 /* La imagen del mapa ocupa todo el ancho sin deformarse */
+/* La imagen del mapa nunca es más ancha que la página (max-width: 100%)
+   ni más alta de 640px (max-height). Así los mapas verticales, como el
+   de Galar, no ocupan toda la pantalla.
+   margin: 0 auto la centra si no llega a ocupar todo el ancho. */
 .mapa-imagen {
   display: block;
-  width: 100%;
-  height: auto;
+  max-width: 100%;
+  max-height: 640px;
+  margin: 0 auto;
   border: 4px solid #222224;
   border-radius: 12px;
 }
@@ -546,6 +578,46 @@ h3,
   background-color: #2980ef;
 }
 
+/* ---------- Contenido descargable (DLC) ---------- */
+
+/* Texto corto que explica cada parte del DLC */
+.descripcion {
+  margin: 0 0 16px 0;
+  color: #6b6f76;
+}
+
+/* Cuadrícula de imágenes del DLC: 3 columnas */
+.galeria {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+/* <figure> trae márgenes por defecto; los quitamos */
+.galeria figure {
+  margin: 0;
+  padding: 12px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Todas las imágenes con la misma altura.
+   object-fit: contain las encaja enteras sin deformarlas. */
+.galeria img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+}
+
+.galeria figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #6b6f76;
+  text-align: center;
+}
+
 
 /* ==========================================================
    PIE DE PÁGINA
@@ -573,6 +645,10 @@ h3,
   }
 
   .juegos {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .galeria {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -628,8 +704,14 @@ h3,
     height: 180px;
   }
 
-  /* Los iniciales, uno debajo de otro */
-  .iniciales {
+  /* Los iniciales y las imágenes del DLC, uno debajo de otro */
+  .iniciales,
+  .galeria {
     grid-template-columns: 1fr;
+  }
+
+  .nav-cabecera a {
+    padding: 8px 10px;
+    font-size: 0.55rem;
   }
 }

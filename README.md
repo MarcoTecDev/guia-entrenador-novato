@@ -8,7 +8,9 @@ Proyecto de clase de **1º de DAW**, hecho solo con **HTML y CSS**.
 ## Contenido
 
 - **Página de inicio** con una tarjeta por cada generación: número, región, juegos, año y la consola en la que salió.
-- **10 páginas de generación** (de Kanto a la generación 10), cada una con su color. De momento están en construcción.
+- **10 páginas de generación** (de Kanto a la generación 10), cada una con su color y con estas secciones:
+  historia de la región, mapa, juegos (originales, remakes, secuelas y DLC) y Pokémon iniciales.
+- **Página de contacto** (en construcción).
 - Enlaces para ir a la generación anterior y a la siguiente.
 - Diseño adaptado a ordenador, tablet y móvil.
 
@@ -20,11 +22,13 @@ guia-entrenador-novato/
 ├── generacion-1.html        Páginas de cada generación
 ├── ...
 ├── generacion-10.html
+├── contacto.html            Página de contacto
 ├── css/
 │   ├── estilos.css          Hoja de estilos de toda la web
 │   └── fuentes/             Fuente pixel Press Start 2P
 ├── img/
 │   ├── consolas/            Imágenes de las consolas de cada generación
+│   ├── mapaRegiones/        Mapas de cada región e imágenes de los DLC
 │   └── en-construccion.jpg  Imagen de las páginas en construcción
 └── media/                   Audio y vídeo (vacía de momento)
 ```

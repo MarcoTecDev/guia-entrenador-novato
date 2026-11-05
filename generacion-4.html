@@ -4,13 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Generación 4 · Pocket Monster</title>
-  <!-- El ?v=7 obliga al navegador a descargar el CSS nuevo. Súbelo (v=8, v=9...) cada vez que cambies el CSS -->
-  <link rel="stylesheet" href="css/estilos.css?v=7">
+  <!-- El ?v=8 obliga al navegador a descargar el CSS nuevo. Súbelo (v=9, v=10...) cada vez que cambies el CSS -->
+  <link rel="stylesheet" href="css/estilos.css?v=8">
 </head>
 <body>
-  <!-- Cabecera con el logo, que lleva al inicio -->
+  <!-- Cabecera: logo a la izquierda y enlaces a la derecha -->
   <header class="cabecera">
     <a class="logo" href="index.html">Pocket Monster</a>
+    <nav class="nav-cabecera">
+      <a href="contacto.html">Contacto</a>
+    </nav>
   </header>
 
   <main>
@@ -20,18 +23,105 @@
       <p>Región de Sinnoh · Diamante y Perla (2006)</p>
     </section>
 
-    <section class="contenido">
-      <div class="aviso">
-        <img src="img/en-construccion.jpg" alt="Un Steelix ayuda a unos obreros a levantar un edificio en una obra">
-        <p>Esta página está en construcción. ¡Pronto habrá contenido!</p>
-      </div>
+    <div class="contenido">
+
+      <!-- ========== 1. HISTORIA DE LA REGIÓN ========== -->
+      <section class="seccion">
+        <h2>Historia de Sinnoh</h2>
+        <div class="lore">
+          <!-- Cambia estos párrafos por tu texto y quita class="texto-ejemplo" -->
+          <p class="texto-ejemplo">Aquí va la introducción a la región de Sinnoh: dónde está, cómo es y qué la hace especial.</p>
+          <p class="texto-ejemplo">Aquí puedes contar la historia de la región: su pasado, sus leyendas, sus villanos, la Liga Pokémon...</p>
+          <p class="texto-ejemplo">Y aquí lo que vive el protagonista: sale de su pueblo, recibe su primer Pokémon de el Profesor Serbal y empieza su viaje.</p>
+        </div>
+      </section>
+
+      <!-- ========== 2. MAPA DE LA REGIÓN ========== -->
+      <section class="seccion">
+        <h2>Mapa de Sinnoh</h2>
+        <figure class="mapa">
+          <img class="mapa-imagen" src="img/mapaRegiones/Sinnoh_BDSP_artwork.png" alt="Mapa de la región de Sinnoh">
+          <figcaption>Mapa de la región de Sinnoh.</figcaption>
+        </figure>
+      </section>
+
+      <!-- ========== 3. JUEGOS ========== -->
+      <section class="seccion">
+        <h2>Juegos</h2>
+
+        <h3 class="subtitulo">Juegos originales</h3>
+        <div class="juegos">
+          <!-- Cambia cada div.hueco por: <img class="caratula" src="img/caratulas/juego.jpg" alt="Carátula de ..."> -->
+          <article class="juego">
+            <div class="hueco hueco-caratula">Carátula</div>
+            <h4>Pokémon Diamante</h4>
+            <p>Nintendo DS · 2006</p>
+          </article>
+          <article class="juego">
+            <div class="hueco hueco-caratula">Carátula</div>
+            <h4>Pokémon Perla</h4>
+            <p>Nintendo DS · 2006</p>
+          </article>
+          <article class="juego">
+            <div class="hueco hueco-caratula">Carátula</div>
+            <h4>Pokémon Platino</h4>
+            <p>Nintendo DS · 2008</p>
+          </article>
+        </div>
+
+        <h3 class="subtitulo">Remakes</h3>
+        <div class="juegos">
+          <article class="juego">
+            <div class="hueco hueco-caratula">Carátula</div>
+            <h4>Pokémon Diamante Brillante</h4>
+            <p>Nintendo Switch · 2021</p>
+          </article>
+          <article class="juego">
+            <div class="hueco hueco-caratula">Carátula</div>
+            <h4>Pokémon Perla Reluciente</h4>
+            <p>Nintendo Switch · 2021</p>
+          </article>
+        </div>
+
+        <h3 class="subtitulo">Otros juegos de la región</h3>
+        <div class="juegos">
+          <article class="juego">
+            <div class="hueco hueco-caratula">Carátula</div>
+            <h4>Leyendas Pokémon: Arceus</h4>
+            <p>Nintendo Switch · 2022</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ========== 4. POKÉMON INICIALES ========== -->
+      <section class="seccion">
+        <h2>Pokémon iniciales</h2>
+        <div class="iniciales">
+          <!-- Cambia cada div.hueco por: <img class="inicial-imagen" src="img/iniciales/turtwig.png" alt="Turtwig"> -->
+          <article class="inicial">
+            <div class="hueco hueco-inicial">Imagen</div>
+            <h4>Turtwig</h4>
+            <span class="tipo tipo-planta">Planta</span>
+          </article>
+          <article class="inicial">
+            <div class="hueco hueco-inicial">Imagen</div>
+            <h4>Chimchar</h4>
+            <span class="tipo tipo-fuego">Fuego</span>
+          </article>
+          <article class="inicial">
+            <div class="hueco hueco-inicial">Imagen</div>
+            <h4>Piplup</h4>
+            <span class="tipo tipo-agua">Agua</span>
+          </article>
+        </div>
+      </section>
 
       <!-- Enlaces a la generación anterior y a la siguiente -->
       <nav class="navegacion-gen">
         <a href="generacion-3.html">← Generación 3</a>
         <a href="generacion-5.html">Generación 5 →</a>
       </nav>
-    </section>
+    </div>
   </main>
 
   <footer class="pie">
