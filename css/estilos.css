@@ -312,7 +312,24 @@ h3,
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
 }
 
+/* Sprite de la consola en la esquina superior derecha de la tarjeta */
+.consola {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 64px;
+  height: 64px;
+  image-rendering: pixelated;
+  transition: transform 0.2s;
+}
+
+.tarjeta:hover .consola {
+  transform: rotate(-8deg) scale(1.1);
+}
+
 .tarjeta .numero {
+  display: block;
+  min-height: 64px;  /* misma altura que la consola, para que no se monten */
   font-size: 1.8rem;
   line-height: 1;
   color: var(--color, var(--rojo));
@@ -400,6 +417,10 @@ h3,
 /* ==========================================================
    Pie de página
    ========================================================== */
+.pie p {
+  margin: 0.3rem 0;
+}
+
 .pie {
   padding: 2rem 1.5rem;
   text-align: center;
