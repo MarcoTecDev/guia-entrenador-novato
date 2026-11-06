@@ -4,34 +4,32 @@
 
    ÍNDICE (el orden en el que está escrito este archivo)
 
-     1.  Variables de colores (modo día)
-     2.  Modo noche
-     3.  Fuente pixel
-     4.  Estilos generales y fondo de pantalla
-     5.  Cabecera (barra roja de arriba)
-     6.  Botón de modo día / modo noche
-     7.  Portada (página de inicio)
-     8.  Contenido (zona central de cada página)
-     9.  Tarjetas de las generaciones
-     10. Colores de cada generación
-     11. Páginas de cada generación
-     12. Secciones de cada generación
-           12.1 Huecos para imágenes
-           12.2 Historia
-           12.3 Mapa
-           12.4 Juegos
-           12.5 Iniciales de cada juego
-           12.6 Pokémon iniciales
-           12.7 Contenido descargable (DLC)
-           12.8 Tráileres
-     13. Pie de página
-     14. Móviles y tablets
+     1.  Variables de colores
+     2.  Fuente pixel
+     3.  Estilos generales
+     4.  Cabecera (barra roja de arriba)
+     5.  Portada (página de inicio)
+     6.  Contenido (zona central de cada página)
+     7.  Tarjetas de las generaciones
+     8.  Colores de cada generación
+     9.  Páginas de cada generación
+     10. Secciones de cada generación
+           10.1 Huecos para imágenes
+           10.2 Historia
+           10.3 Mapa
+           10.4 Juegos
+           10.5 Iniciales de cada juego
+           10.6 Pokémon iniciales
+           10.7 Contenido descargable (DLC)
+           10.8 Tráileres
+     11. Pie de página
+     12. Móviles y tablets
 
    ========================================================== */
 
 
 /* ==========================================================
-   1. VARIABLES DE COLORES (MODO DÍA)
+   1. VARIABLES DE COLORES
    ----------------------------------------------------------
    Una variable es un nombre que guarda un valor. Se crea con
    dos guiones delante (--fondo) y se usa con var(--fondo).
@@ -40,22 +38,16 @@
    usar en toda la página.
 
    Ventaja: si queremos cambiar un color, solo lo cambiamos
-   aquí y se cambia en toda la web. Así funciona el modo noche:
-   solo cambia el valor de estas variables.
+   aquí y se cambia en toda la web.
    ========================================================== */
 
 :root {
-  /* Colores que son iguales en modo día y modo noche */
   --rojo: #e3350d;           /* Rojo Pokémon */
   --negro: #222224;          /* Bordes y sombras de los botones */
   --blanco: #ffffff;
   --amarillo: #ffd23f;       /* Fondo del aviso "en construcción" */
 
-  /* Fondo de pantalla: Reshiram (blanco, el Pokémon de la verdad) */
-  --wallpaper: url("../img/wallpaper/reshiram.jpg");
-
-  /* Colores que cambian en modo noche */
-  --fondo: #ffffff;          /* Color que se ve a través del wallpaper transparente */
+  --fondo: #f4f5f7;          /* Fondo de la página (gris muy claro) */
   --superficie: #ffffff;     /* Fondo de tarjetas y cajas */
   --borde-tarjeta: #222224;  /* Borde de las tarjetas, para separarlas del fondo */
   --texto: #2b2d31;          /* Texto normal */
@@ -72,77 +64,14 @@
   --sombra: rgba(0, 0, 0, 0.15);        /* Sombra de las tarjetas */
   --sombra-texto: rgba(0, 0, 0, 0.25);  /* Sombra de los textos de la portada */
 
-  /* color-scheme le dice al navegador qué modo usamos, así
+  /* color-scheme le dice al navegador que la página es clara, así
      las barras de scroll van a juego con la página. */
   color-scheme: light;
 }
 
 
 /* ==========================================================
-   2. MODO NOCHE
-   ----------------------------------------------------------
-   El botón de la cabecera es en realidad un checkbox
-   (<input type="checkbox" id="modo-noche">) escondido.
-
-   :has() significa "que contiene". Así que
-   :root:has(#modo-noche:checked) se lee:
-   "la página, cuando contiene el checkbox marcado".
-
-   Cuando está marcado, cambiamos el valor de las variables
-   y toda la web se pone en modo noche, con Zekrom de fondo.
-   ========================================================== */
-
-:root:has(#modo-noche:checked) {
-  /* Fondo de pantalla: Zekrom (negro, el Pokémon de los ideales) */
-  --wallpaper: url("../img/wallpaper/zekrom.jpg");
-
-  /* --superficie y --borde-tarjeta no cambian: las tarjetas son
-     blancas con borde negro también en modo noche (ver más abajo) */
-  --fondo: #30303a;          /* El mismo gris que el fondo de Zekrom */
-  --texto: #e8e9ee;
-  --texto-suave: #b4b7c2;
-  --texto-ejemplo: #8d909b;
-  --linea: #e8e9ee;
-  --linea-suave: #3a3c45;
-  --icono-fondo: #30303a;
-  --hueco-borde: #6b6e7a;
-  --hueco-fondo: #24252b;
-  --pie: #111114;
-  --sombra: rgba(0, 0, 0, 0.5);
-  --sombra-texto: #000000;
-
-  color-scheme: dark;
-}
-
-/* ---------- Tarjetas siempre blancas ----------
-   En modo noche el texto de la página es claro, pero dentro de
-   las tarjetas (que son blancas) tiene que seguir siendo oscuro.
-
-   Las variables se heredan: si cambiamos su valor en un elemento,
-   el cambio solo afecta a ese elemento y a lo que tiene dentro.
-   Así que dentro de las tarjetas volvemos a poner los colores del
-   modo día, y color: var(--texto) aplica el texto oscuro.
-
-   En modo día esto no cambia nada, porque son los mismos valores. */
-.tarjeta,
-.lore,
-.juego,
-.inicial,
-.galeria figure,
-.trailer,
-.aviso,
-.navegacion-gen a {
-  --texto: #2b2d31;
-  --texto-suave: #5c6068;
-  --texto-ejemplo: #8a8e96;
-  --linea-suave: #e3e5e8;
-  --icono-fondo: #f4f5f7;
-  color: var(--texto);
-}
-
-
-/* ==========================================================
-   3. FUENTE PIXEL (estilo Game Boy)
+   2. FUENTE PIXEL (estilo Game Boy)
    ========================================================== */
 
 /* @font-face carga una fuente que tenemos guardada en el proyecto.
@@ -155,7 +84,7 @@
 
 
 /* ==========================================================
-   4. ESTILOS GENERALES Y FONDO DE PANTALLA
+   3. ESTILOS GENERALES
    ========================================================== */
 
 /* box-sizing: border-box hace que el padding y el borde se incluyan
@@ -171,42 +100,6 @@ body {
   line-height: 1.6;
   color: var(--texto);
   background-color: var(--fondo);
-}
-
-/* ---------- Fondo de pantalla (wallpaper) ----------
-   No lo ponemos directamente en el body porque queremos hacerlo
-   un poco transparente y borroso, y opacity y filter afectarían
-   también a todo el contenido de la página.
-
-   Por eso creamos una capa aparte con ::before, que es un elemento
-   "invisible" que el CSS añade dentro del body:
-     content: ""           -> obligatorio para que ::before exista
-     position: fixed       -> se queda quieta al hacer scroll
-     inset: -20px          -> ocupa toda la pantalla (top, right, bottom
-                              y left a la vez) y un poco más, porque el
-                              desenfoque deja los bordes borrosos
-     z-index: -1           -> la manda detrás del contenido
-     background-size: cover -> la imagen tapa todo sin deformarse
-     background-position   -> el Pokémon está a la derecha de la imagen
-     opacity: 0.55         -> se ve al 55%; el resto es el color de --fondo
-     filter: blur(3px)     -> la difumina un poco */
-body::before {
-  content: "";
-  position: fixed;
-  inset: -20px;
-  z-index: -1;
-  background-image: var(--wallpaper);
-  background-size: cover;
-  background-position: right center;
-  opacity: 0.55;
-  filter: blur(3px);
-}
-
-/* En modo noche, el fondo de Zekrom se ve en modo espejo.
-   transform: scaleX(-1) le da la vuelta a la imagen de izquierda
-   a derecha, así que Zekrom pasa a estar a la izquierda. */
-:root:has(#modo-noche:checked) body::before {
-  transform: scaleX(-1);
 }
 
 /* Los enlaces cogen el color del texto que los rodea
@@ -232,7 +125,7 @@ h3,
 
 
 /* ==========================================================
-   5. CABECERA (barra roja de arriba)
+   4. CABECERA (barra roja de arriba)
    ========================================================== */
 
 /* position: sticky + top: 0 hace que la cabecera se quede
@@ -268,10 +161,9 @@ h3,
   gap: 10px;
 }
 
-/* Enlaces de la cabecera (Contacto) y botón de modo:
+/* Enlaces de la cabecera (Contacto):
    botón blanco con borde negro */
-.nav-cabecera a,
-.interruptor {
+.nav-cabecera a {
   padding: 10px 16px;
   border: 3px solid var(--negro);
   border-radius: 50px;
@@ -285,78 +177,17 @@ h3,
 
 /* Al pasar el ratón o si estamos en esa página (.activo), se pone negro */
 .nav-cabecera a:hover,
-.nav-cabecera a.activo,
-.interruptor:hover {
+.nav-cabecera a.activo {
   background-color: var(--negro);
   color: var(--blanco);
 }
 
 
 /* ==========================================================
-   6. BOTÓN DE MODO DÍA / MODO NOCHE
-   ----------------------------------------------------------
-   En el HTML hay dos cosas:
-     <input type="checkbox" id="modo-noche">  -> el checkbox (escondido)
-     <label for="modo-noche">                 -> el botón que se ve
-
-   Como el label tiene for="modo-noche", al pulsarlo se marca
-   o desmarca el checkbox, aunque el checkbox no se vea.
+   5. PORTADA (página de inicio)
    ========================================================== */
 
-/* Escondemos el checkbox. No usamos display: none para que se
-   pueda seguir usando con el teclado (tecla Tab + Espacio). */
-#modo-noche {
-  position: absolute;
-  opacity: 0;
-}
-
-/* El botón es redondo y solo lleva el icono, así que le quitamos
-   casi todo el padding que tienen los otros botones de la cabecera.
-   cursor: pointer pone la manita al pasar el ratón. */
-.interruptor {
-  padding: 3px;
-  cursor: pointer;
-}
-
-/* El icono lo dibujamos con ::before como imagen de fondo.
-   Muestra el modo en el que estamos ahora:
-   Solrock (el sol) en modo día y Lunatone (la luna) en modo noche.
-
-   content: ""          -> obligatorio para que ::before exista
-   display: block       -> para poder darle ancho y alto
-   background-size: 150% -> las imágenes tienen mucho margen
-                           transparente alrededor; al ampliarlas,
-                           el Pokémon llena mejor el botón
-   background-position: center -> el Pokémon está en el centro */
-.interruptor::before {
-  content: "";
-  display: block;
-  width: 32px;
-  height: 32px;
-  background-image: url("../img/modoNocheDia/solrock.png");
-  background-size: 150%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Si el checkbox está marcado (modo noche), cambia a Lunatone */
-#modo-noche:checked + .interruptor::before {
-  background-image: url("../img/modoNocheDia/lunatone.png");
-}
-
-/* Cuando se llega al botón con el teclado, se marca con un borde
-   amarillo para saber dónde estamos. */
-#modo-noche:focus-visible + .interruptor {
-  outline: 3px solid var(--amarillo);
-  outline-offset: 2px;
-}
-
-
-/* ==========================================================
-   7. PORTADA (página de inicio)
-   ========================================================== */
-
-/* Sin color de fondo: se ve el wallpaper detrás */
+/* Sin color de fondo: se ve el fondo de la página */
 .hero {
   padding: 80px 24px 64px 24px;
   text-align: center;
@@ -411,7 +242,7 @@ h3,
 
 
 /* ==========================================================
-   8. CONTENIDO (zona central de cada página)
+   6. CONTENIDO (zona central de cada página)
    ========================================================== */
 
 /* max-width + margin auto = contenido centrado con un ancho máximo */
@@ -428,7 +259,7 @@ h3,
 
 
 /* ==========================================================
-   9. TARJETAS DE LAS GENERACIONES (página de inicio)
+   7. TARJETAS DE LAS GENERACIONES (página de inicio)
    ========================================================== */
 
 /* display: grid coloca las tarjetas en una cuadrícula.
@@ -442,7 +273,7 @@ h3,
 
 /* position: relative para poder colocar la imagen de la consola
    en la esquina (con position: absolute).
-   El borde de 3px la separa del fondo de pantalla; el de arriba
+   El borde de 3px la separa del fondo de la página; el de arriba
    es más gordo y tiene el color de la generación. */
 .tarjeta {
   position: relative;
@@ -506,7 +337,7 @@ h3,
 
 
 /* ==========================================================
-   10. COLORES DE CADA GENERACIÓN
+   8. COLORES DE CADA GENERACIÓN
    ----------------------------------------------------------
    .gen-X          -> borde de arriba de la tarjeta
    .gen-X .numero  -> color del número de la tarjeta
@@ -568,7 +399,7 @@ h3,
 
 
 /* ==========================================================
-   11. PÁGINAS DE CADA GENERACIÓN
+   9. PÁGINAS DE CADA GENERACIÓN
    (franja de color con el título, aviso y enlaces de abajo)
    ========================================================== */
 
@@ -637,7 +468,7 @@ h3,
 }
 
 /* Cada enlace es un botón con fondo, para que se lea bien
-   encima del fondo de pantalla. */
+   encima del fondo de la página. */
 .navegacion-gen a {
   padding: 10px 16px;
   border: 3px solid var(--borde-tarjeta);
@@ -653,7 +484,7 @@ h3,
 
 
 /* ==========================================================
-   12. SECCIONES DE CADA GENERACIÓN
+   10. SECCIONES DE CADA GENERACIÓN
    (historia, mapa, juegos e iniciales)
    ========================================================== */
 
@@ -676,7 +507,7 @@ h3,
 }
 
 
-/* ---------- 12.1 Huecos para imágenes ----------
+/* ---------- 10.1 Huecos para imágenes ----------
    Cajas con borde discontinuo que marcan dónde irá una imagen
    que todavía no tenemos (el mapa de la generación 10).
    display: flex + align-items + justify-content centran el texto
@@ -695,7 +526,7 @@ h3,
 }
 
 
-/* ---------- 12.2 Historia ---------- */
+/* ---------- 10.2 Historia ---------- */
 
 .lore {
   padding: 24px 32px;
@@ -714,7 +545,7 @@ h3,
 }
 
 
-/* ---------- 12.3 Mapa ---------- */
+/* ---------- 10.3 Mapa ---------- */
 
 /* <figure> trae márgenes por defecto; los quitamos */
 .mapa {
@@ -748,7 +579,7 @@ h3,
 }
 
 
-/* ---------- 12.4 Juegos ---------- */
+/* ---------- 10.4 Juegos ---------- */
 
 /* Cuadrícula de 4 columnas para las carátulas */
 .juegos {
@@ -792,7 +623,7 @@ h3,
 }
 
 
-/* ---------- 12.5 Iniciales de cada juego ----------
+/* ---------- 10.5 Iniciales de cada juego ----------
    La fila pequeña con los iniciales que sale debajo de cada carátula. */
 
 /* border-top: línea fina que la separa de los datos del juego.
@@ -842,7 +673,7 @@ h3,
 }
 
 
-/* ---------- 12.6 Pokémon iniciales ---------- */
+/* ---------- 10.6 Pokémon iniciales ---------- */
 
 /* Cuadrícula de 3 columnas, una por inicial */
 .iniciales {
@@ -893,7 +724,7 @@ h3,
 .tipo-agua   { background-color: #2980ef; }
 
 
-/* ---------- 12.7 Contenido descargable (DLC) ---------- */
+/* ---------- 10.7 Contenido descargable (DLC) ---------- */
 
 /* Texto corto que explica cada parte del DLC */
 .descripcion {
@@ -936,7 +767,7 @@ h3,
 }
 
 
-/* ---------- 12.8 Tráileres ---------- */
+/* ---------- 10.8 Tráileres ---------- */
 
 /* Cuadrícula de vídeos.
    repeat(auto-fit, minmax(320px, 1fr)) significa: "pon tantas columnas
@@ -982,7 +813,7 @@ h3,
 
 
 /* ==========================================================
-   13. PIE DE PÁGINA
+   11. PIE DE PÁGINA
    ========================================================== */
 
 .pie {
@@ -995,7 +826,7 @@ h3,
 
 
 /* ==========================================================
-   14. MÓVILES Y TABLETS
+   12. MÓVILES Y TABLETS
    ----------------------------------------------------------
    @media (max-width: ...) aplica estos estilos solo cuando
    la pantalla mide como máximo el ancho indicado.
@@ -1038,12 +869,6 @@ h3,
   .nav-cabecera a {
     padding: 8px 10px;
     font-size: 0.55rem;
-  }
-
-  /* Icono del botón de modo un poco más pequeño */
-  .interruptor::before {
-    width: 24px;
-    height: 24px;
   }
 
   /* Títulos de las portadas */
