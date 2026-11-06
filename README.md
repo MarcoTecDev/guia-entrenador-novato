@@ -8,7 +8,9 @@
 
 *Guía web para entrenadores Pokémon novatos, organizada por generaciones.*
 
-<img src="img/pokemon/iconos/bulbasaur.png" width="48" alt="Bulbasaur"><img src="img/pokemon/iconos/charmander.png" width="48" alt="Charmander"><img src="img/pokemon/iconos/squirtle.png" width="48" alt="Squirtle"><img src="img/pokemon/iconos/chikorita.png" width="48" alt="Chikorita"><img src="img/pokemon/iconos/cyndaquil.png" width="48" alt="Cyndaquil"><img src="img/pokemon/iconos/totodile.png" width="48" alt="Totodile"><img src="img/pokemon/iconos/treecko.png" width="48" alt="Treecko"><img src="img/pokemon/iconos/torchic.png" width="48" alt="Torchic"><img src="img/pokemon/iconos/mudkip.png" width="48" alt="Mudkip">
+<img src="img/readme/pokedex-1025.svg" alt="Los 1025 Pokémon desfilando" width="880">
+
+<sub>🔴 ¡Los <b>1025 Pokémon</b> de la Pokédex Nacional, desfilando sin parar!</sub>
 
 ### 🗺️ [¡Empieza tu aventura en Kanto!](https://marcotecdev.github.io/guia-entrenador-novato/)
 
@@ -56,6 +58,7 @@
 ├── 🖼️ img/
 │   ├── caratulas/           Carátulas de los juegos, una carpeta por generación (gen1... gen10)
 │   ├── consolas/            Imágenes de las consolas de cada generación
+│   ├── readme/              Carrusel animado de los 1025 Pokémon para este README
 │   ├── pokemon/
 │   │   ├── ilustraciones/   Ilustraciones oficiales de los iniciales
 │   │   └── iconos/          Iconos de menú de los iniciales (Escarlata y Púrpura)
@@ -103,6 +106,7 @@
 - **Fuente:** [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P), de CodeMan38, licencia SIL Open Font License.
 - **Imágenes de los Pokémon:** [PokeAPI/sprites](https://github.com/PokeAPI/sprites): ilustraciones oficiales e iconos de menú de Escarlata y Púrpura, recortados y redimensionados.
 - **Iniciales de la generación 10** (Browt, Pombon y Gecqua): ilustraciones oficiales tomadas de [WikiDex](https://www.wikidex.net/wiki/Pok%C3%A9mon_Viento_y_Pok%C3%A9mon_Oleaje).
+- **Carrusel de los 1025 Pokémon del README:** sprites de [PokeAPI/sprites](https://github.com/PokeAPI/sprites), unidos en una sola tira animada con SVG.
 - **Sprites de la generación 10:** hechos por [CarnekVT](https://www.deviantart.com/carnekvt/art/Pokemon-Winds-and-Waves-Starters-in-Sprite-version-1303886486) en DeviantArt (aún no hay sprites oficiales).
 - **Carátulas de los juegos:** [WikiDex](https://www.wikidex.net), ajustadas a un mismo tamaño cuadrado (440 × 440).
 - **Imágenes de consolas:** tema «Systematic» de [RetroArch Assets](https://github.com/libretro/retroarch-assets) (libretro), licencia [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Recortadas y redimensionadas.
