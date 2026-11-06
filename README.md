@@ -9,7 +9,7 @@ Proyecto de clase de **1º de DAW**, hecho solo con **HTML y CSS**.
 
 - **Página de inicio** con una tarjeta por cada generación: número, región, juegos, año y la consola en la que salió.
 - **10 páginas de generación** (de Kanto a la generación 10), cada una con su color y con estas secciones:
-  historia de la región, mapa, juegos (originales, remakes, secuelas y DLC) y Pokémon iniciales.
+  historia de la región, mapa, juegos (originales, remakes, secuelas y DLC), tráileres de YouTube (con `<iframe>`) y Pokémon iniciales.
 - **Página de contacto** (en construcción).
 - Enlaces para ir a la generación anterior y a la siguiente.
 - Diseño adaptado a ordenador, tablet y móvil.
@@ -50,7 +50,7 @@ guia-entrenador-novato/
 - **HTML5**
 - **CSS3**: flexbox, grid, `@font-face`, `@media` para móvil y transiciones con `:hover`.
 
-No usa JavaScript ni librerías externas: todo funciona en local, sin conexión a internet.
+No usa JavaScript ni librerías externas. Todo funciona en local salvo los tráileres, que se cargan desde YouTube y necesitan internet.
 El botón de modo día / noche funciona con un checkbox escondido y el selector `:has()`.
 
 ## Cómo verla en local

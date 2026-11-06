@@ -8,8 +8,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Generación 2 · Pocket Monster</title>
-  <!-- El ?v=22 obliga al navegador a descargar el CSS nuevo. Súbelo (v=23, v=24...) cada vez que cambies el CSS -->
-  <link rel="stylesheet" href="../../css/estilos.css?v=22">
+  <!-- El ?v=23 obliga al navegador a descargar el CSS nuevo. Súbelo (v=24, v=25...) cada vez que cambies el CSS -->
+  <link rel="stylesheet" href="../../css/estilos.css?v=23">
 </head>
 <body>
   <!-- ==================================================
@@ -174,7 +174,26 @@
         </div>
       </section>
 
-      <!-- ========== 4. POKÉMON INICIALES ========== -->
+      <!-- ========== 4. TRÁILERES ========== -->
+      <section class="seccion">
+        <h2>Tráileres</h2>
+        <!-- Cada <iframe> muestra un vídeo de YouTube dentro de nuestra página.
+             loading="lazy": el vídeo solo se carga al llegar a él con el scroll.
+             youtube-nocookie.com: YouTube no guarda cookies hasta que se pulsa play.
+             allowfullscreen: deja ver el vídeo a pantalla completa. -->
+        <div class="trailers">
+          <figure class="trailer">
+            <iframe src="https://www.youtube-nocookie.com/embed/gK-rwX4H2Iw" title="Tráiler de Pokémon Oro y Plata (Nintendo 3DS)" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <figcaption>Pokémon Oro y Plata (Nintendo 3DS)</figcaption>
+          </figure>
+          <figure class="trailer">
+            <iframe src="https://www.youtube-nocookie.com/embed/cM__WtFavIc" title="Tráiler de Pokémon Cristal (Nintendo 3DS)" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <figcaption>Pokémon Cristal (Nintendo 3DS)</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ========== 5. POKÉMON INICIALES ========== -->
       <section class="seccion">
         <h2>Pokémon iniciales</h2>
         <div class="iniciales">
@@ -214,6 +233,7 @@
     <p>Imágenes de los Pokémon: <a href="https://github.com/PokeAPI/sprites">PokeAPI/sprites</a> (ilustraciones oficiales e iconos de menú de Escarlata y Púrpura).</p>
     <p>Carátulas de los juegos: <a href="https://www.wikidex.net">WikiDex</a>, ajustadas a un mismo tamaño cuadrado.</p>
     <p>Fondos de Reshiram y Zekrom: wallpapers de MapleRose.</p>
+    <p>Tráileres: canales oficiales de YouTube de Nintendo España y Pokémon.</p>
   </footer>
 </body>
 </html>
