@@ -13,6 +13,7 @@ Proyecto de clase de **1º de DAW**, hecho solo con **HTML y CSS**.
 - **Página de contacto** (en construcción).
 - Enlaces para ir a la generación anterior y a la siguiente.
 - Diseño adaptado a ordenador, tablet y móvil.
+- Botón de modo día (icono de Solrock, fondo de Reshiram) y modo noche (icono de Lunatone, fondo de Zekrom), hecho solo con CSS.
 
 ## Estructura del proyecto
 
@@ -28,6 +29,8 @@ guia-entrenador-novato/
 │   └── fuentes/             Fuente pixel Press Start 2P
 ├── img/
 │   ├── caratulas/           Carátulas de los juegos, una carpeta por generación (gen1... gen10)
+│   ├── wallpaper/           Fondos de pantalla del modo día (Reshiram) y noche (Zekrom)
+│   ├── modoNocheDia/        Iconos del botón de modo: Solrock (día) y Lunatone (noche)
 │   ├── consolas/            Imágenes de las consolas de cada generación
 │   ├── pokemon/
 │   │   ├── ilustraciones/   Ilustraciones oficiales de los iniciales
