@@ -36,7 +36,6 @@
 | ✉️ **Página de contacto** | 🚧 En construcción. |
 | 🔀 **Rutas** | Enlaces para ir a la generación anterior y a la siguiente. |
 | 📱 **Diseño adaptable** | Funciona en ordenador, tablet y móvil. |
-| <img src="img/modoNocheDia/solrock.png" width="24" alt="Solrock"> <img src="img/modoNocheDia/lunatone.png" width="24" alt="Lunatone"> **Modo día / noche** | Modo día (icono de Solrock, fondo de Reshiram) y modo noche (icono de Lunatone, fondo de Zekrom), hecho solo con CSS. |
 
 ---
 
@@ -56,8 +55,6 @@
 │   └── fuentes/             Fuente pixel Press Start 2P
 ├── 🖼️ img/
 │   ├── caratulas/           Carátulas de los juegos, una carpeta por generación (gen1... gen10)
-│   ├── wallpaper/           Fondos de pantalla del modo día (Reshiram) y noche (Zekrom)
-│   ├── modoNocheDia/        Iconos del botón de modo: Solrock (día) y Lunatone (noche)
 │   ├── consolas/            Imágenes de las consolas de cada generación
 │   ├── pokemon/
 │   │   ├── ilustraciones/   Ilustraciones oficiales de los iniciales
@@ -79,8 +76,7 @@
 | Movimiento | Tipo | Efecto |
 | --- | :---: | --- |
 | **HTML5** | 🟠 Estructura | Esqueleto de todas las páginas. |
-| **CSS3** | 🔵 Estilo | Flexbox, grid, `@font-face`, `@media` para móvil y transiciones con `:hover`. |
-| **`:has()`** | 🌗 Especial | El botón de modo día / noche funciona con un checkbox escondido y este selector. |
+| **CSS3** | 🔵 Estilo | Flexbox, grid, variables, `@font-face`, `@media` para móvil y transiciones con `:hover`. |
 
 </div>
 
@@ -109,7 +105,6 @@
 - **Iniciales de la generación 10** (Browt, Pombon y Gecqua): ilustraciones oficiales tomadas de [WikiDex](https://www.wikidex.net/wiki/Pok%C3%A9mon_Viento_y_Pok%C3%A9mon_Oleaje).
 - **Sprites de la generación 10:** hechos por [CarnekVT](https://www.deviantart.com/carnekvt/art/Pokemon-Winds-and-Waves-Starters-in-Sprite-version-1303886486) en DeviantArt (aún no hay sprites oficiales).
 - **Carátulas de los juegos:** [WikiDex](https://www.wikidex.net), ajustadas a un mismo tamaño cuadrado (440 × 440).
-- **Fondos de Reshiram y Zekrom:** wallpapers de MapleRose.
 - **Imágenes de consolas:** tema «Systematic» de [RetroArch Assets](https://github.com/libretro/retroarch-assets) (libretro), licencia [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Recortadas y redimensionadas.
 - **Pokémon** y sus personajes son © Nintendo, Game Freak y The Pokémon Company. Este es un proyecto educativo sin ánimo de lucro y no tiene relación oficial con ellos.
 
