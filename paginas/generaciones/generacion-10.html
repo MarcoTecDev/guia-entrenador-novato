@@ -7,9 +7,9 @@
        ================================================== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Generación 8 · Pocket Monster</title>
+  <title>Generación 10 · Pocket Monster</title>
   <!-- El ?v=22 obliga al navegador a descargar el CSS nuevo. Súbelo (v=23, v=24...) cada vez que cambies el CSS -->
-  <link rel="stylesheet" href="css/estilos.css?v=22">
+  <link rel="stylesheet" href="../../css/estilos.css?v=22">
 </head>
 <body>
   <!-- ==================================================
@@ -17,14 +17,14 @@
        Logo a la izquierda; botón de modo y enlaces a la derecha.
        ================================================== -->
   <header class="cabecera">
-    <a class="logo" href="index.html">Pocket Monster</a>
+    <a class="logo" href="../../index.html">Pocket Monster</a>
     <nav class="nav-cabecera">
       <!-- Botón de modo día / noche (solo con CSS).
            El checkbox está escondido; al pulsar el label se marca o desmarca.
            El icono (Solrock o Lunatone) lo pone el CSS (apartado 6). -->
       <input type="checkbox" id="modo-noche">
       <label for="modo-noche" class="interruptor" title="Cambiar entre modo día y modo noche" aria-label="Cambiar entre modo día y modo noche"></label>
-      <a href="contacto.html">Contacto</a>
+      <a href="../contacto.html">Contacto</a>
     </nav>
   </header>
 
@@ -33,31 +33,31 @@
        Todo lo que cambia de una página a otra.
        ================================================== -->
   <main>
-    <!-- La clase fondo-gen-8 pone el color de esta generación -->
-    <section class="hero-generacion fondo-gen-8">
-      <h1>Generación 8</h1>
-      <p>Región de Galar · Espada y Escudo (2019)</p>
+    <!-- La clase fondo-gen-10 pone el color de esta generación -->
+    <section class="hero-generacion fondo-gen-10">
+      <h1>Generación 10</h1>
+      <p>Región por descubrir · Viento y Oleaje (2027)</p>
     </section>
 
     <div class="contenido">
 
       <!-- ========== 1. HISTORIA DE LA REGIÓN ========== -->
       <section class="seccion">
-        <h2>Historia de Galar</h2>
+        <h2>Historia de la región</h2>
         <div class="lore">
           <!-- Cambia estos párrafos por tu texto y quita class="texto-ejemplo" -->
-          <p class="texto-ejemplo">Aquí va la introducción a la región de Galar: dónde está, cómo es y qué la hace especial.</p>
-          <p class="texto-ejemplo">Aquí puedes contar la historia de la región: su pasado, sus leyendas, sus villanos, la Liga Pokémon...</p>
-          <p class="texto-ejemplo">Y aquí lo que vive el protagonista: sale de su pueblo, recibe su primer Pokémon de la Profesora Magnolia y empieza su viaje.</p>
+          <p class="texto-ejemplo">Aquí irá la historia de la nueva región cuando se anuncie.</p>
+          <p class="texto-ejemplo">Puedes contar dónde está, cómo es, sus leyendas y el viaje del protagonista.</p>
         </div>
       </section>
 
       <!-- ========== 2. MAPA DE LA REGIÓN ========== -->
       <section class="seccion">
-        <h2>Mapa de Galar</h2>
+        <h2>Mapa de la región</h2>
         <figure class="mapa">
-          <img class="mapa-imagen" src="img/regiones/8-galar/mapa.png" alt="Mapa de la región de Galar">
-          <figcaption>Mapa de la región de Galar.</figcaption>
+          <!-- Cambia este div por: <img class="mapa-imagen" src="../../img/regiones/10-por-descubrir/mapa.png" alt="Mapa de la región"> -->
+          <div class="hueco hueco-mapa">Imagen del mapa de la región</div>
+          <figcaption>Mapa de la región.</figcaption>
         </figure>
       </section>
 
@@ -68,58 +68,44 @@
         <h3 class="subtitulo">Juegos originales</h3>
         <div class="juegos">
           <article class="juego">
-            <img class="caratula" src="img/caratulas/gen8/espada.jpg" alt="Carátula de Pokémon Espada">
-            <h4>Pokémon Espada</h4>
-            <p>Nintendo Switch · 2019</p>
+            <img class="caratula" src="../../img/caratulas/gen10/viento.jpg" alt="Carátula de Pokémon Viento">
+            <h4>Pokémon Viento</h4>
+            <p>Nintendo Switch 2 · 2027</p>
             <!-- Iniciales de este juego -->
             <div class="juego-iniciales">
               <div class="mini-inicial">
-                <img class="mini-imagen" src="img/pokemon/iconos/grookey.png" alt="Grookey">
-                <span>Grookey</span>
+                <img class="mini-imagen mini-pixel" src="../../img/pokemon/iconos/browt.png" alt="Browt">
+                <span>Browt</span>
               </div>
               <div class="mini-inicial">
-                <img class="mini-imagen" src="img/pokemon/iconos/scorbunny.png" alt="Scorbunny">
-                <span>Scorbunny</span>
+                <img class="mini-imagen mini-pixel" src="../../img/pokemon/iconos/pombon.png" alt="Pombon">
+                <span>Pombon</span>
               </div>
               <div class="mini-inicial">
-                <img class="mini-imagen" src="img/pokemon/iconos/sobble.png" alt="Sobble">
-                <span>Sobble</span>
+                <img class="mini-imagen mini-pixel" src="../../img/pokemon/iconos/gecqua.png" alt="Gecqua">
+                <span>Gecqua</span>
               </div>
             </div>
           </article>
           <article class="juego">
-            <img class="caratula" src="img/caratulas/gen8/escudo.jpg" alt="Carátula de Pokémon Escudo">
-            <h4>Pokémon Escudo</h4>
-            <p>Nintendo Switch · 2019</p>
+            <img class="caratula" src="../../img/caratulas/gen10/oleaje.jpg" alt="Carátula de Pokémon Oleaje">
+            <h4>Pokémon Oleaje</h4>
+            <p>Nintendo Switch 2 · 2027</p>
             <!-- Iniciales de este juego -->
             <div class="juego-iniciales">
               <div class="mini-inicial">
-                <img class="mini-imagen" src="img/pokemon/iconos/grookey.png" alt="Grookey">
-                <span>Grookey</span>
+                <img class="mini-imagen mini-pixel" src="../../img/pokemon/iconos/browt.png" alt="Browt">
+                <span>Browt</span>
               </div>
               <div class="mini-inicial">
-                <img class="mini-imagen" src="img/pokemon/iconos/scorbunny.png" alt="Scorbunny">
-                <span>Scorbunny</span>
+                <img class="mini-imagen mini-pixel" src="../../img/pokemon/iconos/pombon.png" alt="Pombon">
+                <span>Pombon</span>
               </div>
               <div class="mini-inicial">
-                <img class="mini-imagen" src="img/pokemon/iconos/sobble.png" alt="Sobble">
-                <span>Sobble</span>
+                <img class="mini-imagen mini-pixel" src="../../img/pokemon/iconos/gecqua.png" alt="Gecqua">
+                <span>Gecqua</span>
               </div>
             </div>
-          </article>
-        </div>
-
-        <h3 class="subtitulo">Contenido descargable</h3>
-        <div class="juegos">
-          <article class="juego">
-            <img class="caratula" src="img/caratulas/gen8/isla-armadura.jpg" alt="Carátula de La isla de la Armadura">
-            <h4>La isla de la Armadura</h4>
-            <p>Nintendo Switch · 2020</p>
-          </article>
-          <article class="juego">
-            <img class="caratula" src="img/caratulas/gen8/nieves-corona.jpg" alt="Carátula de Las nieves de la Corona">
-            <h4>Las nieves de la Corona</h4>
-            <p>Nintendo Switch · 2020</p>
           </article>
         </div>
       </section>
@@ -129,18 +115,18 @@
         <h2>Pokémon iniciales</h2>
         <div class="iniciales">
           <article class="inicial">
-            <img class="inicial-imagen" src="img/pokemon/ilustraciones/grookey.png" alt="Grookey">
-            <h4>Grookey</h4>
+            <img class="inicial-imagen" src="../../img/pokemon/ilustraciones/browt.png" alt="Browt">
+            <h4>Browt</h4>
             <span class="tipo tipo-planta">Planta</span>
           </article>
           <article class="inicial">
-            <img class="inicial-imagen" src="img/pokemon/ilustraciones/scorbunny.png" alt="Scorbunny">
-            <h4>Scorbunny</h4>
+            <img class="inicial-imagen" src="../../img/pokemon/ilustraciones/pombon.png" alt="Pombon">
+            <h4>Pombon</h4>
             <span class="tipo tipo-fuego">Fuego</span>
           </article>
           <article class="inicial">
-            <img class="inicial-imagen" src="img/pokemon/ilustraciones/sobble.png" alt="Sobble">
-            <h4>Sobble</h4>
+            <img class="inicial-imagen" src="../../img/pokemon/ilustraciones/gecqua.png" alt="Gecqua">
+            <h4>Gecqua</h4>
             <span class="tipo tipo-agua">Agua</span>
           </article>
         </div>
@@ -148,8 +134,8 @@
 
       <!-- Enlaces a la generación anterior y a la siguiente -->
       <nav class="navegacion-gen">
-        <a href="generacion-7.html">← Generación 7</a>
-        <a href="generacion-9.html">Generación 9 →</a>
+        <a href="generacion-9.html">← Generación 9</a>
+        <a href="../../index.html">Inicio →</a>
       </nav>
     </div>
   </main>
@@ -164,6 +150,8 @@
     <p>Imágenes de los Pokémon: <a href="https://github.com/PokeAPI/sprites">PokeAPI/sprites</a> (ilustraciones oficiales e iconos de menú de Escarlata y Púrpura).</p>
     <p>Carátulas de los juegos: <a href="https://www.wikidex.net">WikiDex</a>, ajustadas a un mismo tamaño cuadrado.</p>
     <p>Fondos de Reshiram y Zekrom: wallpapers de MapleRose.</p>
+    <p>Ilustraciones de Browt, Pombon y Gecqua: <a href="https://www.wikidex.net/wiki/Pok%C3%A9mon_Viento_y_Pok%C3%A9mon_Oleaje">WikiDex</a>.</p>
+    <p>Sprites de Browt, Pombon y Gecqua: hechos por <a href="https://www.deviantart.com/carnekvt/art/Pokemon-Winds-and-Waves-Starters-in-Sprite-version-1303886486">CarnekVT</a> (DeviantArt).</p>
   </footer>
 </body>
 </html>

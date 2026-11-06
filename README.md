@@ -19,11 +19,13 @@ Proyecto de clase de **1º de DAW**, hecho solo con **HTML y CSS**.
 
 ```
 guia-entrenador-novato/
-├── index.html               Página de inicio
-├── generacion-1.html        Páginas de cada generación
-├── ...
-├── generacion-10.html
-├── contacto.html            Página de contacto
+├── index.html               Página de inicio (se queda fuera para que GitHub Pages la encuentre)
+├── paginas/
+│   ├── contacto.html        Página de contacto
+│   └── generaciones/
+│       ├── generacion-1.html    Páginas de cada generación
+│       ├── ...
+│       └── generacion-10.html
 ├── css/
 │   ├── estilos.css          Hoja de estilos de toda la web
 │   └── fuentes/             Fuente pixel Press Start 2P
@@ -49,6 +51,7 @@ guia-entrenador-novato/
 - **CSS3**: flexbox, grid, `@font-face`, `@media` para móvil y transiciones con `:hover`.
 
 No usa JavaScript ni librerías externas: todo funciona en local, sin conexión a internet.
+El botón de modo día / noche funciona con un checkbox escondido y el selector `:has()`.
 
 ## Cómo verla en local
 
@@ -65,6 +68,7 @@ No usa JavaScript ni librerías externas: todo funciona en local, sin conexión 
 - **Iniciales de la generación 10** (Browt, Pombon y Gecqua): ilustraciones oficiales tomadas de [WikiDex](https://www.wikidex.net/wiki/Pok%C3%A9mon_Viento_y_Pok%C3%A9mon_Oleaje).
 - **Sprites de la generación 10:** hechos por [CarnekVT](https://www.deviantart.com/carnekvt/art/Pokemon-Winds-and-Waves-Starters-in-Sprite-version-1303886486) en DeviantArt (aún no hay sprites oficiales).
 - **Carátulas de los juegos:** [WikiDex](https://www.wikidex.net), ajustadas a un mismo tamaño cuadrado (440 × 440).
+- **Fondos de Reshiram y Zekrom:** wallpapers de MapleRose.
 - **Imágenes de consolas:** tema «Systematic» de [RetroArch Assets](https://github.com/libretro/retroarch-assets) (libretro), licencia [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Recortadas y redimensionadas.
 - **Pokémon** y sus personajes son © Nintendo, Game Freak y The Pokémon Company. Este es un proyecto educativo sin ánimo de lucro y no tiene relación oficial con ellos.
 
