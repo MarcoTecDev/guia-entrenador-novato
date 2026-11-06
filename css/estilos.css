@@ -23,6 +23,7 @@
            12.5 Iniciales de cada juego
            12.6 Pokémon iniciales
            12.7 Contenido descargable (DLC)
+           12.8 Tráileres
      13. Pie de página
      14. Móviles y tablets
 
@@ -128,6 +129,7 @@
 .juego,
 .inicial,
 .galeria figure,
+.trailer,
 .aviso,
 .navegacion-gen a {
   --texto: #2b2d31;
@@ -934,6 +936,51 @@ h3,
 }
 
 
+/* ---------- 12.8 Tráileres ---------- */
+
+/* Cuadrícula de vídeos.
+   repeat(auto-fit, minmax(320px, 1fr)) significa: "pon tantas columnas
+   como quepan, cada una de 320px como mínimo, y reparte el espacio que
+   sobre". Así, si hay 3 tráileres salen 3 por fila, si hay 2 se reparten
+   la fila y si solo hay 1 ocupa todo el ancho. */
+.trailers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* Tarjeta blanca de cada tráiler (<figure> trae márgenes; los quitamos) */
+.trailer {
+  margin: 0;
+  padding: 12px;
+  border: 3px solid var(--borde-tarjeta);
+  border-radius: 16px;
+  background-color: var(--superficie);
+  box-shadow: 0 6px 20px var(--sombra);
+}
+
+/* El iframe del vídeo.
+   width: 100% ocupa todo el ancho de la tarjeta y
+   aspect-ratio: 16 / 9 calcula el alto solo, con la forma de una
+   pantalla panorámica, para que el vídeo no tenga bandas negras.
+   border: 0 quita el borde que los iframes traen por defecto. */
+.trailer iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 10px;
+}
+
+/* Nombre del juego debajo del vídeo */
+.trailer figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+
 /* ==========================================================
    13. PIE DE PÁGINA
    ========================================================== */
@@ -1044,10 +1091,11 @@ h3,
     margin: 0 auto;
   }
 
-  /* Los juegos, los iniciales y las imágenes del DLC, uno debajo de otro */
+  /* Los juegos, los iniciales, las imágenes del DLC y los tráileres, uno debajo de otro */
   .juegos,
   .iniciales,
-  .galeria {
+  .galeria,
+  .trailers {
     grid-template-columns: 1fr;
   }
 }
