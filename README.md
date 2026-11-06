@@ -8,9 +8,34 @@
 
 *Guía web para entrenadores Pokémon novatos, organizada por generaciones.*
 
-<img src="img/readme/pokedex-1025.svg" alt="Los 1025 Pokémon desfilando" width="880">
+<sub>🔴 ¡Los <b>1025 Pokémon</b> de la Pokédex Nacional, generación a generación!</sub>
 
-<sub>🔴 ¡Los <b>1025 Pokémon</b> de la Pokédex Nacional, desfilando sin parar!</sub>
+**Gen I · Kanto** <sub>(n.º 001 – 151)</sub><br>
+<img src="img/readme/gen-1.svg" alt="Pokémon de la generación I (Kanto)" width="880">
+
+**Gen II · Johto** <sub>(n.º 152 – 251)</sub><br>
+<img src="img/readme/gen-2.svg" alt="Pokémon de la generación II (Johto)" width="880">
+
+**Gen III · Hoenn** <sub>(n.º 252 – 386)</sub><br>
+<img src="img/readme/gen-3.svg" alt="Pokémon de la generación III (Hoenn)" width="880">
+
+**Gen IV · Sinnoh** <sub>(n.º 387 – 493)</sub><br>
+<img src="img/readme/gen-4.svg" alt="Pokémon de la generación IV (Sinnoh)" width="880">
+
+**Gen V · Teselia** <sub>(n.º 494 – 649)</sub><br>
+<img src="img/readme/gen-5.svg" alt="Pokémon de la generación V (Teselia)" width="880">
+
+**Gen VI · Kalos** <sub>(n.º 650 – 721)</sub><br>
+<img src="img/readme/gen-6.svg" alt="Pokémon de la generación VI (Kalos)" width="880">
+
+**Gen VII · Alola** <sub>(n.º 722 – 809)</sub><br>
+<img src="img/readme/gen-7.svg" alt="Pokémon de la generación VII (Alola)" width="880">
+
+**Gen VIII · Galar** <sub>(n.º 810 – 905)</sub><br>
+<img src="img/readme/gen-8.svg" alt="Pokémon de la generación VIII (Galar)" width="880">
+
+**Gen IX · Paldea** <sub>(n.º 906 – 1025)</sub><br>
+<img src="img/readme/gen-9.svg" alt="Pokémon de la generación IX (Paldea)" width="880">
 
 ### 🗺️ [¡Empieza tu aventura en Kanto!](https://marcotecdev.github.io/guia-entrenador-novato/)
 
@@ -58,7 +83,7 @@
 ├── 🖼️ img/
 │   ├── caratulas/           Carátulas de los juegos, una carpeta por generación (gen1... gen10)
 │   ├── consolas/            Imágenes de las consolas de cada generación
-│   ├── readme/              Carrusel animado de los 1025 Pokémon para este README
+│   ├── readme/              Tiras animadas con los Pokémon de cada generación (gen-1... gen-9) para este README
 │   ├── pokemon/
 │   │   ├── ilustraciones/   Ilustraciones oficiales de los iniciales
 │   │   └── iconos/          Iconos de menú de los iniciales (Escarlata y Púrpura)
@@ -106,7 +131,7 @@
 - **Fuente:** [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P), de CodeMan38, licencia SIL Open Font License.
 - **Imágenes de los Pokémon:** [PokeAPI/sprites](https://github.com/PokeAPI/sprites): ilustraciones oficiales e iconos de menú de Escarlata y Púrpura, recortados y redimensionados.
 - **Iniciales de la generación 10** (Browt, Pombon y Gecqua): ilustraciones oficiales tomadas de [WikiDex](https://www.wikidex.net/wiki/Pok%C3%A9mon_Viento_y_Pok%C3%A9mon_Oleaje).
-- **Carrusel de los 1025 Pokémon del README:** sprites de [PokeAPI/sprites](https://github.com/PokeAPI/sprites), unidos en una sola tira animada con SVG.
+- **Tiras de los 1025 Pokémon del README:** sprites de [PokeAPI/sprites](https://github.com/PokeAPI/sprites), unidos en una tira animada con SVG por generación.
 - **Sprites de la generación 10:** hechos por [CarnekVT](https://www.deviantart.com/carnekvt/art/Pokemon-Winds-and-Waves-Starters-in-Sprite-version-1303886486) en DeviantArt (aún no hay sprites oficiales).
 - **Carátulas de los juegos:** [WikiDex](https://www.wikidex.net), ajustadas a un mismo tamaño cuadrado (440 × 440).
 - **Imágenes de consolas:** tema «Systematic» de [RetroArch Assets](https://github.com/libretro/retroarch-assets) (libretro), licencia [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Recortadas y redimensionadas.
