@@ -19,12 +19,13 @@
            10.3 Mapa
            10.4 Juegos
            10.5 Iniciales de cada juego
-           10.5b Bocadillo de evoluciones (Leyendas Arceus)
+           10.5b Iniciales con enlace a sus evoluciones
            10.6 Pokémon iniciales
            10.7 Contenido descargable (DLC)
            10.8 Tráileres
-     11. Pie de página
-     12. Móviles y tablets
+     11. Página de evoluciones
+     12. Pie de página
+     13. Móviles y tablets
 
    ========================================================== */
 
@@ -666,8 +667,7 @@ h3,
 }
 
 /* Nombre del inicial, en letra pequeña.
-   ">" = solo los <span> hijos directos, para que no afecte
-   a los <span> del bocadillo de evoluciones. */
+   ">" = solo los <span> hijos directos del inicial. */
 .mini-inicial > span {
   display: block;
   margin-top: 4px;
@@ -676,141 +676,54 @@ h3,
 }
 
 
-/* ---------- 10.5b Bocadillo de evoluciones (Leyendas Arceus) ----------
-   Al pasar el ratón (:hover) o al tocar / seleccionar con el teclado (:focus)
-   un inicial, sale encima un bocadillo con su línea evolutiva.
+/* ---------- 10.5b Iniciales con enlace a sus evoluciones ----------
+   En Leyendas Arceus cada inicial es un enlace (<a>) a la página de
+   evoluciones. Al pasar el ratón el icono se hace más grande. */
 
-   El bocadillo se coloca respecto a la fila de iniciales (position: relative),
-   no respecto a cada inicial, para que quede centrado en la tarjeta
-   y no se salga por los lados. */
-.juego-iniciales {
-  position: relative;
+/* display: block para que el <a> ocupe su hueco como un <div>.
+   text-decoration: none quita el subrayado de los enlaces. */
+.mini-enlace {
+  display: block;
+  color: inherit;
+  text-decoration: none;
 }
 
-.con-evoluciones {
-  cursor: pointer;
+/* transition: el cambio de tamaño se hace poco a poco */
+.mini-enlace .mini-imagen {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* scale(1.2) = un 20% más grande */
+.mini-enlace:hover .mini-imagen,
+.mini-enlace:focus-visible .mini-imagen {
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px var(--sombra);
+}
+
+.mini-enlace:hover span,
+.mini-enlace:focus-visible span {
+  color: var(--texto);
+  font-weight: bold;
+}
+
+/* Contorno al llegar con el teclado (Tab) */
+.mini-enlace:focus-visible {
+  outline: 2px solid var(--borde-tarjeta);
+  outline-offset: 4px;
   border-radius: 8px;
 }
 
-/* Al señalar un inicial, su icono se levanta un poco */
-.con-evoluciones .mini-imagen {
-  transition: transform 0.2s;
-}
-
-.con-evoluciones:hover .mini-imagen,
-.con-evoluciones:focus .mini-imagen {
-  transform: translateY(-4px);
-}
-
-/* Contorno al seleccionarlo con el teclado (Tab) */
-.con-evoluciones:focus-visible {
-  outline: 2px solid var(--borde-tarjeta);
-  outline-offset: 2px;
-}
-
-/* El bocadillo. Está escondido (opacity: 0 + visibility: hidden)
-   y con transition aparece poco a poco.
-   bottom: 100% lo pone justo encima de la fila;
-   left: 50% + translateX(-50%) lo centra. */
-.evoluciones {
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  z-index: 10;
-  width: max-content;
-  max-width: 100%;
-  margin-bottom: 10px;
-  padding: 8px 10px;
-  border: 2px solid var(--borde-tarjeta);
-  border-radius: 12px;
-  background-color: var(--superficie);
-  box-shadow: 0 6px 20px var(--sombra);
-  opacity: 0;
-  visibility: hidden;
-  transform: translate(-50%, 6px);
-  transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
-}
-
-.con-evoluciones:hover .evoluciones,
-.con-evoluciones:focus .evoluciones {
-  opacity: 1;
-  visibility: visible;
-  transform: translate(-50%, 0);
-}
-
-/* Piquito del bocadillo: un cuadrado girado 45º.
-   left cambia según el inicial (1º, 2º o 3º) para que apunte a él. */
-.evoluciones::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  width: 10px;
-  height: 10px;
-  margin-top: -5px;
-  margin-left: -6px;
-  border-right: 2px solid var(--borde-tarjeta);
-  border-bottom: 2px solid var(--borde-tarjeta);
-  background-color: var(--superficie);
-  transform: rotate(45deg);
-}
-
-.con-evoluciones:nth-child(1) .evoluciones::after { left: 17%; }
-.con-evoluciones:nth-child(2) .evoluciones::after { left: 50%; }
-.con-evoluciones:nth-child(3) .evoluciones::after { left: 83%; }
-
-/* Fila con los tres Pokémon y las flechas */
-.evo-linea {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2px;
-}
-
-/* Cada paso: icono y nombre debajo */
-.evo-paso {
-  width: 52px;
-  font-size: 0.6rem;
-  color: var(--texto-suave);
-}
-
-.evo-paso img {
-  display: block;
-  width: 40px;
-  height: 40px;
-  margin: 0 auto 2px auto;
-}
-
-.evo-flecha {
-  color: var(--texto-suave);
-  font-size: 0.8rem;
-}
-
-/* Texto de abajo: forma de Hisui y, debajo, sus tipos.
-   flex-wrap + width: 100% en el nombre hace que los tipos
-   bajen juntos a la línea siguiente. */
-.evo-nota {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 4px;
-  margin: 6px 0 0 0;
-  font-size: 0.65rem;
-  font-weight: bold;
-  color: var(--texto);
-}
-
-.evo-forma {
-  width: 100%;
-}
-
-/* Etiquetas de tipo más pequeñas que las normales */
+/* Etiquetas de tipo más pequeñas que las normales
+   (las usa la página de evoluciones) */
 .tipo-mini {
   display: inline-block;
   padding: 1px 6px;
   border-radius: 50px;
   color: var(--blanco);
   font-size: 0.6rem;
+  font-weight: bold;
 }
+
 
 /* ---------- 10.6 Pokémon iniciales ---------- */
 
@@ -864,6 +777,8 @@ h3,
 .tipo-lucha     { background-color: #ff8000; }
 .tipo-fantasma  { background-color: #704170; }
 .tipo-siniestro { background-color: #624d4e; }
+.tipo-electrico { background-color: #fac000; }
+.tipo-normal    { background-color: #9fa19f; }
 
 
 /* ---------- 10.7 Contenido descargable (DLC) ---------- */
@@ -955,7 +870,202 @@ h3,
 
 
 /* ==========================================================
-   11. PIE DE PÁGINA
+   11. PÁGINA DE EVOLUCIONES
+   (líneas evolutivas de los iniciales, por generación y juego)
+   ========================================================== */
+
+/* Fondo de la franja del título: un degradado con los colores
+   de los tres tipos de inicial (planta, fuego y agua) */
+.fondo-evoluciones {
+  background: linear-gradient(90deg, #3fa129, #e62829, #2980ef);
+}
+
+/* Índice de arriba: un botón por generación con su color.
+   flex-wrap: wrap hace que bajen de línea si no caben. */
+.evo-indice {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 48px;
+}
+
+.evo-indice a {
+  padding: 8px 14px;
+  border-radius: 50px;
+  color: var(--blanco);
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.evo-indice a:hover {
+  transform: scale(1.08);
+}
+
+/* La cabecera es sticky y taparía el principio de lo que enlazamos
+   con #. scroll-margin-top deja ese hueco al saltar. */
+.seccion,
+.evo-grupo,
+.evo-tarjeta {
+  scroll-margin-top: 90px;
+}
+
+/* Número de la generación en un cuadrado de su color */
+.evo-numero {
+  display: inline-block;
+  min-width: 1.6em;
+  padding: 4px 6px;
+  border-radius: 8px;
+  color: var(--blanco);
+  text-align: center;
+}
+
+/* Cada línea evolutiva en una tarjeta. Tres por fila. */
+.evo-lineas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+/* border-left: la franja de color de la izquierda, según el tipo */
+/* display: flex + justify-content: center centra el contenido en vertical
+   cuando la tarjeta es más alta que su contenido (la estira la cuadrícula) */
+.evo-tarjeta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px 12px;
+  border: 3px solid var(--borde-tarjeta);
+  border-left-width: 10px;
+  border-radius: 16px;
+  background-color: var(--superficie);
+  box-shadow: 0 6px 20px var(--sombra);
+  color: var(--texto);
+  text-align: center;
+}
+
+.borde-planta    { border-left-color: #3fa129; }
+.borde-fuego     { border-left-color: #e62829; }
+.borde-agua      { border-left-color: #2980ef; }
+.borde-electrico { border-left-color: #fac000; }
+.borde-normal    { border-left-color: #9fa19f; }
+
+/* :target = la tarjeta a la que hemos llegado con un enlace #.
+   Así se ve cuál es la que hemos pulsado en la otra página. */
+.evo-tarjeta:target {
+  outline: 4px solid var(--rojo);
+  outline-offset: 4px;
+}
+
+/* Fila con los Pokémon y las flechas.
+   align-items: flex-start alinea los iconos por arriba, así no se
+   descuadran cuando un nombre ocupa dos líneas ("Decidueye de Hisui"). */
+.evo-linea {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4px;
+}
+
+/* Con ramas (Eevee) la columna es más alta: ahí mejor centrado.
+   :has() = "la fila que tiene dentro unas ramas" */
+.evo-linea:has(.evo-ramas) {
+  align-items: center;
+}
+
+/* Cada paso de la evolución: icono y nombre debajo */
+.evo-paso {
+  width: 30%;
+  font-size: 0.75rem;
+  color: var(--texto-suave);
+}
+
+/* Modelos 3D de Escarlata y Púrpura (o sprite pixel en la generación 10) */
+.evo-icono {
+  display: block;
+  width: 84px;
+  height: 84px;
+  margin: 0 auto 4px auto;
+  padding: 4px;
+  border-radius: 10px;
+  background-color: var(--icono-fondo);
+  transition: transform 0.2s;
+}
+
+.evo-icono:hover {
+  transform: scale(1.15);
+}
+
+/* margin-top baja la flecha hasta la mitad del icono */
+.evo-flecha {
+  margin-top: 30px;
+  color: var(--texto-suave);
+  font-size: 1.1rem;
+}
+
+.evo-linea:has(.evo-ramas) .evo-flecha {
+  margin-top: 0;
+}
+
+/* Evoluciones en rama (Eevee): una debajo de otra, más pequeñas */
+.evo-ramas {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.evo-rama {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-align: left;
+}
+
+.evo-icono-mini {
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  padding: 2px;
+}
+
+/* Evolución que aún no se conoce (generación 10) */
+.evo-interrogante {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 84px;
+  margin: 0 auto 4px auto;
+  border: 3px dashed var(--hueco-borde);
+  border-radius: 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* Nota de debajo de la línea (forma de Hisui, ramas...) */
+.evo-nota {
+  margin: 12px 0 0 0;
+  font-size: 0.75rem;
+  color: var(--texto-suave);
+}
+
+/* Enlace "Volver arriba" al final de cada generación */
+.evo-arriba {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: var(--texto-suave);
+}
+
+.evo-arriba:hover {
+  color: var(--rojo);
+}
+
+
+/* ==========================================================
+   12. PIE DE PÁGINA
    ========================================================== */
 
 .pie {
@@ -968,7 +1078,7 @@ h3,
 
 
 /* ==========================================================
-   12. MÓVILES Y TABLETS
+   13. MÓVILES Y TABLETS
    ----------------------------------------------------------
    @media (max-width: ...) aplica estos estilos solo cuando
    la pantalla mide como máximo el ancho indicado.
@@ -987,6 +1097,11 @@ h3,
   }
 
   .galeria {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Página de evoluciones: 2 líneas por fila */
+  .evo-lineas {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -1062,7 +1177,8 @@ h3,
   .juegos,
   .iniciales,
   .galeria,
-  .trailers {
+  .trailers,
+  .evo-lineas {
     grid-template-columns: 1fr;
   }
 }
