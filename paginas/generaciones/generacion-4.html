@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Generación 4 · Pocket Monster</title>
   <!-- El ?v=23 obliga al navegador a descargar el CSS nuevo. Súbelo (v=24, v=25...) cada vez que cambies el CSS -->
-  <link rel="stylesheet" href="../../css/estilos.css?v=24">
+  <link rel="stylesheet" href="../../css/estilos.css?v=25">
 </head>
 <body>
   <!-- ==================================================
@@ -174,19 +174,81 @@
             <img class="caratula" src="../../img/caratulas/gen4/leyendas-arceus.jpg" alt="Carátula de Leyendas Pokémon: Arceus">
             <h4>Leyendas Pokémon: Arceus</h4>
             <p>Nintendo Switch · 2022</p>
-            <!-- Iniciales de este juego -->
+            <!-- Iniciales de este juego.
+                 tabindex="0" deja seleccionar cada inicial con el teclado o tocándolo
+                 en el móvil, y así el bocadillo también sale sin ratón (con :focus). -->
             <div class="juego-iniciales">
-              <div class="mini-inicial">
+              <div class="mini-inicial con-evoluciones" tabindex="0">
                 <img class="mini-imagen" src="../../img/pokemon/iconos/rowlet.png" alt="Rowlet">
                 <span>Rowlet</span>
+                <!-- Bocadillo con la línea evolutiva (sale con :hover y :focus) -->
+                <div class="evoluciones">
+                  <div class="evo-linea">
+                    <span class="evo-paso">
+                      <img src="../../img/pokemon/iconos/rowlet.png" alt="Rowlet">
+                      Rowlet
+                    </span>
+                    <span class="evo-flecha" aria-hidden="true">→</span>
+                    <span class="evo-paso">
+                      <img src="../../img/pokemon/iconos/dartrix.png" alt="Dartrix">
+                      Dartrix
+                    </span>
+                    <span class="evo-flecha" aria-hidden="true">→</span>
+                    <span class="evo-paso">
+                      <img src="../../img/pokemon/iconos/decidueye-hisui.png" alt="Decidueye">
+                      Decidueye
+                    </span>
+                  </div>
+                  <p class="evo-nota"><span class="evo-forma">Decidueye de Hisui</span> <span class="tipo-mini tipo-planta">Planta</span> <span class="tipo-mini tipo-lucha">Lucha</span></p>
+                </div>
               </div>
-              <div class="mini-inicial">
+              <div class="mini-inicial con-evoluciones" tabindex="0">
                 <img class="mini-imagen" src="../../img/pokemon/iconos/cyndaquil.png" alt="Cyndaquil">
                 <span>Cyndaquil</span>
+                <!-- Bocadillo con la línea evolutiva (sale con :hover y :focus) -->
+                <div class="evoluciones">
+                  <div class="evo-linea">
+                    <span class="evo-paso">
+                      <img src="../../img/pokemon/iconos/cyndaquil.png" alt="Cyndaquil">
+                      Cyndaquil
+                    </span>
+                    <span class="evo-flecha" aria-hidden="true">→</span>
+                    <span class="evo-paso">
+                      <img src="../../img/pokemon/iconos/quilava.png" alt="Quilava">
+                      Quilava
+                    </span>
+                    <span class="evo-flecha" aria-hidden="true">→</span>
+                    <span class="evo-paso">
+                      <img src="../../img/pokemon/iconos/typhlosion-hisui.png" alt="Typhlosion">
+                      Typhlosion
+                    </span>
+                  </div>
+                  <p class="evo-nota"><span class="evo-forma">Typhlosion de Hisui</span> <span class="tipo-mini tipo-fuego">Fuego</span> <span class="tipo-mini tipo-fantasma">Fantasma</span></p>
+                </div>
               </div>
-              <div class="mini-inicial">
+              <div class="mini-inicial con-evoluciones" tabindex="0">
                 <img class="mini-imagen" src="../../img/pokemon/iconos/oshawott.png" alt="Oshawott">
                 <span>Oshawott</span>
+                <!-- Bocadillo con la línea evolutiva (sale con :hover y :focus) -->
+                <div class="evoluciones">
+                  <div class="evo-linea">
+                    <span class="evo-paso">
+                      <img src="../../img/pokemon/iconos/oshawott.png" alt="Oshawott">
+                      Oshawott
+                    </span>
+                    <span class="evo-flecha" aria-hidden="true">→</span>
+                    <span class="evo-paso">
+                      <img src="../../img/pokemon/iconos/dewott.png" alt="Dewott">
+                      Dewott
+                    </span>
+                    <span class="evo-flecha" aria-hidden="true">→</span>
+                    <span class="evo-paso">
+                      <img src="../../img/pokemon/iconos/samurott-hisui.png" alt="Samurott">
+                      Samurott
+                    </span>
+                  </div>
+                  <p class="evo-nota"><span class="evo-forma">Samurott de Hisui</span> <span class="tipo-mini tipo-agua">Agua</span> <span class="tipo-mini tipo-siniestro">Siniestro</span></p>
+                </div>
               </div>
             </div>
           </article>
