@@ -60,7 +60,7 @@
 | :---: | --- |
 | 🏠 **Página de inicio** | Una tarjeta por cada generación: número, región, juegos, año y la consola en la que salió. |
 | 🗺️ **10 páginas de generación** | De Kanto a la generación 10, cada una con su color y con estas secciones: historia de la región, mapa, juegos (originales, remakes, secuelas y DLC), tráileres de YouTube (con `<iframe>`) y Pokémon iniciales. |
-| 🔁 **Página de evoluciones** | Las líneas evolutivas de los iniciales de cada juego, ordenadas por generación, con índice y enlaces directos. Se ven con los modelos 3D de Escarlata y Púrpura. Al pulsar un inicial en cualquier juego te lleva a sus evoluciones. |
+| 🔁 **Página de evoluciones** | Las líneas evolutivas de los iniciales de cada juego, ordenadas por generación, con índice y enlaces directos. Se ven con los renders 3D de Pokémon HOME e incluye las megaevoluciones con sus tipos. Al pulsar un inicial en cualquier juego te lleva a sus evoluciones. |
 | ✉️ **Página de contacto** | 🚧 En construcción. |
 | 🔀 **Rutas** | Enlaces para ir a la generación anterior y a la siguiente. |
 | 📱 **Diseño adaptable** | Funciona en ordenador, tablet y móvil. |
@@ -89,7 +89,7 @@
 │   ├── pokemon/
 │   │   ├── ilustraciones/   Ilustraciones oficiales de los iniciales
 │   │   ├── iconos/          Iconos de menú de los iniciales (Escarlata y Púrpura)
-│   │   └── modelos/         Modelos 3D de los iniciales y sus evoluciones (Escarlata y Púrpura)
+│   │   └── modelos/         Renders 3D de los iniciales, sus evoluciones y megaevoluciones (Pokémon HOME)
 │   ├── regiones/            Una carpeta por región (1-kanto, 2-johto... 10-por-descubrir)
 │   │   ├── 1-kanto/mapa.png      Mapa de la región (aquí van también sus carátulas e iniciales)
 │   │   ├── ...
@@ -132,7 +132,7 @@
 ## 📜 Pokédex de créditos
 
 - **Fuente:** [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P), de CodeMan38, licencia SIL Open Font License.
-- **Imágenes de los Pokémon:** [PokeAPI/sprites](https://github.com/PokeAPI/sprites): ilustraciones oficiales, e iconos de menú y modelos 3D de Escarlata y Púrpura, recortados y redimensionados.
+- **Imágenes de los Pokémon:** [PokeAPI/sprites](https://github.com/PokeAPI/sprites): ilustraciones oficiales, iconos de menú de Escarlata y Púrpura y renders 3D de Pokémon HOME, recortados y redimensionados.
 - **Iniciales de la generación 10** (Browt, Pombon y Gecqua): ilustraciones oficiales tomadas de [WikiDex](https://www.wikidex.net/wiki/Pok%C3%A9mon_Viento_y_Pok%C3%A9mon_Oleaje).
 - **Tiras de los 1025 Pokémon del README:** sprites de [PokeAPI/sprites](https://github.com/PokeAPI/sprites), unidos en una tira animada con SVG por generación.
 - **Sprites de la generación 10:** hechos por [CarnekVT](https://www.deviantart.com/carnekvt/art/Pokemon-Winds-and-Waves-Starters-in-Sprite-version-1303886486) en DeviantArt (aún no hay sprites oficiales).

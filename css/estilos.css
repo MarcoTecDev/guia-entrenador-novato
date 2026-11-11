@@ -779,6 +779,12 @@ h3,
 .tipo-siniestro { background-color: #624d4e; }
 .tipo-electrico { background-color: #fac000; }
 .tipo-normal    { background-color: #9fa19f; }
+.tipo-volador   { background-color: #81b9ef; }
+.tipo-veneno    { background-color: #9141cb; }
+.tipo-dragon    { background-color: #5060e1; }
+.tipo-tierra    { background-color: #915121; }
+.tipo-hada      { background-color: #ef70ef; }
+.tipo-psiquico  { background-color: #ef4179; }
 
 
 /* ---------- 10.7 Contenido descargable (DLC) ---------- */
@@ -952,13 +958,6 @@ h3,
 .borde-electrico { border-left-color: #fac000; }
 .borde-normal    { border-left-color: #9fa19f; }
 
-/* :target = la tarjeta a la que hemos llegado con un enlace #.
-   Así se ve cuál es la que hemos pulsado en la otra página. */
-.evo-tarjeta:target {
-  outline: 4px solid var(--rojo);
-  outline-offset: 4px;
-}
-
 /* Fila con los Pokémon y las flechas.
    align-items: flex-start alinea los iconos por arriba, así no se
    descuadran cuando un nombre ocupa dos líneas ("Decidueye de Hisui"). */
@@ -982,7 +981,7 @@ h3,
   color: var(--texto-suave);
 }
 
-/* Modelos 3D de Escarlata y Púrpura (o sprite pixel en la generación 10) */
+/* Renders 3D de Pokémon HOME (o sprite pixel en la generación 10) */
 .evo-icono {
   display: block;
   width: 84px;
@@ -1049,6 +1048,40 @@ h3,
   margin: 12px 0 0 0;
   font-size: 0.75rem;
   color: var(--texto-suave);
+}
+
+/* Megaevolución: debajo de la línea, separada con una línea discontinua */
+.evo-mega {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 2px dashed var(--linea-suave);
+}
+
+.evo-mega-titulo {
+  margin: 0 0 8px 0;
+  font-size: 0.7rem;
+  color: var(--texto-suave);
+}
+
+/* Insignia "MEGA" con un degradado de colores */
+.evo-mega-insignia {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #f7a400, #e3350d, #7b1fa2);
+  color: var(--blanco);
+  font-size: 0.6rem;
+  font-weight: bold;
+}
+
+/* El paso mega tiene el nombre y debajo sus tipos */
+.evo-mega .evo-paso {
+  width: 45%;
+}
+
+.evo-tipos {
+  display: block;
+  margin-top: 4px;
 }
 
 /* Enlace "Volver arriba" al final de cada generación */
