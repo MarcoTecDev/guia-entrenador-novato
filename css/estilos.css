@@ -24,8 +24,9 @@
            10.7 Contenido descargable (DLC)
            10.8 Tráileres
      11. Página de evoluciones
-     12. Pie de página
-     13. Móviles y tablets
+     12. Páginas de historia de cada región
+     13. Pie de página
+     14. Móviles y tablets
 
    ========================================================== */
 
@@ -547,6 +548,26 @@ h3,
 }
 
 
+/* Botón "Leer la historia de ..." que lleva a la página de la región */
+.boton-historia {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 12px 20px;
+  border: 3px solid var(--borde-tarjeta);
+  border-radius: 50px;
+  background-color: var(--rojo);
+  color: var(--blanco);
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.65rem;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.boton-historia:hover {
+  transform: scale(1.05);
+}
+
+
 /* ---------- 10.3 Mapa ---------- */
 
 /* <figure> trae márgenes por defecto; los quitamos */
@@ -785,6 +806,8 @@ h3,
 .tipo-tierra    { background-color: #915121; }
 .tipo-hada      { background-color: #ef70ef; }
 .tipo-psiquico  { background-color: #ef4179; }
+.tipo-roca      { background-color: #afa981; }
+.tipo-hielo     { background-color: #3dcef3; }
 
 
 /* ---------- 10.7 Contenido descargable (DLC) ---------- */
@@ -1185,7 +1208,261 @@ h3,
 
 
 /* ==========================================================
-   12. PIE DE PÁGINA
+   12. PÁGINAS DE HISTORIA DE CADA REGIÓN
+   (ciudades, legendarios, villanos, gimnasios, Liga y personajes)
+   ========================================================== */
+
+/* El índice reutiliza .evo-indice; aquí los botones son rojos */
+.hist-indice a {
+  background-color: var(--rojo);
+}
+
+/* Debajo del texto de la región va el mapa */
+.seccion .lore + .mapa {
+  margin-top: 24px;
+}
+
+/* Etiqueta pequeña con los tipos (gimnasio, legendario...) */
+.hist-etiqueta {
+  margin: 8px 0 0 0;
+  font-size: 0.8rem;
+  color: var(--texto-suave);
+}
+
+/* ---------- Ciudades: tarjetas con foto, 3 por fila ---------- */
+.hist-ciudades {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.hist-ciudad {
+  overflow: hidden;
+  border: 3px solid var(--borde-tarjeta);
+  border-radius: 16px;
+  background-color: var(--superficie);
+  box-shadow: 0 6px 20px var(--sombra);
+  color: var(--texto);
+}
+
+/* aspect-ratio: todas las fotos con la misma forma (las capturas son 396x228)
+   object-fit: cover recorta la imagen para llenar el hueco sin deformarla */
+.hist-ciudad img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 396 / 228;
+  object-fit: cover;
+}
+
+.hist-ciudad h3 {
+  margin: 14px 16px 6px 16px;
+  font-size: 0.8rem;
+}
+
+.hist-ciudad p {
+  margin: 0 16px 14px 16px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.hist-ciudad .hist-etiqueta {
+  margin-top: -4px;
+}
+
+/* Lista de otros lugares en dos columnas */
+.hist-lugares {
+  columns: 2;
+  column-gap: 40px;
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.hist-lugares li {
+  margin-bottom: 8px;
+  break-inside: avoid;
+}
+
+/* ---------- Legendarios: 5 por fila ---------- */
+.hist-leyendas {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.hist-leyenda,
+.hist-persona {
+  position: relative;
+  padding: 16px;
+  border: 3px solid var(--borde-tarjeta);
+  border-radius: 16px;
+  background-color: var(--superficie);
+  box-shadow: 0 6px 20px var(--sombra);
+  color: var(--texto);
+  text-align: center;
+}
+
+.hist-leyenda h3,
+.hist-persona h3 {
+  margin: 10px 0 0 0;
+  font-size: 0.75rem;
+}
+
+.hist-leyenda p,
+.hist-persona p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Render del legendario: transition para que crezca al pasar el ratón */
+.hist-pokemon {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  transition: transform 0.2s;
+}
+
+.hist-pokemon:hover {
+  transform: scale(1.1);
+}
+
+/* ---------- Villanos: logo, texto y el jefe ---------- */
+.hist-villano {
+  display: grid;
+  grid-template-columns: 140px 1fr 260px;
+  gap: 24px;
+  align-items: center;
+}
+
+.hist-logo {
+  width: 140px;
+  height: 140px;
+}
+
+.hist-villano-texto p {
+  margin: 0 0 12px 0;
+  line-height: 1.6;
+}
+
+/* Lista numerada con lo que hace el villano, en tarjetas */
+.hist-pasos {
+  padding-left: 24px;
+  line-height: 1.6;
+}
+
+.hist-pasos li {
+  margin-bottom: 10px;
+  padding-left: 6px;
+}
+
+/* ---------- Personas (líderes, Alto Mando...): 4 por fila ---------- */
+.hist-personas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Retrato: misma altura para todos.
+   object-fit: contain lo encaja entero sin deformarlo */
+.hist-retrato {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+}
+
+.hist-rol {
+  margin: 4px 0 0 0;
+  color: var(--texto-suave);
+}
+
+/* Número del gimnasio en un círculo, arriba a la izquierda */
+.hist-numero {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--borde-tarjeta);
+  color: var(--blanco);
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+/* Pokémon estrella: el render pequeño y el texto al lado */
+.hist-as {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--linea-suave);
+  font-size: 0.75rem;
+  color: var(--texto-suave);
+}
+
+.hist-as .evo-ver {
+  margin: 0;
+}
+
+/* "Pokémon estrella" en pequeño y el nombre debajo en negrita */
+.hist-as span {
+  text-align: left;
+}
+
+.hist-as strong {
+  display: block;
+  color: var(--texto);
+  font-size: 0.85rem;
+}
+
+.hist-as-img {
+  display: block;
+  width: 48px;
+  height: 48px;
+  transition: transform 0.2s;
+}
+
+.hist-as-img:hover {
+  transform: scale(1.2);
+}
+
+/* La Liga: los 4 del Alto Mando y el Campeón en la misma fila */
+.hist-liga {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* El Campeón destaca con un borde dorado */
+.hist-campeon {
+  border-color: #c9a227;
+  box-shadow: 0 6px 20px rgba(201, 162, 39, 0.4);
+}
+
+/* ---------- Personajes: retrato a la izquierda y texto a la derecha ---------- */
+.hist-personajes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.hist-persona-ancha {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+}
+
+.hist-persona-ancha .hist-retrato {
+  flex-shrink: 0;
+  width: 120px;
+}
+
+
+/* ==========================================================
+   13. PIE DE PÁGINA
    ========================================================== */
 
 .pie {
@@ -1198,7 +1475,7 @@ h3,
 
 
 /* ==========================================================
-   13. MÓVILES Y TABLETS
+   14. MÓVILES Y TABLETS
    ----------------------------------------------------------
    @media (max-width: ...) aplica estos estilos solo cuando
    la pantalla mide como máximo el ancho indicado.
@@ -1223,6 +1500,26 @@ h3,
   /* Página de evoluciones: 2 líneas por fila */
   .evo-lineas {
     grid-template-columns: 1fr 1fr;
+  }
+
+  /* Páginas de historia */
+  .hist-ciudades,
+  .hist-personas {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hist-leyendas,
+  .hist-liga {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* El villano: logo y texto arriba, el jefe debajo */
+  .hist-villano {
+    grid-template-columns: 120px 1fr;
+  }
+
+  .hist-jefe {
+    grid-column: 1 / -1;
   }
 }
 
@@ -1298,7 +1595,28 @@ h3,
   .iniciales,
   .galeria,
   .trailers,
-  .evo-lineas {
+  .evo-lineas,
+  .hist-ciudades,
+  .hist-personajes {
     grid-template-columns: 1fr;
+  }
+
+  .hist-leyendas,
+  .hist-personas,
+  .hist-liga {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hist-lugares {
+    columns: 1;
+  }
+
+  .hist-villano {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .hist-retrato {
+    height: 160px;
   }
 }
