@@ -60,7 +60,7 @@
 | :---: | --- |
 | 🏠 **Página de inicio** | Una tarjeta por cada generación: número, región, juegos, año y la consola en la que salió. |
 | 🗺️ **10 páginas de generación** | De Kanto a la generación 10, cada una con su color y con estas secciones: historia de la región, mapa, juegos (originales, remakes, secuelas y DLC), tráileres de YouTube (con `<iframe>`) y Pokémon iniciales. |
-| 🔁 **Página de evoluciones** | Las líneas evolutivas de los iniciales de cada juego, ordenadas por generación, con índice y enlaces directos. Se ven con los renders 3D de Pokémon HOME e incluye las megaevoluciones con sus tipos. Al pulsar un inicial en cualquier juego te lleva a sus evoluciones. |
+| 🔁 **Página de evoluciones** | Las líneas evolutivas de los iniciales de cada juego, ordenadas por generación, con índice y enlaces directos. Se ven con los renders 3D de Pokémon HOME e incluye las megaevoluciones con sus tipos. Al pulsar un render se abre en grande (con el atributo `popover` de HTML, sin JavaScript). Al pulsar un inicial en cualquier juego te lleva a sus evoluciones. |
 | ✉️ **Página de contacto** | 🚧 En construcción. |
 | 🔀 **Rutas** | Enlaces para ir a la generación anterior y a la siguiente. |
 | 📱 **Diseño adaptable** | Funciona en ordenador, tablet y móvil. |
@@ -89,7 +89,8 @@
 │   ├── pokemon/
 │   │   ├── ilustraciones/   Ilustraciones oficiales de los iniciales
 │   │   ├── iconos/          Iconos de menú de los iniciales (Escarlata y Púrpura)
-│   │   └── modelos/         Renders 3D de los iniciales, sus evoluciones y megaevoluciones (Pokémon HOME)
+│   │   ├── modelos/         Renders 3D de los iniciales, sus evoluciones y megaevoluciones (Pokémon HOME)
+│   │   └── modelos-grandes/ Los mismos renders en grande (420 px, WebP) para el visor
 │   ├── regiones/            Una carpeta por región (1-kanto, 2-johto... 10-por-descubrir)
 │   │   ├── 1-kanto/mapa.png      Mapa de la región (aquí van también sus carátulas e iniciales)
 │   │   ├── ...
