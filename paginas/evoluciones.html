@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- ==================================================
+       DATOS DE LA PÁGINA
+       No se ven en pantalla: idioma, título de la pestaña y CSS.
+       ================================================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evoluciones · Pocket Monster</title>
+  <!-- El ?v=26 obliga al navegador a descargar el CSS nuevo. Súbelo (v=27, v=28...) cada vez que cambies el CSS -->
+  <link rel="stylesheet" href="../css/estilos.css?v=26">
+</head>
+<body>
+  <!-- ==================================================
+       CABECERA
+       Logo a la izquierda y enlaces a la derecha.
+       ================================================== -->
+  <header class="cabecera">
+    <a class="logo" href="../index.html">Pocket Monster</a>
+    <nav class="nav-cabecera">
+      <a href="evoluciones.html" class="activo">Evoluciones</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- ==================================================
+       CONTENIDO PRINCIPAL
+       Todo lo que cambia de una página a otra.
+       ================================================== -->
+  <main>
+    <!-- La clase fondo-evoluciones pone el fondo de colores -->
+    <section class="hero-generacion fondo-evoluciones">
+      <h1>Evoluciones</h1>
+      <p>Cómo evolucionan los iniciales de cada juego, generación por generación</p>
+    </section>
+
+    <div class="contenido">
+
+      <!-- ========== ÍNDICE ==========
+           Cada enlace lleva a su generación con un id (#gen-1, #gen-2...).
+           Cada grupo de juegos y cada línea evolutiva también tienen su id,
+           por ejemplo #leyendas-arceus o #leyendas-arceus-rowlet. -->
+      <nav class="evo-indice" id="indice">
+        <a class="fondo-gen-1" href="#gen-1">1 · Kanto</a>
+        <a class="fondo-gen-2" href="#gen-2">2 · Johto</a>
+        <a class="fondo-gen-3" href="#gen-3">3 · Hoenn</a>
+        <a class="fondo-gen-4" href="#gen-4">4 · Sinnoh</a>
+        <a class="fondo-gen-5" href="#gen-5">5 · Teselia</a>
+        <a class="fondo-gen-6" href="#gen-6">6 · Kalos</a>
+        <a class="fondo-gen-7" href="#gen-7">7 · Alola</a>
+        <a class="fondo-gen-8" href="#gen-8">8 · Galar</a>
+        <a class="fondo-gen-9" href="#gen-9">9 · Paldea</a>
+        <a class="fondo-gen-10" href="#gen-10">10 · Por descubrir</a>
+      </nav>
+
+      <!-- ========== GENERACIÓN 1 · KANTO ========== -->
+      <section class="seccion" id="gen-1">
+        <h2><span class="evo-numero fondo-gen-1">1</span> Kanto</h2>
+
+        <!-- Rojo · Azul · Rojo Fuego · Verde Hoja -->
+        <div class="evo-grupo" id="rojo-azul">
+          <h3 class="subtitulo">Rojo · Azul · Rojo Fuego · Verde Hoja</h3>
+          <div class="evo-lineas">
+            <article class="evo-tarjeta borde-planta" id="rojo-azul-bulbasaur">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/bulbasaur.png" alt="Bulbasaur" loading="lazy">
+                  <span>Bulbasaur</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/ivysaur.png" alt="Ivysaur" loading="lazy">
+                  <span>Ivysaur</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/venusaur.png" alt="Venusaur" loading="lazy">
+                  <span>Venusaur</span>
+                </div>
+              </div>
+            </article>
+            <article class="evo-tarjeta borde-fuego" id="rojo-azul-charmander">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/charmander.png" alt="Charmander" loading="lazy">
+                  <span>Charmander</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/charmeleon.png" alt="Charmeleon" loading="lazy">
+                  <span>Charmeleon</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/charizard.png" alt="Charizard" loading="lazy">
+                  <span>Charizard</span>
+                </div>
+              </div>
+            </article>
+            <article class="evo-tarjeta borde-agua" id="rojo-azul-squirtle">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/squirtle.png" alt="Squirtle" loading="lazy">
+                  <span>Squirtle</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/wartortle.png" alt="Wartortle" loading="lazy">
+                  <span>Wartortle</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/blastoise.png" alt="Blastoise" loading="lazy">
+                  <span>Blastoise</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Amarillo -->
+        <div class="evo-grupo" id="amarillo">
+          <h3 class="subtitulo">Amarillo</h3>
+          <p class="descripcion">Aquí el inicial es Pikachu, que te sigue por el mapa. Si le das una piedra trueno, la rechaza: no quiere evolucionar.</p>
+          <div class="evo-lineas">
+            <article class="evo-tarjeta borde-electrico" id="amarillo-pikachu">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/pikachu.png" alt="Pikachu" loading="lazy">
+                  <span>Pikachu</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/raichu.png" alt="Raichu" loading="lazy">
+                  <span>Raichu</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Let's Go, Pikachu! · Let's Go, Eevee! -->
+        <div class="evo-grupo" id="lets-go">
+          <h3 class="subtitulo">Let's Go, Pikachu! · Let's Go, Eevee!</h3>
+          <p class="descripcion">El Pikachu o el Eevee que te dan al empezar no pueden evolucionar, pero los que captures después sí.</p>
+          <div class="evo-lineas">
+            <article class="evo-tarjeta borde-electrico" id="lets-go-pikachu">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/pikachu.png" alt="Pikachu" loading="lazy">
+                  <span>Pikachu</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/raichu.png" alt="Raichu" loading="lazy">
+                  <span>Raichu</span>
+                </div>
+              </div>
+            </article>
+            <article class="evo-tarjeta borde-normal" id="lets-go-eevee">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/eevee.png" alt="Eevee" loading="lazy">
+                  <span>Eevee</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <!-- Evoluciones en rama: puede evolucionar en cualquiera de estas -->
+                <div class="evo-paso evo-ramas">
+                  <div class="evo-rama"><img class="evo-icono evo-icono-mini" src="../img/pokemon/modelos/vaporeon.png" alt="Vaporeon" loading="lazy"><span>Vaporeon</span></div>
+                  <div class="evo-rama"><img class="evo-icono evo-icono-mini" src="../img/pokemon/modelos/jolteon.png" alt="Jolteon" loading="lazy"><span>Jolteon</span></div>
+                  <div class="evo-rama"><img class="evo-icono evo-icono-mini" src="../img/pokemon/modelos/flareon.png" alt="Flareon" loading="lazy"><span>Flareon</span></div>
+                </div>
+              </div>
+              <p class="evo-nota">Eevee tiene varias evoluciones; en este juego solo están las de Kanto.</p>
+            </article>
+          </div>
+        </div>
+
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== GENERACIÓN 2 · JOHTO ========== -->
+      <section class="seccion" id="gen-2">
+        <h2><span class="evo-numero fondo-gen-2">2</span> Johto</h2>
+
+        <!-- Oro · Plata · Cristal · Oro HeartGold · Plata SoulSilver -->
+        <div class="evo-grupo" id="oro-plata">
+          <h3 class="subtitulo">Oro · Plata · Cristal · Oro HeartGold · Plata SoulSilver</h3>
+          <div class="evo-lineas">
+            <article class="evo-tarjeta borde-planta" id="oro-plata-chikorita">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/chikorita.png" alt="Chikorita" loading="lazy">
+                  <span>Chikorita</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/bayleef.png" alt="Bayleef" loading="lazy">
+                  <span>Bayleef</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/meganium.png" alt="Meganium" loading="lazy">
+                  <span>Meganium</span>
+                </div>
+              </div>
+            </article>
+            <article class="evo-tarjeta borde-fuego" id="oro-plata-cyndaquil">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/cyndaquil.png" alt="Cyndaquil" loading="lazy">
+                  <span>Cyndaquil</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/quilava.png" alt="Quilava" loading="lazy">
+                  <span>Quilava</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/typhlosion.png" alt="Typhlosion" loading="lazy">
+                  <span>Typhlosion</span>
+                </div>
+              </div>
+            </article>
+            <article class="evo-tarjeta borde-agua" id="oro-plata-totodile">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/totodile.png" alt="Totodile" loading="lazy">
+                  <span>Totodile</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/croconaw.png" alt="Croconaw" loading="lazy">
+                  <span>Croconaw</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/feraligatr.png" alt="Feraligatr" loading="lazy">
+                  <span>Feraligatr</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== GENERACIÓN 3 · HOENN ========== -->
+      <section class="seccion" id="gen-3">
+        <h2><span class="evo-numero fondo-gen-3">3</span> Hoenn</h2>
+
+        <!-- Rubí · Zafiro · Esmeralda · Rubí Omega · Zafiro Alfa -->
+        <div class="evo-grupo" id="rubi-zafiro">
+          <h3 class="subtitulo">Rubí · Zafiro · Esmeralda · Rubí Omega · Zafiro Alfa</h3>
+          <div class="evo-lineas">
+            <article class="evo-tarjeta borde-planta" id="rubi-zafiro-treecko">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/treecko.png" alt="Treecko" loading="lazy">
+                  <span>Treecko</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/grovyle.png" alt="Grovyle" loading="lazy">
+                  <span>Grovyle</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/sceptile.png" alt="Sceptile" loading="lazy">
+                  <span>Sceptile</span>
+                </div>
+              </div>
+            </article>
+            <article class="evo-tarjeta borde-fuego" id="rubi-zafiro-torchic">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/torchic.png" alt="Torchic" loading="lazy">
+                  <span>Torchic</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/combusken.png" alt="Combusken" loading="lazy">
+                  <span>Combusken</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/blaziken.png" alt="Blaziken" loading="lazy">
+                  <span>Blaziken</span>
+                </div>
+              </div>
+            </article>
+            <article class="evo-tarjeta borde-agua" id="rubi-zafiro-mudkip">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/mudkip.png" alt="Mudkip" loading="lazy">
+                  <span>Mudkip</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/marshtomp.png" alt="Marshtomp" loading="lazy">
+                  <span>Marshtomp</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/swampert.png" alt="Swampert" loading="lazy">
+                  <span>Swampert</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== GENERACIÓN 4 · SINNOH ========== -->
+      <section class="seccion" id="gen-4">
+        <h2><span class="evo-numero fondo-gen-4">4</span> Sinnoh</h2>
+
+        <!-- Diamante · Perla · Platino · Diamante Brillante · Perla Reluciente -->
+        <div class="evo-grupo" id="diamante-perla">
+          <h3 class="subtitulo">Diamante · Perla · Platino · Diamante Brillante · Perla Reluciente</h3>
+          <div class="evo-lineas">
+            <article class="evo-tarjeta borde-planta" id="diamante-perla-turtwig">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/turtwig.png" alt="Turtwig" loading="lazy">
+                  <span>Turtwig</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/grotle.png" alt="Grotle" loading="lazy">
+                  <span>Grotle</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/torterra.png" alt="Torterra" loading="lazy">
+                  <span>Torterra</span>
+                </div>
+              </div>
+            </article>
+            <article class="evo-tarjeta borde-fuego" id="diamante-perla-chimchar">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/chimchar.png" alt="Chimchar" loading="lazy">
+                  <span>Chimchar</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/monferno.png" alt="Monferno" loading="lazy">
+                  <span>Monferno</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/infernape.png" alt="Infernape" loading="lazy">
+                  <span>Infernape</span>
+                </div>
+              </div>
+            </article>
+            <article class="evo-tarjeta borde-agua" id="diamante-perla-piplup">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/piplup.png" alt="Piplup" loading="lazy">
+                  <span>Piplup</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/prinplup.png" alt="Prinplup" loading="lazy">
+                  <span>Prinplup</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/empoleon.png" alt="Empoleon" loading="lazy">
+                  <span>Empoleon</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Leyendas Pokémon: Arceus -->
+        <div class="evo-grupo" id="leyendas-arceus">
+          <h3 class="subtitulo">Leyendas Pokémon: Arceus</h3>
+          <p class="descripcion">Los iniciales vienen de otras regiones y, en la antigua Sinnoh (Hisui), su última evolución es una forma regional con otro tipo.</p>
+          <div class="evo-lineas">
+            <article class="evo-tarjeta borde-planta" id="leyendas-arceus-rowlet">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/rowlet.png" alt="Rowlet" loading="lazy">
+                  <span>Rowlet</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/dartrix.png" alt="Dartrix" loading="lazy">
+                  <span>Dartrix</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/decidueye-hisui.png" alt="Decidueye de Hisui" loading="lazy">
+                  <span>Decidueye de Hisui</span>
+                </div>
+              </div>
+              <p class="evo-nota">Forma de Hisui: <span class="tipo-mini tipo-planta">Planta</span> <span class="tipo-mini tipo-lucha">Lucha</span></p>
+            </article>
+            <article class="evo-tarjeta borde-fuego" id="leyendas-arceus-cyndaquil">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/cyndaquil.png" alt="Cyndaquil" loading="lazy">
+                  <span>Cyndaquil</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/quilava.png" alt="Quilava" loading="lazy">
+                  <span>Quilava</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/typhlosion-hisui.png" alt="Typhlosion de Hisui" loading="lazy">
+                  <span>Typhlosion de Hisui</span>
+                </div>
+              </div>
+              <p class="evo-nota">Forma de Hisui: <span class="tipo-mini tipo-fuego">Fuego</span> <span class="tipo-mini tipo-fantasma">Fantasma</span></p>
+            </article>
+            <article class="evo-tarjeta borde-agua" id="leyendas-arceus-oshawott">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/oshawott.png" alt="Oshawott" loading="lazy">
+                  <span>Oshawott</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/dewott.png" alt="Dewott" loading="lazy">
+                  <span>Dewott</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/samurott-hisui.png" alt="Samurott de Hisui" loading="lazy">
+                  <span>Samurott de Hisui</span>
+                </div>
+              </div>
+              <p class="evo-nota">Forma de Hisui: <span class="tipo-mini tipo-agua">Agua</span> <span class="tipo-mini tipo-siniestro">Siniestro</span></p>
+            </article>
+          </div>
+        </div>
+
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== GENERACIÓN 5 · TESELIA ========== -->
+      <section class="seccion" id="gen-5">
+        <h2><span class="evo-numero fondo-gen-5">5</span> Teselia</h2>
+
+        <!-- Negro · Blanco · Negro 2 · Blanco 2 -->
+        <div class="evo-grupo" id="negro-blanco">
+          <h3 class="subtitulo">Negro · Blanco · Negro 2 · Blanco 2</h3>
+          <div class="evo-lineas">
+            <article class="evo-tarjeta borde-planta" id="negro-blanco-snivy">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/snivy.png" alt="Snivy" loading="lazy">
+                  <span>Snivy</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/servine.png" alt="Servine" loading="lazy">
+                  <span>Servine</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/serperior.png" alt="Serperior" loading="lazy">
+                  <span>Serperior</span>
+                </div>
+              </div>
+            </article>
+            <article class="evo-tarjeta borde-fuego" id="negro-blanco-tepig">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/tepig.png" alt="Tepig" loading="lazy">
+                  <span>Tepig</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/pignite.png" alt="Pignite" loading="lazy">
+                  <span>Pignite</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/emboar.png" alt="Emboar" loading="lazy">
+                  <span>Emboar</span>
+                </div>
+              </div>
+            </article>
+            <article class="evo-tarjeta borde-agua" id="negro-blanco-oshawott">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/oshawott.png" alt="Oshawott" loading="lazy">
+                  <span>Oshawott</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/dewott.png" alt="Dewott" loading="lazy">
+                  <span>Dewott</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/samurott.png" alt="Samurott" loading="lazy">
+                  <span>Samurott</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== GENERACIÓN 6 · KALOS ========== -->
+      <section class="seccion" id="gen-6">
+        <h2><span class="evo-numero fondo-gen-6">6</span> Kalos</h2>
+
+        <!-- X · Y -->
+        <div class="evo-grupo" id="x-y">
+          <h3 class="subtitulo">X · Y</h3>
+          <div class="evo-lineas">
+            <article class="evo-tarjeta borde-planta" id="x-y-chespin">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/chespin.png" alt="Chespin" loading="lazy">
+                  <span>Chespin</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/quilladin.png" alt="Quilladin" loading="lazy">
+                  <span>Quilladin</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/chesnaught.png" alt="Chesnaught" loading="lazy">
+                  <span>Chesnaught</span>
+                </div>
+              </div>
+            </article>
+            <article class="evo-tarjeta borde-fuego" id="x-y-fennekin">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/fennekin.png" alt="Fennekin" loading="lazy">
+                  <span>Fennekin</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/braixen.png" alt="Braixen" loading="lazy">
+                  <span>Braixen</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/delphox.png" alt="Delphox" loading="lazy">
+                  <span>Delphox</span>
+                </div>
+              </div>
+            </article>
+            <article class="evo-tarjeta borde-agua" id="x-y-froakie">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/froakie.png" alt="Froakie" loading="lazy">
+                  <span>Froakie</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/frogadier.png" alt="Frogadier" loading="lazy">
+                  <span>Frogadier</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/greninja.png" alt="Greninja" loading="lazy">
+                  <span>Greninja</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Leyendas Pokémon: Z-A -->
+        <div class="evo-grupo" id="leyendas-za">
+          <h3 class="subtitulo">Leyendas Pokémon: Z-A</h3>
+          <p class="descripcion">Los iniciales son de Johto y Teselia. En este juego sus evoluciones finales también pueden megaevolucionar.</p>
+          <div class="evo-lineas">
+            <article class="evo-tarjeta borde-planta" id="leyendas-za-chikorita">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/chikorita.png" alt="Chikorita" loading="lazy">
+                  <span>Chikorita</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/bayleef.png" alt="Bayleef" loading="lazy">
+                  <span>Bayleef</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/meganium.png" alt="Meganium" loading="lazy">
+                  <span>Meganium</span>
+                </div>
+              </div>
+            </article>
+            <article class="evo-tarjeta borde-fuego" id="leyendas-za-tepig">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/tepig.png" alt="Tepig" loading="lazy">
+                  <span>Tepig</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/pignite.png" alt="Pignite" loading="lazy">
+                  <span>Pignite</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/emboar.png" alt="Emboar" loading="lazy">
+                  <span>Emboar</span>
+                </div>
+              </div>
+            </article>
+            <article class="evo-tarjeta borde-agua" id="leyendas-za-totodile">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/totodile.png" alt="Totodile" loading="lazy">
+                  <span>Totodile</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/croconaw.png" alt="Croconaw" loading="lazy">
+                  <span>Croconaw</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/feraligatr.png" alt="Feraligatr" loading="lazy">
+                  <span>Feraligatr</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== GENERACIÓN 7 · ALOLA ========== -->
+      <section class="seccion" id="gen-7">
+        <h2><span class="evo-numero fondo-gen-7">7</span> Alola</h2>
+
+        <!-- Sol · Luna · Ultrasol · Ultraluna -->
+        <div class="evo-grupo" id="sol-luna">
+          <h3 class="subtitulo">Sol · Luna · Ultrasol · Ultraluna</h3>
+          <div class="evo-lineas">
+            <article class="evo-tarjeta borde-planta" id="sol-luna-rowlet">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/rowlet.png" alt="Rowlet" loading="lazy">
+                  <span>Rowlet</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/dartrix.png" alt="Dartrix" loading="lazy">
+                  <span>Dartrix</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/decidueye.png" alt="Decidueye" loading="lazy">
+                  <span>Decidueye</span>
+                </div>
+              </div>
+            </article>
+            <article class="evo-tarjeta borde-fuego" id="sol-luna-litten">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/litten.png" alt="Litten" loading="lazy">
+                  <span>Litten</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/torracat.png" alt="Torracat" loading="lazy">
+                  <span>Torracat</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/incineroar.png" alt="Incineroar" loading="lazy">
+                  <span>Incineroar</span>
+                </div>
+              </div>
+            </article>
+            <article class="evo-tarjeta borde-agua" id="sol-luna-popplio">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/popplio.png" alt="Popplio" loading="lazy">
+                  <span>Popplio</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/brionne.png" alt="Brionne" loading="lazy">
+                  <span>Brionne</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/primarina.png" alt="Primarina" loading="lazy">
+                  <span>Primarina</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== GENERACIÓN 8 · GALAR ========== -->
+      <section class="seccion" id="gen-8">
+        <h2><span class="evo-numero fondo-gen-8">8</span> Galar</h2>
+
+        <!-- Espada · Escudo -->
+        <div class="evo-grupo" id="espada-escudo">
+          <h3 class="subtitulo">Espada · Escudo</h3>
+          <div class="evo-lineas">
+            <article class="evo-tarjeta borde-planta" id="espada-escudo-grookey">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/grookey.png" alt="Grookey" loading="lazy">
+                  <span>Grookey</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/thwackey.png" alt="Thwackey" loading="lazy">
+                  <span>Thwackey</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/rillaboom.png" alt="Rillaboom" loading="lazy">
+                  <span>Rillaboom</span>
+                </div>
+              </div>
+            </article>
+            <article class="evo-tarjeta borde-fuego" id="espada-escudo-scorbunny">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/scorbunny.png" alt="Scorbunny" loading="lazy">
+                  <span>Scorbunny</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/raboot.png" alt="Raboot" loading="lazy">
+                  <span>Raboot</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/cinderace.png" alt="Cinderace" loading="lazy">
+                  <span>Cinderace</span>
+                </div>
+              </div>
+            </article>
+            <article class="evo-tarjeta borde-agua" id="espada-escudo-sobble">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/sobble.png" alt="Sobble" loading="lazy">
+                  <span>Sobble</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/drizzile.png" alt="Drizzile" loading="lazy">
+                  <span>Drizzile</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/inteleon.png" alt="Inteleon" loading="lazy">
+                  <span>Inteleon</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== GENERACIÓN 9 · PALDEA ========== -->
+      <section class="seccion" id="gen-9">
+        <h2><span class="evo-numero fondo-gen-9">9</span> Paldea</h2>
+
+        <!-- Escarlata · Púrpura -->
+        <div class="evo-grupo" id="escarlata-purpura">
+          <h3 class="subtitulo">Escarlata · Púrpura</h3>
+          <div class="evo-lineas">
+            <article class="evo-tarjeta borde-planta" id="escarlata-purpura-sprigatito">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/sprigatito.png" alt="Sprigatito" loading="lazy">
+                  <span>Sprigatito</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/floragato.png" alt="Floragato" loading="lazy">
+                  <span>Floragato</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/meowscarada.png" alt="Meowscarada" loading="lazy">
+                  <span>Meowscarada</span>
+                </div>
+              </div>
+            </article>
+            <article class="evo-tarjeta borde-fuego" id="escarlata-purpura-fuecoco">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/fuecoco.png" alt="Fuecoco" loading="lazy">
+                  <span>Fuecoco</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/crocalor.png" alt="Crocalor" loading="lazy">
+                  <span>Crocalor</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/skeledirge.png" alt="Skeledirge" loading="lazy">
+                  <span>Skeledirge</span>
+                </div>
+              </div>
+            </article>
+            <article class="evo-tarjeta borde-agua" id="escarlata-purpura-quaxly">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/quaxly.png" alt="Quaxly" loading="lazy">
+                  <span>Quaxly</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/quaxwell.png" alt="Quaxwell" loading="lazy">
+                  <span>Quaxwell</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso">
+                  <img class="evo-icono" src="../img/pokemon/modelos/quaquaval.png" alt="Quaquaval" loading="lazy">
+                  <span>Quaquaval</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== GENERACIÓN 10 · POR DESCUBRIR ========== -->
+      <section class="seccion" id="gen-10">
+        <h2><span class="evo-numero fondo-gen-10">10</span> Por descubrir</h2>
+
+        <!-- Viento · Oleaje -->
+        <div class="evo-grupo" id="viento-oleaje">
+          <h3 class="subtitulo">Viento · Oleaje</h3>
+          <p class="descripcion">Todavía no se conocen sus evoluciones. Las añadiremos cuando salgan.</p>
+          <div class="evo-lineas">
+            <article class="evo-tarjeta borde-planta" id="viento-oleaje-browt">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono mini-pixel" src="../img/pokemon/iconos/browt.png" alt="Browt">
+                  <span>Browt</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso evo-desconocido">
+                  <span class="evo-interrogante">?</span>
+                  <span>???</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso evo-desconocido">
+                  <span class="evo-interrogante">?</span>
+                  <span>???</span>
+                </div>
+              </div>
+            </article>
+            <article class="evo-tarjeta borde-fuego" id="viento-oleaje-pombon">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono mini-pixel" src="../img/pokemon/iconos/pombon.png" alt="Pombon">
+                  <span>Pombon</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso evo-desconocido">
+                  <span class="evo-interrogante">?</span>
+                  <span>???</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso evo-desconocido">
+                  <span class="evo-interrogante">?</span>
+                  <span>???</span>
+                </div>
+              </div>
+            </article>
+            <article class="evo-tarjeta borde-agua" id="viento-oleaje-gecqua">
+              <div class="evo-linea">
+                <div class="evo-paso">
+                  <img class="evo-icono mini-pixel" src="../img/pokemon/iconos/gecqua.png" alt="Gecqua">
+                  <span>Gecqua</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso evo-desconocido">
+                  <span class="evo-interrogante">?</span>
+                  <span>???</span>
+                </div>
+                <span class="evo-flecha" aria-hidden="true">→</span>
+                <div class="evo-paso evo-desconocido">
+                  <span class="evo-interrogante">?</span>
+                  <span>???</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- Enlace para volver al inicio -->
+      <nav class="navegacion-gen">
+        <a href="../index.html">← Inicio</a>
+      </nav>
+    </div>
+  </main>
+
+  <!-- ==================================================
+       PIE DE PÁGINA
+       Créditos de las imágenes y avisos de copyright.
+       ================================================== -->
+  <footer class="pie">
+    <p>Proyecto de clase · Pokémon y sus personajes son © Nintendo, Game Freak y The Pokémon Company.</p>
+    <p>Imágenes de los Pokémon: <a href="https://github.com/PokeAPI/sprites">PokeAPI/sprites</a> (modelos 3D de Escarlata y Púrpura).</p>
+    <p>Sprites de la generación 10: <a href="https://www.deviantart.com/carnekvt/art/Pokemon-Winds-and-Waves-Starters-in-Sprite-version-1303886486">CarnekVT</a>.</p>
+  </footer>
+</body>
+</html>
