@@ -1084,6 +1084,93 @@ h3,
   margin-top: 4px;
 }
 
+/* ---------- Visor: el render en grande al hacer clic ----------
+   Sin JavaScript, con el atributo popover de HTML:
+   <button popovertarget="ver-x"> abre el <div popover id="ver-x">. */
+
+/* El botón que envuelve cada render: le quitamos el aspecto de botón.
+   cursor: zoom-in pone la lupa con el + al pasar el ratón. */
+.evo-ver {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: zoom-in;
+}
+
+.evo-ver:focus-visible {
+  outline: 2px solid var(--borde-tarjeta);
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+
+/* La ventana. El navegador ya la centra en la pantalla.
+   min(90vw, 460px) = 460px, o el 90% del ancho si la pantalla es más pequeña. */
+.visor {
+  width: min(90vw, 460px);
+  padding: 24px;
+  border: 3px solid var(--borde-tarjeta);
+  border-radius: 16px;
+  background-color: var(--superficie);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  color: var(--texto);
+  text-align: center;
+}
+
+/* :popover-open = cuando está abierta. Aparece con una pequeña animación */
+.visor:popover-open {
+  animation: visor-aparece 0.2s ease-out;
+}
+
+@keyframes visor-aparece {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ::backdrop = el fondo de detrás de la ventana: lo oscurecemos */
+.visor::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.visor img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.visor p {
+  margin: 12px 0 0 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Botón ✕ en la esquina de arriba a la derecha */
+.visor-cerrar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  border: 2px solid var(--borde-tarjeta);
+  border-radius: 50%;
+  background-color: var(--superficie);
+  color: var(--texto);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.visor-cerrar:hover {
+  background-color: var(--rojo);
+  color: var(--blanco);
+}
+
 /* Enlace "Volver arriba" al final de cada generación */
 .evo-arriba {
   display: inline-block;
