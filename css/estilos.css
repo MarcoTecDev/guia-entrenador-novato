@@ -808,6 +808,8 @@ h3,
 .tipo-psiquico  { background-color: #ef4179; }
 .tipo-roca      { background-color: #afa981; }
 .tipo-hielo     { background-color: #3dcef3; }
+.tipo-bicho     { background-color: #91a119; }
+.tipo-acero     { background-color: #60a1b8; }
 
 
 /* ---------- 10.7 Contenido descargable (DLC) ---------- */
@@ -1282,10 +1284,12 @@ h3,
   break-inside: avoid;
 }
 
-/* ---------- Legendarios: 5 por fila ---------- */
+/* ---------- Legendarios: todos en una fila ----------
+   auto-fit + minmax(160px, 1fr): las columnas se reparten el ancho
+   (5 en Kanto, 6 en Johto) y nunca son más estrechas de 160px */
 .hist-leyendas {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 16px;
 }
 
@@ -1430,6 +1434,11 @@ h3,
   transform: scale(1.2);
 }
 
+/* Ejecutivos del equipo villano: 3 por fila */
+.hist-ayudantes {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 /* La Liga: los 4 del Alto Mando y el Campeón en la misma fila */
 .hist-liga {
   grid-template-columns: repeat(5, 1fr);
@@ -1442,9 +1451,11 @@ h3,
 }
 
 /* ---------- Personajes: retrato a la izquierda y texto a la derecha ---------- */
+/* auto-fit + minmax: caben tantas columnas de 320px como quepan
+   (2 personajes en Kanto, 3 en Johto...) */
 .hist-personajes {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
 }
 
@@ -1509,7 +1520,8 @@ h3,
   }
 
   .hist-leyendas,
-  .hist-liga {
+  .hist-liga,
+  .hist-ayudantes {
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -1596,15 +1608,19 @@ h3,
   .galeria,
   .trailers,
   .evo-lineas,
-  .hist-ciudades,
-  .hist-personajes {
+  .hist-ciudades {
     grid-template-columns: 1fr;
   }
 
   .hist-leyendas,
   .hist-personas,
-  .hist-liga {
+  .hist-liga,
+  .hist-ayudantes {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .hist-personajes {
+    grid-template-columns: 1fr;
   }
 
   .hist-lugares {
