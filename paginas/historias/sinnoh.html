@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- ==================================================
+       DATOS DE LA PÁGINA
+       No se ven en pantalla: idioma, título de la pestaña y CSS.
+       ================================================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historia de Sinnoh · Pocket Monster</title>
+  <!-- El ?v=30 obliga al navegador a descargar el CSS nuevo. Súbelo (v=31, v=32...) cada vez que cambies el CSS -->
+  <link rel="stylesheet" href="../../css/estilos.css?v=30">
+</head>
+<body>
+  <!-- ==================================================
+       CABECERA
+       Logo a la izquierda y enlaces a la derecha.
+       ================================================== -->
+  <header class="cabecera">
+    <a class="logo" href="../../index.html">Pocket Monster</a>
+    <nav class="nav-cabecera">
+      <a href="../evoluciones.html">Evoluciones</a>
+      <a href="../contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- ==================================================
+       CONTENIDO PRINCIPAL
+       Todo lo que cambia de una página a otra.
+       ================================================== -->
+  <main>
+    <!-- La clase fondo-gen-4 pone el color de la generación 4 -->
+    <section class="hero-generacion fondo-gen-4">
+      <h1>Historia de Sinnoh</h1>
+      <p>Generación 4 · Diamante, Perla y Platino</p>
+    </section>
+
+    <div class="contenido">
+
+      <!-- ========== ÍNDICE ==========
+           Cada enlace lleva a una sección de esta página por su id (#ciudades, #liga...) -->
+      <nav class="evo-indice hist-indice" id="indice">
+        <a href="#region">La región</a>
+        <a href="#ciudades">Ciudades</a>
+        <a href="#leyendas">Legendarios</a>
+        <a href="#villanos">Equipo Galaxia</a>
+        <a href="#gimnasios">Gimnasios</a>
+        <a href="#liga">Liga Pokémon</a>
+        <a href="#personajes">Personajes</a>
+      </nav>
+
+      <!-- ========== LA REGIÓN ========== -->
+      <section class="seccion" id="region">
+        <h2>La región</h2>
+        <div class="lore">
+          <p>Sinnoh está al norte de Kanto y Johto y se inspira en la isla de Hokkaidō, en Japón. Es una región fría, con nieve en el norte, y está dividida en dos por el Monte Corona, una gran montaña en el centro. Tiene tres lagos muy importantes: Veraz, Valor y Agudeza.</p>
+          <p>Pokémon Diamante y Pokémon Perla salieron en Japón en 2006 (en España, en 2007). Trajeron 107 Pokémon nuevos, los combates por Wi-Fi y la división de los movimientos en físicos y especiales. Después llegó Platino, en 2008 (en España, en 2009), y en 2021 los remakes Diamante Brillante y Perla Reluciente.</p>
+          <p>El protagonista vive en Pueblo Hojaverde con su amigo Israel. Un día, unos Starly salvajes les atacan en el Lago Veraz y, para defenderse, abren el maletín del Profesor Serbal y eligen un Pokémon. El profesor les deja quedárselo y empiezan su viaje: tienen que conseguir las ocho medallas de Sinnoh, vencer a la Liga y parar al Equipo Galaxia.</p>
+        </div>
+        <figure class="mapa">
+          <img class="mapa-imagen" src="../../img/regiones/4-sinnoh/mapa.png" alt="Mapa de la región de Sinnoh" loading="lazy">
+          <figcaption>Mapa de la región de Sinnoh.</figcaption>
+        </figure>
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== CIUDADES Y PUEBLOS ========== -->
+      <section class="seccion" id="ciudades">
+        <h2>Ciudades y pueblos</h2>
+        <div class="hist-ciudades">
+          <article class="hist-ciudad">
+            <img src="../../img/historias/sinnoh/ciudades/pueblo-hojaverde.webp" alt="Mapa de Pueblo Hojaverde en Pokémon Diamante Brillante y Perla Reluciente" loading="lazy">
+            <h3>Pueblo Hojaverde</h3>
+            <p>Un pueblo pequeño y tranquilo donde viven el protagonista y su amigo Israel. Aquí empieza el viaje.</p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/sinnoh/ciudades/pueblo-arena.webp" alt="Mapa de Pueblo Arena en Pokémon Diamante Brillante y Perla Reluciente" loading="lazy">
+            <h3>Pueblo Arena</h3>
+            <p>Un pueblo junto al mar donde está el laboratorio del Profesor Serbal, el investigador más importante de Sinnoh.</p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/sinnoh/ciudades/ciudad-jubileo.webp" alt="Mapa de Ciudad Jubileo en Pokémon Diamante Brillante y Perla Reluciente" loading="lazy">
+            <h3>Ciudad Jubileo</h3>
+            <p>Una ciudad grande y moderna. Aquí te dan el Pokétch, un reloj que se puede llevar en la muñeca y que sirve para muchas cosas.</p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/sinnoh/ciudades/ciudad-pirita.webp" alt="Mapa de Ciudad Pirita en Pokémon Diamante Brillante y Perla Reluciente" loading="lazy">
+            <h3>Ciudad Pirita</h3>
+            <p>Una ciudad minera. Se vive del carbón y de los fósiles que se encuentran en sus minas.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-roca">Roca</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/sinnoh/ciudades/ciudad-vetusta.webp" alt="Mapa de Ciudad Vetusta en Pokémon Diamante Brillante y Perla Reluciente" loading="lazy">
+            <h3>Ciudad Vetusta</h3>
+            <p>Una ciudad antigua, con una estatua muy vieja en el centro y un bosque a su lado. Aquí tiene un edificio el Equipo Galaxia.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-planta">Planta</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/sinnoh/ciudades/ciudad-corazon.webp" alt="Mapa de Ciudad Corazón en Pokémon Diamante Brillante y Perla Reluciente" loading="lazy">
+            <h3>Ciudad Corazón</h3>
+            <p>Una ciudad elegante donde se celebran los concursos Pokémon. Su líder usa Pokémon de tipo Fantasma.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-fantasma">Fantasma</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/sinnoh/ciudades/ciudad-rocavelo.webp" alt="Mapa de Ciudad Rocavelo en Pokémon Diamante Brillante y Perla Reluciente" loading="lazy">
+            <h3>Ciudad Rocavelo</h3>
+            <p>Una de las ciudades más grandes de Sinnoh, con un casino y un enorme edificio: la sede del Equipo Galaxia.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-lucha">Lucha</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/sinnoh/ciudades/ciudad-pradera.webp" alt="Mapa de Ciudad Pradera en Pokémon Diamante Brillante y Perla Reluciente" loading="lazy">
+            <h3>Ciudad Pradera</h3>
+            <p>Una ciudad con casas sobre el agua, al lado del Gran Pantano, un lugar lleno de barro y de Pokémon que solo viven allí.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-agua">Agua</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/sinnoh/ciudades/ciudad-canal.webp" alt="Mapa de Ciudad Canal en Pokémon Diamante Brillante y Perla Reluciente" loading="lazy">
+            <h3>Ciudad Canal</h3>
+            <p>Un puerto con una gran biblioteca. Desde aquí salen los barcos que cruzan el mar.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-acero">Acero</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/sinnoh/ciudades/ciudad-puntaneva.webp" alt="Mapa de Ciudad Puntaneva en Pokémon Diamante Brillante y Perla Reluciente" loading="lazy">
+            <h3>Ciudad Puntaneva</h3>
+            <p>Una ciudad en el norte donde siempre nieva. Las casas están cubiertas por la nieve y casi no se ve a nadie por la calle.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-hielo">Hielo</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/sinnoh/ciudades/ciudad-marina.webp" alt="Mapa de Ciudad Marina en Pokémon Diamante Brillante y Perla Reluciente" loading="lazy">
+            <h3>Ciudad Marina</h3>
+            <p>La ciudad más soleada de Sinnoh. Usa paneles solares para tener electricidad y su faro vigila el mar.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-electrico">Eléctrico</span></p>
+          </article>
+        </div>
+
+        <h3 class="subtitulo">Otros lugares importantes</h3>
+        <ul class="hist-lugares">
+          <li><strong>Monte Corona:</strong> La montaña enorme que parte Sinnoh en dos. Hay muchas cuevas y en su cima está la Columna Lanza.</li>
+          <li><strong>Lago Veraz:</strong> El primer lago del viaje. Aquí empieza la historia y es el hogar de Mesprit.</li>
+          <li><strong>Lago Valor:</strong> Un lago rodeado de una cueva. Es el hogar de Azelf.</li>
+          <li><strong>Lago Agudeza:</strong> Un lago tranquilo y muy grande. Es el hogar de Uxie.</li>
+          <li><strong>Gran Pantano:</strong> Una gran zona de barro y niebla al lado de Ciudad Pradera, donde viven Pokémon que no se ven en otros sitios.</li>
+          <li><strong>Columna Lanza:</strong> Un templo muy antiguo en la cima del Monte Corona. Se dice que desde aquí se creó el universo.</li>
+          <li><strong>Mundo Distorsión:</strong> Un mundo en el que no funcionan las reglas de la gravedad. Allí vive Giratina.</li>
+          <li><strong>Calle Victoria:</strong> El camino lleno de cuevas y entrenadores que lleva a la Liga Pokémon.</li>
+        </ul>
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== POKÉMON LEGENDARIOS ========== -->
+      <section class="seccion" id="leyendas">
+        <h2>Pokémon legendarios</h2>
+        <p class="descripcion">Pulsa en un Pokémon para verlo en grande.</p>
+        <div class="hist-leyendas">
+          <article class="hist-leyenda">
+            <button class="evo-ver" popovertarget="ver-dialga" title="Ver Dialga en grande"><img class="hist-pokemon" src="../../img/pokemon/modelos/dialga.png" alt="Dialga" loading="lazy"></button>
+            <h3>Dialga</h3>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-acero">Acero</span> <span class="tipo-mini tipo-dragon">Dragón</span></p>
+            <p>El Pokémon del tiempo. Controla el tiempo y puede detenerlo. Es el legendario de Diamante y de Diamante Brillante.</p>
+          </article>
+          <article class="hist-leyenda">
+            <button class="evo-ver" popovertarget="ver-palkia" title="Ver Palkia en grande"><img class="hist-pokemon" src="../../img/pokemon/modelos/palkia.png" alt="Palkia" loading="lazy"></button>
+            <h3>Palkia</h3>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-agua">Agua</span> <span class="tipo-mini tipo-dragon">Dragón</span></p>
+            <p>El Pokémon del espacio. Puede distorsionar el espacio. Es el legendario de Perla y de Perla Reluciente.</p>
+          </article>
+          <article class="hist-leyenda">
+            <button class="evo-ver" popovertarget="ver-giratina" title="Ver Giratina en grande"><img class="hist-pokemon" src="../../img/pokemon/modelos/giratina.png" alt="Giratina" loading="lazy"></button>
+            <h3>Giratina</h3>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-fantasma">Fantasma</span> <span class="tipo-mini tipo-dragon">Dragón</span></p>
+            <p>Un Pokémon muy temido que vive en el Mundo Distorsión, un lugar donde no funcionan las reglas normales. Es el legendario de Platino.</p>
+          </article>
+          <article class="hist-leyenda">
+            <button class="evo-ver" popovertarget="ver-arceus" title="Ver Arceus en grande"><img class="hist-pokemon" src="../../img/pokemon/modelos/arceus.png" alt="Arceus" loading="lazy"></button>
+            <h3>Arceus</h3>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-normal">Normal</span></p>
+            <p>El Pokémon que, según los mitos, creó el universo. Dicen que de él nacieron Dialga, Palkia y Giratina.</p>
+          </article>
+          <article class="hist-leyenda">
+            <button class="evo-ver" popovertarget="ver-uxie" title="Ver Uxie en grande"><img class="hist-pokemon" src="../../img/pokemon/modelos/uxie.png" alt="Uxie" loading="lazy"></button>
+            <h3>Uxie</h3>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-psiquico">Psíquico</span></p>
+            <p>El Pokémon del conocimiento. Vive en el Lago Agudeza y dicen que, si abre los ojos, borra los recuerdos de quien le mira.</p>
+          </article>
+          <article class="hist-leyenda">
+            <button class="evo-ver" popovertarget="ver-mesprit" title="Ver Mesprit en grande"><img class="hist-pokemon" src="../../img/pokemon/modelos/mesprit.png" alt="Mesprit" loading="lazy"></button>
+            <h3>Mesprit</h3>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-psiquico">Psíquico</span></p>
+            <p>El Pokémon de las emociones. Vive en el Lago Veraz y dicen que enseñó a la gente a sentir tristeza y alegría.</p>
+          </article>
+          <article class="hist-leyenda">
+            <button class="evo-ver" popovertarget="ver-azelf" title="Ver Azelf en grande"><img class="hist-pokemon" src="../../img/pokemon/modelos/azelf.png" alt="Azelf" loading="lazy"></button>
+            <h3>Azelf</h3>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-psiquico">Psíquico</span></p>
+            <p>El Pokémon de la voluntad. Vive en el Lago Valor y dicen que dio a la gente la fuerza para esforzarse.</p>
+          </article>
+        </div>
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== EQUIPO VILLANO ========== -->
+      <section class="seccion" id="villanos">
+        <h2>El Equipo Galaxia</h2>
+        <div class="hist-villano">
+          <img class="hist-logo" src="../../img/historias/sinnoh/logo-equipo-galaxia.webp" alt="Logo del Equipo Galaxia: una G amarilla con un rayo">
+          <div class="hist-villano-texto">
+            <p>El Equipo Galaxia dice que quiere ayudar al mundo, pero en realidad quiere destruirlo y crear uno nuevo. Para conseguirlo, necesita el poder de los Pokémon legendarios de los tres lagos y de Dialga y Palkia.</p>
+            <p>Son científicos, como Plutón, y no se esconden: hasta anuncian por televisión que reúnen Pokémon. Sus miembros llevan un uniforme gris y un pelo de color muy llamativo.</p>
+          </div>
+          <article class="hist-persona hist-jefe">
+            <img class="hist-retrato" src="../../img/historias/sinnoh/personajes/helio.webp" alt="Helio" loading="lazy">
+            <h3>Helio</h3>
+            <p class="hist-rol">Líder del Equipo Galaxia</p>
+            <p>Un hombre frío y muy inteligente. No cree en los sentimientos, y por eso quiere un mundo nuevo sin ellos.</p>
+          </article>
+        </div>
+
+        <h3 class="subtitulo">Comandantes</h3>
+        <div class="hist-personas hist-ayudantes">
+          <article class="hist-persona">
+            <img class="hist-retrato" src="../../img/historias/sinnoh/personajes/saturno.webp" alt="Saturno" loading="lazy">
+            <h3>Saturno</h3>
+            <p>Comandante. Es la mano derecha de Helio y el más fuerte de todos.</p>
+          </article>
+          <article class="hist-persona">
+            <img class="hist-retrato" src="../../img/historias/sinnoh/personajes/venus.webp" alt="Venus" loading="lazy">
+            <h3>Venus</h3>
+            <p>Comandante. Es la primera a la que te enfrentas; parece débil pero se hace muy fuerte.</p>
+          </article>
+          <article class="hist-persona">
+            <img class="hist-retrato" src="../../img/historias/sinnoh/personajes/ceres.webp" alt="Ceres" loading="lazy">
+            <h3>Ceres</h3>
+            <p>Comandante. Es la segunda en el mando y aparece varias veces durante el viaje.</p>
+          </article>
+        </div>
+
+        <h3 class="subtitulo">Qué hace el Equipo Galaxia durante el viaje</h3>
+        <ol class="hist-pasos">
+          <li><strong>Valle Eólico:</strong> El Equipo Galaxia ocupa la central eólica de Sinnoh y tienes que echarlos.</li>
+          <li><strong>Ciudad Vetusta:</strong> Tienen un edificio en la ciudad y estudian la estatua del centro.</li>
+          <li><strong>Ciudad Rocavelo:</strong> Aquí está la sede del Equipo Galaxia, con Helio al frente.</li>
+          <li><strong>Lagos Veraz, Valor y Agudeza:</strong> Capturan a Mesprit, a Azelf y a Uxie para usar su poder.</li>
+          <li><strong>Columna Lanza:</strong> Helio llama a Dialga o a Palkia, según la versión, para crear un mundo nuevo. Con la ayuda de Cintia y de tu equipo, lo detienes.</li>
+        </ol>
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== LOS GIMNASIOS ========== -->
+      <section class="seccion" id="gimnasios">
+        <h2>Los gimnasios</h2>
+        <p class="descripcion">Los ocho gimnasios de Sinnoh, en el orden normal del viaje.</p>
+        <div class="hist-personas">
+          <article class="hist-persona">
+            <span class="hist-numero">1</span>
+            <img class="hist-retrato" src="../../img/historias/sinnoh/personajes/roco.webp" alt="Roco" loading="lazy">
+            <h3>Roco</h3>
+            <p class="hist-rol">Ciudad Pirita</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-roca">Roca</span> · Medalla Lignito</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-rampardos" title="Ver Rampardos en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/rampardos.png" alt="Rampardos" loading="lazy"></button><span>Pokémon estrella<strong>Rampardos</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">2</span>
+            <img class="hist-retrato" src="../../img/historias/sinnoh/personajes/gardenia.webp" alt="Gardenia" loading="lazy">
+            <h3>Gardenia</h3>
+            <p class="hist-rol">Ciudad Vetusta</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-planta">Planta</span> · Medalla Bosque</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-roserade" title="Ver Roserade en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/roserade.png" alt="Roserade" loading="lazy"></button><span>Pokémon estrella<strong>Roserade</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">3</span>
+            <img class="hist-retrato" src="../../img/historias/sinnoh/personajes/fantina.webp" alt="Fantina" loading="lazy">
+            <h3>Fantina</h3>
+            <p class="hist-rol">Ciudad Corazón</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-fantasma">Fantasma</span> · Medalla Reliquia</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-mismagius" title="Ver Mismagius en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/mismagius.png" alt="Mismagius" loading="lazy"></button><span>Pokémon estrella<strong>Mismagius</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">4</span>
+            <img class="hist-retrato" src="../../img/historias/sinnoh/personajes/brega.webp" alt="Brega" loading="lazy">
+            <h3>Brega</h3>
+            <p class="hist-rol">Ciudad Rocavelo</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-lucha">Lucha</span> · Medalla Adoquín</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-lucario" title="Ver Lucario en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/lucario.png" alt="Lucario" loading="lazy"></button><span>Pokémon estrella<strong>Lucario</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">5</span>
+            <img class="hist-retrato" src="../../img/historias/sinnoh/personajes/mananti.webp" alt="Mananti" loading="lazy">
+            <h3>Mananti</h3>
+            <p class="hist-rol">Ciudad Pradera</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-agua">Agua</span> · Medalla Ciénaga</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-floatzel" title="Ver Floatzel en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/floatzel.png" alt="Floatzel" loading="lazy"></button><span>Pokémon estrella<strong>Floatzel</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">6</span>
+            <img class="hist-retrato" src="../../img/historias/sinnoh/personajes/aceron.webp" alt="Acerón" loading="lazy">
+            <h3>Acerón</h3>
+            <p class="hist-rol">Ciudad Canal</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-acero">Acero</span> · Medalla Mina</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-bastiodon" title="Ver Bastiodon en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/bastiodon.png" alt="Bastiodon" loading="lazy"></button><span>Pokémon estrella<strong>Bastiodon</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">7</span>
+            <img class="hist-retrato" src="../../img/historias/sinnoh/personajes/inverna.webp" alt="Inverna" loading="lazy">
+            <h3>Inverna</h3>
+            <p class="hist-rol">Ciudad Puntaneva</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-hielo">Hielo</span> · Medalla Carámbano</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-abomasnow" title="Ver Abomasnow en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/abomasnow.png" alt="Abomasnow" loading="lazy"></button><span>Pokémon estrella<strong>Abomasnow</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">8</span>
+            <img class="hist-retrato" src="../../img/historias/sinnoh/personajes/lectro.webp" alt="Lectro" loading="lazy">
+            <h3>Lectro</h3>
+            <p class="hist-rol">Ciudad Marina</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-electrico">Eléctrico</span> · Medalla Faro</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-luxray" title="Ver Luxray en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/luxray.png" alt="Luxray" loading="lazy"></button><span>Pokémon estrella<strong>Luxray</strong></span></div>
+          </article>
+        </div>
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== LA LIGA POKÉMON ========== -->
+      <section class="seccion" id="liga">
+        <h2>La Liga Pokémon</h2>
+        <p class="descripcion">La Liga está en una isla al noreste de Sinnoh y su edificio parece una catedral. Hay que tener las ocho medallas y cruzar la Calle Victoria. Primero se vence al Alto Mando y, por último, a la Campeona.</p>
+        <div class="hist-personas hist-liga">
+          <article class="hist-persona">
+            <img class="hist-retrato" src="../../img/historias/sinnoh/personajes/alecran.webp" alt="Alecrán" loading="lazy">
+            <h3>Alecrán</h3>
+            <p class="hist-rol">Alto Mando</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-bicho">Bicho</span></p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-drapion" title="Ver Drapion en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/drapion.png" alt="Drapion" loading="lazy"></button><span>Pokémon estrella<strong>Drapion</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <img class="hist-retrato" src="../../img/historias/sinnoh/personajes/gaia.webp" alt="Gaia" loading="lazy">
+            <h3>Gaia</h3>
+            <p class="hist-rol">Alto Mando</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-tierra">Tierra</span></p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-hippowdon" title="Ver Hippowdon en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/hippowdon.png" alt="Hippowdon" loading="lazy"></button><span>Pokémon estrella<strong>Hippowdon</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <img class="hist-retrato" src="../../img/historias/sinnoh/personajes/fausto.webp" alt="Fausto" loading="lazy">
+            <h3>Fausto</h3>
+            <p class="hist-rol">Alto Mando</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-fuego">Fuego</span></p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-infernape" title="Ver Infernape en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/infernape.png" alt="Infernape" loading="lazy"></button><span>Pokémon estrella<strong>Infernape</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <img class="hist-retrato" src="../../img/historias/sinnoh/personajes/delos.webp" alt="Delos" loading="lazy">
+            <h3>Delos</h3>
+            <p class="hist-rol">Alto Mando</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-psiquico">Psíquico</span></p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-gallade" title="Ver Gallade en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/gallade.png" alt="Gallade" loading="lazy"></button><span>Pokémon estrella<strong>Gallade</strong></span></div>
+          </article>
+          <article class="hist-persona hist-campeon">
+            <img class="hist-retrato" src="../../img/historias/sinnoh/personajes/cintia.webp" alt="Cintia" loading="lazy">
+            <h3>Cintia</h3>
+            <p class="hist-rol">Campeona</p>
+            <p>La mejor entrenadora de Sinnoh. Le encanta investigar los mitos de la región y aparece varias veces durante el viaje para ayudarte.</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-garchomp" title="Ver Garchomp en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/garchomp.png" alt="Garchomp" loading="lazy"></button><span>Pokémon estrella<strong>Garchomp</strong></span></div>
+          </article>
+        </div>
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== PERSONAJES ========== -->
+      <section class="seccion" id="personajes">
+        <h2>Personajes</h2>
+        <div class="hist-personajes">
+          <article class="hist-persona hist-persona-ancha">
+            <img class="hist-retrato" src="../../img/historias/sinnoh/personajes/serbal.webp" alt="Profesor Serbal" loading="lazy">
+            <div>
+              <h3>Profesor Serbal</h3>
+              <p>El investigador más importante de Sinnoh. Estudia cómo evolucionan los Pokémon y te deja quedarte con tu primer Pokémon después del incidente en el Lago Veraz.</p>
+            </div>
+          </article>
+          <article class="hist-persona hist-persona-ancha">
+            <img class="hist-retrato" src="../../img/historias/sinnoh/personajes/israel.webp" alt="Israel" loading="lazy">
+            <div>
+              <h3>Israel</h3>
+              <p>Tu amigo y rival. Es impaciente y siempre tiene prisa. Quiere ser el mejor entrenador y te reta cada vez que os encontráis.</p>
+            </div>
+          </article>
+        </div>
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- Enlaces para volver -->
+      <nav class="navegacion-gen">
+        <a href="../generaciones/generacion-4.html">← Generación 4</a>
+        <a href="../../index.html">Inicio</a>
+      </nav>
+
+      <!-- ========== VISORES (Pokémon en grande) ==========
+           Sin JavaScript: cada Pokémon es un <button popovertarget="ver-...">
+           que abre el <div popover> con ese id. Se cierra con la ✕, pulsando fuera o con Esc. -->
+      <div class="visor" id="ver-dialga" popover>
+        <img src="../../img/pokemon/modelos-grandes/dialga.webp" alt="Dialga en grande" loading="lazy">
+        <p>Dialga</p>
+        <button class="visor-cerrar" popovertarget="ver-dialga" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-palkia" popover>
+        <img src="../../img/pokemon/modelos-grandes/palkia.webp" alt="Palkia en grande" loading="lazy">
+        <p>Palkia</p>
+        <button class="visor-cerrar" popovertarget="ver-palkia" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-giratina" popover>
+        <img src="../../img/pokemon/modelos-grandes/giratina.webp" alt="Giratina en grande" loading="lazy">
+        <p>Giratina</p>
+        <button class="visor-cerrar" popovertarget="ver-giratina" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-arceus" popover>
+        <img src="../../img/pokemon/modelos-grandes/arceus.webp" alt="Arceus en grande" loading="lazy">
+        <p>Arceus</p>
+        <button class="visor-cerrar" popovertarget="ver-arceus" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-uxie" popover>
+        <img src="../../img/pokemon/modelos-grandes/uxie.webp" alt="Uxie en grande" loading="lazy">
+        <p>Uxie</p>
+        <button class="visor-cerrar" popovertarget="ver-uxie" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-mesprit" popover>
+        <img src="../../img/pokemon/modelos-grandes/mesprit.webp" alt="Mesprit en grande" loading="lazy">
+        <p>Mesprit</p>
+        <button class="visor-cerrar" popovertarget="ver-mesprit" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-azelf" popover>
+        <img src="../../img/pokemon/modelos-grandes/azelf.webp" alt="Azelf en grande" loading="lazy">
+        <p>Azelf</p>
+        <button class="visor-cerrar" popovertarget="ver-azelf" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-rampardos" popover>
+        <img src="../../img/pokemon/modelos-grandes/rampardos.webp" alt="Rampardos en grande" loading="lazy">
+        <p>Rampardos</p>
+        <button class="visor-cerrar" popovertarget="ver-rampardos" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-roserade" popover>
+        <img src="../../img/pokemon/modelos-grandes/roserade.webp" alt="Roserade en grande" loading="lazy">
+        <p>Roserade</p>
+        <button class="visor-cerrar" popovertarget="ver-roserade" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-mismagius" popover>
+        <img src="../../img/pokemon/modelos-grandes/mismagius.webp" alt="Mismagius en grande" loading="lazy">
+        <p>Mismagius</p>
+        <button class="visor-cerrar" popovertarget="ver-mismagius" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-lucario" popover>
+        <img src="../../img/pokemon/modelos-grandes/lucario.webp" alt="Lucario en grande" loading="lazy">
+        <p>Lucario</p>
+        <button class="visor-cerrar" popovertarget="ver-lucario" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-floatzel" popover>
+        <img src="../../img/pokemon/modelos-grandes/floatzel.webp" alt="Floatzel en grande" loading="lazy">
+        <p>Floatzel</p>
+        <button class="visor-cerrar" popovertarget="ver-floatzel" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-bastiodon" popover>
+        <img src="../../img/pokemon/modelos-grandes/bastiodon.webp" alt="Bastiodon en grande" loading="lazy">
+        <p>Bastiodon</p>
+        <button class="visor-cerrar" popovertarget="ver-bastiodon" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-abomasnow" popover>
+        <img src="../../img/pokemon/modelos-grandes/abomasnow.webp" alt="Abomasnow en grande" loading="lazy">
+        <p>Abomasnow</p>
+        <button class="visor-cerrar" popovertarget="ver-abomasnow" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-luxray" popover>
+        <img src="../../img/pokemon/modelos-grandes/luxray.webp" alt="Luxray en grande" loading="lazy">
+        <p>Luxray</p>
+        <button class="visor-cerrar" popovertarget="ver-luxray" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-drapion" popover>
+        <img src="../../img/pokemon/modelos-grandes/drapion.webp" alt="Drapion en grande" loading="lazy">
+        <p>Drapion</p>
+        <button class="visor-cerrar" popovertarget="ver-drapion" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-hippowdon" popover>
+        <img src="../../img/pokemon/modelos-grandes/hippowdon.webp" alt="Hippowdon en grande" loading="lazy">
+        <p>Hippowdon</p>
+        <button class="visor-cerrar" popovertarget="ver-hippowdon" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-infernape" popover>
+        <img src="../../img/pokemon/modelos-grandes/infernape.webp" alt="Infernape en grande" loading="lazy">
+        <p>Infernape</p>
+        <button class="visor-cerrar" popovertarget="ver-infernape" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-gallade" popover>
+        <img src="../../img/pokemon/modelos-grandes/gallade.webp" alt="Gallade en grande" loading="lazy">
+        <p>Gallade</p>
+        <button class="visor-cerrar" popovertarget="ver-gallade" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-garchomp" popover>
+        <img src="../../img/pokemon/modelos-grandes/garchomp.webp" alt="Garchomp en grande" loading="lazy">
+        <p>Garchomp</p>
+        <button class="visor-cerrar" popovertarget="ver-garchomp" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==================================================
+       PIE DE PÁGINA
+       Créditos de las imágenes y avisos de copyright.
+       ================================================== -->
+  <footer class="pie">
+    <p>Proyecto de clase · Pokémon y sus personajes son © Nintendo, Game Freak y The Pokémon Company.</p>
+    <p>Personajes y mapas de las ciudades: <a href="https://www.wikidex.net">WikiDex</a> (arte oficial de Pokémon Diamante Brillante y Perla Reluciente; Ciudad Pirita, de Diamante y Perla). Reducidos de tamaño.</p>
+    <p>Pokémon: <a href="https://github.com/PokeAPI/sprites">PokeAPI/sprites</a> (renders 3D de Pokémon HOME).</p>
+  </footer>
+</body>
+</html>
