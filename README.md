@@ -60,7 +60,7 @@
 | :---: | --- |
 | 🏠 **Página de inicio** | Una tarjeta por cada generación: número, región, juegos, año y la consola en la que salió. |
 | 🗺️ **10 páginas de generación** | De Kanto a la generación 10, cada una con su color y con estas secciones: historia de la región, mapa, juegos (originales, remakes, secuelas y DLC), tráileres de YouTube (con `<iframe>`) y Pokémon iniciales. |
-| 📜 **Historia de cada región** | Página propia con la región, sus ciudades, legendarios, equipo villano, gimnasios, Liga Pokémon y personajes. De momento están **Kanto** y **Johto**; desde cada generación se llega con el botón "Leer la historia". |
+| 📜 **Historia de cada región** | Página propia con la región, sus ciudades, legendarios, equipo villano, gimnasios, Liga Pokémon y personajes. De momento están **Kanto**, **Johto**, **Hoenn**, **Sinnoh** y **Teselia**; desde cada generación se llega con el botón "Leer la historia". |
 | 🔁 **Página de evoluciones** | Las líneas evolutivas de los iniciales de cada juego, ordenadas por generación, con índice y enlaces directos. Se ven con los renders 3D de Pokémon HOME e incluye las megaevoluciones con sus tipos. Al pulsar un render se abre en grande (con el atributo `popover` de HTML, sin JavaScript). Al pulsar un inicial en cualquier juego te lleva a sus evoluciones. |
 | ✉️ **Página de contacto** | 🚧 En construcción. |
 | 🔀 **Rutas** | Enlaces para ir a la generación anterior y a la siguiente. |
@@ -77,7 +77,10 @@
 │   ├── 🔁 evoluciones.html     Evoluciones de los iniciales de cada juego
 │   ├── historias/
 │   │   ├── kanto.html           Historia completa de Kanto
-│   │   └── johto.html           Historia completa de Johto
+│   │   ├── johto.html           Historia completa de Johto
+│   │   ├── hoenn.html           Historia completa de Hoenn
+│   │   ├── sinnoh.html          Historia completa de Sinnoh
+│   │   └── teselia.html         Historia completa de Teselia
 │   ├── ✉️ contacto.html        Página de contacto
 │   └── 📍 generaciones/
 │       ├── generacion-1.html    Páginas de cada generación
@@ -142,7 +145,7 @@
 - **Iniciales de la generación 10** (Browt, Pombon y Gecqua): ilustraciones oficiales tomadas de [WikiDex](https://www.wikidex.net/wiki/Pok%C3%A9mon_Viento_y_Pok%C3%A9mon_Oleaje).
 - **Tiras de los 1025 Pokémon del README:** sprites de [PokeAPI/sprites](https://github.com/PokeAPI/sprites), unidos en una tira animada con SVG por generación.
 - **Sprites de la generación 10:** hechos por [CarnekVT](https://www.deviantart.com/carnekvt/art/Pokemon-Winds-and-Waves-Starters-in-Sprite-version-1303886486) en DeviantArt (aún no hay sprites oficiales).
-- **Personajes, ciudades y logos de las páginas de historia:** [WikiDex](https://www.wikidex.net) (arte oficial y capturas de Pokémon Let's Go; arte oficial y mapas de HeartGold y SoulSilver en Johto), reducidos de tamaño.
+- **Personajes, ciudades y logos de las páginas de historia:** [WikiDex](https://www.wikidex.net) (arte oficial y capturas de Pokémon Let's Go; arte oficial y mapas de HeartGold y SoulSilver en Johto, de Rubí Omega y Zafiro Alfa en Hoenn, de Diamante Brillante y Perla Reluciente en Sinnoh y de Negro, Blanco, Negro 2 y Blanco 2 en Teselia), reducidos de tamaño.
 - **Carátulas de los juegos:** [WikiDex](https://www.wikidex.net), ajustadas a un mismo tamaño cuadrado (440 × 440).
 - **Imágenes de consolas:** tema «Systematic» de [RetroArch Assets](https://github.com/libretro/retroarch-assets) (libretro), licencia [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Recortadas y redimensionadas.
 - **Pokémon** y sus personajes son © Nintendo, Game Freak y The Pokémon Company. Este es un proyecto educativo sin ánimo de lucro y no tiene relación oficial con ellos.
