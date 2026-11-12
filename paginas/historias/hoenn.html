@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- ==================================================
+       DATOS DE LA PÁGINA
+       No se ven en pantalla: idioma, título de la pestaña y CSS.
+       ================================================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historia de Hoenn · Pocket Monster</title>
+  <!-- El ?v=30 obliga al navegador a descargar el CSS nuevo. Súbelo (v=31, v=32...) cada vez que cambies el CSS -->
+  <link rel="stylesheet" href="../../css/estilos.css?v=30">
+</head>
+<body>
+  <!-- ==================================================
+       CABECERA
+       Logo a la izquierda y enlaces a la derecha.
+       ================================================== -->
+  <header class="cabecera">
+    <a class="logo" href="../../index.html">Pocket Monster</a>
+    <nav class="nav-cabecera">
+      <a href="../evoluciones.html">Evoluciones</a>
+      <a href="../contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- ==================================================
+       CONTENIDO PRINCIPAL
+       Todo lo que cambia de una página a otra.
+       ================================================== -->
+  <main>
+    <!-- La clase fondo-gen-3 pone el color de la generación 3 -->
+    <section class="hero-generacion fondo-gen-3">
+      <h1>Historia de Hoenn</h1>
+      <p>Generación 3 · Rubí, Zafiro y Esmeralda</p>
+    </section>
+
+    <div class="contenido">
+
+      <!-- ========== ÍNDICE ==========
+           Cada enlace lleva a una sección de esta página por su id (#ciudades, #liga...) -->
+      <nav class="evo-indice hist-indice" id="indice">
+        <a href="#region">La región</a>
+        <a href="#ciudades">Ciudades</a>
+        <a href="#leyendas">Legendarios</a>
+        <a href="#villanos">Equipos villanos</a>
+        <a href="#gimnasios">Gimnasios</a>
+        <a href="#liga">Liga Pokémon</a>
+        <a href="#personajes">Personajes</a>
+      </nav>
+
+      <!-- ========== LA REGIÓN ========== -->
+      <section class="seccion" id="region">
+        <h2>La región</h2>
+        <div class="lore">
+          <p>Hoenn está al suroeste de Johto y se inspira en la isla de Kyūshū, en Japón. Es una región tropical, con muchísimo mar, playas, selvas, desiertos y un volcán, el Monte Cenizo. Aquí el tiempo cambia mucho: llueve, hace sol o hay tormentas de arena, y eso influye en los combates. Gran parte del viaje se hace navegando y buceando entre islas.</p>
+          <p>Pokémon Rubí y Pokémon Zafiro salieron en Japón en 2002 (en España, en 2003). Trajeron 135 Pokémon nuevos, las habilidades y las naturalezas, los combates dobles y los concursos Pokémon. Después llegó Esmeralda, en 2004 (en España, en 2005), y en 2014 los remakes Rubí Omega y Zafiro Alfa.</p>
+          <p>El protagonista se muda a Villa Raíz, y allí empieza su viaje con el Profesor Abedul. Tiene que conseguir las ocho medallas de Hoenn y vencer a la Liga, pero a la vez dos equipos villanos intentan despertar a unos Pokémon legendarios que podrían cambiar el mundo. En Rubí Omega y Zafiro Alfa, después de la Liga, hay una historia extra: el Episodio Delta.</p>
+        </div>
+        <figure class="mapa">
+          <img class="mapa-imagen" src="../../img/regiones/3-hoenn/mapa.png" alt="Mapa de la región de Hoenn" loading="lazy">
+          <figcaption>Mapa de la región de Hoenn.</figcaption>
+        </figure>
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== CIUDADES Y PUEBLOS ========== -->
+      <section class="seccion" id="ciudades">
+        <h2>Ciudades y pueblos</h2>
+        <div class="hist-ciudades">
+          <article class="hist-ciudad">
+            <img src="../../img/historias/hoenn/ciudades/villa-raiz.webp" alt="Mapa de Villa Raíz en Pokémon Rubí Omega y Zafiro Alfa" loading="lazy">
+            <h3>Villa Raíz</h3>
+            <p>Un pueblo pequeño y tranquilo donde empieza todo. Aquí vive el protagonista y está el laboratorio del Profesor Abedul.</p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/hoenn/ciudades/ciudad-petalia.webp" alt="Mapa de Ciudad Petalia en Pokémon Rubí Omega y Zafiro Alfa" loading="lazy">
+            <h3>Ciudad Petalia</h3>
+            <p>Una ciudad rodeada de hierba. Aquí vive Norman, el padre del protagonista, que es el líder de su gimnasio. Al lado está el Bosque Petalia.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-normal">Normal</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/hoenn/ciudades/ciudad-ferrica.webp" alt="Mapa de Ciudad Férrica en Pokémon Rubí Omega y Zafiro Alfa" loading="lazy">
+            <h3>Ciudad Férrica</h3>
+            <p>Una ciudad grande con edificios de piedra y la sede de Devon S. A., la empresa que fabrica objetos para los entrenadores.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-roca">Roca</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/hoenn/ciudades/pueblo-azuliza.webp" alt="Mapa de Pueblo Azuliza en Pokémon Rubí Omega y Zafiro Alfa" loading="lazy">
+            <h3>Pueblo Azuliza</h3>
+            <p>Un pueblo pequeño en una isla, con playa y mucho viento. Cerca está la Cueva Granito.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-lucha">Lucha</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/hoenn/ciudades/ciudad-portual.webp" alt="Mapa de Ciudad Portual en Pokémon Rubí Omega y Zafiro Alfa" loading="lazy">
+            <h3>Ciudad Portual</h3>
+            <p>Un gran puerto con un mercado enorme y un museo del mar. Desde aquí salen los barcos hacia otras islas.</p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/hoenn/ciudades/ciudad-malvalona.webp" alt="Mapa de Ciudad Malvalona en Pokémon Rubí Omega y Zafiro Alfa" loading="lazy">
+            <h3>Ciudad Malvalona</h3>
+            <p>Una ciudad moderna, llena de luces y de cables. Su gimnasio tiene puertas eléctricas y hay que abrirlas una por una.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-electrico">Eléctrico</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/hoenn/ciudades/pueblo-lavacalda.webp" alt="Mapa de Pueblo Lavacalda en Pokémon Rubí Omega y Zafiro Alfa" loading="lazy">
+            <h3>Pueblo Lavacalda</h3>
+            <p>Un pueblo al pie del Monte Cenizo. Tiene aguas termales y arena caliente en la que la gente se entierra para relajarse.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-fuego">Fuego</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/hoenn/ciudades/ciudad-arborada.webp" alt="Mapa de Ciudad Arborada en Pokémon Rubí Omega y Zafiro Alfa" loading="lazy">
+            <h3>Ciudad Arborada</h3>
+            <p>Una ciudad escondida entre árboles gigantes, con casas construidas en lo alto y unidas por puentes de madera.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-volador">Volador</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/hoenn/ciudades/ciudad-calagua.webp" alt="Mapa de Ciudad Calagua en Pokémon Rubí Omega y Zafiro Alfa" loading="lazy">
+            <h3>Ciudad Calagua</h3>
+            <p>Una ciudad grande en la costa. Tiene el centro comercial más grande de Hoenn y el salón de concursos, y cerca están las guaridas de los equipos Magma y Aqua.</p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/hoenn/ciudades/ciudad-algaria.webp" alt="Mapa de Ciudad Algaria en Pokémon Rubí Omega y Zafiro Alfa" loading="lazy">
+            <h3>Ciudad Algaria</h3>
+            <p>Una ciudad en una isla, con el Centro Espacial, de donde salen cohetes. Su gimnasio es de tipo Psíquico y está lleno de teletransportes.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-psiquico">Psíquico</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/hoenn/ciudades/ciudad-arrecipolis.webp" alt="Mapa de Arrecípolis en Pokémon Rubí Omega y Zafiro Alfa" loading="lazy">
+            <h3>Arrecípolis</h3>
+            <p>Una ciudad dentro de un cráter, rodeada de agua y con muy pocos caminos para llegar. Es un lugar sagrado para Groudon y Kyogre.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-agua">Agua</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/hoenn/ciudades/ciudad-colosalia.webp" alt="Mapa de Ciudad Colosalia en Pokémon Rubí Omega y Zafiro Alfa" loading="lazy">
+            <h3>Ciudad Colosalia</h3>
+            <p>Una ciudad en la isla más oriental de Hoenn. Es la sede de la Liga Pokémon, a la que se llega tras cruzar la Calle Victoria.</p>
+            <p class="hist-etiqueta">Aquí está la <strong>Liga Pokémon</strong></p>
+          </article>
+        </div>
+
+        <h3 class="subtitulo">Otros lugares importantes</h3>
+        <ul class="hist-lugares">
+          <li><strong>Bosque Petalia:</strong> Un bosque lleno de árboles entre Ciudad Petalia y Ciudad Férrica. Allí empiezan los problemas con los equipos villanos.</li>
+          <li><strong>Cueva Granito:</strong> Una cueva oscura cerca de Pueblo Azuliza. Hay que cruzarla para llegar a otra isla.</li>
+          <li><strong>Monte Cenizo:</strong> El volcán de Hoenn. Hay un teleférico que sube hasta la cima y allí se esconde uno de los equipos villanos.</li>
+          <li><strong>Monte Pírico:</strong> Una montaña con un cementerio de Pokémon. En su cima hay dos esferas, una roja y una azul, muy importantes en la historia.</li>
+          <li><strong>Nao Abandonada:</strong> Un barco hundido y abandonado en el mar. Dentro hay muchos objetos y entrenadores.</li>
+          <li><strong>Cueva Cardumen:</strong> Una cueva de la costa que cambia con la marea, donde viven Pokémon de hielo y de agua.</li>
+          <li><strong>Tumba Antigua:</strong> Una cámara escondida en el desierto donde duerme Regirock. Junto a Regice y Registeel forman un trío de legendarios.</li>
+          <li><strong>Pilar Celeste:</strong> Una torre muy alta en el mar. En su cima vive Rayquaza.</li>
+          <li><strong>Calle Victoria:</strong> El camino lleno de cuevas y entrenadores que lleva a la Liga Pokémon.</li>
+        </ul>
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== POKÉMON LEGENDARIOS ========== -->
+      <section class="seccion" id="leyendas">
+        <h2>Pokémon legendarios</h2>
+        <p class="descripcion">Pulsa en un Pokémon para verlo en grande.</p>
+        <div class="hist-leyendas">
+          <article class="hist-leyenda">
+            <button class="evo-ver" popovertarget="ver-groudon" title="Ver Groudon en grande"><img class="hist-pokemon" src="../../img/pokemon/modelos/groudon.png" alt="Groudon" loading="lazy"></button>
+            <h3>Groudon</h3>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-tierra">Tierra</span></p>
+            <p>El Pokémon continente. Dicen que creó la tierra firme y que puede hacer crecer los continentes. Es el legendario de Rubí y de Rubí Omega.</p>
+          </article>
+          <article class="hist-leyenda">
+            <button class="evo-ver" popovertarget="ver-kyogre" title="Ver Kyogre en grande"><img class="hist-pokemon" src="../../img/pokemon/modelos/kyogre.png" alt="Kyogre" loading="lazy"></button>
+            <h3>Kyogre</h3>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-agua">Agua</span></p>
+            <p>El Pokémon cuenca. Dicen que creó los mares y que puede provocar lluvias enormes. Es el legendario de Zafiro y de Zafiro Alfa.</p>
+          </article>
+          <article class="hist-leyenda">
+            <button class="evo-ver" popovertarget="ver-rayquaza" title="Ver Rayquaza en grande"><img class="hist-pokemon" src="../../img/pokemon/modelos/rayquaza.png" alt="Rayquaza" loading="lazy"></button>
+            <h3>Rayquaza</h3>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-dragon">Dragón</span> <span class="tipo-mini tipo-volador">Volador</span></p>
+            <p>El guardián del cielo. Vive en el Pilar Celeste y es el único que puede calmar a Groudon y a Kyogre cuando pelean.</p>
+          </article>
+          <article class="hist-leyenda">
+            <button class="evo-ver" popovertarget="ver-latias" title="Ver Latias en grande"><img class="hist-pokemon" src="../../img/pokemon/modelos/latias.png" alt="Latias" loading="lazy"></button>
+            <h3>Latias</h3>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-dragon">Dragón</span> <span class="tipo-mini tipo-psiquico">Psíquico</span></p>
+            <p>Un Pokémon muy cariñoso que puede hacerse invisible. Recorre Hoenn y es difícil de encontrar. Es exclusivo de una versión.</p>
+          </article>
+          <article class="hist-leyenda">
+            <button class="evo-ver" popovertarget="ver-latios" title="Ver Latios en grande"><img class="hist-pokemon" src="../../img/pokemon/modelos/latios.png" alt="Latios" loading="lazy"></button>
+            <h3>Latios</h3>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-dragon">Dragón</span> <span class="tipo-mini tipo-psiquico">Psíquico</span></p>
+            <p>Muy inteligente: entiende el idioma de los humanos. Recorre Hoenn a gran velocidad. Es exclusivo de una versión.</p>
+          </article>
+          <article class="hist-leyenda">
+            <button class="evo-ver" popovertarget="ver-deoxys" title="Ver Deoxys en grande"><img class="hist-pokemon" src="../../img/pokemon/modelos/deoxys.png" alt="Deoxys" loading="lazy"></button>
+            <h3>Deoxys</h3>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-psiquico">Psíquico</span></p>
+            <p>Un Pokémon que llegó del espacio dentro de un meteorito. Puede cambiar de forma según la situación.</p>
+          </article>
+        </div>
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== EQUIPO VILLANO ========== -->
+      <section class="seccion" id="villanos">
+        <h2>Los equipos Magma y Aqua</h2>
+        <h3 class="subtitulo">Equipo Magma</h3>
+        <div class="hist-villano">
+          <img class="hist-logo" src="../../img/historias/hoenn/logo-equipo-magma.webp" alt="Logo del Equipo Magma: una M roja con forma de volcán">
+          <div class="hist-villano-texto">
+            <p>El Equipo Magma quiere aumentar la cantidad de tierra del mundo. Para conseguirlo, quiere despertar a Groudon, y así crear más espacio para las personas y los Pokémon de tierra.</p>
+            <p>Va vestido de rojo oscuro y sus miembros son expertos en volcanes y en geología. En Rubí y en Rubí Omega son los villanos principales.</p>
+          </div>
+          <article class="hist-persona hist-jefe">
+            <img class="hist-retrato" src="../../img/historias/hoenn/personajes/magno.webp" alt="Magno" loading="lazy">
+            <h3>Magno</h3>
+            <p class="hist-rol">Líder del Equipo Magma</p>
+            <p>Un hombre serio y muy inteligente. Está convencido de que el mundo necesita más tierra y hace lo que sea para conseguirla.</p>
+          </article>
+        </div>
+
+        <h3 class="subtitulo">Comandantes del Equipo Magma</h3>
+        <div class="hist-personas hist-ayudantes">
+          <article class="hist-persona">
+            <img class="hist-retrato" src="../../img/historias/hoenn/personajes/tatiano.webp" alt="Tatiano" loading="lazy">
+            <h3>Tatiano</h3>
+            <p>Comandante. Es el segundo de Magno y presume de ser muy fuerte.</p>
+          </article>
+          <article class="hist-persona">
+            <img class="hist-retrato" src="../../img/historias/hoenn/personajes/carola.webp" alt="Carola" loading="lazy">
+            <h3>Carola</h3>
+            <p>Comandante. Es fría y muy fiel a Magno; lleva a cabo sus planes con mucha seriedad.</p>
+          </article>
+        </div>
+
+        <h3 class="subtitulo">Equipo Aqua</h3>
+        <div class="hist-villano">
+          <img class="hist-logo" src="../../img/historias/hoenn/logo-equipo-aqua.webp" alt="Logo del Equipo Aqua: una A azul con forma de ancla">
+          <div class="hist-villano-texto">
+            <p>El Equipo Aqua quiere lo contrario: aumentar la cantidad de mar. Para conseguirlo, quiere despertar a Kyogre, porque cree que así habrá más océano para los Pokémon de agua.</p>
+            <p>Visten como piratas, con camisetas de rayas, y son expertos en el mar. En Zafiro y en Zafiro Alfa son los villanos principales.</p>
+          </div>
+          <article class="hist-persona hist-jefe">
+            <img class="hist-retrato" src="../../img/historias/hoenn/personajes/aquiles.webp" alt="Aquiles" loading="lazy">
+            <h3>Aquiles</h3>
+            <p class="hist-rol">Líder del Equipo Aqua</p>
+            <p>Un hombre muy tranquilo que quiere hacer crecer el mar. Es muy amable con los suyos y muy decidido.</p>
+          </article>
+        </div>
+
+        <h3 class="subtitulo">Comandantes del Equipo Aqua</h3>
+        <div class="hist-personas hist-ayudantes">
+          <article class="hist-persona">
+            <img class="hist-retrato" src="../../img/historias/hoenn/personajes/silvina.webp" alt="Silvina" loading="lazy">
+            <h3>Silvina</h3>
+            <p>Comandante. Es la segunda de Aquiles y manda con mucha autoridad.</p>
+          </article>
+          <article class="hist-persona">
+            <img class="hist-retrato" src="../../img/historias/hoenn/personajes/matias.webp" alt="Matías" loading="lazy">
+            <h3>Matías</h3>
+            <p>Comandante. Es enorme y muy fuerte, y obedece a Aquiles sin dudar.</p>
+          </article>
+        </div>
+
+        <h3 class="subtitulo">Qué hacen los equipos durante el viaje</h3>
+        <ol class="hist-pasos">
+          <li><strong>Bosque Petalia:</strong> Un grupo de miembros de uno de los equipos intenta robarle un paquete a un empleado de Devon S. A.</li>
+          <li><strong>Monte Cenizo:</strong> El equipo villano de tu versión intenta robar un meteorito con el que despertar a su Pokémon legendario.</li>
+          <li><strong>Monte Pírico:</strong> Roban la esfera roja y la esfera azul, dos objetos muy antiguos relacionados con Groudon y Kyogre.</li>
+          <li><strong>Ciudad Calagua:</strong> Cada equipo tiene su guarida cerca de la ciudad, y desde ahí preparan el siguiente paso.</li>
+          <li><strong>Cueva Marina:</strong> El equipo despierta a Groudon o a Kyogre y empieza una pelea que provoca sequía o lluvias enormes.</li>
+          <li><strong>Arrecípolis:</strong> Groudon y Kyogre luchan sin parar. Con la ayuda de Máximo Peñas subes al Pilar Celeste, despiertas a Rayquaza y este los calma.</li>
+        </ol>
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== LOS GIMNASIOS ========== -->
+      <section class="seccion" id="gimnasios">
+        <h2>Los gimnasios</h2>
+        <p class="descripcion">Los ocho gimnasios de Hoenn, en el orden normal del viaje. Vito y Leti son hermanos y combaten juntos en un combate doble.</p>
+        <div class="hist-personas">
+          <article class="hist-persona">
+            <span class="hist-numero">1</span>
+            <img class="hist-retrato" src="../../img/historias/hoenn/personajes/petra.webp" alt="Petra" loading="lazy">
+            <h3>Petra</h3>
+            <p class="hist-rol">Ciudad Férrica</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-roca">Roca</span> · Medalla Piedra</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-nosepass" title="Ver Nosepass en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/nosepass.png" alt="Nosepass" loading="lazy"></button><span>Pokémon estrella<strong>Nosepass</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">2</span>
+            <img class="hist-retrato" src="../../img/historias/hoenn/personajes/marcial.webp" alt="Marcial" loading="lazy">
+            <h3>Marcial</h3>
+            <p class="hist-rol">Pueblo Azuliza</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-lucha">Lucha</span> · Medalla Puño</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-hariyama" title="Ver Hariyama en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/hariyama.png" alt="Hariyama" loading="lazy"></button><span>Pokémon estrella<strong>Hariyama</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">3</span>
+            <img class="hist-retrato" src="../../img/historias/hoenn/personajes/erico.webp" alt="Erico" loading="lazy">
+            <h3>Erico</h3>
+            <p class="hist-rol">Ciudad Malvalona</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-electrico">Eléctrico</span> · Medalla Dinamo</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-manectric" title="Ver Manectric en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/manectric.png" alt="Manectric" loading="lazy"></button><span>Pokémon estrella<strong>Manectric</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">4</span>
+            <img class="hist-retrato" src="../../img/historias/hoenn/personajes/candela.webp" alt="Candela" loading="lazy">
+            <h3>Candela</h3>
+            <p class="hist-rol">Pueblo Lavacalda</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-fuego">Fuego</span> · Medalla Calor</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-torkoal" title="Ver Torkoal en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/torkoal.png" alt="Torkoal" loading="lazy"></button><span>Pokémon estrella<strong>Torkoal</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">5</span>
+            <img class="hist-retrato" src="../../img/historias/hoenn/personajes/norman.webp" alt="Norman" loading="lazy">
+            <h3>Norman</h3>
+            <p class="hist-rol">Ciudad Petalia</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-normal">Normal</span> · Medalla Equilibrio</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-slaking" title="Ver Slaking en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/slaking.png" alt="Slaking" loading="lazy"></button><span>Pokémon estrella<strong>Slaking</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">6</span>
+            <img class="hist-retrato" src="../../img/historias/hoenn/personajes/alana.webp" alt="Alana" loading="lazy">
+            <h3>Alana</h3>
+            <p class="hist-rol">Ciudad Arborada</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-volador">Volador</span> · Medalla Pluma</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-altaria" title="Ver Altaria en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/altaria.png" alt="Altaria" loading="lazy"></button><span>Pokémon estrella<strong>Altaria</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">7</span>
+            <img class="hist-retrato" src="../../img/historias/hoenn/personajes/vito-y-leti.webp" alt="Vito y Leti" loading="lazy">
+            <h3>Vito y Leti</h3>
+            <p class="hist-rol">Ciudad Algaria</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-psiquico">Psíquico</span> · Medalla Mente</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-lunatone" title="Ver Lunatone en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/lunatone.png" alt="Lunatone" loading="lazy"></button><span>Pokémon estrella<strong>Lunatone</strong></span></div>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-solrock" title="Ver Solrock en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/solrock.png" alt="Solrock" loading="lazy"></button><span>Pokémon estrella<strong>Solrock</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">8</span>
+            <img class="hist-retrato" src="../../img/historias/hoenn/personajes/plubio.webp" alt="Plubio" loading="lazy">
+            <h3>Plubio</h3>
+            <p class="hist-rol">Arrecípolis</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-agua">Agua</span> · Medalla Lluvia</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-milotic" title="Ver Milotic en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/milotic.png" alt="Milotic" loading="lazy"></button><span>Pokémon estrella<strong>Milotic</strong></span></div>
+          </article>
+        </div>
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== LA LIGA POKÉMON ========== -->
+      <section class="seccion" id="liga">
+        <h2>La Liga Pokémon</h2>
+        <p class="descripcion">La Liga está en Ciudad Colosalia, en la isla más al este. Hay que tener las ocho medallas y cruzar la Calle Victoria. Primero se vence al Alto Mando y, por último, al Campeón.</p>
+        <div class="hist-personas hist-liga">
+          <article class="hist-persona">
+            <img class="hist-retrato" src="../../img/historias/hoenn/personajes/sixto.webp" alt="Sixto" loading="lazy">
+            <h3>Sixto</h3>
+            <p class="hist-rol">Alto Mando</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-siniestro">Siniestro</span></p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-absol" title="Ver Absol en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/absol.png" alt="Absol" loading="lazy"></button><span>Pokémon estrella<strong>Absol</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <img class="hist-retrato" src="../../img/historias/hoenn/personajes/fatima.webp" alt="Fátima" loading="lazy">
+            <h3>Fátima</h3>
+            <p class="hist-rol">Alto Mando</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-fantasma">Fantasma</span></p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-dusknoir" title="Ver Dusknoir en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/dusknoir.png" alt="Dusknoir" loading="lazy"></button><span>Pokémon estrella<strong>Dusknoir</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <img class="hist-retrato" src="../../img/historias/hoenn/personajes/nivea.webp" alt="Nívea" loading="lazy">
+            <h3>Nívea</h3>
+            <p class="hist-rol">Alto Mando</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-hielo">Hielo</span></p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-walrein" title="Ver Walrein en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/walrein.png" alt="Walrein" loading="lazy"></button><span>Pokémon estrella<strong>Walrein</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <img class="hist-retrato" src="../../img/historias/hoenn/personajes/dracon.webp" alt="Dracón" loading="lazy">
+            <h3>Dracón</h3>
+            <p class="hist-rol">Alto Mando</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-dragon">Dragón</span></p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-salamence" title="Ver Salamence en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/salamence.png" alt="Salamence" loading="lazy"></button><span>Pokémon estrella<strong>Salamence</strong></span></div>
+          </article>
+          <article class="hist-persona hist-campeon">
+            <img class="hist-retrato" src="../../img/historias/hoenn/personajes/maximo-penas.webp" alt="Máximo Peñas" loading="lazy">
+            <h3>Máximo Peñas</h3>
+            <p class="hist-rol">Campeón</p>
+            <p>Es el campeón de Hoenn y le encantan las piedras. Además, es el hijo del presidente de Devon S. A. Te ayuda cuando los dos equipos despiertan a Groudon y a Kyogre.</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-metagross" title="Ver Metagross en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/metagross.png" alt="Metagross" loading="lazy"></button><span>Pokémon estrella<strong>Metagross</strong></span></div>
+          </article>
+        </div>
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== PERSONAJES ========== -->
+      <section class="seccion" id="personajes">
+        <h2>Personajes</h2>
+        <div class="hist-personajes">
+          <article class="hist-persona hist-persona-ancha">
+            <img class="hist-retrato" src="../../img/historias/hoenn/personajes/profesor-abedul.webp" alt="Profesor Abedul" loading="lazy">
+            <div>
+              <h3>Profesor Abedul</h3>
+              <p>Estudia cómo viven los Pokémon en su entorno natural. Le gusta investigar sobre el terreno, así que a menudo está en la hierba y se mete en problemas. Te regala tu primer Pokémon.</p>
+            </div>
+          </article>
+          <article class="hist-persona hist-persona-ancha">
+            <img class="hist-retrato" src="../../img/historias/hoenn/personajes/bruno.webp" alt="Bruno" loading="lazy">
+            <div>
+              <h3>Bruno</h3>
+              <p>Tu rival si eliges a la protagonista. Es el hijo del Profesor Abedul y quiere ser un gran entrenador. Se encuentra contigo varias veces por el camino.</p>
+            </div>
+          </article>
+          <article class="hist-persona hist-persona-ancha">
+            <img class="hist-retrato" src="../../img/historias/hoenn/personajes/aura.webp" alt="Aura" loading="lazy">
+            <div>
+              <h3>Aura</h3>
+              <p>Tu rival si eliges al protagonista. Es la hija del Profesor Abedul y quiere ser una gran investigadora Pokémon, como su padre. Es amable, pero cuando combate va muy en serio.</p>
+            </div>
+          </article>
+        </div>
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- Enlaces para volver -->
+      <nav class="navegacion-gen">
+        <a href="../generaciones/generacion-3.html">← Generación 3</a>
+        <a href="../../index.html">Inicio</a>
+      </nav>
+
+      <!-- ========== VISORES (Pokémon en grande) ==========
+           Sin JavaScript: cada Pokémon es un <button popovertarget="ver-...">
+           que abre el <div popover> con ese id. Se cierra con la ✕, pulsando fuera o con Esc. -->
+      <div class="visor" id="ver-groudon" popover>
+        <img src="../../img/pokemon/modelos-grandes/groudon.webp" alt="Groudon en grande" loading="lazy">
+        <p>Groudon</p>
+        <button class="visor-cerrar" popovertarget="ver-groudon" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-kyogre" popover>
+        <img src="../../img/pokemon/modelos-grandes/kyogre.webp" alt="Kyogre en grande" loading="lazy">
+        <p>Kyogre</p>
+        <button class="visor-cerrar" popovertarget="ver-kyogre" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-rayquaza" popover>
+        <img src="../../img/pokemon/modelos-grandes/rayquaza.webp" alt="Rayquaza en grande" loading="lazy">
+        <p>Rayquaza</p>
+        <button class="visor-cerrar" popovertarget="ver-rayquaza" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-latias" popover>
+        <img src="../../img/pokemon/modelos-grandes/latias.webp" alt="Latias en grande" loading="lazy">
+        <p>Latias</p>
+        <button class="visor-cerrar" popovertarget="ver-latias" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-latios" popover>
+        <img src="../../img/pokemon/modelos-grandes/latios.webp" alt="Latios en grande" loading="lazy">
+        <p>Latios</p>
+        <button class="visor-cerrar" popovertarget="ver-latios" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-deoxys" popover>
+        <img src="../../img/pokemon/modelos-grandes/deoxys.webp" alt="Deoxys en grande" loading="lazy">
+        <p>Deoxys</p>
+        <button class="visor-cerrar" popovertarget="ver-deoxys" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-nosepass" popover>
+        <img src="../../img/pokemon/modelos-grandes/nosepass.webp" alt="Nosepass en grande" loading="lazy">
+        <p>Nosepass</p>
+        <button class="visor-cerrar" popovertarget="ver-nosepass" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-hariyama" popover>
+        <img src="../../img/pokemon/modelos-grandes/hariyama.webp" alt="Hariyama en grande" loading="lazy">
+        <p>Hariyama</p>
+        <button class="visor-cerrar" popovertarget="ver-hariyama" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-manectric" popover>
+        <img src="../../img/pokemon/modelos-grandes/manectric.webp" alt="Manectric en grande" loading="lazy">
+        <p>Manectric</p>
+        <button class="visor-cerrar" popovertarget="ver-manectric" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-torkoal" popover>
+        <img src="../../img/pokemon/modelos-grandes/torkoal.webp" alt="Torkoal en grande" loading="lazy">
+        <p>Torkoal</p>
+        <button class="visor-cerrar" popovertarget="ver-torkoal" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-slaking" popover>
+        <img src="../../img/pokemon/modelos-grandes/slaking.webp" alt="Slaking en grande" loading="lazy">
+        <p>Slaking</p>
+        <button class="visor-cerrar" popovertarget="ver-slaking" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-altaria" popover>
+        <img src="../../img/pokemon/modelos-grandes/altaria.webp" alt="Altaria en grande" loading="lazy">
+        <p>Altaria</p>
+        <button class="visor-cerrar" popovertarget="ver-altaria" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-lunatone" popover>
+        <img src="../../img/pokemon/modelos-grandes/lunatone.webp" alt="Lunatone en grande" loading="lazy">
+        <p>Lunatone</p>
+        <button class="visor-cerrar" popovertarget="ver-lunatone" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-solrock" popover>
+        <img src="../../img/pokemon/modelos-grandes/solrock.webp" alt="Solrock en grande" loading="lazy">
+        <p>Solrock</p>
+        <button class="visor-cerrar" popovertarget="ver-solrock" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-milotic" popover>
+        <img src="../../img/pokemon/modelos-grandes/milotic.webp" alt="Milotic en grande" loading="lazy">
+        <p>Milotic</p>
+        <button class="visor-cerrar" popovertarget="ver-milotic" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-absol" popover>
+        <img src="../../img/pokemon/modelos-grandes/absol.webp" alt="Absol en grande" loading="lazy">
+        <p>Absol</p>
+        <button class="visor-cerrar" popovertarget="ver-absol" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-dusknoir" popover>
+        <img src="../../img/pokemon/modelos-grandes/dusknoir.webp" alt="Dusknoir en grande" loading="lazy">
+        <p>Dusknoir</p>
+        <button class="visor-cerrar" popovertarget="ver-dusknoir" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-walrein" popover>
+        <img src="../../img/pokemon/modelos-grandes/walrein.webp" alt="Walrein en grande" loading="lazy">
+        <p>Walrein</p>
+        <button class="visor-cerrar" popovertarget="ver-walrein" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-salamence" popover>
+        <img src="../../img/pokemon/modelos-grandes/salamence.webp" alt="Salamence en grande" loading="lazy">
+        <p>Salamence</p>
+        <button class="visor-cerrar" popovertarget="ver-salamence" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-metagross" popover>
+        <img src="../../img/pokemon/modelos-grandes/metagross.webp" alt="Metagross en grande" loading="lazy">
+        <p>Metagross</p>
+        <button class="visor-cerrar" popovertarget="ver-metagross" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==================================================
+       PIE DE PÁGINA
+       Créditos de las imágenes y avisos de copyright.
+       ================================================== -->
+  <footer class="pie">
+    <p>Proyecto de clase · Pokémon y sus personajes son © Nintendo, Game Freak y The Pokémon Company.</p>
+    <p>Personajes y mapas de las ciudades: <a href="https://www.wikidex.net">WikiDex</a> (arte oficial y mapas de Pokémon Rubí Omega y Zafiro Alfa). Reducidos de tamaño.</p>
+    <p>Pokémon: <a href="https://github.com/PokeAPI/sprites">PokeAPI/sprites</a> (renders 3D de Pokémon HOME).</p>
+  </footer>
+</body>
+</html>
