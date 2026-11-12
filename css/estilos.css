@@ -550,11 +550,12 @@ h3,
 
 /* Botón "Leer la historia de ..." que lleva a la página de la región */
 .boton-diario {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  margin-top: 8px;
+  width: fit-content;
+  margin: 16px auto 0 auto;
   color: var(--texto);
   font-family: "Press Start 2P", monospace;
   font-size: 0.6rem;
