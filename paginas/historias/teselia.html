@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- ==================================================
+       DATOS DE LA PÁGINA
+       No se ven en pantalla: idioma, título de la pestaña y CSS.
+       ================================================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historia de Teselia · Pocket Monster</title>
+  <!-- El ?v=30 obliga al navegador a descargar el CSS nuevo. Súbelo (v=31, v=32...) cada vez que cambies el CSS -->
+  <link rel="stylesheet" href="../../css/estilos.css?v=30">
+</head>
+<body>
+  <!-- ==================================================
+       CABECERA
+       Logo a la izquierda y enlaces a la derecha.
+       ================================================== -->
+  <header class="cabecera">
+    <a class="logo" href="../../index.html">Pocket Monster</a>
+    <nav class="nav-cabecera">
+      <a href="../evoluciones.html">Evoluciones</a>
+      <a href="../contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- ==================================================
+       CONTENIDO PRINCIPAL
+       Todo lo que cambia de una página a otra.
+       ================================================== -->
+  <main>
+    <!-- La clase fondo-gen-5 pone el color de la generación 5 -->
+    <section class="hero-generacion fondo-gen-5">
+      <h1>Historia de Teselia</h1>
+      <p>Generación 5 · Negro, Blanco, Negro 2 y Blanco 2</p>
+    </section>
+
+    <div class="contenido">
+
+      <!-- ========== ÍNDICE ==========
+           Cada enlace lleva a una sección de esta página por su id (#ciudades, #liga...) -->
+      <nav class="evo-indice hist-indice" id="indice">
+        <a href="#region">La región</a>
+        <a href="#ciudades">Ciudades</a>
+        <a href="#leyendas">Legendarios</a>
+        <a href="#villanos">Equipo Plasma</a>
+        <a href="#gimnasios">Gimnasios</a>
+        <a href="#liga">Liga Pokémon</a>
+        <a href="#personajes">Personajes</a>
+      </nav>
+
+      <!-- ========== LA REGIÓN ========== -->
+      <section class="seccion" id="region">
+        <h2>La región</h2>
+        <div class="lore">
+          <p>Teselia está muy lejos de las demás regiones y se inspira en Nueva York. Es la primera región que no se basa en Japón. Tiene ciudades enormes, como Ciudad Porcelana, con sus rascacielos, y puentes larguísimos. Además, la región cambia con las estaciones del año.</p>
+          <p>Pokémon Negro y Pokémon Blanco salieron en Japón en 2010 (en España, en 2011). Trajeron 156 Pokémon nuevos y, hasta terminar la historia, solo aparecen Pokémon nuevos. También añadieron los combates triples y los combates rotatorios. Dos años después llegaron Pokémon Negro 2 y Pokémon Blanco 2, en 2012.</p>
+          <p>El protagonista vive en Pueblo Arcilla con sus amigos Cheren y Bel. La Profesora Encina les deja elegir un Pokémon a cada uno y empieza el viaje. Tienen que conseguir las ocho medallas, vencer a la Liga y enfrentarse al Equipo Plasma, que quiere liberar a los Pokémon de sus entrenadores.</p>
+        </div>
+        <figure class="mapa">
+          <img class="mapa-imagen" src="../../img/regiones/5-teselia/mapa.png" alt="Mapa de la región de Teselia" loading="lazy">
+          <figcaption>Mapa de la región de Teselia.</figcaption>
+        </figure>
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== CIUDADES Y PUEBLOS ========== -->
+      <section class="seccion" id="ciudades">
+        <h2>Ciudades y pueblos</h2>
+        <div class="hist-ciudades">
+          <article class="hist-ciudad">
+            <img src="../../img/historias/teselia/ciudades/pueblo-arcilla.webp" alt="Mapa de Pueblo Arcilla en Pokémon Negro 2 y Blanco 2" loading="lazy">
+            <h3>Pueblo Arcilla</h3>
+            <p>Un pueblo pequeño y tranquilo con solo tres casas. Aquí viven el protagonista, Cheren y Bel, y empieza el viaje.</p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/teselia/ciudades/pueblo-terracota.webp" alt="Mapa de Pueblo Terracota en Pokémon Negro 2 y Blanco 2" loading="lazy">
+            <h3>Pueblo Terracota</h3>
+            <p>Un pueblo al que llegan los entrenadores nuevos. En su plaza, el Equipo Plasma da un discurso para convencer a la gente de que libere a sus Pokémon.</p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/teselia/ciudades/ciudad-gres.webp" alt="Mapa de Ciudad Gres en Pokémon Negro 2 y Blanco 2" loading="lazy">
+            <h3>Ciudad Gres</h3>
+            <p>Una ciudad con un gimnasio que también es un restaurante. Allí te atienden tres hermanos que son los líderes.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-planta">Planta</span> <span class="tipo-mini tipo-fuego">Fuego</span> <span class="tipo-mini tipo-agua">Agua</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/teselia/ciudades/ciudad-esmalte.webp" alt="Mapa de Ciudad Esmalte en Pokémon Negro 2 y Blanco 2" loading="lazy">
+            <h3>Ciudad Esmalte</h3>
+            <p>Una ciudad con un museo muy grande. Su directora, Aloe, es la líder del gimnasio.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-normal">Normal</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/teselia/ciudades/ciudad-porcelana.webp" alt="Mapa de Ciudad Porcelana en Pokémon Negro 2 y Blanco 2" loading="lazy">
+            <h3>Ciudad Porcelana</h3>
+            <p>La mayor ciudad de Teselia, con enormes rascacielos y un puerto. Su gimnasio parece una galería de arte.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-bicho">Bicho</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/teselia/ciudades/ciudad-mayolica.webp" alt="Mapa de Ciudad Mayólica en Pokémon Negro 2 y Blanco 2" loading="lazy">
+            <h3>Ciudad Mayólica</h3>
+            <p>Una ciudad de diversión, con un parque de atracciones, una noria enorme y un teatro. El gimnasio está dentro de una montaña rusa.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-electrico">Eléctrico</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/teselia/ciudades/ciudad-fayenza.webp" alt="Mapa de Ciudad Fayenza en Pokémon Negro 2 y Blanco 2" loading="lazy">
+            <h3>Ciudad Fayenza</h3>
+            <p>Una ciudad con un mercado y un puerto. Su líder es un minero y su gimnasio está bajo tierra.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-tierra">Tierra</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/teselia/ciudades/ciudad-loza.webp" alt="Mapa de Ciudad Loza en Pokémon Negro 2 y Blanco 2" loading="lazy">
+            <h3>Ciudad Loza</h3>
+            <p>Una ciudad con un aeropuerto. Su líder, Gerania, es piloto y para llegar a ella hay que lanzarse desde un cañón.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-volador">Volador</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/teselia/ciudades/ciudad-teja.webp" alt="Mapa de Ciudad Teja en Pokémon Negro 2 y Blanco 2" loading="lazy">
+            <h3>Ciudad Teja</h3>
+            <p>Una ciudad helada del norte. Su gimnasio está cubierto de hielo y hay que resbalar para avanzar.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-hielo">Hielo</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/teselia/ciudades/ciudad-caolin.webp" alt="Mapa de Ciudad Caolín en Pokémon Negro 2 y Blanco 2" loading="lazy">
+            <h3>Ciudad Caolín</h3>
+            <p>Una ciudad moderna donde viven los domadores de dragones. Su gimnasio está lleno de estatuas de dragones.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-dragon">Dragón</span></p>
+          </article>
+        </div>
+
+        <h3 class="subtitulo">Otros lugares importantes</h3>
+        <ul class="hist-lugares">
+          <li><strong>Jardín Ensueño:</strong> Un jardín abandonado donde se pueden ver Munna. Aquí el Equipo Plasma roba un Pokémon.</li>
+          <li><strong>Cueva Electrorroca:</strong> Una cueva de rocas imantadas que atraen a los Pokémon eléctricos.</li>
+          <li><strong>Montaña Reversia:</strong> Una montaña con túneles y cuevas con distintos tipos de terreno. Hay que cruzarla para llegar a Ciudad Teja.</li>
+          <li><strong>Torre Dracoespiral:</strong> Una torre muy alta y muy antigua, relacionada con los dragones legendarios de la región.</li>
+          <li><strong>Palacio de N:</strong> El castillo del Equipo Plasma. Aparece del suelo cuando consigues las ocho medallas.</li>
+          <li><strong>Calle Victoria:</strong> El camino lleno de cuevas y entrenadores que lleva a la Liga Pokémon.</li>
+          <li><strong>Isla Libertad:</strong> Una isla a la que solo se puede llegar en un barco especial. Allí está Victini.</li>
+        </ul>
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== POKÉMON LEGENDARIOS ========== -->
+      <section class="seccion" id="leyendas">
+        <h2>Pokémon legendarios</h2>
+        <p class="descripcion">Pulsa en un Pokémon para verlo en grande.</p>
+        <div class="hist-leyendas">
+          <article class="hist-leyenda">
+            <button class="evo-ver" popovertarget="ver-reshiram" title="Ver Reshiram en grande"><img class="hist-pokemon" src="../../img/pokemon/modelos/reshiram.png" alt="Reshiram" loading="lazy"></button>
+            <h3>Reshiram</h3>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-dragon">Dragón</span> <span class="tipo-mini tipo-fuego">Fuego</span></p>
+            <p>El dragón blanco. Es el legendario de Negro y busca la verdad. Con su fuego puede quemar el mundo entero.</p>
+          </article>
+          <article class="hist-leyenda">
+            <button class="evo-ver" popovertarget="ver-zekrom" title="Ver Zekrom en grande"><img class="hist-pokemon" src="../../img/pokemon/modelos/zekrom.png" alt="Zekrom" loading="lazy"></button>
+            <h3>Zekrom</h3>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-dragon">Dragón</span> <span class="tipo-mini tipo-electrico">Eléctrico</span></p>
+            <p>El dragón negro. Es el legendario de Blanco y busca los ideales. Puede crear tormentas con sus rayos.</p>
+          </article>
+          <article class="hist-leyenda">
+            <button class="evo-ver" popovertarget="ver-kyurem" title="Ver Kyurem en grande"><img class="hist-pokemon" src="../../img/pokemon/modelos/kyurem.png" alt="Kyurem" loading="lazy"></button>
+            <h3>Kyurem</h3>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-dragon">Dragón</span> <span class="tipo-mini tipo-hielo">Hielo</span></p>
+            <p>Lo que sobró de la división del dragón original. Vive en el Boquete Gigante y tiene un cuerpo hueco, que congela todo.</p>
+          </article>
+          <article class="hist-leyenda">
+            <button class="evo-ver" popovertarget="ver-victini" title="Ver Victini en grande"><img class="hist-pokemon" src="../../img/pokemon/modelos/victini.png" alt="Victini" loading="lazy"></button>
+            <h3>Victini</h3>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-psiquico">Psíquico</span> <span class="tipo-mini tipo-fuego">Fuego</span></p>
+            <p>El Pokémon de la victoria. Da energía a quien está cerca. Solo se podía conseguir en eventos especiales.</p>
+          </article>
+          <article class="hist-leyenda">
+            <button class="evo-ver" popovertarget="ver-cobalion" title="Ver Cobalion en grande"><img class="hist-pokemon" src="../../img/pokemon/modelos/cobalion.png" alt="Cobalion" loading="lazy"></button>
+            <h3>Cobalion</h3>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-acero">Acero</span> <span class="tipo-mini tipo-lucha">Lucha</span></p>
+            <p>El líder de los Espadachines de la Justicia. Es serio y muy valiente. Se esconde en la Cueva Loza.</p>
+          </article>
+          <article class="hist-leyenda">
+            <button class="evo-ver" popovertarget="ver-landorus" title="Ver Landorus en grande"><img class="hist-pokemon" src="../../img/pokemon/modelos/landorus.png" alt="Landorus" loading="lazy"></button>
+            <h3>Landorus</h3>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-tierra">Tierra</span> <span class="tipo-mini tipo-volador">Volador</span></p>
+            <p>Uno de los tres Pokémon que traen la fertilidad al suelo de Teselia. Se consigue después de terminar la historia.</p>
+          </article>
+        </div>
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== EQUIPO VILLANO ========== -->
+      <section class="seccion" id="villanos">
+        <h2>El Equipo Plasma</h2>
+        <div class="hist-villano">
+          <img class="hist-logo" src="../../img/historias/teselia/logo-equipo-plasma.webp" alt="Logo del Equipo Plasma: una P azul en un escudo">
+          <div class="hist-villano-texto">
+            <p>El Equipo Plasma dice que quiere liberar a los Pokémon de sus entrenadores. Su rey es N, un chico que habla con los Pokémon. Pero detrás de todo está Ghechis, que solo quiere el poder y usa a N.</p>
+            <p>Sus miembros llevan uniformes que parecen de caballeros medievales, con un escudo con una P. Los lidera Ghechis, que tiene el consejo de los Siete Sabios, y le sirven tres ninjas, el Trío Sombrío.</p>
+          </div>
+          <article class="hist-persona hist-jefe">
+            <img class="hist-retrato" src="../../img/historias/teselia/personajes/ghechis.webp" alt="Ghechis" loading="lazy">
+            <h3>Ghechis</h3>
+            <p class="hist-rol">Líder del Equipo Plasma</p>
+            <p>El verdadero jefe del Equipo Plasma. Es frío y cruel y no le importan los Pokémon: solo quiere gobernar Teselia.</p>
+          </article>
+        </div>
+
+        <h3 class="subtitulo">Qué hace el Equipo Plasma durante el viaje</h3>
+        <ol class="hist-pasos">
+          <li><strong>Pueblo Terracota:</strong> El Equipo Plasma da un discurso en la plaza para que la gente libere a sus Pokémon, y N te reta a un combate.</li>
+          <li><strong>Jardín Ensueño:</strong> Roban un Munna y tienes que recuperarlo.</li>
+          <li><strong>Por toda la región:</strong> Sus miembros roban Pokémon a los entrenadores y aparecen en casi todas las ciudades.</li>
+          <li><strong>Palacio de N:</strong> Cuando tienes las ocho medallas, el castillo sale del suelo. Tienes que cruzarlo, vencer a los Siete Sabios y llegar hasta N.</li>
+          <li><strong>Final:</strong> N se enfrenta a ti con el dragón legendario y, después, Ghechis lo intenta todo con su propio Pokémon, pero lo vences.</li>
+        </ol>
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== LOS GIMNASIOS ========== -->
+      <section class="seccion" id="gimnasios">
+        <h2>Los gimnasios</h2>
+        <p class="descripcion">Los ocho gimnasios de Teselia, en el orden normal del viaje. En el primero te enfrentas a uno de los tres hermanos, según el Pokémon inicial que hayas elegido.</p>
+        <div class="hist-personas">
+          <article class="hist-persona">
+            <span class="hist-numero">1</span>
+            <img class="hist-retrato" src="../../img/historias/teselia/personajes/trio-gres.webp" alt="Millo, Zeo y Maíz" loading="lazy">
+            <h3>Millo, Zeo y Maíz</h3>
+            <p class="hist-rol">Ciudad Gres</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-planta">Planta</span> <span class="tipo-mini tipo-fuego">Fuego</span> <span class="tipo-mini tipo-agua">Agua</span> · Medalla Trío</p>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">2</span>
+            <img class="hist-retrato" src="../../img/historias/teselia/personajes/aloe.webp" alt="Aloe" loading="lazy">
+            <h3>Aloe</h3>
+            <p class="hist-rol">Ciudad Esmalte</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-normal">Normal</span> · Medalla Base</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-watchog" title="Ver Watchog en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/watchog.png" alt="Watchog" loading="lazy"></button><span>Pokémon estrella<strong>Watchog</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">3</span>
+            <img class="hist-retrato" src="../../img/historias/teselia/personajes/camus.webp" alt="Camus" loading="lazy">
+            <h3>Camus</h3>
+            <p class="hist-rol">Ciudad Porcelana</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-bicho">Bicho</span> · Medalla Élitro</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-leavanny" title="Ver Leavanny en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/leavanny.png" alt="Leavanny" loading="lazy"></button><span>Pokémon estrella<strong>Leavanny</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">4</span>
+            <img class="hist-retrato" src="../../img/historias/teselia/personajes/camila.webp" alt="Camila" loading="lazy">
+            <h3>Camila</h3>
+            <p class="hist-rol">Ciudad Mayólica</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-electrico">Eléctrico</span> · Medalla Voltio</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-zebstrika" title="Ver Zebstrika en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/zebstrika.png" alt="Zebstrika" loading="lazy"></button><span>Pokémon estrella<strong>Zebstrika</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">5</span>
+            <img class="hist-retrato" src="../../img/historias/teselia/personajes/yakon.webp" alt="Yakón" loading="lazy">
+            <h3>Yakón</h3>
+            <p class="hist-rol">Ciudad Fayenza</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-tierra">Tierra</span> · Medalla Temblor</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-excadrill" title="Ver Excadrill en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/excadrill.png" alt="Excadrill" loading="lazy"></button><span>Pokémon estrella<strong>Excadrill</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">6</span>
+            <img class="hist-retrato" src="../../img/historias/teselia/personajes/gerania.webp" alt="Gerania" loading="lazy">
+            <h3>Gerania</h3>
+            <p class="hist-rol">Ciudad Loza</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-volador">Volador</span> · Medalla Jet</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-swanna" title="Ver Swanna en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/swanna.png" alt="Swanna" loading="lazy"></button><span>Pokémon estrella<strong>Swanna</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">7</span>
+            <img class="hist-retrato" src="../../img/historias/teselia/personajes/junco.webp" alt="Junco" loading="lazy">
+            <h3>Junco</h3>
+            <p class="hist-rol">Ciudad Teja</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-hielo">Hielo</span> · Medalla Candelizo</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-beartic" title="Ver Beartic en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/beartic.png" alt="Beartic" loading="lazy"></button><span>Pokémon estrella<strong>Beartic</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">8</span>
+            <img class="hist-retrato" src="../../img/historias/teselia/personajes/lirio.webp" alt="Lirio" loading="lazy">
+            <h3>Lirio</h3>
+            <p class="hist-rol">Ciudad Caolín</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-dragon">Dragón</span> · Medalla Leyenda</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-haxorus" title="Ver Haxorus en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/haxorus.png" alt="Haxorus" loading="lazy"></button><span>Pokémon estrella<strong>Haxorus</strong></span></div>
+          </article>
+        </div>
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== LA LIGA POKÉMON ========== -->
+      <section class="seccion" id="liga">
+        <h2>La Liga Pokémon</h2>
+        <p class="descripcion">La Liga está en lo alto de una colina, al norte de la Calle Victoria. Hay que tener las ocho medallas. Primero se vence al Alto Mando y, por último, al Campeón, pero el Palacio de N cambia el final de la historia.</p>
+        <div class="hist-personas hist-liga">
+          <article class="hist-persona">
+            <img class="hist-retrato" src="../../img/historias/teselia/personajes/anis.webp" alt="Anís" loading="lazy">
+            <h3>Anís</h3>
+            <p class="hist-rol">Alto Mando</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-fantasma">Fantasma</span></p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-chandelure" title="Ver Chandelure en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/chandelure.png" alt="Chandelure" loading="lazy"></button><span>Pokémon estrella<strong>Chandelure</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <img class="hist-retrato" src="../../img/historias/teselia/personajes/aza.webp" alt="Aza" loading="lazy">
+            <h3>Aza</h3>
+            <p class="hist-rol">Alto Mando</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-lucha">Lucha</span></p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-conkeldurr" title="Ver Conkeldurr en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/conkeldurr.png" alt="Conkeldurr" loading="lazy"></button><span>Pokémon estrella<strong>Conkeldurr</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <img class="hist-retrato" src="../../img/historias/teselia/personajes/lotto.webp" alt="Lotto" loading="lazy">
+            <h3>Lotto</h3>
+            <p class="hist-rol">Alto Mando</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-siniestro">Siniestro</span></p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-bisharp" title="Ver Bisharp en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/bisharp.png" alt="Bisharp" loading="lazy"></button><span>Pokémon estrella<strong>Bisharp</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <img class="hist-retrato" src="../../img/historias/teselia/personajes/catleya.webp" alt="Catleya" loading="lazy">
+            <h3>Catleya</h3>
+            <p class="hist-rol">Alto Mando</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-psiquico">Psíquico</span></p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-gothitelle" title="Ver Gothitelle en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/gothitelle.png" alt="Gothitelle" loading="lazy"></button><span>Pokémon estrella<strong>Gothitelle</strong></span></div>
+          </article>
+          <article class="hist-persona hist-campeon">
+            <img class="hist-retrato" src="../../img/historias/teselia/personajes/mirto.webp" alt="Mirto" loading="lazy">
+            <h3>Mirto</h3>
+            <p class="hist-rol">Campeón</p>
+            <p>El campeón de Teselia en Negro y Blanco. Es un entrenador muy experimentado. Tu combate con él se interrumpe porque llega N. En Negro 2 y Blanco 2 la campeona es Iris.</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-volcarona" title="Ver Volcarona en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/volcarona.png" alt="Volcarona" loading="lazy"></button><span>Pokémon estrella<strong>Volcarona</strong></span></div>
+          </article>
+        </div>
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- ========== PERSONAJES ========== -->
+      <section class="seccion" id="personajes">
+        <h2>Personajes</h2>
+        <div class="hist-personajes">
+          <article class="hist-persona hist-persona-ancha">
+            <img class="hist-retrato" src="../../img/historias/teselia/personajes/profesora-encina.webp" alt="Profesora Encina" loading="lazy">
+            <div>
+              <h3>Profesora Encina</h3>
+              <p>Investiga el origen de los Pokémon. Te da tu primer Pokémon y te pide que completes la Pokédex, la lista de todos los que existen.</p>
+            </div>
+          </article>
+          <article class="hist-persona hist-persona-ancha">
+            <img class="hist-retrato" src="../../img/historias/teselia/personajes/cheren.webp" alt="Cheren" loading="lazy">
+            <div>
+              <h3>Cheren</h3>
+              <p>Tu amigo y rival. Es serio, estudioso y muy ambicioso. Quiere ser el más fuerte, y elige el Pokémon que tenga ventaja de tipo frente al tuyo.</p>
+            </div>
+          </article>
+          <article class="hist-persona hist-persona-ancha">
+            <img class="hist-retrato" src="../../img/historias/teselia/personajes/n.webp" alt="N" loading="lazy">
+            <div>
+              <h3>N</h3>
+              <p>El rey del Equipo Plasma. Creció entre Pokémon y los entiende, pero no sabe cómo es el mundo real. Quiere liberarlos de verdad y no sabe que Ghechis le engaña.</p>
+            </div>
+          </article>
+          <article class="hist-persona hist-persona-ancha">
+            <img class="hist-retrato" src="../../img/historias/teselia/personajes/iris.webp" alt="Iris" loading="lazy">
+            <div>
+              <h3>Iris</h3>
+              <p>Es una gran domadora de dragones. En Blanco es la líder del gimnasio de Ciudad Caolín y, en Negro 2 y Blanco 2, la nueva campeona de la Liga.</p>
+            </div>
+          </article>
+          <article class="hist-persona hist-persona-ancha">
+            <img class="hist-retrato" src="../../img/historias/teselia/personajes/bel.webp" alt="Bel" loading="lazy">
+            <div>
+              <h3>Bel</h3>
+              <p>Tu otra amiga. Es tímida y le cuesta ganar, pero poco a poco se hace más fuerte. Elige el Pokémon que tiene desventaja de tipo frente al tuyo.</p>
+            </div>
+          </article>
+        </div>
+        <a class="evo-arriba" href="#indice">↑ Volver arriba</a>
+      </section>
+
+      <!-- Enlaces para volver -->
+      <nav class="navegacion-gen">
+        <a href="../generaciones/generacion-5.html">← Generación 5</a>
+        <a href="../../index.html">Inicio</a>
+      </nav>
+
+      <!-- ========== VISORES (Pokémon en grande) ==========
+           Sin JavaScript: cada Pokémon es un <button popovertarget="ver-...">
+           que abre el <div popover> con ese id. Se cierra con la ✕, pulsando fuera o con Esc. -->
+      <div class="visor" id="ver-reshiram" popover>
+        <img src="../../img/pokemon/modelos-grandes/reshiram.webp" alt="Reshiram en grande" loading="lazy">
+        <p>Reshiram</p>
+        <button class="visor-cerrar" popovertarget="ver-reshiram" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-zekrom" popover>
+        <img src="../../img/pokemon/modelos-grandes/zekrom.webp" alt="Zekrom en grande" loading="lazy">
+        <p>Zekrom</p>
+        <button class="visor-cerrar" popovertarget="ver-zekrom" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-kyurem" popover>
+        <img src="../../img/pokemon/modelos-grandes/kyurem.webp" alt="Kyurem en grande" loading="lazy">
+        <p>Kyurem</p>
+        <button class="visor-cerrar" popovertarget="ver-kyurem" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-victini" popover>
+        <img src="../../img/pokemon/modelos-grandes/victini.webp" alt="Victini en grande" loading="lazy">
+        <p>Victini</p>
+        <button class="visor-cerrar" popovertarget="ver-victini" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-cobalion" popover>
+        <img src="../../img/pokemon/modelos-grandes/cobalion.webp" alt="Cobalion en grande" loading="lazy">
+        <p>Cobalion</p>
+        <button class="visor-cerrar" popovertarget="ver-cobalion" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-landorus" popover>
+        <img src="../../img/pokemon/modelos-grandes/landorus.webp" alt="Landorus en grande" loading="lazy">
+        <p>Landorus</p>
+        <button class="visor-cerrar" popovertarget="ver-landorus" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-watchog" popover>
+        <img src="../../img/pokemon/modelos-grandes/watchog.webp" alt="Watchog en grande" loading="lazy">
+        <p>Watchog</p>
+        <button class="visor-cerrar" popovertarget="ver-watchog" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-leavanny" popover>
+        <img src="../../img/pokemon/modelos-grandes/leavanny.webp" alt="Leavanny en grande" loading="lazy">
+        <p>Leavanny</p>
+        <button class="visor-cerrar" popovertarget="ver-leavanny" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-zebstrika" popover>
+        <img src="../../img/pokemon/modelos-grandes/zebstrika.webp" alt="Zebstrika en grande" loading="lazy">
+        <p>Zebstrika</p>
+        <button class="visor-cerrar" popovertarget="ver-zebstrika" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-excadrill" popover>
+        <img src="../../img/pokemon/modelos-grandes/excadrill.webp" alt="Excadrill en grande" loading="lazy">
+        <p>Excadrill</p>
+        <button class="visor-cerrar" popovertarget="ver-excadrill" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-swanna" popover>
+        <img src="../../img/pokemon/modelos-grandes/swanna.webp" alt="Swanna en grande" loading="lazy">
+        <p>Swanna</p>
+        <button class="visor-cerrar" popovertarget="ver-swanna" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-beartic" popover>
+        <img src="../../img/pokemon/modelos-grandes/beartic.webp" alt="Beartic en grande" loading="lazy">
+        <p>Beartic</p>
+        <button class="visor-cerrar" popovertarget="ver-beartic" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-haxorus" popover>
+        <img src="../../img/pokemon/modelos-grandes/haxorus.webp" alt="Haxorus en grande" loading="lazy">
+        <p>Haxorus</p>
+        <button class="visor-cerrar" popovertarget="ver-haxorus" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-chandelure" popover>
+        <img src="../../img/pokemon/modelos-grandes/chandelure.webp" alt="Chandelure en grande" loading="lazy">
+        <p>Chandelure</p>
+        <button class="visor-cerrar" popovertarget="ver-chandelure" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-conkeldurr" popover>
+        <img src="../../img/pokemon/modelos-grandes/conkeldurr.webp" alt="Conkeldurr en grande" loading="lazy">
+        <p>Conkeldurr</p>
+        <button class="visor-cerrar" popovertarget="ver-conkeldurr" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-bisharp" popover>
+        <img src="../../img/pokemon/modelos-grandes/bisharp.webp" alt="Bisharp en grande" loading="lazy">
+        <p>Bisharp</p>
+        <button class="visor-cerrar" popovertarget="ver-bisharp" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-gothitelle" popover>
+        <img src="../../img/pokemon/modelos-grandes/gothitelle.webp" alt="Gothitelle en grande" loading="lazy">
+        <p>Gothitelle</p>
+        <button class="visor-cerrar" popovertarget="ver-gothitelle" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-volcarona" popover>
+        <img src="../../img/pokemon/modelos-grandes/volcarona.webp" alt="Volcarona en grande" loading="lazy">
+        <p>Volcarona</p>
+        <button class="visor-cerrar" popovertarget="ver-volcarona" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==================================================
+       PIE DE PÁGINA
+       Créditos de las imágenes y avisos de copyright.
+       ================================================== -->
+  <footer class="pie">
+    <p>Proyecto de clase · Pokémon y sus personajes son © Nintendo, Game Freak y The Pokémon Company.</p>
+    <p>Personajes y mapas de las ciudades: <a href="https://www.wikidex.net">WikiDex</a> (arte oficial y mapas de Pokémon Negro, Blanco, Negro 2 y Blanco 2). Reducidos de tamaño.</p>
+    <p>Pokémon: <a href="https://github.com/PokeAPI/sprites">PokeAPI/sprites</a> (renders 3D de Pokémon HOME).</p>
+  </footer>
+</body>
+</html>
