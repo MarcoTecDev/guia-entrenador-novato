@@ -1641,3 +1641,37 @@ h3,
     height: 160px;
   }
 }
+
+
+/* ==========================================================
+   Aparición al hacer scroll
+   Las tarjetas entran con un fundido y subiendo un poco cuando
+   llegan a la pantalla. Solo en navegadores que lo soportan
+   (animation-timeline) y si la persona no pidió menos movimiento.
+   "backwards" hace que al acabar vuelva al estilo normal, así el
+   efecto del ratón (hover) sigue funcionando.
+   ========================================================== */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.96);
+      }
+    }
+
+    .tarjeta,
+    .hist-ciudad,
+    .hist-persona,
+    .hist-leyenda,
+    .evo-tarjeta,
+    .seccion h2,
+    .mapa-imagen,
+    .hist-lugares li,
+    .hist-pasos li {
+      animation: aparecer linear backwards;
+      animation-timeline: view();
+      animation-range: entry 0% entry 45%;
+    }
+  }
+}
