@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- ==================================================
+       DATOS DE LA PÁGINA
+       No se ven en pantalla: idioma, título de la pestaña y CSS.
+       ================================================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historia de Galar · Pocket Monster</title>
+  <!-- El ?v=31 obliga al navegador a descargar el CSS nuevo. Súbelo (v=32, v=33...) cada vez que cambies el CSS -->
+  <link rel="stylesheet" href="../../css/estilos.css?v=31">
+</head>
+<body>
+  <!-- ==================================================
+       CABECERA
+       Logo a la izquierda y enlaces a la derecha.
+       ================================================== -->
+  <header class="cabecera">
+    <a class="logo" href="../../index.html">Pocket Monster</a>
+    <nav class="nav-cabecera">
+      <a href="../evoluciones.html">Evoluciones</a>
+      <a href="../contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- ==================================================
+       CONTENIDO PRINCIPAL
+       Todo lo que cambia de una página a otra.
+       ================================================== -->
+  <main>
+    <!-- La clase fondo-gen-8 pone el color de la generación 8 -->
+    <section class="hero-generacion fondo-gen-8">
+      <h1>Historia de Galar</h1>
+      <p>Generación 8 · Espada y Escudo</p>
+    </section>
+
+    <div class="contenido">
+
+      <!-- ========== LA REGIÓN ========== -->
+      <section class="seccion" id="region">
+        <h2>La región</h2>
+        <div class="lore">
+          <p>Galar se inspira en el Reino Unido. Tiene campos verdes, pueblos de piedra, ciudades industriales y estadios gigantes donde se celebran los combates. Aquí los combates Pokémon son un deporte: la gente los ve en los estadios y los entrenadores son como estrellas.</p>
+          <p>Pokémon Espada y Pokémon Escudo salieron en 2019 y trajeron 81 Pokémon nuevos, el Dinamax y la Zona Salvaje, una gran llanura donde se pueden capturar Pokémon. Después llegaron dos ampliaciones: La isla solitaria de la Armadura y Las nieves de la Corona.</p>
+          <p>El protagonista vive en Pueblo Par. Su amigo Paul le consigue una invitación del Campeón Lionel y los dos empiezan el Desafío de los gimnasios. Hay que conseguir ocho medallas, ganar la Copa de Campeones y, mientras tanto, descubrir un secreto que amenaza a toda Galar.</p>
+        </div>
+        <figure class="mapa">
+          <img class="mapa-imagen" src="../../img/regiones/8-galar/mapa.png" alt="Mapa de la región de Galar" loading="lazy">
+          <figcaption>Mapa de la región de Galar.</figcaption>
+        </figure>
+      </section>
+
+      <!-- ========== CIUDADES Y PUEBLOS ========== -->
+      <section class="seccion" id="ciudades">
+        <h2>Ciudades y pueblos</h2>
+        <div class="hist-ciudades">
+          <article class="hist-ciudad">
+            <img src="../../img/historias/galar/ciudades/pueblo-par.webp" alt="Mapa de Pueblo Par en Pokémon Espada y Pokémon Escudo" loading="lazy">
+            <h3>Pueblo Par</h3>
+            <p>El pueblo donde empieza el viaje. Aquí viven el protagonista y Paul.</p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/galar/ciudades/pueblo-yarda.webp" alt="Mapa de Pueblo Yarda en Pokémon Espada y Pokémon Escudo" loading="lazy">
+            <h3>Pueblo Yarda</h3>
+            <p>Un pueblo en el sur de Galar. Aquí el Campeón Lionel os da su primer Pokémon a Paul y a ti.</p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/galar/ciudades/pueblo-hoyuelo.webp" alt="Mapa de Pueblo Hoyuelo en Pokémon Espada y Pokémon Escudo" loading="lazy">
+            <h3>Pueblo Hoyuelo</h3>
+            <p>Un pueblo con campos y granjas, donde está el primer gimnasio.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-planta">Planta</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/galar/ciudades/ciudad-piston.webp" alt="Mapa de Ciudad Pistón en Pokémon Espada y Pokémon Escudo" loading="lazy">
+            <h3>Ciudad Pistón</h3>
+            <p>Una ciudad industrial, en el centro de Galar, con un estadio de gimnasio de tipo Fuego.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-fuego">Fuego</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/galar/ciudades/pueblo-amura.webp" alt="Mapa de Pueblo Amura en Pokémon Espada y Pokémon Escudo" loading="lazy">
+            <h3>Pueblo Amura</h3>
+            <p>Un pueblo en la costa, con un puerto y una playa. Su gimnasio es de tipo Agua.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-agua">Agua</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/galar/ciudades/pueblo-ladera.webp" alt="Mapa de Pueblo Ladera en Pokémon Espada y Pokémon Escudo" loading="lazy">
+            <h3>Pueblo Ladera</h3>
+            <p>Un pueblo en el oeste de Galar, con calles empedradas. Tiene un gimnasio de Lucha o de Fantasma.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-lucha">Lucha</span> <span class="tipo-mini tipo-fantasma">Fantasma</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/galar/ciudades/pueblo-plie.webp" alt="Mapa de Pueblo Plié en Pokémon Espada y Pokémon Escudo" loading="lazy">
+            <h3>Pueblo Plié</h3>
+            <p>Un pueblo escondido en el Bosque Lumirinto. Su gimnasio es de tipo Hada.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-hada">Hada</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/galar/ciudades/pueblo-auriga.webp" alt="Mapa de Pueblo Auriga en Pokémon Espada y Pokémon Escudo" loading="lazy">
+            <h3>Pueblo Auriga</h3>
+            <p>Un pueblo en el nordeste de Galar, con mucha nieve. Tiene un gimnasio de Roca o de Hielo.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-roca">Roca</span> <span class="tipo-mini tipo-hielo">Hielo</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/galar/ciudades/pueblo-crampon.webp" alt="Mapa de Pueblo Crampón en Pokémon Espada y Pokémon Escudo" loading="lazy">
+            <h3>Pueblo Crampón</h3>
+            <p>Un pueblo en el este de Galar, con un aire de ciudad gris. Su gimnasio es de tipo Siniestro.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-siniestro">Siniestro</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/galar/ciudades/ciudad-artejo.webp" alt="Mapa de Ciudad Artejo en Pokémon Espada y Pokémon Escudo" loading="lazy">
+            <h3>Ciudad Artejo</h3>
+            <p>Una ciudad en el centro de Galar con un castillo antiguo. Su gimnasio es de tipo Dragón.</p>
+            <p class="hist-etiqueta">Gimnasio: <span class="tipo-mini tipo-dragon">Dragón</span></p>
+          </article>
+          <article class="hist-ciudad">
+            <img src="../../img/historias/galar/ciudades/ciudad-puntera.webp" alt="Mapa de Ciudad Puntera en Pokémon Espada y Pokémon Escudo" loading="lazy">
+            <h3>Ciudad Puntera</h3>
+            <p>La capital de Galar, en el norte. Aquí está el estadio más grande de la región y la sede de la Copa de Campeones.</p>
+            <p class="hist-etiqueta">Aquí se celebra la <strong>Copa de Campeones</strong></p>
+          </article>
+        </div>
+
+        <h3 class="subtitulo">Otros lugares importantes</h3>
+        <ul class="hist-lugares">
+          <li><strong>Zona Salvaje:</strong> Una gran llanura donde el tiempo cambia y se pueden capturar Pokémon. Es la parte más abierta de Galar.</li>
+          <li><strong>Torre Rose:</strong> El edificio más alto de Ciudad Puntera. Es la sede de Macrocosmos.</li>
+          <li><strong>Villa Helada:</strong> Un pueblo helado con una gran montaña nevada detrás.</li>
+          <li><strong>Isla de la Armadura:</strong> Una isla con un dojo, donde se entrena para ser más fuerte. Salió en la primera ampliación.</li>
+          <li><strong>Las Nieves de la Corona:</strong> Una montaña helada y llena de sorpresas. Salió en la segunda ampliación.</li>
+        </ul>
+      </section>
+
+      <!-- ========== POKÉMON LEGENDARIOS ========== -->
+      <section class="seccion" id="leyendas">
+        <h2>Pokémon legendarios</h2>
+        <p class="descripcion">Pulsa en un Pokémon para verlo en grande.</p>
+        <div class="hist-leyendas">
+          <article class="hist-leyenda">
+            <button class="evo-ver" popovertarget="ver-zacian" title="Ver Zacian en grande"><img class="hist-pokemon" src="../../img/pokemon/modelos/zacian.png" alt="Zacian" loading="lazy"></button>
+            <h3>Zacian</h3>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-hada">Hada</span></p>
+            <p>El héroe legendario con espada. Es el legendario de Espada y aparece durante la historia.</p>
+          </article>
+          <article class="hist-leyenda">
+            <button class="evo-ver" popovertarget="ver-zamazenta" title="Ver Zamazenta en grande"><img class="hist-pokemon" src="../../img/pokemon/modelos/zamazenta.png" alt="Zamazenta" loading="lazy"></button>
+            <h3>Zamazenta</h3>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-lucha">Lucha</span></p>
+            <p>El héroe legendario con escudo. Es el legendario de Escudo y aparece durante la historia.</p>
+          </article>
+          <article class="hist-leyenda">
+            <button class="evo-ver" popovertarget="ver-eternatus" title="Ver Eternatus en grande"><img class="hist-pokemon" src="../../img/pokemon/modelos/eternatus.png" alt="Eternatus" loading="lazy"></button>
+            <h3>Eternatus</h3>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-veneno">Veneno</span> <span class="tipo-mini tipo-dragon">Dragón</span></p>
+            <p>Un Pokémon que llegó del espacio hace miles de años. Provoca el Dinamax en toda Galar.</p>
+          </article>
+          <article class="hist-leyenda">
+            <button class="evo-ver" popovertarget="ver-calyrex" title="Ver Calyrex en grande"><img class="hist-pokemon" src="../../img/pokemon/modelos/calyrex.png" alt="Calyrex" loading="lazy"></button>
+            <h3>Calyrex</h3>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-psiquico">Psíquico</span> <span class="tipo-mini tipo-planta">Planta</span></p>
+            <p>El Rey Corona, un Pokémon muy antiguo. Aparece en Las nieves de la Corona.</p>
+          </article>
+          <article class="hist-leyenda">
+            <button class="evo-ver" popovertarget="ver-glastrier" title="Ver Glastrier en grande"><img class="hist-pokemon" src="../../img/pokemon/modelos/glastrier.png" alt="Glastrier" loading="lazy"></button>
+            <h3>Glastrier</h3>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-hielo">Hielo</span></p>
+            <p>El corcel de la Corona. Es un Pokémon muy rápido y lo monta Calyrex.</p>
+          </article>
+          <article class="hist-leyenda">
+            <button class="evo-ver" popovertarget="ver-spectrier" title="Ver Spectrier en grande"><img class="hist-pokemon" src="../../img/pokemon/modelos/spectrier.png" alt="Spectrier" loading="lazy"></button>
+            <h3>Spectrier</h3>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-fantasma">Fantasma</span></p>
+            <p>El corcel espectral de la Corona. Es un Pokémon muy rápido y lo monta Calyrex.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ========== EQUIPO VILLANO ========== -->
+      <section class="seccion" id="villanos">
+        <h2>Macrocosmos</h2>
+        <div class="hist-villano">
+          <img class="hist-logo" src="../../img/historias/galar/logo-macrocosmos.webp" alt="Logo de Macrocosmos">
+          <div class="hist-villano-texto">
+            <p>Macrocosmos es la empresa de energía más grande de Galar. Parece muy amable, pero su presidente, Rose, tiene un plan: usar a Eternatus para conseguir energía para siempre.</p>
+            <p>En la región también está el Equipo Yell, un grupo de fans de Mery que apoya a su ídolo y suele molestar a los entrenadores.</p>
+          </div>
+          <article class="hist-persona hist-jefe">
+            <img class="hist-retrato" src="../../img/historias/galar/personajes/rose.webp" alt="Rose" loading="lazy">
+            <h3>Rose</h3>
+            <p class="hist-rol">Presidente de Macrocosmos</p>
+            <p>El presidente de Macrocosmos y presidente de la Liga de Galar. Es un hombre muy amable, pero cree que hay que hacer cualquier cosa para salvar el futuro.</p>
+          </article>
+        </div>
+
+        <h3 class="subtitulo">Qué hace Macrocosmos durante el viaje</h3>
+        <ol class="hist-pasos">
+          <li><strong>Macrocosmos:</strong> Rose y su ayudante buscan Estrellas deseo por toda la región para obtener su energía.</li>
+          <li><strong>Ciudad Puntera:</strong> Rose libera a Eternatus, que provoca el Dinamax en toda la región.</li>
+          <li><strong>Final:</strong> Con la ayuda de Zacian o de Zamazenta y de tus amigos, derrotas a Eternatus y detienes el plan.</li>
+        </ol>
+      </section>
+
+      <!-- ========== LOS GIMNASIOS ========== -->
+      <section class="seccion" id="gimnasios">
+        <h2>Los gimnasios</h2>
+        <p class="descripcion">Los ocho gimnasios de Galar, en el orden normal del viaje. En Pueblo Ladera y en Pueblo Auriga hay dos líderes, y toca uno u otro según la versión: en Espada, Judith y Morris; en Escudo, Alistair y Mel.</p>
+        <div class="hist-personas">
+          <article class="hist-persona">
+            <span class="hist-numero">1</span>
+            <img class="hist-retrato" src="../../img/historias/galar/personajes/percy.webp" alt="Percy" loading="lazy">
+            <h3>Percy</h3>
+            <p class="hist-rol">Pueblo Hoyuelo</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-planta">Planta</span> · Medalla Planta</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-eldegoss" title="Ver Eldegoss en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/eldegoss.png" alt="Eldegoss" loading="lazy"></button><span>Pokémon estrella<strong>Eldegoss</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">2</span>
+            <img class="hist-retrato" src="../../img/historias/galar/personajes/cathy.webp" alt="Cathy" loading="lazy">
+            <h3>Cathy</h3>
+            <p class="hist-rol">Pueblo Amura</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-agua">Agua</span> · Medalla Agua</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-drednaw" title="Ver Drednaw en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/drednaw.png" alt="Drednaw" loading="lazy"></button><span>Pokémon estrella<strong>Drednaw</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">3</span>
+            <img class="hist-retrato" src="../../img/historias/galar/personajes/naboru.webp" alt="Naboru" loading="lazy">
+            <h3>Naboru</h3>
+            <p class="hist-rol">Ciudad Pistón</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-fuego">Fuego</span> · Medalla Fuego</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-centiskorch" title="Ver Centiskorch en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/centiskorch.png" alt="Centiskorch" loading="lazy"></button><span>Pokémon estrella<strong>Centiskorch</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">4</span>
+            <img class="hist-retrato" src="../../img/historias/galar/personajes/judith.webp" alt="Judith" loading="lazy">
+            <h3>Judith</h3>
+            <p class="hist-rol">Pueblo Ladera</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-lucha">Lucha</span> · Medalla Lucha</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-machamp" title="Ver Machamp en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/machamp.png" alt="Machamp" loading="lazy"></button><span>Pokémon estrella<strong>Machamp</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">4</span>
+            <img class="hist-retrato" src="../../img/historias/galar/personajes/alistair.webp" alt="Alistair" loading="lazy">
+            <h3>Alistair</h3>
+            <p class="hist-rol">Pueblo Ladera</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-fantasma">Fantasma</span> · Medalla Fantasma</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-gengar" title="Ver Gengar en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/gengar.png" alt="Gengar" loading="lazy"></button><span>Pokémon estrella<strong>Gengar</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">5</span>
+            <img class="hist-retrato" src="../../img/historias/galar/personajes/sally.webp" alt="Sally" loading="lazy">
+            <h3>Sally</h3>
+            <p class="hist-rol">Pueblo Plié</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-hada">Hada</span> · Medalla Hada</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-alcremie" title="Ver Alcremie en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/alcremie.png" alt="Alcremie" loading="lazy"></button><span>Pokémon estrella<strong>Alcremie</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">6</span>
+            <img class="hist-retrato" src="../../img/historias/galar/personajes/morris.webp" alt="Morris" loading="lazy">
+            <h3>Morris</h3>
+            <p class="hist-rol">Pueblo Auriga</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-roca">Roca</span> · Medalla Roca</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-coalossal" title="Ver Coalossal en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/coalossal.png" alt="Coalossal" loading="lazy"></button><span>Pokémon estrella<strong>Coalossal</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">6</span>
+            <img class="hist-retrato" src="../../img/historias/galar/personajes/mel.webp" alt="Mel" loading="lazy">
+            <h3>Mel</h3>
+            <p class="hist-rol">Pueblo Auriga</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-hielo">Hielo</span> · Medalla Hielo</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-lapras" title="Ver Lapras en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/lapras.png" alt="Lapras" loading="lazy"></button><span>Pokémon estrella<strong>Lapras</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">7</span>
+            <img class="hist-retrato" src="../../img/historias/galar/personajes/nerio.webp" alt="Nerio" loading="lazy">
+            <h3>Nerio</h3>
+            <p class="hist-rol">Pueblo Crampón</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-siniestro">Siniestro</span> · Medalla Siniestro</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-obstagoon" title="Ver Obstagoon en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/obstagoon.png" alt="Obstagoon" loading="lazy"></button><span>Pokémon estrella<strong>Obstagoon</strong></span></div>
+          </article>
+          <article class="hist-persona">
+            <span class="hist-numero">8</span>
+            <img class="hist-retrato" src="../../img/historias/galar/personajes/roy.webp" alt="Roy" loading="lazy">
+            <h3>Roy</h3>
+            <p class="hist-rol">Ciudad Artejo</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-dragon">Dragón</span> · Medalla Dragón</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-duraludon" title="Ver Duraludon en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/duraludon.png" alt="Duraludon" loading="lazy"></button><span>Pokémon estrella<strong>Duraludon</strong></span></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ========== LA LIGA POKÉMON ========== -->
+      <section class="seccion" id="liga">
+        <h2>La Copa de Campeones</h2>
+        <p class="descripcion">En Galar no hay Alto Mando. Para llegar al Campeón hay que ganar la Copa de Campeones, que se celebra en Ciudad Puntera, y vencer a los demás participantes.</p>
+        <div class="hist-personas hist-liga">
+          <article class="hist-persona">
+            <img class="hist-retrato" src="../../img/historias/galar/personajes/roxy.webp" alt="Mery" loading="lazy">
+            <h3>Mery</h3>
+            <p class="hist-rol">Rival de la Copa</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-siniestro">Siniestro</span></p>
+            <p>La líder del Equipo Yell y rival en el desafío. Es muy fuerte y no se rinde.</p>
+          </article>
+          <article class="hist-persona">
+            <img class="hist-retrato" src="../../img/historias/galar/personajes/berto.webp" alt="Berto" loading="lazy">
+            <h3>Berto</h3>
+            <p class="hist-rol">Rival de la Copa</p>
+            <p class="hist-etiqueta"><span class="tipo-mini tipo-psiquico">Psíquico</span></p>
+            <p>Un entrenador de Pueblo Plié que acaba siendo líder de gimnasio. Es muy orgulloso.</p>
+          </article>
+          <article class="hist-persona">
+            <img class="hist-retrato" src="../../img/historias/galar/personajes/paul.webp" alt="Paul" loading="lazy">
+            <h3>Paul</h3>
+            <p class="hist-rol">Rival de la Copa</p>
+            <p>Tu mejor amigo. Quiere ser campeón como su hermano Lionel.</p>
+          </article>
+          <article class="hist-persona hist-campeon">
+            <img class="hist-retrato" src="../../img/historias/galar/personajes/lionel.webp" alt="Lionel" loading="lazy">
+            <h3>Lionel</h3>
+            <p class="hist-rol">Campeón</p>
+            <p>El campeón de Galar. Es invencible y muy famoso, y tiene una capa roja.</p>
+            <div class="hist-as"><button class="evo-ver" popovertarget="ver-charizard" title="Ver Charizard en grande"><img class="hist-as-img" src="../../img/pokemon/modelos/charizard.png" alt="Charizard" loading="lazy"></button><span>Pokémon estrella<strong>Charizard</strong></span></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ========== PERSONAJES ========== -->
+      <section class="seccion" id="personajes">
+        <h2>Personajes</h2>
+        <div class="hist-personajes">
+          <article class="hist-persona hist-persona-ancha">
+            <img class="hist-retrato" src="../../img/historias/galar/personajes/magnolia.webp" alt="Profesora Magnolia" loading="lazy">
+            <div>
+              <h3>Profesora Magnolia</h3>
+              <p>La experta en Dinamax. Es muy mayor, pero muy lista, y es la abuela de Sonia.</p>
+            </div>
+          </article>
+          <article class="hist-persona hist-persona-ancha">
+            <img class="hist-retrato" src="../../img/historias/galar/personajes/sonia.webp" alt="Sonia" loading="lazy">
+            <div>
+              <h3>Sonia</h3>
+              <p>La nieta de la Profesora Magnolia. Investiga las leyendas de Galar y te ayuda en el viaje.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Enlaces para volver -->
+      <nav class="navegacion-gen">
+        <a href="../generaciones/generacion-8.html">← Generación 8</a>
+        <a href="../../index.html">Inicio</a>
+      </nav>
+
+      <!-- ========== VISORES (Pokémon en grande) ==========
+           Sin JavaScript: cada Pokémon es un <button popovertarget="ver-...">
+           que abre el <div popover> con ese id. Se cierra con la ✕, pulsando fuera o con Esc. -->
+      <div class="visor" id="ver-zacian" popover>
+        <img src="../../img/pokemon/modelos-grandes/zacian.webp" alt="Zacian en grande" loading="lazy">
+        <p>Zacian</p>
+        <button class="visor-cerrar" popovertarget="ver-zacian" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-zamazenta" popover>
+        <img src="../../img/pokemon/modelos-grandes/zamazenta.webp" alt="Zamazenta en grande" loading="lazy">
+        <p>Zamazenta</p>
+        <button class="visor-cerrar" popovertarget="ver-zamazenta" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-eternatus" popover>
+        <img src="../../img/pokemon/modelos-grandes/eternatus.webp" alt="Eternatus en grande" loading="lazy">
+        <p>Eternatus</p>
+        <button class="visor-cerrar" popovertarget="ver-eternatus" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-calyrex" popover>
+        <img src="../../img/pokemon/modelos-grandes/calyrex.webp" alt="Calyrex en grande" loading="lazy">
+        <p>Calyrex</p>
+        <button class="visor-cerrar" popovertarget="ver-calyrex" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-glastrier" popover>
+        <img src="../../img/pokemon/modelos-grandes/glastrier.webp" alt="Glastrier en grande" loading="lazy">
+        <p>Glastrier</p>
+        <button class="visor-cerrar" popovertarget="ver-glastrier" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-spectrier" popover>
+        <img src="../../img/pokemon/modelos-grandes/spectrier.webp" alt="Spectrier en grande" loading="lazy">
+        <p>Spectrier</p>
+        <button class="visor-cerrar" popovertarget="ver-spectrier" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-eldegoss" popover>
+        <img src="../../img/pokemon/modelos-grandes/eldegoss.webp" alt="Eldegoss en grande" loading="lazy">
+        <p>Eldegoss</p>
+        <button class="visor-cerrar" popovertarget="ver-eldegoss" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-drednaw" popover>
+        <img src="../../img/pokemon/modelos-grandes/drednaw.webp" alt="Drednaw en grande" loading="lazy">
+        <p>Drednaw</p>
+        <button class="visor-cerrar" popovertarget="ver-drednaw" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-centiskorch" popover>
+        <img src="../../img/pokemon/modelos-grandes/centiskorch.webp" alt="Centiskorch en grande" loading="lazy">
+        <p>Centiskorch</p>
+        <button class="visor-cerrar" popovertarget="ver-centiskorch" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-machamp" popover>
+        <img src="../../img/pokemon/modelos-grandes/machamp.webp" alt="Machamp en grande" loading="lazy">
+        <p>Machamp</p>
+        <button class="visor-cerrar" popovertarget="ver-machamp" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-gengar" popover>
+        <img src="../../img/pokemon/modelos-grandes/gengar.webp" alt="Gengar en grande" loading="lazy">
+        <p>Gengar</p>
+        <button class="visor-cerrar" popovertarget="ver-gengar" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-alcremie" popover>
+        <img src="../../img/pokemon/modelos-grandes/alcremie.webp" alt="Alcremie en grande" loading="lazy">
+        <p>Alcremie</p>
+        <button class="visor-cerrar" popovertarget="ver-alcremie" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-coalossal" popover>
+        <img src="../../img/pokemon/modelos-grandes/coalossal.webp" alt="Coalossal en grande" loading="lazy">
+        <p>Coalossal</p>
+        <button class="visor-cerrar" popovertarget="ver-coalossal" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-lapras" popover>
+        <img src="../../img/pokemon/modelos-grandes/lapras.webp" alt="Lapras en grande" loading="lazy">
+        <p>Lapras</p>
+        <button class="visor-cerrar" popovertarget="ver-lapras" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-obstagoon" popover>
+        <img src="../../img/pokemon/modelos-grandes/obstagoon.webp" alt="Obstagoon en grande" loading="lazy">
+        <p>Obstagoon</p>
+        <button class="visor-cerrar" popovertarget="ver-obstagoon" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-duraludon" popover>
+        <img src="../../img/pokemon/modelos-grandes/duraludon.webp" alt="Duraludon en grande" loading="lazy">
+        <p>Duraludon</p>
+        <button class="visor-cerrar" popovertarget="ver-duraludon" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="visor" id="ver-charizard" popover>
+        <img src="../../img/pokemon/modelos-grandes/charizard.webp" alt="Charizard en grande" loading="lazy">
+        <p>Charizard</p>
+        <button class="visor-cerrar" popovertarget="ver-charizard" popovertargetaction="hide" aria-label="Cerrar">✕</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==================================================
+       PIE DE PÁGINA
+       Créditos de las imágenes y avisos de copyright.
+       ================================================== -->
+  <footer class="pie">
+    <p>Proyecto de clase · Pokémon y sus personajes son © Nintendo, Game Freak y The Pokémon Company.</p>
+    <p>Personajes y mapas de las ciudades: <a href="https://www.wikidex.net">WikiDex</a> (arte oficial y mapas de Pokémon Espada y Pokémon Escudo). Reducidos de tamaño.</p>
+    <p>Pokémon: <a href="https://github.com/PokeAPI/sprites">PokeAPI/sprites</a> (renders 3D de Pokémon HOME).</p>
+  </footer>
+</body>
+</html>
