@@ -10,6 +10,7 @@
 
 /* ---------- 1. VARIABLES ---------- */
 
+/* Colores y fuente de toda la web: si cambias uno aquí, cambia en todas partes */
 :root {
   --rojo: #e3350d;
   --negro: #222224;
@@ -29,6 +30,7 @@
 /* El padding y el borde no suman al ancho */
 * { box-sizing: border-box; }
 
+/* Letra, color y fondo de toda la página */
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -37,7 +39,7 @@ body {
   background-color: var(--fondo);
 }
 
-a { color: inherit; }
+a { color: inherit; } /* los enlaces usan el color del texto de alrededor */
 
 /* El foco se tiene que ver al moverse con la tecla Tab */
 a:focus { outline: 3px solid var(--amarillo); outline-offset: 2px; }
@@ -53,11 +55,12 @@ h1, h2, h3, .logo, .menu a, .boton, .numero, .anterior-siguiente a,
   line-height: 1.5;
 }
 
-h2 { font-size: 1.1rem; }
+h2 { font-size: 1.1rem; } /* rem: relativo al tamaño de letra base */
 
 /* Columna central de 1100px como máximo, centrada */
 .contenido { max-width: 1100px; margin: 0 auto; padding: 48px 16px; }
-.seccion { margin-bottom: 56px; }
+.seccion { margin-bottom: 56px; } /* espacio entre secciones */
+/* Línea gruesa bajo cada título */
 .seccion h2 { padding-bottom: 12px; border-bottom: 4px solid var(--negro); }
 
 /* Tarjetas y cajas blancas: todas con el mismo aspecto */
@@ -67,7 +70,7 @@ h2 { font-size: 1.1rem; }
   border: 3px solid var(--negro);
   border-radius: 16px;
   background-color: var(--blanco);
-  box-shadow: 0 6px 20px var(--sombra);
+  box-shadow: 0 6px 20px var(--sombra); /* sombra suave: x, y, difuminado, color */
 }
 
 /* Todas las listas de tarjetas son una rejilla (Grid).
@@ -80,6 +83,7 @@ h2 { font-size: 1.1rem; }
   gap: 20px;
 }
 
+/* Estas listas ya empiezan con 2 columnas en el móvil */
 .lista-generaciones, .lista-legendarios, .lista-personas {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -98,12 +102,13 @@ h2 { font-size: 1.1rem; }
 .tipo, .tipo-pequeno, .mega-etiqueta {
   display: inline-block;
   padding: 4px 14px;
-  border-radius: 999px;
+  border-radius: 999px; /* 999px: forma de pastilla */
   color: var(--blanco);
   font-size: 0.85rem;
   font-weight: bold;
 }
 
+/* Versión pequeña de la pastilla */
 .tipo-pequeno, .mega-etiqueta { padding: 1px 6px; font-size: 0.6rem; }
 
 /* ---------- 3. CABECERA Y PIE ---------- */
@@ -112,16 +117,17 @@ h2 { font-size: 1.1rem; }
 .cabecera {
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 10; /* por encima del contenido que pasa por debajo */
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* logo a la izquierda, menú a la derecha */
   padding: 12px 16px;
   background-color: var(--rojo);
   color: var(--blanco);
   border-bottom: 6px solid var(--negro);
 }
 
+/* Nombre de la web con sombra negra sin difuminar (estilo pixel) */
 .logo {
   font-size: 0.7rem;
   text-decoration: none;
@@ -129,7 +135,7 @@ h2 { font-size: 1.1rem; }
   text-shadow: 3px 3px 0 var(--negro);
 }
 
-.menu { display: flex; gap: 6px; }
+.menu { display: flex; gap: 6px; } /* botones del menú en fila */
 
 /* Botones del menú, enlaces "Anterior/Siguiente" e índice: pastillas */
 .menu a, .anterior-siguiente a, .botones-indice a {
@@ -145,6 +151,7 @@ h2 { font-size: 1.1rem; }
 /* La página en la que estás sale en negro */
 .menu a.activo { background-color: var(--negro); color: var(--blanco); }
 
+/* Pie de página negro */
 .pie {
   padding: 32px 16px;
   text-align: center;
@@ -155,13 +162,14 @@ h2 { font-size: 1.1rem; }
 
 /* ---------- 4. INICIO ---------- */
 
+/* Portada: título grande centrado; el span del título va en rojo */
 .portada { padding: 64px 16px; text-align: center; }
 .portada h1 { margin: 0; font-size: 1.4rem; text-shadow: 4px 4px 0 var(--sombra); }
 .portada h1 span { color: var(--rojo); }
 
 .portada p {
   max-width: 560px;
-  margin: 16px auto 32px;
+  margin: 16px auto 32px; /* auto: centra la caja */
   font-size: 1.15rem;
   font-weight: bold;
   color: var(--texto-suave);
@@ -188,6 +196,7 @@ h2 { font-size: 1.1rem; }
 }
 
 .tarjeta h3 { font-size: 0.7rem; }
+/* El número usa el color de su generación (apartado 8) */
 .numero { font-size: 1.8rem; color: var(--color-generacion); }
 .nombre-juego { font-weight: bold; }
 
@@ -253,6 +262,7 @@ h2 { font-size: 1.1rem; }
 
 .boton-diario img { display: block; width: 96px; margin: 0 auto; }
 
+/* Mapa de la región con borde y esquinas redondeadas */
 .imagen-mapa {
   display: block;
   margin: 24px auto 0;
@@ -260,6 +270,7 @@ h2 { font-size: 1.1rem; }
   border-radius: 12px;
 }
 
+/* Contenido centrado dentro de estas tarjetas */
 .juego, .inicial, .legendario, .persona, .tarjeta-evolucion { text-align: center; }
 .caratula { border-radius: 12px; }
 
@@ -272,6 +283,7 @@ h2 { font-size: 1.1rem; }
   border-top: 1px solid var(--linea);
 }
 
+/* 33%: caben tres iniciales en cada fila */
 .inicial-pequeno { width: 33%; font-size: 0.7rem; color: var(--texto-suave); }
 .enlace-inicial { display: block; text-decoration: none; }
 
@@ -286,7 +298,7 @@ h2 { font-size: 1.1rem; }
   background-color: var(--fondo);
 }
 
-.imagen-inicial { width: 160px; }
+.imagen-inicial { width: 160px; } /* iniciales grandes */
 
 /* Vídeo de YouTube con forma panorámica */
 .video iframe {
@@ -308,6 +320,7 @@ h2 { font-size: 1.1rem; }
 }
 
 .botones-indice a { color: var(--blanco); font-size: 0.8rem; font-weight: bold; }
+/* Número de la generación en un cuadrado de color */
 .numero-generacion { padding: 4px 8px; border-radius: 8px; color: var(--blanco); }
 
 /* Franja gruesa a la izquierda con el color del tipo */
@@ -315,8 +328,9 @@ h2 { font-size: 1.1rem; }
 
 /* Fila de Pokémon y flechas (Flexbox) */
 .fila-evolucion { display: flex; justify-content: center; gap: 4px; }
-.paso { width: 30%; }
-.icono { width: 84px; height: 84px; }
+.paso { width: 30%; } /* cada Pokémon de la fila */
+.icono { width: 84px; height: 84px; } /* más grandes que .imagen-pequena */
+/* El margen baja la flecha hasta la mitad del icono */
 .flecha { margin-top: 30px; color: var(--texto-suave); }
 
 /* Evolución todavía desconocida */
@@ -333,17 +347,21 @@ h2 { font-size: 1.1rem; }
 /* Megaevolución, separada con una línea a rayas */
 .mega { margin-top: 14px; border-top: 2px dashed var(--linea); }
 
+/* Etiqueta MEGA con degradado de izquierda a derecha */
 .mega-etiqueta {
   background-image: linear-gradient(90deg, #f7a400, #e3350d, #7b1fa2);
 }
-.tipos { display: block; }
+.tipos { display: block; } /* los tipos bajan a su propia línea */
 
 /* ---------- 7. PÁGINAS DE HISTORIA ---------- */
 
+/* Tarjeta de ciudad: la foto ocupa todo el ancho de arriba.
+   relative: para colocar a Kecleon encima de la foto (apartado 10) */
 .ciudad { position: relative; padding: 0; }
-.foto-ciudad { display: block; border-radius: 13px 13px 0 0; }
+.foto-ciudad { display: block; border-radius: 13px 13px 0 0; } /* solo las esquinas de arriba */
 .ciudad h3, .ciudad p { margin: 12px 16px; font-size: 0.8rem; }
 .lista-lugares li, .pasos-villanos li { margin-bottom: 8px; }
+/* Tamaño de los legendarios y del logo del equipo villano */
 .imagen-pokemon { width: 120px; }
 .logo-villanos { width: 140px; }
 
@@ -351,7 +369,7 @@ h2 { font-size: 1.1rem; }
 .foto-persona {
   display: block;
   height: 200px;
-  width: auto;
+  width: auto; /* el ancho se ajusta solo para no deformar la imagen */
   margin: 0 auto;
 }
 
@@ -369,7 +387,7 @@ h2 { font-size: 1.1rem; }
   line-height: 30px;
 }
 
-.legendario, .persona { position: relative; }
+.legendario, .persona { position: relative; } /* referencia para el número del gimnasio */
 
 /* El Campeón destaca con borde dorado */
 .campeon { border-color: #c9a227; }
@@ -386,7 +404,7 @@ h2 { font-size: 1.1rem; }
 }
 
 .pokemon-estrella span { text-align: left; }
-.pokemon-estrella strong { display: block; color: var(--texto); }
+.pokemon-estrella strong { display: block; color: var(--texto); } /* el nombre baja de línea */
 .legendario p, .persona p { font-size: 0.85rem; }
 .imagen-estrella { width: 48px; }
 
@@ -399,6 +417,7 @@ h2 { font-size: 1.1rem; }
   text-align: left;
 }
 
+/* Descendiente: solo los retratos que están dentro de .persona-ancha */
 .persona-ancha .foto-persona { width: 120px; height: auto; }
 
 /* ---------- 8. COLORES ---------- */
@@ -415,17 +434,19 @@ h2 { font-size: 1.1rem; }
 .gen-9, .fondo-gen-9 { --color-generacion: #7b1fa2; }
 .gen-10, .fondo-gen-10 { --color-generacion: #00897b; }
 
+/* Estos elementos usan ese color de fondo */
 .portada-generacion, .numero-generacion, .botones-indice a {
   background-color: var(--color-generacion);
 }
 
 .fondo-contacto { background-color: var(--rojo); }
 
+/* Degradado verde, rojo y azul (planta, fuego y agua) */
 .fondo-evoluciones {
   background-image: linear-gradient(90deg, #3fa129, #e62829, #2980ef);
 }
 
-/* Colores de los tipos */
+/* Colores de los tipos: fondo de las pastillas y borde izquierdo de las evoluciones */
 .tipo-planta { background-color: #3fa129; }
 .tipo-fuego { background-color: #e62829; }
 .tipo-agua { background-color: #2980ef; }
@@ -478,11 +499,13 @@ h2 { font-size: 1.1rem; }
 .anterior-siguiente a:hover, .volver-arriba:hover { color: var(--rojo); }
 
 /* El título de la portada aparece subiendo al cargar la página */
+/* @keyframes: la animación va sola, sin pasar el ratón */
 @keyframes aparecer {
   from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* both: el título empieza invisible y no da un salto */
 .portada h1, .portada-generacion h1 { animation: aparecer 0.6s ease-out both; }
 
 /* ---------- 10. SORPRESAS ESCONDIDAS (al pasar el ratón) ---------- */
@@ -493,7 +516,7 @@ h2 { font-size: 1.1rem; }
   top: 18px;
   right: 6%;
   width: 30%;
-  opacity: 0.2;
+  opacity: 0.2; /* casi transparente: camuflado */
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
@@ -506,7 +529,7 @@ h2 { font-size: 1.1rem; }
 /* Alola y Teselia: dos imágenes una encima de otra; al pasar el ratón
    la de arriba desaparece y se ve la de abajo */
 .disfraz, .ilusion { position: relative; display: inline-block; }
-.disfraz { width: 56px; height: 56px; }
+.disfraz { width: 56px; height: 56px; } /* Mimikyu, del tamaño de un icono */
 
 .disfraz img {
   position: absolute;
@@ -515,8 +538,10 @@ h2 { font-size: 1.1rem; }
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
+/* Zoroark se coloca justo encima de N */
 .zoroark { position: absolute; top: 0; left: 0; }
 .ilusion img { transition: opacity 0.5s ease, transform 0.5s ease; }
+/* Al principio están escondidos y pequeños */
 .mimikyu, .zoroark { opacity: 0; transform: scale(0.6); }
 
 /* El disfraz de Pikachu se cae y aparece Mimikyu temblando */
@@ -525,7 +550,7 @@ h2 { font-size: 1.1rem; }
 .disfraz:hover .mimikyu {
   opacity: 1;
   transform: scale(1);
-  animation: temblar 0.3s ease-in-out 0.4s 2;
+  animation: temblar 0.3s ease-in-out 0.4s 2; /* espera 0.4s y tiembla 2 veces */
 }
 
 @keyframes temblar {
@@ -561,6 +586,7 @@ h2 { font-size: 1.1rem; }
   /* Villano: logo y texto arriba, jefe debajo a todo el ancho */
   .villanos { grid-template-columns: 140px 1fr; }
   .jefe { grid-column: span 2; }
+  /* En pantallas más grandes, letras y espacios más grandes */
   .cabecera { padding: 24px; }
   .logo { font-size: 1.1rem; }
   .menu a { font-size: 0.65rem; }
@@ -582,5 +608,5 @@ h2 { font-size: 1.1rem; }
   /* Villano: logo, texto y jefe en tres columnas */
   .villanos { grid-template-columns: 140px 1fr 260px; }
   .jefe { grid-column: span 1; }
-  .consola { width: 72px; }
+  .consola { width: 72px; } /* consolas más grandes */
 }
