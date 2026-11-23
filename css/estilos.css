@@ -2,62 +2,51 @@
    ESTILOS DE LA WEB "POCKET MONSTER"
 
    ÍNDICE
-     1.  Variables (colores, fuente)
-     2.  Fuente pixel
-     3.  Estilos generales
-     4.  Cabecera
-     5.  Portada
-     6.  Contenido
-     7.  Tarjetas (base común y generaciones)
-     8.  Colores de cada generación
-     9.  Páginas de generación
-     10. Secciones de generación (historia, mapa, juegos...)
-     11. Página de evoluciones
-     12. Páginas de historia de cada región
-     13. Pie de página
-     14. Móviles y tablets
-     15. Animación al hacer scroll
-     16. Easter eggs (Kecleon, Giratina y Mimikyu)
+     1.  Colores y fuente (variables)
+     2.  Estilos generales
+     3.  Cabecera
+     4.  Portada
+     5.  Contenido y tarjetas
+     6.  Colores de cada generación
+     7.  Páginas de generación
+     8.  Secciones de generación (historia, mapa, juegos...)
+     9.  Página de evoluciones
+     10. Ventana para ver un Pokémon en grande
+     11. Páginas de historia de cada región
+     12. Pie de página
+     13. EFECTOS AL PASAR EL RATÓN
+     14. Aparición al hacer scroll
+     15. Sorpresas escondidas (Kecleon, Giratina, Mimikyu y Zoroark)
+     16. Móviles y tablets
    ========================================================== */
 
 
 /* ==========================================================
-   1. VARIABLES
-   Se definen una vez y se usan con var(--nombre).
+   1. COLORES Y FUENTE
+   Se escriben una vez aquí y se usan con var(--nombre).
    ========================================================== */
 
 :root {
   --rojo: #e3350d;
-  --negro: #222224;
-  --blanco: #ffffff;
-  --amarillo: #ffd23f;        /* Aviso "en construcción" */
+  --negro: #222224;          /* Bordes, líneas de título y pie */
+  --blanco: #ffffff;         /* Fondo de tarjetas y cajas */
+  --amarillo: #ffd23f;       /* Cinta de "en construcción" */
+  --dorado: #c9a227;         /* Campeón de la Liga */
 
-  --fondo: #f4f5f7;           /* Fondo de la página */
-  --fondo-tarjeta: #ffffff;      /* Fondo de tarjetas y cajas */
-  --borde-tarjeta: #222224;
+  --fondo: #f4f5f7;          /* Fondo de la página y de los iconos */
   --texto: #2b2d31;
-  --texto-suave: #5c6068;     /* Años, pies de foto... */
-  --texto-ejemplo: #8a8e96;   /* Texto de ejemplo a cambiar */
-  --linea-titulo: #222224;           /* Líneas gruesas bajo los títulos */
-  --linea-suave: #e3e5e8;     /* Líneas finas de separación */
-  --fondo-icono: #f4f5f7;     /* Cuadro tras los iconos de Pokémon */
-  --borde-vacio: #b9bcc2;     /* Huecos sin imagen */
-  --fondo-vacio: #fafafa;
-  --fondo-pie: #222224;
-
+  --texto-suave: #5c6068;    /* Años, pies de foto... */
+  --gris: #8a8e96;           /* Huecos sin imagen todavía */
+  --gris-claro: #e3e5e8;     /* Líneas finas de separación */
   --sombra: rgba(0, 0, 0, 0.15);
   --sombra-texto: rgba(0, 0, 0, 0.25);
 
   --fuente-pixel: "Press Start 2P", monospace;
 
-  color-scheme: light;
+  color-scheme: light;       /* La web siempre en modo claro */
 }
 
-
-/* ==========================================================
-   2. FUENTE PIXEL
-   ========================================================== */
-
+/* Fuente de estilo videojuego, guardada en css/fuentes */
 @font-face {
   font-family: "Press Start 2P";
   src: url("fuentes/PressStart2P-Regular.ttf");
@@ -65,10 +54,10 @@
 
 
 /* ==========================================================
-   3. ESTILOS GENERALES
+   2. ESTILOS GENERALES
    ========================================================== */
 
-/* El padding y el borde cuentan dentro del ancho */
+/* El relleno y el borde cuentan dentro del ancho */
 * {
   box-sizing: border-box;
 }
@@ -100,12 +89,20 @@ h3,
   line-height: 1.5;
 }
 
+/* Pies de foto */
+figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+  text-align: center;
+}
+
 
 /* ==========================================================
-   4. CABECERA
+   3. CABECERA
    ========================================================== */
 
-/* Barra roja pegada arriba al hacer scroll */
+/* Barra roja que se queda pegada arriba al bajar */
 .cabecera {
   position: sticky;
   top: 0;
@@ -132,7 +129,7 @@ h3,
   gap: 10px;
 }
 
-/* Botón blanco con borde negro */
+/* Botones blancos con borde negro */
 .menu a {
   padding: 10px 16px;
   border: 3px solid var(--negro);
@@ -145,8 +142,7 @@ h3,
   text-decoration: none;
 }
 
-/* Al pasar el ratón, o en la página actual, se pone negro */
-.menu a:hover,
+/* La página en la que estás sale en negro */
 .menu a.activo {
   background-color: var(--negro);
   color: var(--blanco);
@@ -154,7 +150,7 @@ h3,
 
 
 /* ==========================================================
-   5. PORTADA
+   4. PORTADA
    ========================================================== */
 
 .portada {
@@ -166,7 +162,6 @@ h3,
 .portada h1 {
   margin: 0;
   font-size: 2.6rem;
-  color: var(--texto);
   text-shadow: 4px 4px 0 var(--sombra-texto);
 }
 
@@ -183,7 +178,7 @@ h3,
   text-shadow: 2px 2px 4px var(--sombra-texto);
 }
 
-/* Botón con efecto 3D */
+/* Botón rojo con una sombra negra debajo que lo hace parecer en 3D */
 .boton {
   display: inline-block;
   padding: 14px 28px;
@@ -196,17 +191,12 @@ h3,
   box-shadow: 0 4px 0 var(--negro);
 }
 
-/* Al pasar el ratón parece que se hunde */
-.boton:hover {
-  transform: translateY(2px);
-  box-shadow: 0 2px 0 var(--negro);
-}
-
 
 /* ==========================================================
-   6. CONTENIDO
+   5. CONTENIDO Y TARJETAS
    ========================================================== */
 
+/* Columna central de 1100px como máximo */
 .contenido {
   max-width: 1100px;
   margin: 0 auto;
@@ -218,25 +208,20 @@ h3,
   font-size: 1.1rem;
 }
 
-
-/* ==========================================================
-   7. TARJETAS
-   ========================================================== */
-
 /* Aspecto común de todas las tarjetas y cajas blancas */
 .tarjeta,
 .caja-historia,
 .juego,
 .inicial,
 .galeria figure,
-.trailer,
+.video,
 .tarjeta-evolucion,
 .ciudad,
 .legendario,
 .persona {
-  border: 3px solid var(--borde-tarjeta);
+  border: 3px solid var(--negro);
   border-radius: 16px;
-  background-color: var(--fondo-tarjeta);
+  background-color: var(--blanco);
   box-shadow: 0 6px 20px var(--sombra);
 }
 
@@ -247,19 +232,14 @@ h3,
   gap: 20px;
 }
 
-/* relative: para colocar la consola en la esquina.
-   El borde de arriba lleva el color de la generación. */
+/* El borde de arriba lleva el color de la generación.
+   relative: para poder colocar la consola en la esquina. */
 .tarjeta {
   position: relative;
   display: block;
   padding: 20px;
   border-top: 8px solid var(--color-generacion, var(--rojo));
   text-decoration: none;
-  transition: transform 0.2s;
-}
-
-.tarjeta:hover {
-  transform: translateY(-6px);
 }
 
 /* Mismo alto que la consola para que el título no se meta debajo */
@@ -282,7 +262,6 @@ h3,
   color: var(--texto-suave);
 }
 
-/* Nombre de los juegos */
 .nombre-juego {
   font-weight: bold;
 }
@@ -302,9 +281,9 @@ h3,
 
 
 /* ==========================================================
-   8. COLORES DE CADA GENERACIÓN
-   Cada clase guarda su color en --color-generacion. Se usa en el borde
-   y el número de la tarjeta (.gen-X) y en el fondo (.fondo-gen-X).
+   6. COLORES DE CADA GENERACIÓN
+   Cada clase guarda su color en --color-generacion. Lo usan el borde
+   y el número de la tarjeta (.gen-1) y el fondo (.fondo-gen-1).
    ========================================================== */
 
 .gen-1,  .fondo-gen-1  { --color-generacion: #e53935; }  /* Kanto */
@@ -318,6 +297,7 @@ h3,
 .gen-9,  .fondo-gen-9  { --color-generacion: #7b1fa2; }  /* Paldea */
 .gen-10, .fondo-gen-10 { --color-generacion: #00897b; }  /* Por descubrir */
 
+/* Todas las clases que contienen "fondo-gen-" pintan el fondo con su color */
 [class*="fondo-gen-"] {
   background-color: var(--color-generacion);
 }
@@ -326,9 +306,14 @@ h3,
   background-color: var(--rojo);
 }
 
+/* Degradado verde, rojo y azul (planta, fuego y agua) */
+.fondo-evoluciones {
+  background: linear-gradient(90deg, #3fa129, #e62829, #2980ef);
+}
+
 
 /* ==========================================================
-   9. PÁGINAS DE GENERACIÓN
+   7. PÁGINAS DE GENERACIÓN
    ========================================================== */
 
 /* Franja de color con el título (el color lo pone .fondo-gen-X) */
@@ -352,9 +337,9 @@ h3,
 /* Aviso de "página en construcción" */
 .aviso {
   overflow: hidden;
-  border: 4px solid var(--borde-tarjeta);
+  border: 4px solid var(--negro);
   border-radius: 16px;
-  background-color: var(--fondo-tarjeta);
+  background-color: var(--blanco);
   text-align: center;
 }
 
@@ -376,7 +361,7 @@ h3,
   border-top: 8px dashed var(--negro);
 }
 
-/* Enlaces "Anterior" y "Siguiente" */
+/* Enlaces "Anterior" y "Siguiente", uno a cada lado */
 .anterior-siguiente {
   display: flex;
   justify-content: space-between;
@@ -385,29 +370,26 @@ h3,
 
 .anterior-siguiente a {
   padding: 10px 16px;
-  border: 3px solid var(--borde-tarjeta);
+  border: 3px solid var(--negro);
   border-radius: 50px;
-  background-color: var(--fondo-tarjeta);
+  background-color: var(--blanco);
   font-size: 0.7rem;
   text-decoration: none;
 }
 
-.anterior-siguiente a:hover {
-  color: var(--rojo);
-}
-
 
 /* ==========================================================
-   10. SECCIONES DE GENERACIÓN
+   8. SECCIONES DE GENERACIÓN
    ========================================================== */
 
 .seccion {
   margin-bottom: 56px;
 }
 
+/* Línea gruesa bajo cada título */
 .seccion h2 {
   padding-bottom: 12px;
-  border-bottom: 4px solid var(--linea-titulo);
+  border-bottom: 4px solid var(--negro);
 }
 
 .subtitulo {
@@ -416,15 +398,15 @@ h3,
   color: var(--texto-suave);
 }
 
-/* Caja con borde discontinuo donde irá una imagen futura */
+/* Hueco con borde discontinuo donde irá una imagen más adelante */
 .caja-vacia {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 3px dashed var(--borde-vacio);
+  border: 3px dashed var(--gris);
   border-radius: 12px;
-  background-color: var(--fondo-vacio);
-  color: var(--texto-ejemplo);
+  background-color: var(--fondo);
+  color: var(--gris);
   font-family: var(--fuente-pixel);
   font-size: 0.65rem;
   text-align: center;
@@ -438,13 +420,7 @@ h3,
   font-size: 1.05rem;
 }
 
-/* Texto de ejemplo: cursiva y gris */
-.texto-ejemplo {
-  font-style: italic;
-  color: var(--texto-ejemplo);
-}
-
-/* Botón "Leer la historia de ..." */
+/* Botón con el diario: "Leer la historia de ..." */
 .boton-diario {
   display: flex;
   flex-direction: column;
@@ -456,16 +432,11 @@ h3,
   font-family: var(--fuente-pixel);
   font-size: 0.6rem;
   text-decoration: none;
-  transition: transform 0.2s;
 }
 
 .boton-diario img {
   width: 96px;
   height: auto;
-}
-
-.boton-diario:hover {
-  transform: scale(1.08);
 }
 
 
@@ -485,17 +456,8 @@ h3,
   max-width: 100%;
   max-height: 640px;
   margin: 0 auto;
-  border: 4px solid var(--borde-tarjeta);
+  border: 4px solid var(--negro);
   border-radius: 12px;
-}
-
-/* Pies de foto */
-.mapa figcaption,
-.galeria figcaption {
-  margin-top: 8px;
-  font-size: 0.9rem;
-  color: var(--texto-suave);
-  text-align: center;
 }
 
 
@@ -512,7 +474,7 @@ h3,
   text-align: center;
 }
 
-/* Carátula cuadrada, del ancho de la tarjeta */
+/* Carátula del ancho de la tarjeta */
 .caratula {
   display: block;
   width: 100%;
@@ -540,7 +502,7 @@ h3,
   gap: 8px;
   margin-top: 12px;
   padding-top: 12px;
-  border-top: 1px solid var(--linea-suave);
+  border-top: 1px solid var(--gris-claro);
 }
 
 /* Caben tres por fila */
@@ -556,10 +518,10 @@ h3,
   margin: 0 auto;
   padding: 3px;
   border-radius: 8px;
-  background-color: var(--fondo-icono);
+  background-color: var(--fondo);
 }
 
-/* Pixel art (generación 10): sin suavizar al ampliar */
+/* Imágenes pixel art: no se emborronan al hacerlas grandes */
 .pixelado {
   image-rendering: pixelated;
 }
@@ -574,30 +536,12 @@ h3,
 /* Inicial con enlace a sus evoluciones (Leyendas Arceus) */
 .enlace-inicial {
   display: block;
-  color: inherit;
   text-decoration: none;
 }
 
-.enlace-inicial .imagen-pequena {
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-/* Al pasar el ratón el icono crece */
-.enlace-inicial:hover .imagen-pequena,
-.enlace-inicial:focus-visible .imagen-pequena {
-  transform: scale(1.2);
-  box-shadow: 0 4px 12px var(--sombra);
-}
-
-.enlace-inicial:hover span,
-.enlace-inicial:focus-visible span {
-  color: var(--texto);
-  font-weight: bold;
-}
-
-/* Contorno al navegar con el teclado */
+/* Contorno al moverse con el teclado (tecla Tab) */
 .enlace-inicial:focus-visible {
-  outline: 2px solid var(--borde-tarjeta);
+  outline: 2px solid var(--negro);
   outline-offset: 4px;
   border-radius: 8px;
 }
@@ -630,8 +574,8 @@ h3,
 
 
 /* ---------- Tipos ----------
-   Cada tipo guarda su color en --color-tipo. Se usa como fondo de las
-   etiquetas (.tipo, .tipo-pequeno) y en el borde de las tarjetas (.borde-X). */
+   Cada tipo guarda su color en --color-tipo. Lo usan las etiquetas
+   (.tipo y .tipo-pequeno) y el borde de las evoluciones (.borde-planta...). */
 
 .tipo,
 .tipo-pequeno {
@@ -647,17 +591,16 @@ h3,
   font-size: 0.85rem;
 }
 
-/* Etiqueta pequeña (página de evoluciones) */
 .tipo-pequeno {
   padding: 1px 6px;
   font-size: 0.6rem;
 }
 
-.tipo-planta,   .borde-planta    { --color-tipo: #3fa129; }
-.tipo-fuego,    .borde-fuego     { --color-tipo: #e62829; }
-.tipo-agua,     .borde-agua      { --color-tipo: #2980ef; }
-.tipo-electrico,.borde-electrico { --color-tipo: #fac000; }
-.tipo-normal,   .borde-normal    { --color-tipo: #9fa19f; }
+.tipo-planta, .borde-planta { --color-tipo: #3fa129; }
+.tipo-fuego,  .borde-fuego  { --color-tipo: #e62829; }
+.tipo-agua,   .borde-agua   { --color-tipo: #2980ef; }
+.tipo-electrico { --color-tipo: #fac000; }
+.tipo-normal    { --color-tipo: #9fa19f; }
 .tipo-lucha     { --color-tipo: #ff8000; }
 .tipo-fantasma  { --color-tipo: #704170; }
 .tipo-siniestro { --color-tipo: #624d4e; }
@@ -691,7 +634,7 @@ h3,
   padding: 12px;
 }
 
-/* Misma altura para todas, sin deformarlas */
+/* Todas igual de altas, sin deformarse */
 .galeria img {
   display: block;
   width: 100%;
@@ -700,22 +643,22 @@ h3,
 }
 
 
-/* ---------- Tráileres ---------- */
+/* ---------- Vídeos (tráileres) ---------- */
 
 /* Tantas columnas de 320px como quepan */
-.lista-trailers {
+.lista-videos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
 }
 
-.trailer {
+.video {
   margin: 0;
   padding: 12px;
 }
 
 /* Vídeo panorámico 16:9 */
-.trailer iframe {
+.video iframe {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -723,22 +666,15 @@ h3,
   border-radius: 10px;
 }
 
-.trailer figcaption {
-  margin-top: 8px;
-  font-size: 0.9rem;
+.video figcaption {
   font-weight: bold;
-  text-align: center;
+  color: var(--texto);
 }
 
 
 /* ==========================================================
-   11. PÁGINA DE EVOLUCIONES
+   9. PÁGINA DE EVOLUCIONES
    ========================================================== */
-
-/* Degradado con los colores planta, fuego y agua */
-.fondo-evoluciones {
-  background: linear-gradient(90deg, #3fa129, #e62829, #2980ef);
-}
 
 /* Índice de arriba: un botón por generación */
 .botones-indice {
@@ -756,14 +692,9 @@ h3,
   font-size: 0.8rem;
   font-weight: bold;
   text-decoration: none;
-  transition: transform 0.2s;
 }
 
-.botones-indice a:hover {
-  transform: scale(1.08);
-}
-
-/* Deja hueco bajo la cabecera fija al saltar a un enlace (#) */
+/* Al saltar a un apartado (#), deja hueco para la cabecera */
 .seccion,
 .grupo-generacion,
 .tarjeta-evolucion {
@@ -787,30 +718,23 @@ h3,
   gap: 16px;
 }
 
-/* Franja de color a la izquierda según el tipo.
-   Centra el contenido en vertical si la tarjeta es más alta. */
+/* Franja gruesa a la izquierda con el color del tipo */
 .tarjeta-evolucion {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 16px 12px;
   border-left-width: 10px;
-  border-left-color: var(--color-tipo, var(--borde-tarjeta));
-  color: var(--texto);
+  border-left-color: var(--color-tipo, var(--negro));
   text-align: center;
 }
 
-/* Fila de Pokémon y flechas, alineados por arriba */
+/* Fila con los Pokémon y las flechas */
 .fila-evolucion {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   gap: 4px;
-}
-
-/* Con ramas (Eevee) se centra */
-.fila-evolucion:has(.ramas) {
-  align-items: center;
 }
 
 /* Cada paso: icono y nombre debajo */
@@ -827,44 +751,14 @@ h3,
   margin: 0 auto 4px;
   padding: 4px;
   border-radius: 10px;
-  background-color: var(--fondo-icono);
-  transition: transform 0.2s;
+  background-color: var(--fondo);
 }
 
-.icono:hover {
-  transform: scale(1.15);
-}
-
-/* El margen baja la flecha a la mitad del icono */
+/* El margen baja la flecha a la altura del centro del icono */
 .flecha {
   margin-top: 30px;
   color: var(--texto-suave);
   font-size: 1.1rem;
-}
-
-.fila-evolucion:has(.ramas) .flecha {
-  margin-top: 0;
-}
-
-/* Evoluciones en rama (Eevee): una debajo de otra */
-.ramas {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.rama {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  text-align: left;
-}
-
-.icono-pequeno {
-  width: 48px;
-  height: 48px;
-  margin: 0;
-  padding: 2px;
 }
 
 /* Evolución aún desconocida (generación 10) */
@@ -875,13 +769,13 @@ h3,
   width: 84px;
   height: 84px;
   margin: 0 auto 4px;
-  border: 3px dashed var(--borde-vacio);
+  border: 3px dashed var(--gris);
   border-radius: 10px;
   font-size: 1.4rem;
   font-weight: bold;
 }
 
-/* Nota bajo la línea (forma de Hisui, ramas...) */
+/* Nota bajo la línea evolutiva (forma de Hisui...) */
 .nota {
   margin: 12px 0 0;
   font-size: 0.75rem;
@@ -892,7 +786,7 @@ h3,
 .mega {
   margin-top: 14px;
   padding-top: 12px;
-  border-top: 2px dashed var(--linea-suave);
+  border-top: 2px dashed var(--gris-claro);
 }
 
 .mega-titulo {
@@ -920,11 +814,21 @@ h3,
   margin-top: 4px;
 }
 
+/* Enlace "Volver arriba" */
+.volver-arriba {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: var(--texto-suave);
+}
 
-/* ---------- Visor: render en grande al hacer clic ----------
-   Usa el atributo popover de HTML, sin JavaScript. */
 
-/* Botón que envuelve cada render, sin aspecto de botón */
+/* ==========================================================
+   10. VENTANA PARA VER UN POKÉMON EN GRANDE
+   Se abre al hacer clic con el atributo popover de HTML, sin JavaScript.
+   ========================================================== */
+
+/* Botón que envuelve cada imagen, sin aspecto de botón */
 .boton-ampliar {
   display: block;
   margin: 0 auto;
@@ -935,7 +839,7 @@ h3,
 }
 
 .boton-ampliar:focus-visible {
-  outline: 2px solid var(--borde-tarjeta);
+  outline: 2px solid var(--negro);
   outline-offset: 2px;
   border-radius: 10px;
 }
@@ -944,14 +848,15 @@ h3,
 .ventana {
   width: min(90vw, 460px);
   padding: 24px;
-  border: 3px solid var(--borde-tarjeta);
+  border: 3px solid var(--negro);
   border-radius: 16px;
-  background-color: var(--fondo-tarjeta);
+  background-color: var(--blanco);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
   color: var(--texto);
   text-align: center;
 }
 
+/* Al abrirse crece un poco a la vez que aparece */
 .ventana:popover-open {
   animation: aparecer-ventana 0.2s ease-out;
 }
@@ -961,13 +866,9 @@ h3,
     opacity: 0;
     transform: scale(0.9);
   }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
 }
 
-/* Fondo oscuro tras la ventana */
+/* Fondo oscuro detrás de la ventana */
 .ventana::backdrop {
   background-color: rgba(0, 0, 0, 0.6);
 }
@@ -984,54 +885,32 @@ h3,
   font-weight: bold;
 }
 
-/* Botón ✕ arriba a la derecha */
+/* Botón ✕ redondo arriba a la derecha */
 .boton-cerrar {
   position: absolute;
   top: 10px;
   right: 10px;
   width: 36px;
   height: 36px;
-  border: 2px solid var(--borde-tarjeta);
+  border: 2px solid var(--negro);
   border-radius: 50%;
-  background-color: var(--fondo-tarjeta);
+  background-color: var(--blanco);
   color: var(--texto);
   font-size: 1rem;
   cursor: pointer;
 }
 
-.boton-cerrar:hover {
-  background-color: var(--rojo);
-  color: var(--blanco);
-}
-
-/* Enlace "Volver arriba" */
-.volver-arriba {
-  display: inline-block;
-  margin-top: 20px;
-  font-size: 0.8rem;
-  color: var(--texto-suave);
-}
-
-.volver-arriba:hover {
-  color: var(--rojo);
-}
-
 
 /* ==========================================================
-   12. PÁGINAS DE HISTORIA DE CADA REGIÓN
+   11. PÁGINAS DE HISTORIA DE CADA REGIÓN
    ========================================================== */
 
-/* Índice con botones rojos (reutiliza .botones-indice) */
-.indice-rojo a {
-  background-color: var(--rojo);
-}
-
-/* Mapa bajo el texto de la región */
-.seccion .caja-historia + .mapa {
+/* Mapa debajo del texto de la región */
+.caja-historia + .mapa {
   margin-top: 24px;
 }
 
-/* Etiqueta pequeña (gimnasio, legendario...) */
+/* Texto pequeño gris (gimnasio, legendario...) */
 .etiqueta {
   margin: 8px 0 0;
   font-size: 0.8rem;
@@ -1047,13 +926,14 @@ h3,
   gap: 20px;
 }
 
+/* relative: para poder colocar a Kecleon encima de la foto */
 .ciudad {
+  position: relative;
   overflow: hidden;
-  color: var(--texto);
 }
 
 /* Todas las fotos con la misma forma, recortadas sin deformar */
-.ciudad img {
+.foto-ciudad {
   display: block;
   width: 100%;
   aspect-ratio: 396 / 228;
@@ -1080,9 +960,9 @@ h3,
   columns: 2;
   column-gap: 40px;
   padding-left: 20px;
-  line-height: 1.6;
 }
 
+/* Ningún lugar se parte entre dos columnas */
 .lista-lugares li {
   margin-bottom: 8px;
   break-inside: avoid;
@@ -1102,7 +982,6 @@ h3,
 .persona {
   position: relative;
   padding: 16px;
-  color: var(--texto);
   text-align: center;
 }
 
@@ -1118,22 +997,17 @@ h3,
   line-height: 1.5;
 }
 
-/* Render del legendario: crece al pasar el ratón */
 .imagen-pokemon {
   display: block;
   width: 120px;
   height: 120px;
   margin: 0 auto;
-  transition: transform 0.2s;
-}
-
-.imagen-pokemon:hover {
-  transform: scale(1.1);
 }
 
 
 /* ---------- Villanos: logo, texto y jefe ---------- */
 
+/* Tres columnas: logo de 140px, texto y jefe de 260px */
 .villanos {
   display: grid;
   grid-template-columns: 140px 1fr 260px;
@@ -1148,13 +1022,11 @@ h3,
 
 .texto-villanos p {
   margin: 0 0 12px;
-  line-height: 1.6;
 }
 
 /* Lista numerada de lo que hace el villano */
 .pasos-villanos {
   padding-left: 24px;
-  line-height: 1.6;
 }
 
 .pasos-villanos li {
@@ -1171,7 +1043,17 @@ h3,
   gap: 20px;
 }
 
-/* Retrato con la misma altura para todos */
+/* Ayudantes del villano: 3 por fila */
+.lista-ayudantes {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* La Liga: Alto Mando y Campeón en una fila */
+.lista-liga {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* Retratos todos igual de altos */
 .foto-persona {
   display: block;
   width: 100%;
@@ -1192,14 +1074,20 @@ h3,
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: var(--borde-tarjeta);
+  background-color: var(--negro);
   color: var(--blanco);
   font-size: 0.8rem;
   font-weight: bold;
   line-height: 30px;
 }
 
-/* Pokémon estrella: render pequeño y texto al lado */
+/* El Campeón destaca con borde y brillo dorados */
+.campeon {
+  border-color: var(--dorado);
+  box-shadow: 0 6px 20px rgba(201, 162, 39, 0.4);
+}
+
+/* Pokémon estrella del líder: imagen pequeña y texto al lado */
 .pokemon-estrella {
   display: flex;
   align-items: center;
@@ -1207,7 +1095,7 @@ h3,
   gap: 6px;
   margin-top: 10px;
   padding-top: 10px;
-  border-top: 1px solid var(--linea-suave);
+  border-top: 1px solid var(--gris-claro);
   font-size: 0.75rem;
   color: var(--texto-suave);
 }
@@ -1230,27 +1118,6 @@ h3,
   display: block;
   width: 48px;
   height: 48px;
-  transition: transform 0.2s;
-}
-
-.imagen-estrella:hover {
-  transform: scale(1.2);
-}
-
-/* Ejecutivos del equipo villano: 3 por fila */
-.lista-ayudantes {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-/* La Liga: Alto Mando y Campeón en una fila */
-.lista-liga {
-  grid-template-columns: repeat(5, 1fr);
-}
-
-/* El Campeón destaca con borde dorado */
-.campeon {
-  border-color: #c9a227;
-  box-shadow: 0 6px 20px rgba(201, 162, 39, 0.4);
 }
 
 
@@ -1275,55 +1142,9 @@ h3,
   width: 120px;
 }
 
-/* Ilusión de Zoroark: al pasar el ratón por encima, la ilusión de N
-   se emborrona y se tiñe de rojo y morado, y aparece Zoroark */
-.ilusion {
-  position: relative;
-  flex-shrink: 0;
-  width: 120px;
-}
-
-.ilusion .foto-persona {
-  transition: opacity 0.5s ease, transform 0.5s ease, filter 0.5s ease;
-}
-
-/* Zoroark espera escondido, borroso y un poco más grande */
-.ilusion .zoroark {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transform: scale(1.1);
-  filter: blur(6px);
-  transition-delay: 0.1s;
-}
-
-/* N: la ilusión se rompe (borrón, tono rojizo y se encoge) */
-.ilusion:hover .foto-persona {
-  opacity: 0;
-  transform: scale(0.85) skewX(-4deg);
-  filter: blur(8px) hue-rotate(-60deg) saturate(3) brightness(1.3);
-}
-
-/* Zoroark: se enfoca y aparece con un brillo rojo */
-.ilusion:hover .zoroark {
-  opacity: 1;
-  transform: scale(1);
-  filter: blur(0) drop-shadow(0 0 10px rgba(200, 30, 60, 0.6));
-}
-
-/* Si el sistema pide menos movimiento, solo un fundido */
-@media (prefers-reduced-motion: reduce) {
-  .ilusion .foto-persona,
-  .ilusion:hover .foto-persona,
-  .ilusion:hover .zoroark {
-    transform: none;
-    filter: none;
-  }
-}
-
 
 /* ==========================================================
-   13. PIE DE PÁGINA
+   12. PIE DE PÁGINA
    ========================================================== */
 
 .pie {
@@ -1331,147 +1152,90 @@ h3,
   text-align: center;
   font-size: 0.9rem;
   color: var(--blanco);
-  background-color: var(--fondo-pie);
+  background-color: var(--negro);
 }
 
 
 /* ==========================================================
-   14. MÓVILES Y TABLETS
-   Van al final para sustituir a los estilos de arriba.
+   13. EFECTOS AL PASAR EL RATÓN
+   Todo lo que se mueve o cambia de color al pasar el ratón está aquí.
    ========================================================== */
 
-/* ---------- Tablets (hasta 900px) ---------- */
-@media (max-width: 900px) {
-  .lista-generaciones {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .lista-juegos,
-  .galeria,
-  .lista-evoluciones,
-  .lista-ciudades,
-  .lista-personas {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .lista-legendarios,
-  .lista-liga,
-  .lista-ayudantes {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  /* Villano: logo y texto arriba, jefe debajo */
-  .villanos {
-    grid-template-columns: 120px 1fr;
-  }
-
-  .jefe {
-    grid-column: 1 / -1;
-  }
+/* transition: el cambio dura 0.2 segundos en vez de ser de golpe */
+.tarjeta,
+.boton-diario,
+.botones-indice a,
+.icono,
+.imagen-pokemon,
+.imagen-estrella,
+.imagen-pequena {
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* ---------- Móviles (hasta 600px) ---------- */
-@media (max-width: 600px) {
+/* ELEVARSE: las tarjetas de las generaciones suben 6px */
+.tarjeta:hover {
+  transform: translateY(-6px);
+}
 
-  /* Cabecera */
-  .cabecera {
-    padding: 12px 16px;
-  }
+/* HUNDIRSE: el botón rojo baja 2px y su sombra se hace más pequeña,
+   como si lo apretaras */
+.boton:hover {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 var(--negro);
+}
 
-  .logo {
-    font-size: 0.7rem;
-  }
+/* CRECER UN POCO (un 10%): botones del índice, diario y legendarios */
+.botones-indice a:hover,
+.boton-diario:hover,
+.imagen-pokemon:hover {
+  transform: scale(1.1);
+}
 
-  .menu {
-    gap: 6px;
-  }
+/* CRECER MÁS (un 20%): iconos pequeños de Pokémon */
+.icono:hover,
+.imagen-estrella:hover,
+.enlace-inicial:hover .imagen-pequena,
+.enlace-inicial:focus-visible .imagen-pequena {
+  transform: scale(1.2);
+}
 
-  .menu a {
-    padding: 8px 10px;
-    font-size: 0.55rem;
-  }
+/* ...y el icono del inicial con enlace, además, echa sombra */
+.enlace-inicial:hover .imagen-pequena,
+.enlace-inicial:focus-visible .imagen-pequena {
+  box-shadow: 0 4px 12px var(--sombra);
+}
 
-  /* Títulos */
-  .portada h1 {
-    font-size: 1.4rem;
-  }
+.enlace-inicial:hover span,
+.enlace-inicial:focus-visible span {
+  color: var(--texto);
+  font-weight: bold;
+}
 
-  .portada-generacion h1 {
-    font-size: 1.3rem;
-  }
+/* CAMBIAR DE COLOR */
+/* Botones del menú: de blanco a negro */
+.menu a:hover {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
 
-  /* Tarjetas de inicio: consolas más pequeñas para no tapar el número */
-  .lista-generaciones {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* Botón ✕ de la ventana: se pone rojo */
+.boton-cerrar:hover {
+  background-color: var(--rojo);
+  color: var(--blanco);
+}
 
-  .tarjeta h3 {
-    font-size: 0.70rem;
-  }
-
-  .consola {
-    width: 54px;
-    height: 45px;
-  }
-
-  .numero {
-    min-height: 40px;
-  }
-
-  /* Generaciones */
-  .caja-historia {
-    padding: 16px 20px;
-  }
-
-  .caja-vacia-mapa {
-    height: 220px;
-  }
-
-  /* Carátula limitada y centrada */
-  .caratula {
-    max-width: 220px;
-    margin: 0 auto;
-  }
-
-  /* Una columna */
-  .lista-juegos,
-  .lista-iniciales,
-  .galeria,
-  .lista-trailers,
-  .lista-evoluciones,
-  .lista-ciudades,
-  .lista-personajes {
-    grid-template-columns: 1fr;
-  }
-
-  /* Dos columnas */
-  .lista-legendarios,
-  .lista-personas,
-  .lista-liga,
-  .lista-ayudantes {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .lista-lugares {
-    columns: 1;
-  }
-
-  .villanos {
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
-
-  .foto-persona {
-    height: 160px;
-  }
+/* Enlaces "Anterior", "Siguiente" y "Volver arriba": texto rojo */
+.anterior-siguiente a:hover,
+.volver-arriba:hover {
+  color: var(--rojo);
 }
 
 
 /* ==========================================================
-   15. APARICIÓN AL HACER SCROLL
-   Las tarjetas entran con un fundido al llegar a la pantalla.
-   Solo si el navegador lo soporta y la persona no pidió menos
-   movimiento. "backwards" evita romper el efecto hover.
+   14. APARICIÓN AL HACER SCROLL
+   Las tarjetas aparecen subiendo y con un fundido al llegar a la
+   pantalla. Solo si el navegador lo admite y si la persona no ha
+   pedido menos movimiento en su sistema.
    ========================================================== */
 
 @supports (animation-timeline: view()) {
@@ -1483,6 +1247,7 @@ h3,
       }
     }
 
+    /* backwards: al acabar, la animación no bloquea el efecto al pasar el ratón */
     .tarjeta,
     .ciudad,
     .persona,
@@ -1501,33 +1266,25 @@ h3,
 
 
 /* ==========================================================
-   16. EASTER EGGS
-   Sorpresas escondidas, todas solo con CSS.
-   (La ilusión de Zoroark está en el apartado 12, con los personajes.)
+   15. SORPRESAS ESCONDIDAS
+   Easter eggs que salen al pasar el ratón, todos solo con CSS.
    ========================================================== */
 
 /* ---------- Hoenn: Kecleon camuflado en Ciudad Arborada ----------
-   Kecleon cambia de color para volverse invisible. Está encima de
-   la foto casi transparente y aparece al pasar el ratón por encima. */
+   Kecleon cambia de color para volverse invisible: está casi
+   transparente encima de la foto y aparece al pasar el ratón. */
 
-.ciudad:has(.kecleon) {
-  position: relative;
-}
-
-.ciudad .kecleon {
+.kecleon {
   position: absolute;
   top: 18px;
   right: 6%;
   width: 30%;
-  height: auto;
-  aspect-ratio: auto;
-  object-fit: contain;
   opacity: 0.18;
   filter: saturate(0.4);
   transition: opacity 0.4s, filter 0.4s, transform 0.4s;
 }
 
-.ciudad .kecleon:hover {
+.kecleon:hover {
   opacity: 1;
   filter: none;
   transform: translateY(-8px) rotate(-5deg);
@@ -1535,22 +1292,21 @@ h3,
 
 
 /* ---------- Sinnoh: Giratina y el Mundo Distorsión ----------
-   En el Mundo Distorsión no funciona la gravedad: al pasar el ratón,
+   En el Mundo Distorsión no hay gravedad: al pasar el ratón,
    la tarjeta de Giratina se da la vuelta. */
 
-.legendario.giratina {
+.giratina {
   transition: transform 0.8s ease-in-out;
 }
 
-.legendario.giratina:hover {
+.giratina:hover {
   transform: rotate(180deg);
   box-shadow: 0 6px 24px rgba(112, 65, 112, 0.6);
 }
 
 
 /* ---------- Alola: Mimikyu disfrazado de Pikachu ----------
-   Mimikyu se disfraza de Pikachu para tener amigos. Al pasar el
-   ratón, el disfraz se cae y aparece Mimikyu. */
+   Al pasar el ratón, el disfraz de Pikachu se cae y aparece Mimikyu. */
 
 .disfraz {
   position: relative;
@@ -1560,6 +1316,7 @@ h3,
   margin-right: 10px;
 }
 
+/* Las dos imágenes, una encima de la otra */
 .disfraz img {
   position: absolute;
   inset: 0;
@@ -1568,8 +1325,8 @@ h3,
   transition: opacity 0.4s, transform 0.4s;
 }
 
-/* Mimikyu espera escondido */
-.disfraz .mimikyu {
+/* Mimikyu espera escondido y pequeño */
+.mimikyu {
   opacity: 0;
   transform: scale(0.6);
 }
@@ -1580,7 +1337,7 @@ h3,
   transform: translate(20px, 16px) rotate(70deg);
 }
 
-/* Mimikyu aparece y tiembla un poco */
+/* Mimikyu aparece y tiembla dos veces */
 .disfraz:hover .mimikyu {
   opacity: 1;
   transform: scale(1);
@@ -1588,19 +1345,182 @@ h3,
 }
 
 @keyframes temblar {
-  0%, 100% { translate: 0; }
-  25%      { translate: -3px 0; }
-  75%      { translate: 3px 0; }
+  25% { translate: -3px 0; }
+  75% { translate: 3px 0; }
 }
 
 
-/* Sin animaciones: Giratina no gira y Mimikyu no tiembla */
+/* ---------- Teselia: la ilusión de Zoroark ----------
+   Al pasar el ratón, la imagen de N se emborrona y se tiñe de rojo,
+   y en su lugar aparece Zoroark, que estaba escondido detrás. */
+
+.ilusion {
+  position: relative;
+  flex-shrink: 0;
+  width: 120px;
+}
+
+.ilusion .foto-persona {
+  transition: opacity 0.5s, transform 0.5s, filter 0.5s;
+}
+
+/* Zoroark espera escondido, borroso y un poco más grande */
+.ilusion .zoroark {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(1.1);
+  filter: blur(6px);
+  transition-delay: 0.1s;
+}
+
+/* N: la ilusión se rompe (se emborrona, se vuelve rojiza y encoge) */
+.ilusion:hover .foto-persona {
+  opacity: 0;
+  transform: scale(0.85) skewX(-4deg);
+  filter: blur(8px) hue-rotate(-60deg) saturate(3) brightness(1.3);
+}
+
+/* Zoroark: se enfoca y aparece con un brillo rojo */
+.ilusion:hover .zoroark {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0) drop-shadow(0 0 10px rgba(200, 30, 60, 0.6));
+}
+
+
+/* Si la persona pidió menos movimiento: nada gira, tiembla ni se deforma */
 @media (prefers-reduced-motion: reduce) {
-  .legendario.giratina:hover {
+  .giratina:hover,
+  .ilusion .foto-persona,
+  .ilusion:hover .foto-persona,
+  .ilusion:hover .zoroark {
     transform: none;
+    filter: none;
   }
 
   .disfraz:hover .mimikyu {
     animation: none;
+  }
+}
+
+
+/* ==========================================================
+   16. MÓVILES Y TABLETS
+   Van al final para que cambien lo de arriba en pantallas pequeñas.
+   ========================================================== */
+
+/* ---------- Tablets (hasta 900px de ancho) ---------- */
+@media (max-width: 900px) {
+  .lista-generaciones,
+  .lista-legendarios,
+  .lista-liga,
+  .lista-ayudantes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .lista-juegos,
+  .galeria,
+  .lista-evoluciones,
+  .lista-ciudades,
+  .lista-personas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Villano: logo y texto arriba, jefe debajo a todo el ancho */
+  .villanos {
+    grid-template-columns: 120px 1fr;
+  }
+
+  .jefe {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---------- Móviles (hasta 600px de ancho) ---------- */
+@media (max-width: 600px) {
+  .cabecera {
+    padding: 12px 16px;
+  }
+
+  .logo {
+    font-size: 0.7rem;
+  }
+
+  .menu {
+    gap: 6px;
+  }
+
+  .menu a {
+    padding: 8px 10px;
+    font-size: 0.55rem;
+  }
+
+  .portada h1 {
+    font-size: 1.4rem;
+  }
+
+  .portada-generacion h1 {
+    font-size: 1.3rem;
+  }
+
+  /* Consolas más pequeñas para que no tapen el número */
+  .consola {
+    width: 54px;
+    height: 45px;
+  }
+
+  .numero {
+    min-height: 40px;
+  }
+
+  .tarjeta h3 {
+    font-size: 0.7rem;
+  }
+
+  .caja-historia {
+    padding: 16px 20px;
+  }
+
+  .caja-vacia-mapa {
+    height: 220px;
+  }
+
+  .caratula {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  /* Una columna */
+  .lista-juegos,
+  .lista-iniciales,
+  .galeria,
+  .lista-videos,
+  .lista-evoluciones,
+  .lista-ciudades,
+  .lista-personajes,
+  .villanos {
+    grid-template-columns: 1fr;
+  }
+
+  .villanos {
+    justify-items: center;
+  }
+
+  /* Dos columnas */
+  .lista-generaciones,
+  .lista-legendarios,
+  .lista-personas,
+  .lista-liga,
+  .lista-ayudantes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lista-lugares {
+    columns: 1;
+  }
+
+  .foto-persona {
+    height: 160px;
   }
 }
