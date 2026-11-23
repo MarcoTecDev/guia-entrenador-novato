@@ -8,8 +8,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Generación 9 · Pocket Monster</title>
-  <!-- El ?v=23 obliga al navegador a descargar el CSS nuevo. Súbelo (v=24, v=25...) cada vez que cambies el CSS -->
-  <link rel="stylesheet" href="../../css/estilos.css?v=36">
+  <!-- Google Fonts: la fuente pixel. Va ANTES de nuestra hoja de estilos. El ?v= de estilos.css obliga al navegador a descargar el CSS nuevo: súbelo cada vez que cambies el CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/estilos.css?v=37">
 </head>
 <body>
   <!-- ==================================================
@@ -50,10 +53,10 @@
       <!-- ========== 2. MAPA DE LA REGIÓN ========== -->
       <section class="seccion">
         <h2>Mapa de Paldea</h2>
-        <figure class="mapa">
+        <div>
           <img class="imagen-mapa" src="../../img/regiones/9-paldea/mapa.png" alt="Mapa de la región de Paldea">
-          <figcaption>Mapa de la región de Paldea.</figcaption>
-        </figure>
+          <p class="pie-foto">Mapa de la región de Paldea.</p>
+        </div>
       </section>
 
       <!-- ========== 3. JUEGOS ========== -->
@@ -127,28 +130,28 @@
         <div class="galeria">
           <figure>
             <img src="../../img/regiones/9-paldea/dlc1-noroteo-ilustracion.jpg" alt="Ilustración de Noroteo">
-            <figcaption>Ilustración de Noroteo.</figcaption>
-          </figure>
+            <p class="pie-foto">Ilustración de Noroteo.</p>
+          </div>
           <figure>
             <img src="../../img/regiones/9-paldea/dlc1-noroteo-mapa.png" alt="Mapa de Noroteo">
-            <figcaption>Mapa de Noroteo.</figcaption>
-          </figure>
+            <p class="pie-foto">Mapa de Noroteo.</p>
+          </div>
         </div>
         <h3 class="subtitulo">Parte 2: El disco índigo</h3>
         <p class="descripcion">La segunda parte transcurre en la Academia Arándano, una escuela en mitad del mar con un gran hábitat interior: el Terario.</p>
         <div class="galeria">
           <figure>
             <img src="../../img/regiones/9-paldea/dlc2-academia-arandano.jpg" alt="La Academia Arándano">
-            <figcaption>La Academia Arándano.</figcaption>
-          </figure>
+            <p class="pie-foto">La Academia Arándano.</p>
+          </div>
           <figure>
             <img src="../../img/regiones/9-paldea/dlc2-academia-arandano-ilustracion.png" alt="Ilustración de la Academia Arándano">
-            <figcaption>Ilustración de la Academia Arándano.</figcaption>
-          </figure>
+            <p class="pie-foto">Ilustración de la Academia Arándano.</p>
+          </div>
           <figure>
             <img src="../../img/regiones/9-paldea/dlc2-terario-mapa.png" alt="Mapa del Terario">
-            <figcaption>Mapa del Terario.</figcaption>
-          </figure>
+            <p class="pie-foto">Mapa del Terario.</p>
+          </div>
         </div>
       </section>
 
@@ -161,14 +164,14 @@
              allow: permisos que pide el reproductor (pantalla completa, autoplay...).
              allowfullscreen: deja ver el vídeo a pantalla completa. -->
         <div class="lista-videos">
-          <figure class="video">
+          <div class="video">
             <iframe src="https://www.youtube.com/embed/wSjreMPrHeg" title="Tráiler de Pokémon Escarlata y Púrpura" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <figcaption>Pokémon Escarlata y Púrpura</figcaption>
-          </figure>
-          <figure class="video">
+            <p class="pie-foto">Pokémon Escarlata y Púrpura</p>
+          </div>
+          <div class="video">
             <iframe src="https://www.youtube.com/embed/lJiMrEGEcfI" title="Tráiler de El tesoro oculto del Área Cero" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <figcaption>El tesoro oculto del Área Cero</figcaption>
-          </figure>
+            <p class="pie-foto">El tesoro oculto del Área Cero</p>
+          </div>
         </div>
       </section>
 

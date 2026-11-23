@@ -8,8 +8,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Historia de Kalos · Pocket Monster</title>
-  <!-- El ?v=32 obliga al navegador a descargar el CSS nuevo. Súbelo (v=33, v=34...) cada vez que cambies el CSS -->
-  <link rel="stylesheet" href="../../css/estilos.css?v=36">
+  <!-- Google Fonts: la fuente pixel. Va ANTES de nuestra hoja de estilos. El ?v= de estilos.css obliga al navegador a descargar el CSS nuevo: súbelo cada vez que cambies el CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/estilos.css?v=37">
 </head>
 <body>
   <!-- ==================================================
@@ -45,10 +48,10 @@
           <p>Pokémon X y Pokémon Y salieron en todo el mundo en 2013, y fueron los primeros juegos en 3D. Trajeron 72 Pokémon nuevos, el tipo Hada, las megaevoluciones y la posibilidad de personalizar al protagonista con ropa y peinados.</p>
           <p>El protagonista vive en Pueblo Boceto con sus amigos. El Profesor Ciprés le envía su primer Pokémon y empieza el viaje: hay que conseguir las ocho medallas de Kalos y vencer a la Liga, pero también parar al Equipo Flare, que quiere crear un mundo más bello a su manera.</p>
         </div>
-        <figure class="mapa">
+        <div>
           <img class="imagen-mapa" src="../../img/regiones/6-kalos/mapa.png" alt="Mapa de la región de Kalos" loading="lazy">
-          <figcaption>Mapa de la región de Kalos.</figcaption>
-        </figure>
+          <p class="pie-foto">Mapa de la región de Kalos.</p>
+        </div>
       </section>
 
       <!-- ========== CIUDADES Y PUEBLOS ========== -->
@@ -127,40 +130,39 @@
       <!-- ========== POKÉMON LEGENDARIOS ========== -->
       <section class="seccion" id="leyendas">
         <h2>Pokémon legendarios</h2>
-        <p class="descripcion">Pulsa en un Pokémon para verlo en grande.</p>
         <div class="lista-legendarios">
           <article class="legendario">
-            <button class="boton-ampliar" popovertarget="ver-xerneas" title="Ver Xerneas en grande"><img class="imagen-pokemon" src="../../img/pokemon/modelos/xerneas.png" alt="Xerneas" loading="lazy"></button>
+            <img class="imagen-pokemon" src="../../img/pokemon/modelos/xerneas.png" alt="Xerneas" loading="lazy">
             <h3>Xerneas</h3>
             <p class="etiqueta"><span class="tipo-pequeno tipo-hada">Hada</span></p>
             <p>El Pokémon de la vida. Con su poder puede dar vida a todo el mundo y vivir miles de años. Es el legendario de X.</p>
           </article>
           <article class="legendario">
-            <button class="boton-ampliar" popovertarget="ver-yveltal" title="Ver Yveltal en grande"><img class="imagen-pokemon" src="../../img/pokemon/modelos/yveltal.png" alt="Yveltal" loading="lazy"></button>
+            <img class="imagen-pokemon" src="../../img/pokemon/modelos/yveltal.png" alt="Yveltal" loading="lazy">
             <h3>Yveltal</h3>
             <p class="etiqueta"><span class="tipo-pequeno tipo-siniestro">Siniestro</span> <span class="tipo-pequeno tipo-volador">Volador</span></p>
             <p>El Pokémon de la destrucción. Absorbe la energía de los seres vivos para despertarse. Es el legendario de Y.</p>
           </article>
           <article class="legendario">
-            <button class="boton-ampliar" popovertarget="ver-zygarde" title="Ver Zygarde en grande"><img class="imagen-pokemon" src="../../img/pokemon/modelos/zygarde.png" alt="Zygarde" loading="lazy"></button>
+            <img class="imagen-pokemon" src="../../img/pokemon/modelos/zygarde.png" alt="Zygarde" loading="lazy">
             <h3>Zygarde</h3>
             <p class="etiqueta"><span class="tipo-pequeno tipo-dragon">Dragón</span> <span class="tipo-pequeno tipo-tierra">Tierra</span></p>
             <p>El guardián del equilibrio de la naturaleza. Vive en secreto en una cueva y se puede ver en tres formas.</p>
           </article>
           <article class="legendario">
-            <button class="boton-ampliar" popovertarget="ver-diancie" title="Ver Diancie en grande"><img class="imagen-pokemon" src="../../img/pokemon/modelos/diancie.png" alt="Diancie" loading="lazy"></button>
+            <img class="imagen-pokemon" src="../../img/pokemon/modelos/diancie.png" alt="Diancie" loading="lazy">
             <h3>Diancie</h3>
             <p class="etiqueta"><span class="tipo-pequeno tipo-roca">Roca</span> <span class="tipo-pequeno tipo-hada">Hada</span></p>
             <p>El Pokémon joya. Es un Pokémon legendario muy raro y se podía conseguir en un evento especial.</p>
           </article>
           <article class="legendario">
-            <button class="boton-ampliar" popovertarget="ver-hoopa" title="Ver Hoopa en grande"><img class="imagen-pokemon" src="../../img/pokemon/modelos/hoopa.png" alt="Hoopa" loading="lazy"></button>
+            <img class="imagen-pokemon" src="../../img/pokemon/modelos/hoopa.png" alt="Hoopa" loading="lazy">
             <h3>Hoopa</h3>
             <p class="etiqueta"><span class="tipo-pequeno tipo-psiquico">Psíquico</span> <span class="tipo-pequeno tipo-fantasma">Fantasma</span></p>
             <p>El Pokémon travieso. Puede abrir portales para traer objetos y Pokémon desde muy lejos. También se podía conseguir en un evento.</p>
           </article>
           <article class="legendario">
-            <button class="boton-ampliar" popovertarget="ver-volcanion" title="Ver Volcanion en grande"><img class="imagen-pokemon" src="../../img/pokemon/modelos/volcanion.png" alt="Volcanion" loading="lazy"></button>
+            <img class="imagen-pokemon" src="../../img/pokemon/modelos/volcanion.png" alt="Volcanion" loading="lazy">
             <h3>Volcanion</h3>
             <p class="etiqueta"><span class="tipo-pequeno tipo-fuego">Fuego</span> <span class="tipo-pequeno tipo-agua">Agua</span></p>
             <p>Un Pokémon legendario que lanza vapor y que puede hacer erupcionar una montaña. También se conseguía en un evento.</p>
@@ -173,7 +175,7 @@
         <h2>El Equipo Flare</h2>
         <div class="villanos">
           <img class="logo-villanos" src="../../img/historias/kalos/logo-equipo-flare.webp" alt="Logo del Equipo Flare: una llama roja">
-          <div class="texto-villanos">
+          <div>
             <p>El Equipo Flare dice que quiere crear un mundo más hermoso, pero para eso quiere acabar con todos los que no sean como él. Para conseguirlo, quiere usar un arma definitiva alimentada por la energía de Xerneas o de Yveltal.</p>
             <p>Sus miembros llevan trajes rojos y gafas, y tienen un aspecto muy elegante. Dentro del equipo hay científicos, como Xero, y Malva, que además forma parte de la Liga.</p>
           </div>
@@ -218,7 +220,7 @@
             <h3>Violeta</h3>
             <p class="cargo">Ciudad Novarte</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-bicho">Bicho</span> · Medalla Insecto</p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-vivillon" title="Ver Vivillon en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/vivillon.png" alt="Vivillon" loading="lazy"></button><span>Pokémon estrella<strong>Vivillon</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/vivillon.png" alt="Vivillon" loading="lazy"><span>Pokémon estrella<strong>Vivillon</strong></span></div>
           </article>
           <article class="persona">
             <span class="numero-gimnasio">2</span>
@@ -226,7 +228,7 @@
             <h3>Lino</h3>
             <p class="cargo">Ciudad Relieve</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-roca">Roca</span> · Medalla Muro</p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-tyrantrum" title="Ver Tyrantrum en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/tyrantrum.png" alt="Tyrantrum" loading="lazy"></button><span>Pokémon estrella<strong>Tyrantrum</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/tyrantrum.png" alt="Tyrantrum" loading="lazy"><span>Pokémon estrella<strong>Tyrantrum</strong></span></div>
           </article>
           <article class="persona">
             <span class="numero-gimnasio">3</span>
@@ -234,7 +236,7 @@
             <h3>Corelia</h3>
             <p class="cargo">Ciudad Yantra</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-lucha">Lucha</span> · Medalla Lid</p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-lucario" title="Ver Lucario en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/lucario.png" alt="Lucario" loading="lazy"></button><span>Pokémon estrella<strong>Lucario</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/lucario.png" alt="Lucario" loading="lazy"><span>Pokémon estrella<strong>Lucario</strong></span></div>
           </article>
           <article class="persona">
             <span class="numero-gimnasio">4</span>
@@ -242,7 +244,7 @@
             <h3>Amaro</h3>
             <p class="cargo">Ciudad Témpera</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-planta">Planta</span> · Medalla Hoja</p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-gogoat" title="Ver Gogoat en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/gogoat.png" alt="Gogoat" loading="lazy"></button><span>Pokémon estrella<strong>Gogoat</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/gogoat.png" alt="Gogoat" loading="lazy"><span>Pokémon estrella<strong>Gogoat</strong></span></div>
           </article>
           <article class="persona">
             <span class="numero-gimnasio">5</span>
@@ -250,7 +252,7 @@
             <h3>Lem</h3>
             <p class="cargo">Ciudad Luminalia</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-electrico">Eléctrico</span> · Medalla Voltaje</p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-heliolisk" title="Ver Heliolisk en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/heliolisk.png" alt="Heliolisk" loading="lazy"></button><span>Pokémon estrella<strong>Heliolisk</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/heliolisk.png" alt="Heliolisk" loading="lazy"><span>Pokémon estrella<strong>Heliolisk</strong></span></div>
           </article>
           <article class="persona">
             <span class="numero-gimnasio">6</span>
@@ -258,7 +260,7 @@
             <h3>Valeria</h3>
             <p class="cargo">Ciudad Romantis</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-hada">Hada</span> · Medalla Hada</p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-sylveon" title="Ver Sylveon en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/sylveon.png" alt="Sylveon" loading="lazy"></button><span>Pokémon estrella<strong>Sylveon</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/sylveon.png" alt="Sylveon" loading="lazy"><span>Pokémon estrella<strong>Sylveon</strong></span></div>
           </article>
           <article class="persona">
             <span class="numero-gimnasio">7</span>
@@ -266,7 +268,7 @@
             <h3>Ástrid</h3>
             <p class="cargo">Ciudad Fluxus</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-psiquico">Psíquico</span> · Medalla Psique</p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-meowstic" title="Ver Meowstic en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/meowstic.png" alt="Meowstic" loading="lazy"></button><span>Pokémon estrella<strong>Meowstic</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/meowstic.png" alt="Meowstic" loading="lazy"><span>Pokémon estrella<strong>Meowstic</strong></span></div>
           </article>
           <article class="persona">
             <span class="numero-gimnasio">8</span>
@@ -274,7 +276,7 @@
             <h3>Édel</h3>
             <p class="cargo">Ciudad Fractal</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-hielo">Hielo</span> · Medalla Iceberg</p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-abomasnow" title="Ver Abomasnow en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/abomasnow.png" alt="Abomasnow" loading="lazy"></button><span>Pokémon estrella<strong>Abomasnow</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/abomasnow.png" alt="Abomasnow" loading="lazy"><span>Pokémon estrella<strong>Abomasnow</strong></span></div>
           </article>
         </div>
       </section>
@@ -289,35 +291,35 @@
             <h3>Tileo</h3>
             <p class="cargo">Alto Mando</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-acero">Acero</span></p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-aegislash" title="Ver Aegislash en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/aegislash.png" alt="Aegislash" loading="lazy"></button><span>Pokémon estrella<strong>Aegislash</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/aegislash.png" alt="Aegislash" loading="lazy"><span>Pokémon estrella<strong>Aegislash</strong></span></div>
           </article>
           <article class="persona">
             <img class="foto-persona" src="../../img/historias/kalos/personajes/dracena.webp" alt="Drácena" loading="lazy">
             <h3>Drácena</h3>
             <p class="cargo">Alto Mando</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-dragon">Dragón</span></p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-noivern" title="Ver Noivern en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/noivern.png" alt="Noivern" loading="lazy"></button><span>Pokémon estrella<strong>Noivern</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/noivern.png" alt="Noivern" loading="lazy"><span>Pokémon estrella<strong>Noivern</strong></span></div>
           </article>
           <article class="persona">
             <img class="foto-persona" src="../../img/historias/kalos/personajes/malva.webp" alt="Malva" loading="lazy">
             <h3>Malva</h3>
             <p class="cargo">Alto Mando</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-fuego">Fuego</span></p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-pyroar" title="Ver Pyroar en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/pyroar.png" alt="Pyroar" loading="lazy"></button><span>Pokémon estrella<strong>Pyroar</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/pyroar.png" alt="Pyroar" loading="lazy"><span>Pokémon estrella<strong>Pyroar</strong></span></div>
           </article>
           <article class="persona">
             <img class="foto-persona" src="../../img/historias/kalos/personajes/narciso.webp" alt="Narciso" loading="lazy">
             <h3>Narciso</h3>
             <p class="cargo">Alto Mando</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-agua">Agua</span></p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-barbaracle" title="Ver Barbaracle en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/barbaracle.png" alt="Barbaracle" loading="lazy"></button><span>Pokémon estrella<strong>Barbaracle</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/barbaracle.png" alt="Barbaracle" loading="lazy"><span>Pokémon estrella<strong>Barbaracle</strong></span></div>
           </article>
           <article class="persona campeon">
             <img class="foto-persona" src="../../img/historias/kalos/personajes/dianta.webp" alt="Dianta" loading="lazy">
             <h3>Dianta</h3>
             <p class="cargo">Campeona</p>
             <p>Una actriz muy famosa y la mejor entrenadora de Kalos. Es la campeona de la Liga.</p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-gardevoir" title="Ver Gardevoir en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/gardevoir.png" alt="Gardevoir" loading="lazy"></button><span>Pokémon estrella<strong>Gardevoir</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/gardevoir.png" alt="Gardevoir" loading="lazy"><span>Pokémon estrella<strong>Gardevoir</strong></span></div>
           </article>
         </div>
       </section>
@@ -349,104 +351,6 @@
         <a href="../../index.html">Inicio</a>
       </nav>
 
-      <!-- ========== VISORES (Pokémon en grande) ==========
-           Sin JavaScript: cada Pokémon es un <button popovertarget="ver-...">
-           que abre el <div popover> con ese id. Se cierra con la ✕, pulsando fuera o con Esc. -->
-      <div class="ventana" id="ver-xerneas" popover>
-        <img src="../../img/pokemon/modelos-grandes/xerneas.webp" alt="Xerneas en grande" loading="lazy">
-        <p>Xerneas</p>
-        <button class="boton-cerrar" popovertarget="ver-xerneas" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-yveltal" popover>
-        <img src="../../img/pokemon/modelos-grandes/yveltal.webp" alt="Yveltal en grande" loading="lazy">
-        <p>Yveltal</p>
-        <button class="boton-cerrar" popovertarget="ver-yveltal" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-zygarde" popover>
-        <img src="../../img/pokemon/modelos-grandes/zygarde.webp" alt="Zygarde en grande" loading="lazy">
-        <p>Zygarde</p>
-        <button class="boton-cerrar" popovertarget="ver-zygarde" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-diancie" popover>
-        <img src="../../img/pokemon/modelos-grandes/diancie.webp" alt="Diancie en grande" loading="lazy">
-        <p>Diancie</p>
-        <button class="boton-cerrar" popovertarget="ver-diancie" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-hoopa" popover>
-        <img src="../../img/pokemon/modelos-grandes/hoopa.webp" alt="Hoopa en grande" loading="lazy">
-        <p>Hoopa</p>
-        <button class="boton-cerrar" popovertarget="ver-hoopa" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-volcanion" popover>
-        <img src="../../img/pokemon/modelos-grandes/volcanion.webp" alt="Volcanion en grande" loading="lazy">
-        <p>Volcanion</p>
-        <button class="boton-cerrar" popovertarget="ver-volcanion" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-vivillon" popover>
-        <img src="../../img/pokemon/modelos-grandes/vivillon.webp" alt="Vivillon en grande" loading="lazy">
-        <p>Vivillon</p>
-        <button class="boton-cerrar" popovertarget="ver-vivillon" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-tyrantrum" popover>
-        <img src="../../img/pokemon/modelos-grandes/tyrantrum.webp" alt="Tyrantrum en grande" loading="lazy">
-        <p>Tyrantrum</p>
-        <button class="boton-cerrar" popovertarget="ver-tyrantrum" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-lucario" popover>
-        <img src="../../img/pokemon/modelos-grandes/lucario.webp" alt="Lucario en grande" loading="lazy">
-        <p>Lucario</p>
-        <button class="boton-cerrar" popovertarget="ver-lucario" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-gogoat" popover>
-        <img src="../../img/pokemon/modelos-grandes/gogoat.webp" alt="Gogoat en grande" loading="lazy">
-        <p>Gogoat</p>
-        <button class="boton-cerrar" popovertarget="ver-gogoat" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-heliolisk" popover>
-        <img src="../../img/pokemon/modelos-grandes/heliolisk.webp" alt="Heliolisk en grande" loading="lazy">
-        <p>Heliolisk</p>
-        <button class="boton-cerrar" popovertarget="ver-heliolisk" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-sylveon" popover>
-        <img src="../../img/pokemon/modelos-grandes/sylveon.webp" alt="Sylveon en grande" loading="lazy">
-        <p>Sylveon</p>
-        <button class="boton-cerrar" popovertarget="ver-sylveon" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-meowstic" popover>
-        <img src="../../img/pokemon/modelos-grandes/meowstic.webp" alt="Meowstic en grande" loading="lazy">
-        <p>Meowstic</p>
-        <button class="boton-cerrar" popovertarget="ver-meowstic" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-abomasnow" popover>
-        <img src="../../img/pokemon/modelos-grandes/abomasnow.webp" alt="Abomasnow en grande" loading="lazy">
-        <p>Abomasnow</p>
-        <button class="boton-cerrar" popovertarget="ver-abomasnow" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-aegislash" popover>
-        <img src="../../img/pokemon/modelos-grandes/aegislash.webp" alt="Aegislash en grande" loading="lazy">
-        <p>Aegislash</p>
-        <button class="boton-cerrar" popovertarget="ver-aegislash" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-noivern" popover>
-        <img src="../../img/pokemon/modelos-grandes/noivern.webp" alt="Noivern en grande" loading="lazy">
-        <p>Noivern</p>
-        <button class="boton-cerrar" popovertarget="ver-noivern" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-pyroar" popover>
-        <img src="../../img/pokemon/modelos-grandes/pyroar.webp" alt="Pyroar en grande" loading="lazy">
-        <p>Pyroar</p>
-        <button class="boton-cerrar" popovertarget="ver-pyroar" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-barbaracle" popover>
-        <img src="../../img/pokemon/modelos-grandes/barbaracle.webp" alt="Barbaracle en grande" loading="lazy">
-        <p>Barbaracle</p>
-        <button class="boton-cerrar" popovertarget="ver-barbaracle" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-gardevoir" popover>
-        <img src="../../img/pokemon/modelos-grandes/gardevoir.webp" alt="Gardevoir en grande" loading="lazy">
-        <p>Gardevoir</p>
-        <button class="boton-cerrar" popovertarget="ver-gardevoir" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
     </div>
   </main>
 

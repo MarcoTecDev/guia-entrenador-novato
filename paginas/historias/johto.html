@@ -8,8 +8,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Historia de Johto · Pocket Monster</title>
-  <!-- El ?v=32 obliga al navegador a descargar el CSS nuevo. Súbelo (v=33, v=34...) cada vez que cambies el CSS -->
-  <link rel="stylesheet" href="../../css/estilos.css?v=36">
+  <!-- Google Fonts: la fuente pixel. Va ANTES de nuestra hoja de estilos. El ?v= de estilos.css obliga al navegador a descargar el CSS nuevo: súbelo cada vez que cambies el CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/estilos.css?v=37">
 </head>
 <body>
   <!-- ==================================================
@@ -45,10 +48,10 @@
           <p>Pokémon Oro y Pokémon Plata salieron en Japón en 1999 (en España, en 2001). Fueron los primeros con reloj, así que había día y noche, y trajeron 100 Pokémon nuevos, los tipos Siniestro y Acero, la crianza de Pokémon y los objetos equipados. Después llegaron Cristal y, en 2009 (en España, en 2010), los remakes Oro HeartGold y Plata SoulSilver.</p>
           <p>La historia pasa tres años después de Rojo y Azul. Hay que conseguir las ocho medallas de Johto y vencer a la Liga, pero ese no es el final: después puedes viajar a Kanto, ganar también sus ocho medallas y subir al Monte Plateado para enfrentarte al entrenador más fuerte.</p>
         </div>
-        <figure class="mapa">
+        <div>
           <img class="imagen-mapa" src="../../img/regiones/2-johto/mapa.png" alt="Mapa de la región de Johto" loading="lazy">
-          <figcaption>Mapa de la región de Johto.</figcaption>
-        </figure>
+          <p class="pie-foto">Mapa de la región de Johto.</p>
+        </div>
       </section>
 
       <!-- ========== CIUDADES Y PUEBLOS ========== -->
@@ -131,40 +134,39 @@
       <!-- ========== POKÉMON LEGENDARIOS ========== -->
       <section class="seccion" id="leyendas">
         <h2>Pokémon legendarios</h2>
-        <p class="descripcion">Pulsa en un Pokémon para verlo en grande.</p>
         <div class="lista-legendarios">
           <article class="legendario">
-            <button class="boton-ampliar" popovertarget="ver-ho-oh" title="Ver Ho-Oh en grande"><img class="imagen-pokemon" src="../../img/pokemon/modelos/ho-oh.png" alt="Ho-Oh" loading="lazy"></button>
+            <img class="imagen-pokemon" src="../../img/pokemon/modelos/ho-oh.png" alt="Ho-Oh" loading="lazy">
             <h3>Ho-Oh</h3>
             <p class="etiqueta"><span class="tipo-pequeno tipo-fuego">Fuego</span> <span class="tipo-pequeno tipo-volador">Volador</span></p>
             <p>El Pokémon arcoíris. Se posa en lo alto de la Torre Hojalata y es el legendario de Oro y de HeartGold.</p>
           </article>
           <article class="legendario">
-            <button class="boton-ampliar" popovertarget="ver-lugia" title="Ver Lugia en grande"><img class="imagen-pokemon" src="../../img/pokemon/modelos/lugia.png" alt="Lugia" loading="lazy"></button>
+            <img class="imagen-pokemon" src="../../img/pokemon/modelos/lugia.png" alt="Lugia" loading="lazy">
             <h3>Lugia</h3>
             <p class="etiqueta"><span class="tipo-pequeno tipo-psiquico">Psíquico</span> <span class="tipo-pequeno tipo-volador">Volador</span></p>
             <p>El guardián de los mares, que duerme en las Islas Remolino. Es el legendario de Plata y de SoulSilver.</p>
           </article>
           <article class="legendario">
-            <button class="boton-ampliar" popovertarget="ver-raikou" title="Ver Raikou en grande"><img class="imagen-pokemon" src="../../img/pokemon/modelos/raikou.png" alt="Raikou" loading="lazy"></button>
+            <img class="imagen-pokemon" src="../../img/pokemon/modelos/raikou.png" alt="Raikou" loading="lazy">
             <h3>Raikou</h3>
             <p class="etiqueta"><span class="tipo-pequeno tipo-electrico">Eléctrico</span></p>
             <p>Uno de los tres Pokémon que Ho-Oh revivió tras el incendio de la Torre Quemada. Corre por toda la región.</p>
           </article>
           <article class="legendario">
-            <button class="boton-ampliar" popovertarget="ver-entei" title="Ver Entei en grande"><img class="imagen-pokemon" src="../../img/pokemon/modelos/entei.png" alt="Entei" loading="lazy"></button>
+            <img class="imagen-pokemon" src="../../img/pokemon/modelos/entei.png" alt="Entei" loading="lazy">
             <h3>Entei</h3>
             <p class="etiqueta"><span class="tipo-pequeno tipo-fuego">Fuego</span></p>
             <p>Otro de los tres Pokémon revividos por Ho-Oh. Dicen que, cuando ruge, entra en erupción un volcán.</p>
           </article>
           <article class="legendario">
-            <button class="boton-ampliar" popovertarget="ver-suicune" title="Ver Suicune en grande"><img class="imagen-pokemon" src="../../img/pokemon/modelos/suicune.png" alt="Suicune" loading="lazy"></button>
+            <img class="imagen-pokemon" src="../../img/pokemon/modelos/suicune.png" alt="Suicune" loading="lazy">
             <h3>Suicune</h3>
             <p class="etiqueta"><span class="tipo-pequeno tipo-agua">Agua</span></p>
             <p>El tercero, capaz de purificar el agua sucia. En Cristal tiene un papel muy importante en la historia.</p>
           </article>
           <article class="legendario">
-            <button class="boton-ampliar" popovertarget="ver-celebi" title="Ver Celebi en grande"><img class="imagen-pokemon" src="../../img/pokemon/modelos/celebi.png" alt="Celebi" loading="lazy"></button>
+            <img class="imagen-pokemon" src="../../img/pokemon/modelos/celebi.png" alt="Celebi" loading="lazy">
             <h3>Celebi</h3>
             <p class="etiqueta"><span class="tipo-pequeno tipo-psiquico">Psíquico</span> <span class="tipo-pequeno tipo-planta">Planta</span></p>
             <p>Un Pokémon que viaja en el tiempo y protege los bosques. Solo se podía conseguir en eventos especiales.</p>
@@ -177,7 +179,7 @@
         <h2>El regreso del Team Rocket</h2>
         <div class="villanos">
           <img class="logo-villanos" src="../../img/historias/johto/logo-team-rocket.svg" alt="Logo del Team Rocket: una R roja">
-          <div class="texto-villanos">
+          <div>
             <p>Tres años después de que Giovanni disolviera el Team Rocket, sus antiguos miembros se vuelven a juntar en Johto. Ya no tienen jefe, así que su plan es encontrarlo y convencerlo para que vuelva.</p>
             <p>Esta vez el Team Rocket está dirigido por cuatro ejecutivos. En Oro, Plata y Cristal no tienen nombre; en HeartGold y SoulSilver se llaman Atlas, Atenea, Protón y Petrel.</p>
           </div>
@@ -229,7 +231,7 @@
             <h3>Pegaso</h3>
             <p class="cargo">Ciudad Malva</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-volador">Volador</span> · Medalla Céfiro</p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-pidgeotto" title="Ver Pidgeotto en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/pidgeotto.png" alt="Pidgeotto" loading="lazy"></button><span>Pokémon estrella<strong>Pidgeotto</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/pidgeotto.png" alt="Pidgeotto" loading="lazy"><span>Pokémon estrella<strong>Pidgeotto</strong></span></div>
           </article>
           <article class="persona">
             <span class="numero-gimnasio">2</span>
@@ -237,7 +239,7 @@
             <h3>Antón</h3>
             <p class="cargo">Pueblo Azalea</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-bicho">Bicho</span> · Medalla Colmena</p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-scyther" title="Ver Scyther en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/scyther.png" alt="Scyther" loading="lazy"></button><span>Pokémon estrella<strong>Scyther</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/scyther.png" alt="Scyther" loading="lazy"><span>Pokémon estrella<strong>Scyther</strong></span></div>
           </article>
           <article class="persona">
             <span class="numero-gimnasio">3</span>
@@ -245,7 +247,7 @@
             <h3>Blanca</h3>
             <p class="cargo">Ciudad Trigal</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-normal">Normal</span> · Medalla Planicie</p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-miltank" title="Ver Miltank en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/miltank.png" alt="Miltank" loading="lazy"></button><span>Pokémon estrella<strong>Miltank</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/miltank.png" alt="Miltank" loading="lazy"><span>Pokémon estrella<strong>Miltank</strong></span></div>
           </article>
           <article class="persona">
             <span class="numero-gimnasio">4</span>
@@ -253,7 +255,7 @@
             <h3>Morti</h3>
             <p class="cargo">Ciudad Iris</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-fantasma">Fantasma</span> · Medalla Niebla</p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-gengar" title="Ver Gengar en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/gengar.png" alt="Gengar" loading="lazy"></button><span>Pokémon estrella<strong>Gengar</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/gengar.png" alt="Gengar" loading="lazy"><span>Pokémon estrella<strong>Gengar</strong></span></div>
           </article>
           <article class="persona">
             <span class="numero-gimnasio">5</span>
@@ -261,7 +263,7 @@
             <h3>Aníbal</h3>
             <p class="cargo">Ciudad Orquídea</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-lucha">Lucha</span> · Medalla Tormenta</p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-poliwrath" title="Ver Poliwrath en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/poliwrath.png" alt="Poliwrath" loading="lazy"></button><span>Pokémon estrella<strong>Poliwrath</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/poliwrath.png" alt="Poliwrath" loading="lazy"><span>Pokémon estrella<strong>Poliwrath</strong></span></div>
           </article>
           <article class="persona">
             <span class="numero-gimnasio">6</span>
@@ -269,7 +271,7 @@
             <h3>Yasmina</h3>
             <p class="cargo">Ciudad Olivo</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-acero">Acero</span> · Medalla Mineral</p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-steelix" title="Ver Steelix en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/steelix.png" alt="Steelix" loading="lazy"></button><span>Pokémon estrella<strong>Steelix</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/steelix.png" alt="Steelix" loading="lazy"><span>Pokémon estrella<strong>Steelix</strong></span></div>
           </article>
           <article class="persona">
             <span class="numero-gimnasio">7</span>
@@ -277,7 +279,7 @@
             <h3>Fredo</h3>
             <p class="cargo">Pueblo Caoba</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-hielo">Hielo</span> · Medalla Glaciar</p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-piloswine" title="Ver Piloswine en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/piloswine.png" alt="Piloswine" loading="lazy"></button><span>Pokémon estrella<strong>Piloswine</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/piloswine.png" alt="Piloswine" loading="lazy"><span>Pokémon estrella<strong>Piloswine</strong></span></div>
           </article>
           <article class="persona">
             <span class="numero-gimnasio">8</span>
@@ -285,7 +287,7 @@
             <h3>Débora</h3>
             <p class="cargo">Ciudad Endrino</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-dragon">Dragón</span> · Medalla Dragón</p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-kingdra" title="Ver Kingdra en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/kingdra.png" alt="Kingdra" loading="lazy"></button><span>Pokémon estrella<strong>Kingdra</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/kingdra.png" alt="Kingdra" loading="lazy"><span>Pokémon estrella<strong>Kingdra</strong></span></div>
           </article>
         </div>
       </section>
@@ -300,35 +302,35 @@
             <h3>Mento</h3>
             <p class="cargo">Alto Mando</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-psiquico">Psíquico</span></p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-xatu" title="Ver Xatu en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/xatu.png" alt="Xatu" loading="lazy"></button><span>Pokémon estrella<strong>Xatu</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/xatu.png" alt="Xatu" loading="lazy"><span>Pokémon estrella<strong>Xatu</strong></span></div>
           </article>
           <article class="persona">
             <img class="foto-persona" src="../../img/historias/johto/personajes/koga.webp" alt="Koga" loading="lazy">
             <h3>Koga</h3>
             <p class="cargo">Alto Mando</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-veneno">Veneno</span></p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-crobat" title="Ver Crobat en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/crobat.png" alt="Crobat" loading="lazy"></button><span>Pokémon estrella<strong>Crobat</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/crobat.png" alt="Crobat" loading="lazy"><span>Pokémon estrella<strong>Crobat</strong></span></div>
           </article>
           <article class="persona">
             <img class="foto-persona" src="../../img/historias/johto/personajes/bruno.webp" alt="Bruno" loading="lazy">
             <h3>Bruno</h3>
             <p class="cargo">Alto Mando</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-lucha">Lucha</span></p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-machamp" title="Ver Machamp en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/machamp.png" alt="Machamp" loading="lazy"></button><span>Pokémon estrella<strong>Machamp</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/machamp.png" alt="Machamp" loading="lazy"><span>Pokémon estrella<strong>Machamp</strong></span></div>
           </article>
           <article class="persona">
             <img class="foto-persona" src="../../img/historias/johto/personajes/karen.webp" alt="Karen" loading="lazy">
             <h3>Karen</h3>
             <p class="cargo">Alto Mando</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-siniestro">Siniestro</span></p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-houndoom" title="Ver Houndoom en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/houndoom.png" alt="Houndoom" loading="lazy"></button><span>Pokémon estrella<strong>Houndoom</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/houndoom.png" alt="Houndoom" loading="lazy"><span>Pokémon estrella<strong>Houndoom</strong></span></div>
           </article>
           <article class="persona campeon">
             <img class="foto-persona" src="../../img/historias/johto/personajes/lance.webp" alt="Lance" loading="lazy">
             <h3>Lance</h3>
             <p class="cargo">Campeón</p>
             <p>El maestro de los dragones. Te ayuda a acabar con el Team Rocket en Pueblo Caoba y luego te espera como Campeón.</p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-dragonite" title="Ver Dragonite en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/dragonite.png" alt="Dragonite" loading="lazy"></button><span>Pokémon estrella<strong>Dragonite</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/dragonite.png" alt="Dragonite" loading="lazy"><span>Pokémon estrella<strong>Dragonite</strong></span></div>
           </article>
         </div>
       </section>
@@ -367,104 +369,6 @@
         <a href="../../index.html">Inicio</a>
       </nav>
 
-      <!-- ========== VISORES (Pokémon en grande) ==========
-           Sin JavaScript: cada Pokémon es un <button popovertarget="ver-...">
-           que abre el <div popover> con ese id. Se cierra con la ✕, pulsando fuera o con Esc. -->
-      <div class="ventana" id="ver-ho-oh" popover>
-        <img src="../../img/pokemon/modelos-grandes/ho-oh.webp" alt="Ho-Oh en grande" loading="lazy">
-        <p>Ho-Oh</p>
-        <button class="boton-cerrar" popovertarget="ver-ho-oh" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-lugia" popover>
-        <img src="../../img/pokemon/modelos-grandes/lugia.webp" alt="Lugia en grande" loading="lazy">
-        <p>Lugia</p>
-        <button class="boton-cerrar" popovertarget="ver-lugia" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-raikou" popover>
-        <img src="../../img/pokemon/modelos-grandes/raikou.webp" alt="Raikou en grande" loading="lazy">
-        <p>Raikou</p>
-        <button class="boton-cerrar" popovertarget="ver-raikou" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-entei" popover>
-        <img src="../../img/pokemon/modelos-grandes/entei.webp" alt="Entei en grande" loading="lazy">
-        <p>Entei</p>
-        <button class="boton-cerrar" popovertarget="ver-entei" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-suicune" popover>
-        <img src="../../img/pokemon/modelos-grandes/suicune.webp" alt="Suicune en grande" loading="lazy">
-        <p>Suicune</p>
-        <button class="boton-cerrar" popovertarget="ver-suicune" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-celebi" popover>
-        <img src="../../img/pokemon/modelos-grandes/celebi.webp" alt="Celebi en grande" loading="lazy">
-        <p>Celebi</p>
-        <button class="boton-cerrar" popovertarget="ver-celebi" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-pidgeotto" popover>
-        <img src="../../img/pokemon/modelos-grandes/pidgeotto.webp" alt="Pidgeotto en grande" loading="lazy">
-        <p>Pidgeotto</p>
-        <button class="boton-cerrar" popovertarget="ver-pidgeotto" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-scyther" popover>
-        <img src="../../img/pokemon/modelos-grandes/scyther.webp" alt="Scyther en grande" loading="lazy">
-        <p>Scyther</p>
-        <button class="boton-cerrar" popovertarget="ver-scyther" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-miltank" popover>
-        <img src="../../img/pokemon/modelos-grandes/miltank.webp" alt="Miltank en grande" loading="lazy">
-        <p>Miltank</p>
-        <button class="boton-cerrar" popovertarget="ver-miltank" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-gengar" popover>
-        <img src="../../img/pokemon/modelos-grandes/gengar.webp" alt="Gengar en grande" loading="lazy">
-        <p>Gengar</p>
-        <button class="boton-cerrar" popovertarget="ver-gengar" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-poliwrath" popover>
-        <img src="../../img/pokemon/modelos-grandes/poliwrath.webp" alt="Poliwrath en grande" loading="lazy">
-        <p>Poliwrath</p>
-        <button class="boton-cerrar" popovertarget="ver-poliwrath" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-steelix" popover>
-        <img src="../../img/pokemon/modelos-grandes/steelix.webp" alt="Steelix en grande" loading="lazy">
-        <p>Steelix</p>
-        <button class="boton-cerrar" popovertarget="ver-steelix" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-piloswine" popover>
-        <img src="../../img/pokemon/modelos-grandes/piloswine.webp" alt="Piloswine en grande" loading="lazy">
-        <p>Piloswine</p>
-        <button class="boton-cerrar" popovertarget="ver-piloswine" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-kingdra" popover>
-        <img src="../../img/pokemon/modelos-grandes/kingdra.webp" alt="Kingdra en grande" loading="lazy">
-        <p>Kingdra</p>
-        <button class="boton-cerrar" popovertarget="ver-kingdra" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-xatu" popover>
-        <img src="../../img/pokemon/modelos-grandes/xatu.webp" alt="Xatu en grande" loading="lazy">
-        <p>Xatu</p>
-        <button class="boton-cerrar" popovertarget="ver-xatu" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-crobat" popover>
-        <img src="../../img/pokemon/modelos-grandes/crobat.webp" alt="Crobat en grande" loading="lazy">
-        <p>Crobat</p>
-        <button class="boton-cerrar" popovertarget="ver-crobat" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-machamp" popover>
-        <img src="../../img/pokemon/modelos-grandes/machamp.webp" alt="Machamp en grande" loading="lazy">
-        <p>Machamp</p>
-        <button class="boton-cerrar" popovertarget="ver-machamp" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-houndoom" popover>
-        <img src="../../img/pokemon/modelos-grandes/houndoom.webp" alt="Houndoom en grande" loading="lazy">
-        <p>Houndoom</p>
-        <button class="boton-cerrar" popovertarget="ver-houndoom" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-dragonite" popover>
-        <img src="../../img/pokemon/modelos-grandes/dragonite.webp" alt="Dragonite en grande" loading="lazy">
-        <p>Dragonite</p>
-        <button class="boton-cerrar" popovertarget="ver-dragonite" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
     </div>
   </main>
 

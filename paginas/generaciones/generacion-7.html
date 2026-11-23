@@ -8,8 +8,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Generación 7 · Pocket Monster</title>
-  <!-- El ?v=23 obliga al navegador a descargar el CSS nuevo. Súbelo (v=24, v=25...) cada vez que cambies el CSS -->
-  <link rel="stylesheet" href="../../css/estilos.css?v=36">
+  <!-- Google Fonts: la fuente pixel. Va ANTES de nuestra hoja de estilos. El ?v= de estilos.css obliga al navegador a descargar el CSS nuevo: súbelo cada vez que cambies el CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/estilos.css?v=37">
 </head>
 <body>
   <!-- ==================================================
@@ -50,10 +53,10 @@
       <!-- ========== 2. MAPA DE LA REGIÓN ========== -->
       <section class="seccion">
         <h2>Mapa de Alola</h2>
-        <figure class="mapa">
+        <div>
           <img class="imagen-mapa" src="../../img/regiones/7-alola/mapa.png" alt="Mapa de la región de Alola">
-          <figcaption>Mapa de la región de Alola.</figcaption>
-        </figure>
+          <p class="pie-foto">Mapa de la región de Alola.</p>
+        </div>
       </section>
 
       <!-- ========== 3. JUEGOS ========== -->
@@ -158,14 +161,14 @@
              allow: permisos que pide el reproductor (pantalla completa, autoplay...).
              allowfullscreen: deja ver el vídeo a pantalla completa. -->
         <div class="lista-videos">
-          <figure class="video">
+          <div class="video">
             <iframe src="https://www.youtube.com/embed/jA1pF9cwisM" title="Tráiler de Pokémon Sol y Luna" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <figcaption>Pokémon Sol y Luna</figcaption>
-          </figure>
-          <figure class="video">
+            <p class="pie-foto">Pokémon Sol y Luna</p>
+          </div>
+          <div class="video">
             <iframe src="https://www.youtube.com/embed/XgKUZqyNLP0" title="Tráiler de Pokémon Ultrasol y Ultraluna" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <figcaption>Pokémon Ultrasol y Ultraluna</figcaption>
-          </figure>
+            <p class="pie-foto">Pokémon Ultrasol y Ultraluna</p>
+          </div>
         </div>
       </section>
 

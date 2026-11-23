@@ -8,8 +8,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Historia de Alola · Pocket Monster</title>
-  <!-- El ?v=32 obliga al navegador a descargar el CSS nuevo. Súbelo (v=33, v=34...) cada vez que cambies el CSS -->
-  <link rel="stylesheet" href="../../css/estilos.css?v=36">
+  <!-- Google Fonts: la fuente pixel. Va ANTES de nuestra hoja de estilos. El ?v= de estilos.css obliga al navegador a descargar el CSS nuevo: súbelo cada vez que cambies el CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/estilos.css?v=37">
 </head>
 <body>
   <!-- ==================================================
@@ -45,10 +48,10 @@
           <p>Pokémon Sol y Pokémon Luna salieron en 2016 y trajeron 81 Pokémon nuevos, las formas de Alola y los movimientos Z. Un año después llegaron Pokémon Ultrasol y Pokémon Ultraluna, con más historia.</p>
           <p>En Alola no hay gimnasios. El viaje se llama el recorrido insular: hay que superar las pruebas de cada isla, vencer a los kahunas y, por último, a la Liga Pokémon, que se construye en esta región. Mientras, el Equipo Skull y la Fundación Æther complican las cosas.</p>
         </div>
-        <figure class="mapa">
+        <div>
           <img class="imagen-mapa" src="../../img/regiones/7-alola/mapa.png" alt="Mapa de la región de Alola" loading="lazy">
-          <figcaption>Mapa de la región de Alola.</figcaption>
-        </figure>
+          <p class="pie-foto">Mapa de la región de Alola.</p>
+        </div>
       </section>
 
       <!-- ========== CIUDADES Y PUEBLOS ========== -->
@@ -109,7 +112,7 @@
           <li>
             <span class="disfraz" title="¿Seguro que es un Pikachu?">
               <img class="pikachu" src="../../img/pokemon/modelos/pikachu.png" alt="Pikachu">
-              <img class="mimikyu" src="../../img/pokemon/modelos/mimikyu.png" alt="" aria-hidden="true">
+              <img class="mimikyu" src="../../img/pokemon/modelos/mimikyu.png" alt="">
             </span>
             <strong>Supermercado abandonado:</strong> Un supermercado cerrado de la isla Ula-Ula. Dicen que dentro vive un Pikachu un poco raro...
           </li>
@@ -119,46 +122,45 @@
       <!-- ========== POKÉMON LEGENDARIOS ========== -->
       <section class="seccion" id="leyendas">
         <h2>Pokémon legendarios</h2>
-        <p class="descripcion">Pulsa en un Pokémon para verlo en grande.</p>
         <div class="lista-legendarios">
           <article class="legendario">
-            <button class="boton-ampliar" popovertarget="ver-solgaleo" title="Ver Solgaleo en grande"><img class="imagen-pokemon" src="../../img/pokemon/modelos/solgaleo.png" alt="Solgaleo" loading="lazy"></button>
+            <img class="imagen-pokemon" src="../../img/pokemon/modelos/solgaleo.png" alt="Solgaleo" loading="lazy">
             <h3>Solgaleo</h3>
             <p class="etiqueta"><span class="tipo-pequeno tipo-psiquico">Psíquico</span> <span class="tipo-pequeno tipo-acero">Acero</span></p>
             <p>El Pokémon que devora el sol. Es el legendario de Sol.</p>
           </article>
           <article class="legendario">
-            <button class="boton-ampliar" popovertarget="ver-lunala" title="Ver Lunala en grande"><img class="imagen-pokemon" src="../../img/pokemon/modelos/lunala.png" alt="Lunala" loading="lazy"></button>
+            <img class="imagen-pokemon" src="../../img/pokemon/modelos/lunala.png" alt="Lunala" loading="lazy">
             <h3>Lunala</h3>
             <p class="etiqueta"><span class="tipo-pequeno tipo-psiquico">Psíquico</span> <span class="tipo-pequeno tipo-fantasma">Fantasma</span></p>
             <p>El Pokémon que llama a la luna. Es el legendario de Luna.</p>
           </article>
           <article class="legendario">
-            <button class="boton-ampliar" popovertarget="ver-necrozma" title="Ver Necrozma en grande"><img class="imagen-pokemon" src="../../img/pokemon/modelos/necrozma.png" alt="Necrozma" loading="lazy"></button>
+            <img class="imagen-pokemon" src="../../img/pokemon/modelos/necrozma.png" alt="Necrozma" loading="lazy">
             <h3>Necrozma</h3>
             <p class="etiqueta"><span class="tipo-pequeno tipo-psiquico">Psíquico</span></p>
             <p>Un Pokémon que llegó del espacio y que roba luz. Aparece en Ultrasol y Ultraluna.</p>
           </article>
           <article class="legendario">
-            <button class="boton-ampliar" popovertarget="ver-tapu-koko" title="Ver Tapu Koko en grande"><img class="imagen-pokemon" src="../../img/pokemon/modelos/tapu-koko.png" alt="Tapu Koko" loading="lazy"></button>
+            <img class="imagen-pokemon" src="../../img/pokemon/modelos/tapu-koko.png" alt="Tapu Koko" loading="lazy">
             <h3>Tapu Koko</h3>
             <p class="etiqueta"><span class="tipo-pequeno tipo-electrico">Eléctrico</span> <span class="tipo-pequeno tipo-hada">Hada</span></p>
             <p>El guardián de Melemele. Es juguetón e impulsivo.</p>
           </article>
           <article class="legendario">
-            <button class="boton-ampliar" popovertarget="ver-tapu-lele" title="Ver Tapu Lele en grande"><img class="imagen-pokemon" src="../../img/pokemon/modelos/tapu-lele.png" alt="Tapu Lele" loading="lazy"></button>
+            <img class="imagen-pokemon" src="../../img/pokemon/modelos/tapu-lele.png" alt="Tapu Lele" loading="lazy">
             <h3>Tapu Lele</h3>
             <p class="etiqueta"><span class="tipo-pequeno tipo-psiquico">Psíquico</span> <span class="tipo-pequeno tipo-hada">Hada</span></p>
             <p>El guardián de Akala. Es alegre y caprichoso.</p>
           </article>
           <article class="legendario">
-            <button class="boton-ampliar" popovertarget="ver-tapu-bulu" title="Ver Tapu Bulu en grande"><img class="imagen-pokemon" src="../../img/pokemon/modelos/tapu-bulu.png" alt="Tapu Bulu" loading="lazy"></button>
+            <img class="imagen-pokemon" src="../../img/pokemon/modelos/tapu-bulu.png" alt="Tapu Bulu" loading="lazy">
             <h3>Tapu Bulu</h3>
             <p class="etiqueta"><span class="tipo-pequeno tipo-planta">Planta</span> <span class="tipo-pequeno tipo-hada">Hada</span></p>
             <p>El guardián de Ula-Ula. Es tranquilo y muy fuerte.</p>
           </article>
           <article class="legendario">
-            <button class="boton-ampliar" popovertarget="ver-tapu-fini" title="Ver Tapu Fini en grande"><img class="imagen-pokemon" src="../../img/pokemon/modelos/tapu-fini.png" alt="Tapu Fini" loading="lazy"></button>
+            <img class="imagen-pokemon" src="../../img/pokemon/modelos/tapu-fini.png" alt="Tapu Fini" loading="lazy">
             <h3>Tapu Fini</h3>
             <p class="etiqueta"><span class="tipo-pequeno tipo-agua">Agua</span> <span class="tipo-pequeno tipo-hada">Hada</span></p>
             <p>El guardián de Poni. Es muy dulce y purifica el agua.</p>
@@ -172,7 +174,7 @@
         <h3 class="subtitulo">Equipo Skull</h3>
         <div class="villanos">
           <img class="logo-villanos" src="../../img/historias/alola/logo-equipo-skull.webp" alt="Logo del Equipo Skull: una calavera">
-          <div class="texto-villanos">
+          <div>
             <p>El Equipo Skull es una banda de jóvenes rebeldes que roban Pokémon y se meten con los demás. Visten con ropa suelta, cadenas y collares, y su base está en el Pueblo Po.</p>
           </div>
           <article class="persona jefe">
@@ -200,7 +202,7 @@
         <h3 class="subtitulo">Fundación Æther</h3>
         <div class="villanos">
           <img class="logo-villanos" src="../../img/historias/alola/logo-fundacion-aether.webp" alt="Logo de la Fundación Æther">
-          <div class="texto-villanos">
+          <div>
             <p>La Fundación Æther parece una organización amable que protege Pokémon, pero su presidenta tiene un plan peligroso: abrir una puerta a otra dimensión con ayuda de un Pokémon misterioso.</p>
             <p>Sus miembros visten trajes blancos con detalles dorados, y su sede es una isla artificial: el Paraíso Æther.</p>
           </div>
@@ -233,7 +235,7 @@
             <h3>Kaudan</h3>
             <p class="cargo">Isla Melemele</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-lucha">Lucha</span> · Kahuna de Melemele</p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-crabominable" title="Ver Crabominable en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/crabominable.png" alt="Crabominable" loading="lazy"></button><span>Pokémon estrella<strong>Crabominable</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/crabominable.png" alt="Crabominable" loading="lazy"><span>Pokémon estrella<strong>Crabominable</strong></span></div>
           </article>
           <article class="persona">
             <span class="numero-gimnasio">2</span>
@@ -241,7 +243,7 @@
             <h3>Olivia</h3>
             <p class="cargo">Isla Akala</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-roca">Roca</span> · Kahuna de Akala</p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-lycanroc" title="Ver Lycanroc en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/lycanroc.png" alt="Lycanroc" loading="lazy"></button><span>Pokémon estrella<strong>Lycanroc</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/lycanroc.png" alt="Lycanroc" loading="lazy"><span>Pokémon estrella<strong>Lycanroc</strong></span></div>
           </article>
           <article class="persona">
             <span class="numero-gimnasio">3</span>
@@ -249,7 +251,7 @@
             <h3>Denio</h3>
             <p class="cargo">Isla Ula-Ula</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-siniestro">Siniestro</span> · Kahuna de Ula-Ula</p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-persian-alola" title="Ver Persian de Alola en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/persian-alola.png" alt="Persian de Alola" loading="lazy"></button><span>Pokémon estrella<strong>Persian de Alola</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/persian-alola.png" alt="Persian de Alola" loading="lazy"><span>Pokémon estrella<strong>Persian de Alola</strong></span></div>
           </article>
           <article class="persona">
             <span class="numero-gimnasio">4</span>
@@ -257,7 +259,7 @@
             <h3>Hela</h3>
             <p class="cargo">Isla Poni</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-tierra">Tierra</span> · Kahuna de Poni</p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-mudsdale" title="Ver Mudsdale en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/mudsdale.png" alt="Mudsdale" loading="lazy"></button><span>Pokémon estrella<strong>Mudsdale</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/mudsdale.png" alt="Mudsdale" loading="lazy"><span>Pokémon estrella<strong>Mudsdale</strong></span></div>
           </article>
         </div>
       </section>
@@ -272,28 +274,28 @@
             <h3>Kaudan</h3>
             <p class="cargo">Alto Mando</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-lucha">Lucha</span></p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-crabominable" title="Ver Crabominable en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/crabominable.png" alt="Crabominable" loading="lazy"></button><span>Pokémon estrella<strong>Crabominable</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/crabominable.png" alt="Crabominable" loading="lazy"><span>Pokémon estrella<strong>Crabominable</strong></span></div>
           </article>
           <article class="persona">
             <img class="foto-persona" src="../../img/historias/alola/personajes/olivia.webp" alt="Olivia" loading="lazy">
             <h3>Olivia</h3>
             <p class="cargo">Alto Mando</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-roca">Roca</span></p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-lycanroc" title="Ver Lycanroc en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/lycanroc.png" alt="Lycanroc" loading="lazy"></button><span>Pokémon estrella<strong>Lycanroc</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/lycanroc.png" alt="Lycanroc" loading="lazy"><span>Pokémon estrella<strong>Lycanroc</strong></span></div>
           </article>
           <article class="persona">
             <img class="foto-persona" src="../../img/historias/alola/personajes/zarala.webp" alt="Zarala" loading="lazy">
             <h3>Zarala</h3>
             <p class="cargo">Alto Mando</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-fantasma">Fantasma</span></p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-palossand" title="Ver Palossand en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/palossand.png" alt="Palossand" loading="lazy"></button><span>Pokémon estrella<strong>Palossand</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/palossand.png" alt="Palossand" loading="lazy"><span>Pokémon estrella<strong>Palossand</strong></span></div>
           </article>
           <article class="persona">
             <img class="foto-persona" src="../../img/historias/alola/personajes/kahili.webp" alt="Kahili" loading="lazy">
             <h3>Kahili</h3>
             <p class="cargo">Alto Mando</p>
             <p class="etiqueta"><span class="tipo-pequeno tipo-volador">Volador</span></p>
-            <div class="pokemon-estrella"><button class="boton-ampliar" popovertarget="ver-toucannon" title="Ver Toucannon en grande"><img class="imagen-estrella" src="../../img/pokemon/modelos/toucannon.png" alt="Toucannon" loading="lazy"></button><span>Pokémon estrella<strong>Toucannon</strong></span></div>
+            <div class="pokemon-estrella"><img class="imagen-estrella" src="../../img/pokemon/modelos/toucannon.png" alt="Toucannon" loading="lazy"><span>Pokémon estrella<strong>Toucannon</strong></span></div>
           </article>
           <article class="persona campeon">
             <img class="foto-persona" src="../../img/historias/alola/personajes/kukui.webp" alt="Profesor Kukui" loading="lazy">
@@ -338,74 +340,6 @@
         <a href="../../index.html">Inicio</a>
       </nav>
 
-      <!-- ========== VISORES (Pokémon en grande) ==========
-           Sin JavaScript: cada Pokémon es un <button popovertarget="ver-...">
-           que abre el <div popover> con ese id. Se cierra con la ✕, pulsando fuera o con Esc. -->
-      <div class="ventana" id="ver-solgaleo" popover>
-        <img src="../../img/pokemon/modelos-grandes/solgaleo.webp" alt="Solgaleo en grande" loading="lazy">
-        <p>Solgaleo</p>
-        <button class="boton-cerrar" popovertarget="ver-solgaleo" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-lunala" popover>
-        <img src="../../img/pokemon/modelos-grandes/lunala.webp" alt="Lunala en grande" loading="lazy">
-        <p>Lunala</p>
-        <button class="boton-cerrar" popovertarget="ver-lunala" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-necrozma" popover>
-        <img src="../../img/pokemon/modelos-grandes/necrozma.webp" alt="Necrozma en grande" loading="lazy">
-        <p>Necrozma</p>
-        <button class="boton-cerrar" popovertarget="ver-necrozma" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-tapu-koko" popover>
-        <img src="../../img/pokemon/modelos-grandes/tapu-koko.webp" alt="Tapu Koko en grande" loading="lazy">
-        <p>Tapu Koko</p>
-        <button class="boton-cerrar" popovertarget="ver-tapu-koko" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-tapu-lele" popover>
-        <img src="../../img/pokemon/modelos-grandes/tapu-lele.webp" alt="Tapu Lele en grande" loading="lazy">
-        <p>Tapu Lele</p>
-        <button class="boton-cerrar" popovertarget="ver-tapu-lele" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-tapu-bulu" popover>
-        <img src="../../img/pokemon/modelos-grandes/tapu-bulu.webp" alt="Tapu Bulu en grande" loading="lazy">
-        <p>Tapu Bulu</p>
-        <button class="boton-cerrar" popovertarget="ver-tapu-bulu" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-tapu-fini" popover>
-        <img src="../../img/pokemon/modelos-grandes/tapu-fini.webp" alt="Tapu Fini en grande" loading="lazy">
-        <p>Tapu Fini</p>
-        <button class="boton-cerrar" popovertarget="ver-tapu-fini" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-crabominable" popover>
-        <img src="../../img/pokemon/modelos-grandes/crabominable.webp" alt="Crabominable en grande" loading="lazy">
-        <p>Crabominable</p>
-        <button class="boton-cerrar" popovertarget="ver-crabominable" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-lycanroc" popover>
-        <img src="../../img/pokemon/modelos-grandes/lycanroc.webp" alt="Lycanroc en grande" loading="lazy">
-        <p>Lycanroc</p>
-        <button class="boton-cerrar" popovertarget="ver-lycanroc" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-persian-alola" popover>
-        <img src="../../img/pokemon/modelos-grandes/persian-alola.webp" alt="Persian de Alola en grande" loading="lazy">
-        <p>Persian de Alola</p>
-        <button class="boton-cerrar" popovertarget="ver-persian-alola" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-mudsdale" popover>
-        <img src="../../img/pokemon/modelos-grandes/mudsdale.webp" alt="Mudsdale en grande" loading="lazy">
-        <p>Mudsdale</p>
-        <button class="boton-cerrar" popovertarget="ver-mudsdale" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-palossand" popover>
-        <img src="../../img/pokemon/modelos-grandes/palossand.webp" alt="Palossand en grande" loading="lazy">
-        <p>Palossand</p>
-        <button class="boton-cerrar" popovertarget="ver-palossand" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="ventana" id="ver-toucannon" popover>
-        <img src="../../img/pokemon/modelos-grandes/toucannon.webp" alt="Toucannon en grande" loading="lazy">
-        <p>Toucannon</p>
-        <button class="boton-cerrar" popovertarget="ver-toucannon" popovertargetaction="hide" aria-label="Cerrar">✕</button>
-      </div>
     </div>
   </main>
 
