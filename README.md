@@ -59,9 +59,8 @@
 | Objeto | Descripción |
 | :---: | --- |
 | 🏠 **Página de inicio** | Una tarjeta por cada generación: número, región, juegos, año y la consola en la que salió. |
-| 🗺️ **10 páginas de generación** | De Kanto a la generación 10, cada una con su color y con estas secciones: historia de la región, mapa, juegos (originales, remakes, secuelas y DLC), tráileres de YouTube (con `<iframe>`) y Pokémon iniciales. |
-| 📜 **Historia de cada región** | Página propia con la región, sus ciudades, legendarios, equipo villano, gimnasios, Liga Pokémon y personajes. De momento están **Kanto**, **Johto**, **Hoenn**, **Sinnoh**, **Teselia**, **Kalos**, **Alola**, **Galar** y **Paldea**; desde cada generación se llega con el botón "Leer la historia". |
-| 🔁 **Página de evoluciones** | Las líneas evolutivas de los iniciales de cada juego, ordenadas por generación, con índice y enlaces directos. Se ven con los renders 3D de Pokémon HOME e incluye las megaevoluciones con sus tipos. Al pulsar un render se abre en grande (con el atributo `popover` de HTML, sin JavaScript). Al pulsar un inicial en cualquier juego te lleva a sus evoluciones. |
+| 🗺️ **10 páginas de generación** | De Kanto a la generación 10, cada una con su color y con estas secciones: mapa de la región, juegos (originales, remakes, secuelas y DLC), tráileres de YouTube (con `<iframe>`) y Pokémon iniciales. |
+| 🔁 **Página de evoluciones** | Las líneas evolutivas de los iniciales de cada juego, ordenadas por generación, con índice y enlaces directos. Se ven con los renders 3D de Pokémon HOME e incluye las megaevoluciones con sus tipos. Al pulsar un inicial en cualquier juego te lleva a sus evoluciones. |
 | ✉️ **Página de contacto** | 🚧 En construcción. |
 | 🔀 **Rutas** | Enlaces para ir a la generación anterior y a la siguiente. |
 | 📱 **Diseño adaptable** | Funciona en ordenador, tablet y móvil. |
@@ -75,34 +74,21 @@
 ├── 🏠 index.html               Pueblo de origen: página de inicio (se queda fuera para que GitHub Pages la encuentre)
 ├── 🛤️ paginas/
 │   ├── 🔁 evoluciones.html     Evoluciones de los iniciales de cada juego
-│   ├── historias/
-│   │   ├── kanto.html           Historia completa de Kanto
-│   │   ├── johto.html           Historia completa de Johto
-│   │   ├── hoenn.html           Historia completa de Hoenn
-│   │   ├── sinnoh.html          Historia completa de Sinnoh
-│   │   ├── teselia.html         Historia completa de Teselia
-│   │   ├── kalos.html           Historia completa de Kalos
-│   │   ├── alola.html           Historia completa de Alola
-│   │   ├── galar.html           Historia completa de Galar
-│   │   └── paldea.html          Historia completa de Paldea
 │   ├── ✉️ contacto.html        Página de contacto
 │   └── 📍 generaciones/
 │       ├── generacion-1.html    Páginas de cada generación
 │       ├── ...
 │       └── generacion-10.html
 ├── 🎨 css/
-│   ├── estilos.css          Hoja de estilos de toda la web
-│   └── fuentes/             Fuente pixel Press Start 2P
+│   └── estilos.css          Hoja de estilos de toda la web (la fuente pixel llega de Google Fonts)
 ├── 🖼️ img/
 │   ├── caratulas/           Carátulas de los juegos, una carpeta por generación (gen1... gen10)
 │   ├── consolas/            Imágenes de las consolas de cada generación
 │   ├── readme/              Tiras animadas con los Pokémon de cada generación (gen-1... gen-9) para este README
-│   ├── historias/           Imágenes de las páginas de historia (personajes, ciudades y logos), una carpeta por región
 │   ├── pokemon/
 │   │   ├── ilustraciones/   Ilustraciones oficiales de los iniciales
 │   │   ├── iconos/          Iconos de menú de los iniciales (Escarlata y Púrpura)
-│   │   ├── modelos/         Renders 3D de los iniciales, sus evoluciones y megaevoluciones (Pokémon HOME)
-│   │   └── modelos-grandes/ Los mismos renders en grande (420 px, WebP) para el visor
+│   │   └── modelos/         Renders 3D de los iniciales, sus evoluciones y megaevoluciones (Pokémon HOME)
 │   ├── regiones/            Una carpeta por región (1-kanto, 2-johto... 10-por-descubrir)
 │   │   ├── 1-kanto/mapa.png      Mapa de la región (aquí van también sus carátulas e iniciales)
 │   │   ├── ...
@@ -120,12 +106,12 @@
 | Movimiento | Tipo | Efecto |
 | --- | :---: | --- |
 | **HTML5** | 🟠 Estructura | Esqueleto de todas las páginas. |
-| **CSS3** | 🔵 Estilo | Flexbox, grid, variables, `@font-face`, `@media` para móvil y transiciones con `:hover`. |
+| **CSS3** | 🔵 Estilo | Flexbox, grid, variables, Google Fonts, `@media` (primero móvil), transiciones con `:hover` y `@keyframes`. |
 
 </div>
 
 > ⚠️ **¡JavaScript no está en el equipo!** La web no usa JavaScript ni librerías externas.
-> Todo funciona en local salvo los tráileres, que se cargan desde YouTube y necesitan internet.
+> Todo funciona en local salvo los tráileres (YouTube) y la fuente pixel (Google Fonts), que necesitan internet.
 
 ---
 
@@ -149,7 +135,6 @@
 - **Iniciales de la generación 10** (Browt, Pombon y Gecqua): ilustraciones oficiales tomadas de [WikiDex](https://www.wikidex.net/wiki/Pok%C3%A9mon_Viento_y_Pok%C3%A9mon_Oleaje).
 - **Tiras de los 1025 Pokémon del README:** sprites de [PokeAPI/sprites](https://github.com/PokeAPI/sprites), unidos en una tira animada con SVG por generación.
 - **Sprites de la generación 10:** hechos por [CarnekVT](https://www.deviantart.com/carnekvt/art/Pokemon-Winds-and-Waves-Starters-in-Sprite-version-1303886486) en DeviantArt (aún no hay sprites oficiales).
-- **Personajes, ciudades y logos de las páginas de historia:** [WikiDex](https://www.wikidex.net) (arte oficial y capturas de Pokémon Let's Go; arte oficial y mapas de HeartGold y SoulSilver en Johto, de Rubí Omega y Zafiro Alfa en Hoenn, de Diamante Brillante y Perla Reluciente en Sinnoh de Negro, Blanco, Negro 2 y Blanco 2 en Teselia, de X e Y en Kalos, de Ultrasol y Ultraluna en Alola, de Espada y Escudo en Galar y de Escarlata y Púrpura en Paldea), reducidos de tamaño.
 - **Carátulas de los juegos:** [WikiDex](https://www.wikidex.net), ajustadas a un mismo tamaño cuadrado (440 × 440).
 - **Imágenes de consolas:** tema «Systematic» de [RetroArch Assets](https://github.com/libretro/retroarch-assets) (libretro), licencia [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Recortadas y redimensionadas.
 - **Pokémon** y sus personajes son © Nintendo, Game Freak y The Pokémon Company. Este es un proyecto educativo sin ánimo de lucro y no tiene relación oficial con ellos.

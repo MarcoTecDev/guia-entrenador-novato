@@ -1,9 +1,8 @@
 /* ==========================================================
    ESTILOS DE LA WEB "POCKET MONSTER"
-     1. Variables        5. Generaciones    9.  Efectos al pasar el ratón
-     2. Base             6. Evoluciones     10. Sorpresas escondidas
-     3. Cabecera y pie   7. Historias       11. Responsive (tablet y ordenador)
-     4. Inicio           8. Colores
+     1. Variables        4. Inicio          7. Colores
+     2. Base             5. Generaciones    8. Efectos al pasar el ratón
+     3. Cabecera y pie   6. Evoluciones     9. Responsive (tablet y ordenador)
    Se diseña primero para móvil; las media queries del final
    añaden columnas cuando la pantalla es más ancha.
    ========================================================== */
@@ -49,7 +48,7 @@ img { max-width: 100%; height: auto; }
 
 /* Textos con la fuente pixel (Google Fonts) */
 h1, h2, h3, .logo, .menu a, .boton, .numero, .anterior-siguiente a,
-.boton-diario, .caja-vacia, .aviso p {
+.caja-vacia, .aviso p {
   font-family: var(--fuente-pixel);
   font-weight: normal;
   line-height: 1.5;
@@ -64,8 +63,7 @@ h2 { font-size: 1.1rem; } /* rem: relativo al tamaño de letra base */
 .seccion h2 { padding-bottom: 12px; border-bottom: 4px solid var(--negro); }
 
 /* Tarjetas y cajas blancas: todas con el mismo aspecto */
-.tarjeta, .caja-historia, .juego, .inicial, .galeria img, .video,
-.tarjeta-evolucion, .ciudad, .legendario, .persona, .aviso {
+.tarjeta, .juego, .inicial, .galeria img, .video, .tarjeta-evolucion, .aviso {
   padding: 16px;
   border: 3px solid var(--negro);
   border-radius: 16px;
@@ -73,24 +71,24 @@ h2 { font-size: 1.1rem; } /* rem: relativo al tamaño de letra base */
   box-shadow: 0 6px 20px var(--sombra); /* sombra suave: x, y, difuminado, color */
 }
 
+/* Contenido centrado dentro de estas tarjetas */
+.juego, .inicial, .tarjeta-evolucion, .aviso { text-align: center; }
+
 /* Todas las listas de tarjetas son una rejilla (Grid).
-   En móvil, una columna; abajo, en el apartado 11, se añaden más. */
+   En móvil, una columna; abajo, en el apartado 9, se añaden más. */
 .lista-generaciones, .lista-juegos, .lista-iniciales, .galeria,
-.lista-videos, .lista-evoluciones, .lista-ciudades, .lista-legendarios,
-.lista-personas, .lista-personajes, .villanos {
+.lista-videos, .lista-evoluciones {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
 }
 
-/* Estas listas ya empiezan con 2 columnas en el móvil */
-.lista-generaciones, .lista-legendarios, .lista-personas {
-  grid-template-columns: repeat(2, 1fr);
-}
+/* Las generaciones ya empiezan con 2 columnas en el móvil */
+.lista-generaciones { grid-template-columns: repeat(2, 1fr); }
 
 /* Textos pequeños y grises */
-.subtitulo, .descripcion, .pie-foto, .etiqueta, .cargo, .nota,
-.mega-titulo, .paso, .juego p, .tarjeta p {
+.subtitulo, .descripcion, .pie-foto, .nota, .mega-titulo, .paso,
+.juego p, .tarjeta p {
   margin: 8px 0;
   font-size: 0.85rem;
   color: var(--texto-suave);
@@ -196,26 +194,17 @@ h2 { font-size: 1.1rem; } /* rem: relativo al tamaño de letra base */
 }
 
 .tarjeta h3 { font-size: 0.7rem; }
-/* El número usa el color de su generación (apartado 8) */
+/* El número usa el color de su generación (apartado 7) */
 .numero { font-size: 1.8rem; color: var(--color-generacion); }
 .nombre-juego { font-weight: bold; }
 
 /* Consola arriba a la derecha (absolute dentro de la tarjeta) */
-.consola {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 54px;
-}
+.consola { position: absolute; top: 12px; right: 12px; width: 54px; }
 
 /* ---------- 5. PÁGINAS DE GENERACIÓN ---------- */
 
 /* Franja de color con el título */
-.portada-generacion {
-  padding: 48px 16px;
-  text-align: center;
-  color: var(--blanco);
-}
+.portada-generacion { padding: 48px 16px; text-align: center; color: var(--blanco); }
 
 .portada-generacion h1 {
   margin: 0;
@@ -224,7 +213,7 @@ h2 { font-size: 1.1rem; } /* rem: relativo al tamaño de letra base */
 }
 
 /* Aviso de "en construcción" con cinta amarilla de obra */
-.aviso { padding: 0; text-align: center; }
+.aviso { padding: 0; }
 
 .aviso p {
   margin: 0;
@@ -235,11 +224,7 @@ h2 { font-size: 1.1rem; } /* rem: relativo al tamaño de letra base */
 }
 
 /* "Anterior" a la izquierda y "Siguiente" a la derecha */
-.anterior-siguiente {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 32px;
-}
+.anterior-siguiente { display: flex; justify-content: space-between; margin-top: 32px; }
 
 /* Hueco con borde a rayas donde irá una imagen */
 .caja-vacia {
@@ -251,27 +236,14 @@ h2 { font-size: 1.1rem; } /* rem: relativo al tamaño de letra base */
   text-align: center;
 }
 
-/* Botón del diario: imagen y texto centrados */
-.boton-diario {
-  display: block;
-  margin-top: 16px;
-  font-size: 0.6rem;
-  text-align: center;
-  text-decoration: none;
-}
-
-.boton-diario img { display: block; width: 96px; margin: 0 auto; }
-
 /* Mapa de la región con borde y esquinas redondeadas */
 .imagen-mapa {
   display: block;
-  margin: 24px auto 0;
+  margin: 0 auto;
   border: 4px solid var(--negro);
   border-radius: 12px;
 }
 
-/* Contenido centrado dentro de estas tarjetas */
-.juego, .inicial, .legendario, .persona, .tarjeta-evolucion { text-align: center; }
 .caratula { border-radius: 12px; }
 
 /* Iniciales de cada juego: fila de tres bajo la carátula (Flexbox) */
@@ -301,12 +273,7 @@ h2 { font-size: 1.1rem; } /* rem: relativo al tamaño de letra base */
 .imagen-inicial { width: 160px; } /* iniciales grandes */
 
 /* Vídeo de YouTube con forma panorámica */
-.video iframe {
-  width: 100%;
-  height: 200px;
-  border: 0;
-  border-radius: 10px;
-}
+.video iframe { width: 100%; height: 200px; border: 0; border-radius: 10px; }
 
 /* ---------- 6. PÁGINA DE EVOLUCIONES ---------- */
 
@@ -348,79 +315,10 @@ h2 { font-size: 1.1rem; } /* rem: relativo al tamaño de letra base */
 .mega { margin-top: 14px; border-top: 2px dashed var(--linea); }
 
 /* Etiqueta MEGA con degradado de izquierda a derecha */
-.mega-etiqueta {
-  background-image: linear-gradient(90deg, #f7a400, #e3350d, #7b1fa2);
-}
+.mega-etiqueta { background-image: linear-gradient(90deg, #f7a400, #e3350d, #7b1fa2); }
 .tipos { display: block; } /* los tipos bajan a su propia línea */
 
-/* ---------- 7. PÁGINAS DE HISTORIA ---------- */
-
-/* Tarjeta de ciudad: la foto ocupa todo el ancho de arriba.
-   relative: para colocar a Kecleon encima de la foto (apartado 10) */
-.ciudad { position: relative; padding: 0; }
-.foto-ciudad { display: block; border-radius: 13px 13px 0 0; } /* solo las esquinas de arriba */
-.ciudad h3, .ciudad p { margin: 12px 16px; font-size: 0.8rem; }
-.lista-lugares li, .pasos-villanos li { margin-bottom: 8px; }
-/* Tamaño de los legendarios y del logo del equipo villano */
-.imagen-pokemon { width: 120px; }
-.logo-villanos { width: 140px; }
-
-/* Retratos todos igual de altos */
-.foto-persona {
-  display: block;
-  height: 200px;
-  width: auto; /* el ancho se ajusta solo para no deformar la imagen */
-  margin: 0 auto;
-}
-
-/* Número del gimnasio en un círculo, arriba a la izquierda */
-.numero-gimnasio {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: var(--negro);
-  color: var(--blanco);
-  font-weight: bold;
-  line-height: 30px;
-}
-
-.legendario, .persona { position: relative; } /* referencia para el número del gimnasio */
-
-/* El Campeón destaca con borde dorado */
-.campeon { border-color: #c9a227; }
-
-/* Pokémon estrella del líder: imagen pequeña y texto al lado */
-.pokemon-estrella {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding-top: 10px;
-  border-top: 1px solid var(--linea);
-  font-size: 0.75rem;
-}
-
-.pokemon-estrella span { text-align: left; }
-.pokemon-estrella strong { display: block; color: var(--texto); } /* el nombre baja de línea */
-.legendario p, .persona p { font-size: 0.85rem; }
-.imagen-estrella { width: 48px; }
-
-/* Personajes: retrato a la izquierda y texto a la derecha (Grid) */
-.persona-ancha {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 16px;
-  align-items: center;
-  text-align: left;
-}
-
-/* Descendiente: solo los retratos que están dentro de .persona-ancha */
-.persona-ancha .foto-persona { width: 120px; height: auto; }
-
-/* ---------- 8. COLORES ---------- */
+/* ---------- 7. COLORES ---------- */
 
 /* Cada generación guarda su color en una variable */
 .gen-1, .fondo-gen-1 { --color-generacion: #e53935; }
@@ -442,16 +340,12 @@ h2 { font-size: 1.1rem; } /* rem: relativo al tamaño de letra base */
 .fondo-contacto { background-color: var(--rojo); }
 
 /* Degradado verde, rojo y azul (planta, fuego y agua) */
-.fondo-evoluciones {
-  background-image: linear-gradient(90deg, #3fa129, #e62829, #2980ef);
-}
+.fondo-evoluciones { background-image: linear-gradient(90deg, #3fa129, #e62829, #2980ef); }
 
 /* Colores de los tipos: fondo de las pastillas y borde izquierdo de las evoluciones */
 .tipo-planta { background-color: #3fa129; }
 .tipo-fuego { background-color: #e62829; }
 .tipo-agua { background-color: #2980ef; }
-.tipo-electrico { background-color: #fac000; }
-.tipo-normal { background-color: #9fa19f; }
 .tipo-lucha { background-color: #ff8000; }
 .tipo-fantasma { background-color: #704170; }
 .tipo-siniestro { background-color: #624d4e; }
@@ -461,19 +355,14 @@ h2 { font-size: 1.1rem; } /* rem: relativo al tamaño de letra base */
 .tipo-tierra { background-color: #915121; }
 .tipo-hada { background-color: #ef70ef; }
 .tipo-psiquico { background-color: #ef4179; }
-.tipo-roca { background-color: #afa981; }
-.tipo-hielo { background-color: #3dcef3; }
-.tipo-bicho { background-color: #91a119; }
-.tipo-acero { background-color: #60a1b8; }
 .borde-planta { border-left-color: #3fa129; }
 .borde-fuego { border-left-color: #e62829; }
 .borde-agua { border-left-color: #2980ef; }
 
-/* ---------- 9. EFECTOS AL PASAR EL RATÓN ---------- */
+/* ---------- 8. EFECTOS AL PASAR EL RATÓN ---------- */
 
 /* transition: el cambio dura 0.2 segundos en vez de ser de golpe */
-.tarjeta, .boton, .boton-diario, .botones-indice a, .icono,
-.imagen-pequena, .imagen-pokemon, .imagen-estrella {
+.tarjeta, .boton, .botones-indice a, .icono, .imagen-pequena {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -483,22 +372,16 @@ h2 { font-size: 1.1rem; } /* rem: relativo al tamaño de letra base */
 /* HUNDIRSE: el botón rojo baja y su sombra se hace pequeña */
 .boton:hover { transform: translateY(2px); box-shadow: 0 2px 0 var(--negro); }
 
-/* CRECER un 10% */
-.boton-diario:hover, .botones-indice a:hover, .imagen-pokemon:hover {
-  transform: scale(1.1);
-}
+/* CRECER un 10%: botones del índice de evoluciones */
+.botones-indice a:hover { transform: scale(1.1); }
 
 /* CRECER un 20%: iconos de Pokémon */
-.icono:hover, .imagen-estrella:hover,
-.enlace-inicial:hover .imagen-pequena {
-  transform: scale(1.2);
-}
+.icono:hover, .enlace-inicial:hover .imagen-pequena { transform: scale(1.2); }
 
 /* CAMBIAR DE COLOR */
 .menu a:hover { background-color: var(--negro); color: var(--blanco); }
 .anterior-siguiente a:hover, .volver-arriba:hover { color: var(--rojo); }
 
-/* El título de la portada aparece subiendo al cargar la página */
 /* @keyframes: la animación va sola, sin pasar el ratón */
 @keyframes aparecer {
   from { opacity: 0; transform: translateY(12px); }
@@ -508,84 +391,21 @@ h2 { font-size: 1.1rem; } /* rem: relativo al tamaño de letra base */
 /* both: el título empieza invisible y no da un salto */
 .portada h1, .portada-generacion h1 { animation: aparecer 0.6s ease-out both; }
 
-/* ---------- 10. SORPRESAS ESCONDIDAS (al pasar el ratón) ---------- */
-
-/* Hoenn: Kecleon, casi transparente sobre la foto, se deja ver */
-.kecleon {
-  position: absolute;
-  top: 18px;
-  right: 6%;
-  width: 30%;
-  opacity: 0.2; /* casi transparente: camuflado */
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-.kecleon:hover { opacity: 1; transform: translateY(-8px) rotate(-5deg); }
-
-/* Sinnoh: en el Mundo Distorsión no hay gravedad y Giratina se da la vuelta */
-.giratina { transition: transform 0.8s ease-in-out; }
-.giratina:hover { transform: rotate(180deg); }
-
-/* Alola y Teselia: dos imágenes una encima de otra; al pasar el ratón
-   la de arriba desaparece y se ve la de abajo */
-.disfraz, .ilusion { position: relative; display: inline-block; }
-.disfraz { width: 56px; height: 56px; } /* Mimikyu, del tamaño de un icono */
-
-.disfraz img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-/* Zoroark se coloca justo encima de N */
-.zoroark { position: absolute; top: 0; left: 0; }
-.ilusion img { transition: opacity 0.5s ease, transform 0.5s ease; }
-/* Al principio están escondidos y pequeños */
-.mimikyu, .zoroark { opacity: 0; transform: scale(0.6); }
-
-/* El disfraz de Pikachu se cae y aparece Mimikyu temblando */
-.disfraz:hover .pikachu { opacity: 0; transform: translateY(16px) rotate(70deg); }
-
-.disfraz:hover .mimikyu {
-  opacity: 1;
-  transform: scale(1);
-  animation: temblar 0.3s ease-in-out 0.4s 2; /* espera 0.4s y tiembla 2 veces */
-}
-
-@keyframes temblar {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(-8deg); }
-  75% { transform: rotate(8deg); }
-  100% { transform: rotate(0deg); }
-}
-
-/* La ilusión de N se rompe y aparece Zoroark */
-.ilusion:hover .foto-persona { opacity: 0; transform: scale(0.8); }
-.ilusion:hover .zoroark { opacity: 1; transform: scale(1); }
-
 /* Quien pide menos movimiento en su sistema ve la web sin animaciones */
 @media (prefers-reduced-motion: reduce) {
-  .portada h1, .portada-generacion h1, .disfraz:hover .mimikyu { animation: none; }
-  .giratina:hover { transform: none; }
+  .portada h1, .portada-generacion h1 { animation: none; }
 }
 
-/* ---------- 11. RESPONSIVE: TABLET Y ORDENADOR ---------- */
+/* ---------- 9. RESPONSIVE: TABLET Y ORDENADOR ---------- */
 
 /* Tablet: desde 600px de ancho */
 @media (min-width: 600px) {
-  .lista-juegos, .galeria, .lista-videos, .lista-evoluciones,
-  .lista-ciudades, .lista-personajes {
+  .lista-juegos, .galeria, .lista-videos, .lista-evoluciones {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .lista-generaciones, .lista-iniciales, .lista-legendarios {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  .lista-generaciones, .lista-iniciales { grid-template-columns: repeat(3, 1fr); }
 
-  /* Villano: logo y texto arriba, jefe debajo a todo el ancho */
-  .villanos { grid-template-columns: 140px 1fr; }
-  .jefe { grid-column: span 2; }
   /* En pantallas más grandes, letras y espacios más grandes */
   .cabecera { padding: 24px; }
   .logo { font-size: 1.1rem; }
@@ -596,17 +416,8 @@ h2 { font-size: 1.1rem; } /* rem: relativo al tamaño de letra base */
 
 /* Ordenador: desde 900px de ancho */
 @media (min-width: 900px) {
-  .lista-juegos, .lista-personas { grid-template-columns: repeat(4, 1fr); }
-
-  /* Va después de .lista-personas para ganarle (misma especificidad) */
-  .lista-generaciones, .lista-liga { grid-template-columns: repeat(5, 1fr); }
-
-  .lista-evoluciones, .lista-ciudades, .lista-videos, .lista-ayudantes {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  /* Villano: logo, texto y jefe en tres columnas */
-  .villanos { grid-template-columns: 140px 1fr 260px; }
-  .jefe { grid-column: span 1; }
+  .lista-generaciones { grid-template-columns: repeat(5, 1fr); }
+  .lista-juegos { grid-template-columns: repeat(4, 1fr); }
+  .lista-evoluciones, .lista-videos { grid-template-columns: repeat(3, 1fr); }
   .consola { width: 72px; } /* consolas más grandes */
 }
