@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Generación 7 · Pocket Monster</title>
   <!-- El ?v=23 obliga al navegador a descargar el CSS nuevo. Súbelo (v=24, v=25...) cada vez que cambies el CSS -->
-  <link rel="stylesheet" href="../../css/estilos.css?v=32">
+  <link rel="stylesheet" href="../../css/estilos.css?v=35">
 </head>
 <body>
   <!-- ==================================================
@@ -18,7 +18,7 @@
        ================================================== -->
   <header class="cabecera">
     <a class="logo" href="../../index.html">Pocket Monster</a>
-    <nav class="nav-cabecera">
+    <nav class="menu">
       <a href="../evoluciones.html">Evoluciones</a>
       <a href="../contacto.html">Contacto</a>
     </nav>
@@ -30,7 +30,7 @@
        ================================================== -->
   <main>
     <!-- La clase fondo-gen-7 pone el color de esta generación -->
-    <section class="hero-generacion fondo-gen-7">
+    <section class="portada-generacion fondo-gen-7">
       <h1>Generación 7</h1>
       <p>Región de Alola · Sol y Luna (2016)</p>
     </section>
@@ -40,7 +40,7 @@
       <!-- ========== 1. HISTORIA DE LA REGIÓN ========== -->
       <section class="seccion">
         <h2>Historia de Alola</h2>
-        <div class="lore">
+        <div class="caja-historia">
           <!-- Resumen de la región. La historia completa está en paginas/historias/alola.html -->
           <p>Alola se inspira en Hawái y está formada por cuatro islas. Cada isla está protegida por un Pokémon guardián, un Tapu. No hay gimnasios: hay pruebas y kahunas, y el Equipo Skull y la Fundación Æther complican el viaje.</p>
           <a class="boton-diario" href="../historias/alola.html" title="Leer la historia de Alola"><img src="../../img/historias/diario.webp" alt="Diario de Alola"><span>Historia de Alola</span></a>
@@ -51,7 +51,7 @@
       <section class="seccion">
         <h2>Mapa de Alola</h2>
         <figure class="mapa">
-          <img class="mapa-imagen" src="../../img/regiones/7-alola/mapa.png" alt="Mapa de la región de Alola">
+          <img class="imagen-mapa" src="../../img/regiones/7-alola/mapa.png" alt="Mapa de la región de Alola">
           <figcaption>Mapa de la región de Alola.</figcaption>
         </figure>
       </section>
@@ -61,23 +61,23 @@
         <h2>Juegos</h2>
 
         <h3 class="subtitulo">Juegos originales</h3>
-        <div class="juegos">
+        <div class="lista-juegos">
           <article class="juego">
             <img class="caratula" src="../../img/caratulas/gen7/sol.jpg" alt="Carátula de Pokémon Sol">
             <h4>Pokémon Sol</h4>
             <p>Nintendo 3DS · 2016</p>
             <!-- Iniciales de este juego: cada uno es un enlace a sus evoluciones -->
-            <div class="juego-iniciales">
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#sol-luna-rowlet" title="Ver las evoluciones de Rowlet">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/rowlet.png" alt="Rowlet">
+            <div class="iniciales-juego">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#sol-luna-rowlet" title="Ver las evoluciones de Rowlet">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/rowlet.png" alt="Rowlet">
                 <span>Rowlet</span>
               </a>
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#sol-luna-litten" title="Ver las evoluciones de Litten">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/litten.png" alt="Litten">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#sol-luna-litten" title="Ver las evoluciones de Litten">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/litten.png" alt="Litten">
                 <span>Litten</span>
               </a>
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#sol-luna-popplio" title="Ver las evoluciones de Popplio">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/popplio.png" alt="Popplio">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#sol-luna-popplio" title="Ver las evoluciones de Popplio">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/popplio.png" alt="Popplio">
                 <span>Popplio</span>
               </a>
             </div>
@@ -87,17 +87,17 @@
             <h4>Pokémon Luna</h4>
             <p>Nintendo 3DS · 2016</p>
             <!-- Iniciales de este juego: cada uno es un enlace a sus evoluciones -->
-            <div class="juego-iniciales">
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#sol-luna-rowlet" title="Ver las evoluciones de Rowlet">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/rowlet.png" alt="Rowlet">
+            <div class="iniciales-juego">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#sol-luna-rowlet" title="Ver las evoluciones de Rowlet">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/rowlet.png" alt="Rowlet">
                 <span>Rowlet</span>
               </a>
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#sol-luna-litten" title="Ver las evoluciones de Litten">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/litten.png" alt="Litten">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#sol-luna-litten" title="Ver las evoluciones de Litten">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/litten.png" alt="Litten">
                 <span>Litten</span>
               </a>
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#sol-luna-popplio" title="Ver las evoluciones de Popplio">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/popplio.png" alt="Popplio">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#sol-luna-popplio" title="Ver las evoluciones de Popplio">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/popplio.png" alt="Popplio">
                 <span>Popplio</span>
               </a>
             </div>
@@ -105,23 +105,23 @@
         </div>
 
         <h3 class="subtitulo">Versiones mejoradas</h3>
-        <div class="juegos">
+        <div class="lista-juegos">
           <article class="juego">
             <img class="caratula" src="../../img/caratulas/gen7/ultrasol.jpg" alt="Carátula de Pokémon Ultrasol">
             <h4>Pokémon Ultrasol</h4>
             <p>Nintendo 3DS · 2017</p>
             <!-- Iniciales de este juego: cada uno es un enlace a sus evoluciones -->
-            <div class="juego-iniciales">
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#sol-luna-rowlet" title="Ver las evoluciones de Rowlet">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/rowlet.png" alt="Rowlet">
+            <div class="iniciales-juego">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#sol-luna-rowlet" title="Ver las evoluciones de Rowlet">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/rowlet.png" alt="Rowlet">
                 <span>Rowlet</span>
               </a>
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#sol-luna-litten" title="Ver las evoluciones de Litten">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/litten.png" alt="Litten">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#sol-luna-litten" title="Ver las evoluciones de Litten">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/litten.png" alt="Litten">
                 <span>Litten</span>
               </a>
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#sol-luna-popplio" title="Ver las evoluciones de Popplio">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/popplio.png" alt="Popplio">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#sol-luna-popplio" title="Ver las evoluciones de Popplio">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/popplio.png" alt="Popplio">
                 <span>Popplio</span>
               </a>
             </div>
@@ -131,17 +131,17 @@
             <h4>Pokémon Ultraluna</h4>
             <p>Nintendo 3DS · 2017</p>
             <!-- Iniciales de este juego: cada uno es un enlace a sus evoluciones -->
-            <div class="juego-iniciales">
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#sol-luna-rowlet" title="Ver las evoluciones de Rowlet">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/rowlet.png" alt="Rowlet">
+            <div class="iniciales-juego">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#sol-luna-rowlet" title="Ver las evoluciones de Rowlet">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/rowlet.png" alt="Rowlet">
                 <span>Rowlet</span>
               </a>
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#sol-luna-litten" title="Ver las evoluciones de Litten">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/litten.png" alt="Litten">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#sol-luna-litten" title="Ver las evoluciones de Litten">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/litten.png" alt="Litten">
                 <span>Litten</span>
               </a>
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#sol-luna-popplio" title="Ver las evoluciones de Popplio">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/popplio.png" alt="Popplio">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#sol-luna-popplio" title="Ver las evoluciones de Popplio">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/popplio.png" alt="Popplio">
                 <span>Popplio</span>
               </a>
             </div>
@@ -154,15 +154,16 @@
         <h2>Tráileres</h2>
         <!-- Cada <iframe> muestra un vídeo de YouTube dentro de nuestra página.
              loading="lazy": el vídeo solo se carga al llegar a él con el scroll.
-             youtube-nocookie.com: YouTube no guarda cookies hasta que se pulsa play.
+             referrerpolicy: le dice a YouTube desde qué web se ve el vídeo (sin esto no se reproduce).
+             allow: permisos que pide el reproductor (pantalla completa, autoplay...).
              allowfullscreen: deja ver el vídeo a pantalla completa. -->
-        <div class="trailers">
+        <div class="lista-trailers">
           <figure class="trailer">
-            <iframe src="https://www.youtube-nocookie.com/embed/jA1pF9cwisM" title="Tráiler de Pokémon Sol y Luna" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/jA1pF9cwisM" title="Tráiler de Pokémon Sol y Luna" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <figcaption>Pokémon Sol y Luna</figcaption>
           </figure>
           <figure class="trailer">
-            <iframe src="https://www.youtube-nocookie.com/embed/XgKUZqyNLP0" title="Tráiler de Pokémon Ultrasol y Ultraluna" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/XgKUZqyNLP0" title="Tráiler de Pokémon Ultrasol y Ultraluna" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <figcaption>Pokémon Ultrasol y Ultraluna</figcaption>
           </figure>
         </div>
@@ -171,19 +172,19 @@
       <!-- ========== 5. POKÉMON INICIALES ========== -->
       <section class="seccion">
         <h2>Pokémon iniciales</h2>
-        <div class="iniciales">
+        <div class="lista-iniciales">
           <article class="inicial">
-            <img class="inicial-imagen" src="../../img/pokemon/ilustraciones/rowlet.png" alt="Rowlet">
+            <img class="imagen-inicial" src="../../img/pokemon/ilustraciones/rowlet.png" alt="Rowlet">
             <h4>Rowlet</h4>
             <span class="tipo tipo-planta">Planta</span>
           </article>
           <article class="inicial">
-            <img class="inicial-imagen" src="../../img/pokemon/ilustraciones/litten.png" alt="Litten">
+            <img class="imagen-inicial" src="../../img/pokemon/ilustraciones/litten.png" alt="Litten">
             <h4>Litten</h4>
             <span class="tipo tipo-fuego">Fuego</span>
           </article>
           <article class="inicial">
-            <img class="inicial-imagen" src="../../img/pokemon/ilustraciones/popplio.png" alt="Popplio">
+            <img class="imagen-inicial" src="../../img/pokemon/ilustraciones/popplio.png" alt="Popplio">
             <h4>Popplio</h4>
             <span class="tipo tipo-agua">Agua</span>
           </article>
@@ -191,7 +192,7 @@
       </section>
 
       <!-- Enlaces a la generación anterior y a la siguiente -->
-      <nav class="navegacion-gen">
+      <nav class="anterior-siguiente">
         <a href="generacion-6.html">← Generación 6</a>
         <a href="generacion-8.html">Generación 8 →</a>
       </nav>

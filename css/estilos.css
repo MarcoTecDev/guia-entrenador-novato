@@ -17,6 +17,7 @@
      13. Pie de página
      14. Móviles y tablets
      15. Animación al hacer scroll
+     16. Easter eggs (Kecleon, Giratina y Mimikyu)
    ========================================================== */
 
 
@@ -32,17 +33,17 @@
   --amarillo: #ffd23f;        /* Aviso "en construcción" */
 
   --fondo: #f4f5f7;           /* Fondo de la página */
-  --superficie: #ffffff;      /* Fondo de tarjetas y cajas */
+  --fondo-tarjeta: #ffffff;      /* Fondo de tarjetas y cajas */
   --borde-tarjeta: #222224;
   --texto: #2b2d31;
   --texto-suave: #5c6068;     /* Años, pies de foto... */
   --texto-ejemplo: #8a8e96;   /* Texto de ejemplo a cambiar */
-  --linea: #222224;           /* Líneas gruesas bajo los títulos */
+  --linea-titulo: #222224;           /* Líneas gruesas bajo los títulos */
   --linea-suave: #e3e5e8;     /* Líneas finas de separación */
-  --icono-fondo: #f4f5f7;     /* Cuadro tras los iconos de Pokémon */
-  --hueco-borde: #b9bcc2;     /* Huecos sin imagen */
-  --hueco-fondo: #fafafa;
-  --pie: #222224;
+  --fondo-icono: #f4f5f7;     /* Cuadro tras los iconos de Pokémon */
+  --borde-vacio: #b9bcc2;     /* Huecos sin imagen */
+  --fondo-vacio: #fafafa;
+  --fondo-pie: #222224;
 
   --sombra: rgba(0, 0, 0, 0.15);
   --sombra-texto: rgba(0, 0, 0, 0.25);
@@ -92,7 +93,7 @@ h3,
 .logo,
 .boton,
 .numero,
-.navegacion-gen a,
+.anterior-siguiente a,
 .aviso p {
   font-family: var(--fuente-pixel);
   font-weight: normal;
@@ -125,14 +126,14 @@ h3,
   text-shadow: 3px 3px 0 var(--negro);
 }
 
-.nav-cabecera {
+.menu {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
 /* Botón blanco con borde negro */
-.nav-cabecera a {
+.menu a {
   padding: 10px 16px;
   border: 3px solid var(--negro);
   border-radius: 50px;
@@ -145,8 +146,8 @@ h3,
 }
 
 /* Al pasar el ratón, o en la página actual, se pone negro */
-.nav-cabecera a:hover,
-.nav-cabecera a.activo {
+.menu a:hover,
+.menu a.activo {
   background-color: var(--negro);
   color: var(--blanco);
 }
@@ -156,24 +157,24 @@ h3,
    5. PORTADA
    ========================================================== */
 
-.hero {
+.portada {
   padding: 80px 24px 64px;
   text-align: center;
 }
 
 /* Sombra sin desenfoque: efecto pixel art */
-.hero h1 {
+.portada h1 {
   margin: 0;
   font-size: 2.6rem;
   color: var(--texto);
   text-shadow: 4px 4px 0 var(--sombra-texto);
 }
 
-.hero h1 span {
+.portada h1 span {
   color: var(--rojo);
 }
 
-.hero p {
+.portada p {
   max-width: 560px;
   margin: 16px auto 32px;
   font-size: 1.15rem;
@@ -224,23 +225,23 @@ h3,
 
 /* Aspecto común de todas las tarjetas y cajas blancas */
 .tarjeta,
-.lore,
+.caja-historia,
 .juego,
 .inicial,
 .galeria figure,
 .trailer,
-.evo-tarjeta,
-.hist-ciudad,
-.hist-leyenda,
-.hist-persona {
+.tarjeta-evolucion,
+.ciudad,
+.legendario,
+.persona {
   border: 3px solid var(--borde-tarjeta);
   border-radius: 16px;
-  background-color: var(--superficie);
+  background-color: var(--fondo-tarjeta);
   box-shadow: 0 6px 20px var(--sombra);
 }
 
 /* Cuadrícula de 5 columnas con las generaciones */
-.generaciones {
+.lista-generaciones {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
@@ -252,7 +253,7 @@ h3,
   position: relative;
   display: block;
   padding: 20px;
-  border-top: 8px solid var(--color-gen, var(--rojo));
+  border-top: 8px solid var(--color-generacion, var(--rojo));
   text-decoration: none;
   transition: transform 0.2s;
 }
@@ -267,7 +268,7 @@ h3,
   min-height: 52px;
   font-size: 1.8rem;
   line-height: 1;
-  color: var(--color-gen);
+  color: var(--color-generacion);
 }
 
 .tarjeta h3 {
@@ -282,7 +283,7 @@ h3,
 }
 
 /* Nombre de los juegos */
-.version {
+.nombre-juego {
   font-weight: bold;
 }
 
@@ -302,23 +303,23 @@ h3,
 
 /* ==========================================================
    8. COLORES DE CADA GENERACIÓN
-   Cada clase guarda su color en --color-gen. Se usa en el borde
+   Cada clase guarda su color en --color-generacion. Se usa en el borde
    y el número de la tarjeta (.gen-X) y en el fondo (.fondo-gen-X).
    ========================================================== */
 
-.gen-1,  .fondo-gen-1  { --color-gen: #e53935; }  /* Kanto */
-.gen-2,  .fondo-gen-2  { --color-gen: #c9a227; }  /* Johto */
-.gen-3,  .fondo-gen-3  { --color-gen: #2e7d32; }  /* Hoenn */
-.gen-4,  .fondo-gen-4  { --color-gen: #5c6bc0; }  /* Sinnoh */
-.gen-5,  .fondo-gen-5  { --color-gen: #424242; }  /* Teselia */
-.gen-6,  .fondo-gen-6  { --color-gen: #1e88e5; }  /* Kalos */
-.gen-7,  .fondo-gen-7  { --color-gen: #fb8c00; }  /* Alola */
-.gen-8,  .fondo-gen-8  { --color-gen: #c2185b; }  /* Galar */
-.gen-9,  .fondo-gen-9  { --color-gen: #7b1fa2; }  /* Paldea */
-.gen-10, .fondo-gen-10 { --color-gen: #00897b; }  /* Por descubrir */
+.gen-1,  .fondo-gen-1  { --color-generacion: #e53935; }  /* Kanto */
+.gen-2,  .fondo-gen-2  { --color-generacion: #c9a227; }  /* Johto */
+.gen-3,  .fondo-gen-3  { --color-generacion: #2e7d32; }  /* Hoenn */
+.gen-4,  .fondo-gen-4  { --color-generacion: #5c6bc0; }  /* Sinnoh */
+.gen-5,  .fondo-gen-5  { --color-generacion: #424242; }  /* Teselia */
+.gen-6,  .fondo-gen-6  { --color-generacion: #1e88e5; }  /* Kalos */
+.gen-7,  .fondo-gen-7  { --color-generacion: #fb8c00; }  /* Alola */
+.gen-8,  .fondo-gen-8  { --color-generacion: #c2185b; }  /* Galar */
+.gen-9,  .fondo-gen-9  { --color-generacion: #7b1fa2; }  /* Paldea */
+.gen-10, .fondo-gen-10 { --color-generacion: #00897b; }  /* Por descubrir */
 
 [class*="fondo-gen-"] {
-  background-color: var(--color-gen);
+  background-color: var(--color-generacion);
 }
 
 .fondo-contacto {
@@ -331,19 +332,19 @@ h3,
    ========================================================== */
 
 /* Franja de color con el título (el color lo pone .fondo-gen-X) */
-.hero-generacion {
+.portada-generacion {
   padding: 64px 24px 48px;
   text-align: center;
   color: var(--blanco);
 }
 
-.hero-generacion h1 {
+.portada-generacion h1 {
   margin: 0;
   font-size: 2rem;
   text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.35);
 }
 
-.hero-generacion p {
+.portada-generacion p {
   margin: 8px 0 0;
   font-size: 1.15rem;
 }
@@ -353,7 +354,7 @@ h3,
   overflow: hidden;
   border: 4px solid var(--borde-tarjeta);
   border-radius: 16px;
-  background-color: var(--superficie);
+  background-color: var(--fondo-tarjeta);
   text-align: center;
 }
 
@@ -376,22 +377,22 @@ h3,
 }
 
 /* Enlaces "Anterior" y "Siguiente" */
-.navegacion-gen {
+.anterior-siguiente {
   display: flex;
   justify-content: space-between;
   margin-top: 32px;
 }
 
-.navegacion-gen a {
+.anterior-siguiente a {
   padding: 10px 16px;
   border: 3px solid var(--borde-tarjeta);
   border-radius: 50px;
-  background-color: var(--superficie);
+  background-color: var(--fondo-tarjeta);
   font-size: 0.7rem;
   text-decoration: none;
 }
 
-.navegacion-gen a:hover {
+.anterior-siguiente a:hover {
   color: var(--rojo);
 }
 
@@ -406,7 +407,7 @@ h3,
 
 .seccion h2 {
   padding-bottom: 12px;
-  border-bottom: 4px solid var(--linea);
+  border-bottom: 4px solid var(--linea-titulo);
 }
 
 .subtitulo {
@@ -416,13 +417,13 @@ h3,
 }
 
 /* Caja con borde discontinuo donde irá una imagen futura */
-.hueco {
+.caja-vacia {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 3px dashed var(--hueco-borde);
+  border: 3px dashed var(--borde-vacio);
   border-radius: 12px;
-  background-color: var(--hueco-fondo);
+  background-color: var(--fondo-vacio);
   color: var(--texto-ejemplo);
   font-family: var(--fuente-pixel);
   font-size: 0.65rem;
@@ -432,7 +433,7 @@ h3,
 
 /* ---------- Historia ---------- */
 
-.lore {
+.caja-historia {
   padding: 24px 32px;
   font-size: 1.05rem;
 }
@@ -474,12 +475,12 @@ h3,
   margin: 0;
 }
 
-.hueco-mapa {
+.caja-vacia-mapa {
   height: 420px;
 }
 
 /* Nunca más ancho que la página ni más alto de 640px */
-.mapa-imagen {
+.imagen-mapa {
   display: block;
   max-width: 100%;
   max-height: 640px;
@@ -500,7 +501,7 @@ h3,
 
 /* ---------- Juegos ---------- */
 
-.juegos {
+.lista-juegos {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
@@ -533,7 +534,7 @@ h3,
 
 /* ---------- Iniciales de cada juego (fila bajo la carátula) ---------- */
 
-.juego-iniciales {
+.iniciales-juego {
   display: flex;
   justify-content: center;
   gap: 8px;
@@ -543,27 +544,27 @@ h3,
 }
 
 /* Caben tres por fila */
-.mini-inicial {
+.inicial-pequeno {
   width: 33%;
   text-align: center;
 }
 
-.mini-imagen {
+.imagen-pequena {
   display: block;
   width: 56px;
   height: 56px;
   margin: 0 auto;
   padding: 3px;
   border-radius: 8px;
-  background-color: var(--icono-fondo);
+  background-color: var(--fondo-icono);
 }
 
 /* Pixel art (generación 10): sin suavizar al ampliar */
-.mini-pixel {
+.pixelado {
   image-rendering: pixelated;
 }
 
-.mini-inicial > span {
+.inicial-pequeno > span {
   display: block;
   margin-top: 4px;
   font-size: 0.7rem;
@@ -571,31 +572,31 @@ h3,
 }
 
 /* Inicial con enlace a sus evoluciones (Leyendas Arceus) */
-.mini-enlace {
+.enlace-inicial {
   display: block;
   color: inherit;
   text-decoration: none;
 }
 
-.mini-enlace .mini-imagen {
+.enlace-inicial .imagen-pequena {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 /* Al pasar el ratón el icono crece */
-.mini-enlace:hover .mini-imagen,
-.mini-enlace:focus-visible .mini-imagen {
+.enlace-inicial:hover .imagen-pequena,
+.enlace-inicial:focus-visible .imagen-pequena {
   transform: scale(1.2);
   box-shadow: 0 4px 12px var(--sombra);
 }
 
-.mini-enlace:hover span,
-.mini-enlace:focus-visible span {
+.enlace-inicial:hover span,
+.enlace-inicial:focus-visible span {
   color: var(--texto);
   font-weight: bold;
 }
 
 /* Contorno al navegar con el teclado */
-.mini-enlace:focus-visible {
+.enlace-inicial:focus-visible {
   outline: 2px solid var(--borde-tarjeta);
   outline-offset: 4px;
   border-radius: 8px;
@@ -604,7 +605,7 @@ h3,
 
 /* ---------- Pokémon iniciales ---------- */
 
-.iniciales {
+.lista-iniciales {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -615,7 +616,7 @@ h3,
   text-align: center;
 }
 
-.inicial-imagen {
+.imagen-inicial {
   display: block;
   width: 160px;
   height: 160px;
@@ -630,10 +631,10 @@ h3,
 
 /* ---------- Tipos ----------
    Cada tipo guarda su color en --color-tipo. Se usa como fondo de las
-   etiquetas (.tipo, .tipo-mini) y en el borde de las tarjetas (.borde-X). */
+   etiquetas (.tipo, .tipo-pequeno) y en el borde de las tarjetas (.borde-X). */
 
 .tipo,
-.tipo-mini {
+.tipo-pequeno {
   display: inline-block;
   border-radius: 50px;
   background-color: var(--color-tipo);
@@ -647,7 +648,7 @@ h3,
 }
 
 /* Etiqueta pequeña (página de evoluciones) */
-.tipo-mini {
+.tipo-pequeno {
   padding: 1px 6px;
   font-size: 0.6rem;
 }
@@ -702,7 +703,7 @@ h3,
 /* ---------- Tráileres ---------- */
 
 /* Tantas columnas de 320px como quepan */
-.trailers {
+.lista-trailers {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
@@ -740,7 +741,7 @@ h3,
 }
 
 /* Índice de arriba: un botón por generación */
-.evo-indice {
+.botones-indice {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -748,7 +749,7 @@ h3,
   margin-bottom: 48px;
 }
 
-.evo-indice a {
+.botones-indice a {
   padding: 8px 14px;
   border-radius: 50px;
   color: var(--blanco);
@@ -758,19 +759,19 @@ h3,
   transition: transform 0.2s;
 }
 
-.evo-indice a:hover {
+.botones-indice a:hover {
   transform: scale(1.08);
 }
 
 /* Deja hueco bajo la cabecera fija al saltar a un enlace (#) */
 .seccion,
-.evo-grupo,
-.evo-tarjeta {
+.grupo-generacion,
+.tarjeta-evolucion {
   scroll-margin-top: 90px;
 }
 
 /* Número de la generación en un cuadrado de color */
-.evo-numero {
+.numero-generacion {
   display: inline-block;
   min-width: 1.6em;
   padding: 4px 6px;
@@ -780,7 +781,7 @@ h3,
 }
 
 /* Tres líneas evolutivas por fila */
-.evo-lineas {
+.lista-evoluciones {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
@@ -788,7 +789,7 @@ h3,
 
 /* Franja de color a la izquierda según el tipo.
    Centra el contenido en vertical si la tarjeta es más alta. */
-.evo-tarjeta {
+.tarjeta-evolucion {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -800,7 +801,7 @@ h3,
 }
 
 /* Fila de Pokémon y flechas, alineados por arriba */
-.evo-linea {
+.fila-evolucion {
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -808,58 +809,58 @@ h3,
 }
 
 /* Con ramas (Eevee) se centra */
-.evo-linea:has(.evo-ramas) {
+.fila-evolucion:has(.ramas) {
   align-items: center;
 }
 
 /* Cada paso: icono y nombre debajo */
-.evo-paso {
+.paso {
   width: 30%;
   font-size: 0.75rem;
   color: var(--texto-suave);
 }
 
-.evo-icono {
+.icono {
   display: block;
   width: 84px;
   height: 84px;
   margin: 0 auto 4px;
   padding: 4px;
   border-radius: 10px;
-  background-color: var(--icono-fondo);
+  background-color: var(--fondo-icono);
   transition: transform 0.2s;
 }
 
-.evo-icono:hover {
+.icono:hover {
   transform: scale(1.15);
 }
 
 /* El margen baja la flecha a la mitad del icono */
-.evo-flecha {
+.flecha {
   margin-top: 30px;
   color: var(--texto-suave);
   font-size: 1.1rem;
 }
 
-.evo-linea:has(.evo-ramas) .evo-flecha {
+.fila-evolucion:has(.ramas) .flecha {
   margin-top: 0;
 }
 
 /* Evoluciones en rama (Eevee): una debajo de otra */
-.evo-ramas {
+.ramas {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.evo-rama {
+.rama {
   display: flex;
   align-items: center;
   gap: 6px;
   text-align: left;
 }
 
-.evo-icono-mini {
+.icono-pequeno {
   width: 48px;
   height: 48px;
   margin: 0;
@@ -867,40 +868,40 @@ h3,
 }
 
 /* Evolución aún desconocida (generación 10) */
-.evo-interrogante {
+.interrogacion {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 84px;
   height: 84px;
   margin: 0 auto 4px;
-  border: 3px dashed var(--hueco-borde);
+  border: 3px dashed var(--borde-vacio);
   border-radius: 10px;
   font-size: 1.4rem;
   font-weight: bold;
 }
 
 /* Nota bajo la línea (forma de Hisui, ramas...) */
-.evo-nota {
+.nota {
   margin: 12px 0 0;
   font-size: 0.75rem;
   color: var(--texto-suave);
 }
 
 /* Megaevolución, separada por una línea discontinua */
-.evo-mega {
+.mega {
   margin-top: 14px;
   padding-top: 12px;
   border-top: 2px dashed var(--linea-suave);
 }
 
-.evo-mega-titulo {
+.mega-titulo {
   margin: 0 0 8px;
   font-size: 0.7rem;
   color: var(--texto-suave);
 }
 
-.evo-mega-insignia {
+.mega-etiqueta {
   display: inline-block;
   padding: 2px 8px;
   border-radius: 50px;
@@ -910,11 +911,11 @@ h3,
   font-weight: bold;
 }
 
-.evo-mega .evo-paso {
+.mega .paso {
   width: 45%;
 }
 
-.evo-tipos {
+.tipos {
   display: block;
   margin-top: 4px;
 }
@@ -924,7 +925,7 @@ h3,
    Usa el atributo popover de HTML, sin JavaScript. */
 
 /* Botón que envuelve cada render, sin aspecto de botón */
-.evo-ver {
+.boton-ampliar {
   display: block;
   margin: 0 auto;
   padding: 0;
@@ -933,29 +934,29 @@ h3,
   cursor: zoom-in;
 }
 
-.evo-ver:focus-visible {
+.boton-ampliar:focus-visible {
   outline: 2px solid var(--borde-tarjeta);
   outline-offset: 2px;
   border-radius: 10px;
 }
 
 /* Ventana centrada: 460px como máximo, o el 90% de la pantalla */
-.visor {
+.ventana {
   width: min(90vw, 460px);
   padding: 24px;
   border: 3px solid var(--borde-tarjeta);
   border-radius: 16px;
-  background-color: var(--superficie);
+  background-color: var(--fondo-tarjeta);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
   color: var(--texto);
   text-align: center;
 }
 
-.visor:popover-open {
-  animation: visor-aparece 0.2s ease-out;
+.ventana:popover-open {
+  animation: aparecer-ventana 0.2s ease-out;
 }
 
-@keyframes visor-aparece {
+@keyframes aparecer-ventana {
   from {
     opacity: 0;
     transform: scale(0.9);
@@ -967,24 +968,24 @@ h3,
 }
 
 /* Fondo oscuro tras la ventana */
-.visor::backdrop {
+.ventana::backdrop {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.visor img {
+.ventana img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.visor p {
+.ventana p {
   margin: 12px 0 0;
   font-size: 1.1rem;
   font-weight: bold;
 }
 
 /* Botón ✕ arriba a la derecha */
-.visor-cerrar {
+.boton-cerrar {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -992,26 +993,26 @@ h3,
   height: 36px;
   border: 2px solid var(--borde-tarjeta);
   border-radius: 50%;
-  background-color: var(--superficie);
+  background-color: var(--fondo-tarjeta);
   color: var(--texto);
   font-size: 1rem;
   cursor: pointer;
 }
 
-.visor-cerrar:hover {
+.boton-cerrar:hover {
   background-color: var(--rojo);
   color: var(--blanco);
 }
 
 /* Enlace "Volver arriba" */
-.evo-arriba {
+.volver-arriba {
   display: inline-block;
   margin-top: 20px;
   font-size: 0.8rem;
   color: var(--texto-suave);
 }
 
-.evo-arriba:hover {
+.volver-arriba:hover {
   color: var(--rojo);
 }
 
@@ -1020,18 +1021,18 @@ h3,
    12. PÁGINAS DE HISTORIA DE CADA REGIÓN
    ========================================================== */
 
-/* Índice con botones rojos (reutiliza .evo-indice) */
-.hist-indice a {
+/* Índice con botones rojos (reutiliza .botones-indice) */
+.indice-rojo a {
   background-color: var(--rojo);
 }
 
 /* Mapa bajo el texto de la región */
-.seccion .lore + .mapa {
+.seccion .caja-historia + .mapa {
   margin-top: 24px;
 }
 
 /* Etiqueta pequeña (gimnasio, legendario...) */
-.hist-etiqueta {
+.etiqueta {
   margin: 8px 0 0;
   font-size: 0.8rem;
   color: var(--texto-suave);
@@ -1040,49 +1041,49 @@ h3,
 
 /* ---------- Ciudades: tarjetas con foto, 3 por fila ---------- */
 
-.hist-ciudades {
+.lista-ciudades {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-.hist-ciudad {
+.ciudad {
   overflow: hidden;
   color: var(--texto);
 }
 
 /* Todas las fotos con la misma forma, recortadas sin deformar */
-.hist-ciudad img {
+.ciudad img {
   display: block;
   width: 100%;
   aspect-ratio: 396 / 228;
   object-fit: cover;
 }
 
-.hist-ciudad h3 {
+.ciudad h3 {
   margin: 14px 16px 6px;
   font-size: 0.8rem;
 }
 
-.hist-ciudad p {
+.ciudad p {
   margin: 0 16px 14px;
   font-size: 0.9rem;
   line-height: 1.5;
 }
 
-.hist-ciudad .hist-etiqueta {
+.ciudad .etiqueta {
   margin-top: -4px;
 }
 
 /* Otros lugares, en dos columnas */
-.hist-lugares {
+.lista-lugares {
   columns: 2;
   column-gap: 40px;
   padding-left: 20px;
   line-height: 1.6;
 }
 
-.hist-lugares li {
+.lista-lugares li {
   margin-bottom: 8px;
   break-inside: avoid;
 }
@@ -1091,34 +1092,34 @@ h3,
 /* ---------- Legendarios y personas ---------- */
 
 /* Columnas de 160px como mínimo, repartiendo el ancho */
-.hist-leyendas {
+.lista-legendarios {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 16px;
 }
 
-.hist-leyenda,
-.hist-persona {
+.legendario,
+.persona {
   position: relative;
   padding: 16px;
   color: var(--texto);
   text-align: center;
 }
 
-.hist-leyenda h3,
-.hist-persona h3 {
+.legendario h3,
+.persona h3 {
   margin: 10px 0 0;
   font-size: 0.75rem;
 }
 
-.hist-leyenda p,
-.hist-persona p {
+.legendario p,
+.persona p {
   font-size: 0.85rem;
   line-height: 1.5;
 }
 
 /* Render del legendario: crece al pasar el ratón */
-.hist-pokemon {
+.imagen-pokemon {
   display: block;
   width: 120px;
   height: 120px;
@@ -1126,37 +1127,37 @@ h3,
   transition: transform 0.2s;
 }
 
-.hist-pokemon:hover {
+.imagen-pokemon:hover {
   transform: scale(1.1);
 }
 
 
 /* ---------- Villanos: logo, texto y jefe ---------- */
 
-.hist-villano {
+.villanos {
   display: grid;
   grid-template-columns: 140px 1fr 260px;
   gap: 24px;
   align-items: center;
 }
 
-.hist-logo {
+.logo-villanos {
   width: 140px;
   height: 140px;
 }
 
-.hist-villano-texto p {
+.texto-villanos p {
   margin: 0 0 12px;
   line-height: 1.6;
 }
 
 /* Lista numerada de lo que hace el villano */
-.hist-pasos {
+.pasos-villanos {
   padding-left: 24px;
   line-height: 1.6;
 }
 
-.hist-pasos li {
+.pasos-villanos li {
   margin-bottom: 10px;
   padding-left: 6px;
 }
@@ -1164,27 +1165,27 @@ h3,
 
 /* ---------- Personas (líderes, Alto Mando...): 4 por fila ---------- */
 
-.hist-personas {
+.lista-personas {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
 /* Retrato con la misma altura para todos */
-.hist-retrato {
+.foto-persona {
   display: block;
   width: 100%;
   height: 220px;
   object-fit: contain;
 }
 
-.hist-rol {
+.cargo {
   margin: 4px 0 0;
   color: var(--texto-suave);
 }
 
 /* Número del gimnasio en un círculo, arriba a la izquierda */
-.hist-numero {
+.numero-gimnasio {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -1199,7 +1200,7 @@ h3,
 }
 
 /* Pokémon estrella: render pequeño y texto al lado */
-.hist-as {
+.pokemon-estrella {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1211,43 +1212,43 @@ h3,
   color: var(--texto-suave);
 }
 
-.hist-as .evo-ver {
+.pokemon-estrella .boton-ampliar {
   margin: 0;
 }
 
-.hist-as span {
+.pokemon-estrella span {
   text-align: left;
 }
 
-.hist-as strong {
+.pokemon-estrella strong {
   display: block;
   color: var(--texto);
   font-size: 0.85rem;
 }
 
-.hist-as-img {
+.imagen-estrella {
   display: block;
   width: 48px;
   height: 48px;
   transition: transform 0.2s;
 }
 
-.hist-as-img:hover {
+.imagen-estrella:hover {
   transform: scale(1.2);
 }
 
 /* Ejecutivos del equipo villano: 3 por fila */
-.hist-ayudantes {
+.lista-ayudantes {
   grid-template-columns: repeat(3, 1fr);
 }
 
 /* La Liga: Alto Mando y Campeón en una fila */
-.hist-liga {
+.lista-liga {
   grid-template-columns: repeat(5, 1fr);
 }
 
 /* El Campeón destaca con borde dorado */
-.hist-campeon {
+.campeon {
   border-color: #c9a227;
   box-shadow: 0 6px 20px rgba(201, 162, 39, 0.4);
 }
@@ -1256,22 +1257,68 @@ h3,
 /* ---------- Personajes: retrato a la izquierda, texto a la derecha ---------- */
 
 /* Columnas de 320px como mínimo */
-.hist-personajes {
+.lista-personajes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
 }
 
-.hist-persona-ancha {
+.persona-ancha {
   display: flex;
   align-items: center;
   gap: 16px;
   text-align: left;
 }
 
-.hist-persona-ancha .hist-retrato {
+.persona-ancha .foto-persona {
   flex-shrink: 0;
   width: 120px;
+}
+
+/* Ilusión de Zoroark: al pasar el ratón por encima, la ilusión de N
+   se emborrona y se tiñe de rojo y morado, y aparece Zoroark */
+.ilusion {
+  position: relative;
+  flex-shrink: 0;
+  width: 120px;
+}
+
+.ilusion .foto-persona {
+  transition: opacity 0.5s ease, transform 0.5s ease, filter 0.5s ease;
+}
+
+/* Zoroark espera escondido, borroso y un poco más grande */
+.ilusion .zoroark {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(1.1);
+  filter: blur(6px);
+  transition-delay: 0.1s;
+}
+
+/* N: la ilusión se rompe (borrón, tono rojizo y se encoge) */
+.ilusion:hover .foto-persona {
+  opacity: 0;
+  transform: scale(0.85) skewX(-4deg);
+  filter: blur(8px) hue-rotate(-60deg) saturate(3) brightness(1.3);
+}
+
+/* Zoroark: se enfoca y aparece con un brillo rojo */
+.ilusion:hover .zoroark {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0) drop-shadow(0 0 10px rgba(200, 30, 60, 0.6));
+}
+
+/* Si el sistema pide menos movimiento, solo un fundido */
+@media (prefers-reduced-motion: reduce) {
+  .ilusion .foto-persona,
+  .ilusion:hover .foto-persona,
+  .ilusion:hover .zoroark {
+    transform: none;
+    filter: none;
+  }
 }
 
 
@@ -1284,7 +1331,7 @@ h3,
   text-align: center;
   font-size: 0.9rem;
   color: var(--blanco);
-  background-color: var(--pie);
+  background-color: var(--fondo-pie);
 }
 
 
@@ -1295,30 +1342,30 @@ h3,
 
 /* ---------- Tablets (hasta 900px) ---------- */
 @media (max-width: 900px) {
-  .generaciones {
+  .lista-generaciones {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .juegos,
+  .lista-juegos,
   .galeria,
-  .evo-lineas,
-  .hist-ciudades,
-  .hist-personas {
+  .lista-evoluciones,
+  .lista-ciudades,
+  .lista-personas {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .hist-leyendas,
-  .hist-liga,
-  .hist-ayudantes {
+  .lista-legendarios,
+  .lista-liga,
+  .lista-ayudantes {
     grid-template-columns: repeat(3, 1fr);
   }
 
   /* Villano: logo y texto arriba, jefe debajo */
-  .hist-villano {
+  .villanos {
     grid-template-columns: 120px 1fr;
   }
 
-  .hist-jefe {
+  .jefe {
     grid-column: 1 / -1;
   }
 }
@@ -1335,31 +1382,31 @@ h3,
     font-size: 0.7rem;
   }
 
-  .nav-cabecera {
+  .menu {
     gap: 6px;
   }
 
-  .nav-cabecera a {
+  .menu a {
     padding: 8px 10px;
     font-size: 0.55rem;
   }
 
   /* Títulos */
-  .hero h1 {
+  .portada h1 {
     font-size: 1.4rem;
   }
 
-  .hero-generacion h1 {
+  .portada-generacion h1 {
     font-size: 1.3rem;
   }
 
   /* Tarjetas de inicio: consolas más pequeñas para no tapar el número */
-  .generaciones {
+  .lista-generaciones {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .tarjeta h3 {
-    font-size: 0.65rem;
+    font-size: 0.70rem;
   }
 
   .consola {
@@ -1372,11 +1419,11 @@ h3,
   }
 
   /* Generaciones */
-  .lore {
+  .caja-historia {
     padding: 16px 20px;
   }
 
-  .hueco-mapa {
+  .caja-vacia-mapa {
     height: 220px;
   }
 
@@ -1387,34 +1434,34 @@ h3,
   }
 
   /* Una columna */
-  .juegos,
-  .iniciales,
+  .lista-juegos,
+  .lista-iniciales,
   .galeria,
-  .trailers,
-  .evo-lineas,
-  .hist-ciudades,
-  .hist-personajes {
+  .lista-trailers,
+  .lista-evoluciones,
+  .lista-ciudades,
+  .lista-personajes {
     grid-template-columns: 1fr;
   }
 
   /* Dos columnas */
-  .hist-leyendas,
-  .hist-personas,
-  .hist-liga,
-  .hist-ayudantes {
+  .lista-legendarios,
+  .lista-personas,
+  .lista-liga,
+  .lista-ayudantes {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .hist-lugares {
+  .lista-lugares {
     columns: 1;
   }
 
-  .hist-villano {
+  .villanos {
     grid-template-columns: 1fr;
     justify-items: center;
   }
 
-  .hist-retrato {
+  .foto-persona {
     height: 160px;
   }
 }
@@ -1437,17 +1484,123 @@ h3,
     }
 
     .tarjeta,
-    .hist-ciudad,
-    .hist-persona,
-    .hist-leyenda,
-    .evo-tarjeta,
+    .ciudad,
+    .persona,
+    .legendario,
+    .tarjeta-evolucion,
     .seccion h2,
-    .mapa-imagen,
-    .hist-lugares li,
-    .hist-pasos li {
+    .imagen-mapa,
+    .lista-lugares li,
+    .pasos-villanos li {
       animation: aparecer linear backwards;
       animation-timeline: view();
       animation-range: entry 0% entry 45%;
     }
+  }
+}
+
+
+/* ==========================================================
+   16. EASTER EGGS
+   Sorpresas escondidas, todas solo con CSS.
+   (La ilusión de Zoroark está en el apartado 12, con los personajes.)
+   ========================================================== */
+
+/* ---------- Hoenn: Kecleon camuflado en Ciudad Arborada ----------
+   Kecleon cambia de color para volverse invisible. Está encima de
+   la foto casi transparente y aparece al pasar el ratón por encima. */
+
+.ciudad:has(.kecleon) {
+  position: relative;
+}
+
+.ciudad .kecleon {
+  position: absolute;
+  top: 18px;
+  right: 6%;
+  width: 30%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  opacity: 0.18;
+  filter: saturate(0.4);
+  transition: opacity 0.4s, filter 0.4s, transform 0.4s;
+}
+
+.ciudad .kecleon:hover {
+  opacity: 1;
+  filter: none;
+  transform: translateY(-8px) rotate(-5deg);
+}
+
+
+/* ---------- Sinnoh: Giratina y el Mundo Distorsión ----------
+   En el Mundo Distorsión no funciona la gravedad: al pasar el ratón,
+   la tarjeta de Giratina se da la vuelta. */
+
+.legendario.giratina {
+  transition: transform 0.8s ease-in-out;
+}
+
+.legendario.giratina:hover {
+  transform: rotate(180deg);
+  box-shadow: 0 6px 24px rgba(112, 65, 112, 0.6);
+}
+
+
+/* ---------- Alola: Mimikyu disfrazado de Pikachu ----------
+   Mimikyu se disfraza de Pikachu para tener amigos. Al pasar el
+   ratón, el disfraz se cae y aparece Mimikyu. */
+
+.disfraz {
+  position: relative;
+  float: left;
+  width: 56px;
+  height: 56px;
+  margin-right: 10px;
+}
+
+.disfraz img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+/* Mimikyu espera escondido */
+.disfraz .mimikyu {
+  opacity: 0;
+  transform: scale(0.6);
+}
+
+/* El disfraz de Pikachu se cae hacia un lado */
+.disfraz:hover .pikachu {
+  opacity: 0;
+  transform: translate(20px, 16px) rotate(70deg);
+}
+
+/* Mimikyu aparece y tiembla un poco */
+.disfraz:hover .mimikyu {
+  opacity: 1;
+  transform: scale(1);
+  animation: temblar 0.3s 0.4s 2;
+}
+
+@keyframes temblar {
+  0%, 100% { translate: 0; }
+  25%      { translate: -3px 0; }
+  75%      { translate: 3px 0; }
+}
+
+
+/* Sin animaciones: Giratina no gira y Mimikyu no tiembla */
+@media (prefers-reduced-motion: reduce) {
+  .legendario.giratina:hover {
+    transform: none;
+  }
+
+  .disfraz:hover .mimikyu {
+    animation: none;
   }
 }

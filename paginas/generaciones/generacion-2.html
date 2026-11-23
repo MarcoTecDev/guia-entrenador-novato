@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Generación 2 · Pocket Monster</title>
   <!-- El ?v=23 obliga al navegador a descargar el CSS nuevo. Súbelo (v=24, v=25...) cada vez que cambies el CSS -->
-  <link rel="stylesheet" href="../../css/estilos.css?v=32">
+  <link rel="stylesheet" href="../../css/estilos.css?v=35">
 </head>
 <body>
   <!-- ==================================================
@@ -18,7 +18,7 @@
        ================================================== -->
   <header class="cabecera">
     <a class="logo" href="../../index.html">Pocket Monster</a>
-    <nav class="nav-cabecera">
+    <nav class="menu">
       <a href="../evoluciones.html">Evoluciones</a>
       <a href="../contacto.html">Contacto</a>
     </nav>
@@ -30,7 +30,7 @@
        ================================================== -->
   <main>
     <!-- La clase fondo-gen-2 pone el color de esta generación -->
-    <section class="hero-generacion fondo-gen-2">
+    <section class="portada-generacion fondo-gen-2">
       <h1>Generación 2</h1>
       <p>Región de Johto · Oro y Plata (1999)</p>
     </section>
@@ -40,7 +40,7 @@
       <!-- ========== 1. HISTORIA DE LA REGIÓN ========== -->
       <section class="seccion">
         <h2>Historia de Johto</h2>
-        <div class="lore">
+        <div class="caja-historia">
           <!-- Resumen de la región. La historia completa está en paginas/historias/johto.html -->
           <p>Johto está al oeste de Kanto y se inspira en la región de Kansai, en Japón. Es una región tradicional, con templos, torres antiguas y ciudades como Ciudad Iris, llena de historia, o Ciudad Trigal, la más grande de la región.</p>
           <a class="boton-diario" href="../historias/johto.html" title="Leer la historia de Johto"><img src="../../img/historias/diario.webp" alt="Diario de Johto"><span>Historia de Johto</span></a>
@@ -51,7 +51,7 @@
       <section class="seccion">
         <h2>Mapa de Johto</h2>
         <figure class="mapa">
-          <img class="mapa-imagen" src="../../img/regiones/2-johto/mapa.png" alt="Mapa de la región de Johto">
+          <img class="imagen-mapa" src="../../img/regiones/2-johto/mapa.png" alt="Mapa de la región de Johto">
           <figcaption>Mapa de la región de Johto.</figcaption>
         </figure>
       </section>
@@ -61,23 +61,23 @@
         <h2>Juegos</h2>
 
         <h3 class="subtitulo">Juegos originales</h3>
-        <div class="juegos">
+        <div class="lista-juegos">
           <article class="juego">
             <img class="caratula" src="../../img/caratulas/gen2/oro.jpg" alt="Carátula de Pokémon Oro">
             <h4>Pokémon Oro</h4>
             <p>Game Boy Color · 1999</p>
             <!-- Iniciales de este juego: cada uno es un enlace a sus evoluciones -->
-            <div class="juego-iniciales">
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#oro-plata-chikorita" title="Ver las evoluciones de Chikorita">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/chikorita.png" alt="Chikorita">
+            <div class="iniciales-juego">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#oro-plata-chikorita" title="Ver las evoluciones de Chikorita">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/chikorita.png" alt="Chikorita">
                 <span>Chikorita</span>
               </a>
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#oro-plata-cyndaquil" title="Ver las evoluciones de Cyndaquil">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/cyndaquil.png" alt="Cyndaquil">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#oro-plata-cyndaquil" title="Ver las evoluciones de Cyndaquil">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/cyndaquil.png" alt="Cyndaquil">
                 <span>Cyndaquil</span>
               </a>
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#oro-plata-totodile" title="Ver las evoluciones de Totodile">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/totodile.png" alt="Totodile">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#oro-plata-totodile" title="Ver las evoluciones de Totodile">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/totodile.png" alt="Totodile">
                 <span>Totodile</span>
               </a>
             </div>
@@ -87,17 +87,17 @@
             <h4>Pokémon Plata</h4>
             <p>Game Boy Color · 1999</p>
             <!-- Iniciales de este juego: cada uno es un enlace a sus evoluciones -->
-            <div class="juego-iniciales">
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#oro-plata-chikorita" title="Ver las evoluciones de Chikorita">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/chikorita.png" alt="Chikorita">
+            <div class="iniciales-juego">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#oro-plata-chikorita" title="Ver las evoluciones de Chikorita">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/chikorita.png" alt="Chikorita">
                 <span>Chikorita</span>
               </a>
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#oro-plata-cyndaquil" title="Ver las evoluciones de Cyndaquil">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/cyndaquil.png" alt="Cyndaquil">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#oro-plata-cyndaquil" title="Ver las evoluciones de Cyndaquil">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/cyndaquil.png" alt="Cyndaquil">
                 <span>Cyndaquil</span>
               </a>
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#oro-plata-totodile" title="Ver las evoluciones de Totodile">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/totodile.png" alt="Totodile">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#oro-plata-totodile" title="Ver las evoluciones de Totodile">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/totodile.png" alt="Totodile">
                 <span>Totodile</span>
               </a>
             </div>
@@ -107,17 +107,17 @@
             <h4>Pokémon Cristal</h4>
             <p>Game Boy Color · 2000</p>
             <!-- Iniciales de este juego: cada uno es un enlace a sus evoluciones -->
-            <div class="juego-iniciales">
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#oro-plata-chikorita" title="Ver las evoluciones de Chikorita">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/chikorita.png" alt="Chikorita">
+            <div class="iniciales-juego">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#oro-plata-chikorita" title="Ver las evoluciones de Chikorita">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/chikorita.png" alt="Chikorita">
                 <span>Chikorita</span>
               </a>
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#oro-plata-cyndaquil" title="Ver las evoluciones de Cyndaquil">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/cyndaquil.png" alt="Cyndaquil">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#oro-plata-cyndaquil" title="Ver las evoluciones de Cyndaquil">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/cyndaquil.png" alt="Cyndaquil">
                 <span>Cyndaquil</span>
               </a>
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#oro-plata-totodile" title="Ver las evoluciones de Totodile">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/totodile.png" alt="Totodile">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#oro-plata-totodile" title="Ver las evoluciones de Totodile">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/totodile.png" alt="Totodile">
                 <span>Totodile</span>
               </a>
             </div>
@@ -125,23 +125,23 @@
         </div>
 
         <h3 class="subtitulo">Remakes</h3>
-        <div class="juegos">
+        <div class="lista-juegos">
           <article class="juego">
             <img class="caratula" src="../../img/caratulas/gen2/oro-heartgold.jpg" alt="Carátula de Pokémon Oro HeartGold">
             <h4>Pokémon Oro HeartGold</h4>
             <p>Nintendo DS · 2009</p>
             <!-- Iniciales de este juego: cada uno es un enlace a sus evoluciones -->
-            <div class="juego-iniciales">
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#oro-plata-chikorita" title="Ver las evoluciones de Chikorita">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/chikorita.png" alt="Chikorita">
+            <div class="iniciales-juego">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#oro-plata-chikorita" title="Ver las evoluciones de Chikorita">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/chikorita.png" alt="Chikorita">
                 <span>Chikorita</span>
               </a>
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#oro-plata-cyndaquil" title="Ver las evoluciones de Cyndaquil">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/cyndaquil.png" alt="Cyndaquil">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#oro-plata-cyndaquil" title="Ver las evoluciones de Cyndaquil">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/cyndaquil.png" alt="Cyndaquil">
                 <span>Cyndaquil</span>
               </a>
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#oro-plata-totodile" title="Ver las evoluciones de Totodile">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/totodile.png" alt="Totodile">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#oro-plata-totodile" title="Ver las evoluciones de Totodile">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/totodile.png" alt="Totodile">
                 <span>Totodile</span>
               </a>
             </div>
@@ -151,17 +151,17 @@
             <h4>Pokémon Plata SoulSilver</h4>
             <p>Nintendo DS · 2009</p>
             <!-- Iniciales de este juego: cada uno es un enlace a sus evoluciones -->
-            <div class="juego-iniciales">
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#oro-plata-chikorita" title="Ver las evoluciones de Chikorita">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/chikorita.png" alt="Chikorita">
+            <div class="iniciales-juego">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#oro-plata-chikorita" title="Ver las evoluciones de Chikorita">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/chikorita.png" alt="Chikorita">
                 <span>Chikorita</span>
               </a>
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#oro-plata-cyndaquil" title="Ver las evoluciones de Cyndaquil">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/cyndaquil.png" alt="Cyndaquil">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#oro-plata-cyndaquil" title="Ver las evoluciones de Cyndaquil">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/cyndaquil.png" alt="Cyndaquil">
                 <span>Cyndaquil</span>
               </a>
-              <a class="mini-inicial mini-enlace" href="../evoluciones.html#oro-plata-totodile" title="Ver las evoluciones de Totodile">
-                <img class="mini-imagen" src="../../img/pokemon/iconos/totodile.png" alt="Totodile">
+              <a class="inicial-pequeno enlace-inicial" href="../evoluciones.html#oro-plata-totodile" title="Ver las evoluciones de Totodile">
+                <img class="imagen-pequena" src="../../img/pokemon/iconos/totodile.png" alt="Totodile">
                 <span>Totodile</span>
               </a>
             </div>
@@ -174,15 +174,16 @@
         <h2>Tráileres</h2>
         <!-- Cada <iframe> muestra un vídeo de YouTube dentro de nuestra página.
              loading="lazy": el vídeo solo se carga al llegar a él con el scroll.
-             youtube-nocookie.com: YouTube no guarda cookies hasta que se pulsa play.
+             referrerpolicy: le dice a YouTube desde qué web se ve el vídeo (sin esto no se reproduce).
+             allow: permisos que pide el reproductor (pantalla completa, autoplay...).
              allowfullscreen: deja ver el vídeo a pantalla completa. -->
-        <div class="trailers">
+        <div class="lista-trailers">
           <figure class="trailer">
-            <iframe src="https://www.youtube-nocookie.com/embed/gK-rwX4H2Iw" title="Tráiler de Pokémon Oro y Plata (Nintendo 3DS)" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/gK-rwX4H2Iw" title="Tráiler de Pokémon Oro y Plata (Nintendo 3DS)" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <figcaption>Pokémon Oro y Plata (Nintendo 3DS)</figcaption>
           </figure>
           <figure class="trailer">
-            <iframe src="https://www.youtube-nocookie.com/embed/cM__WtFavIc" title="Tráiler de Pokémon Cristal (Nintendo 3DS)" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/cM__WtFavIc" title="Tráiler de Pokémon Cristal (Nintendo 3DS)" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <figcaption>Pokémon Cristal (Nintendo 3DS)</figcaption>
           </figure>
         </div>
@@ -191,19 +192,19 @@
       <!-- ========== 5. POKÉMON INICIALES ========== -->
       <section class="seccion">
         <h2>Pokémon iniciales</h2>
-        <div class="iniciales">
+        <div class="lista-iniciales">
           <article class="inicial">
-            <img class="inicial-imagen" src="../../img/pokemon/ilustraciones/chikorita.png" alt="Chikorita">
+            <img class="imagen-inicial" src="../../img/pokemon/ilustraciones/chikorita.png" alt="Chikorita">
             <h4>Chikorita</h4>
             <span class="tipo tipo-planta">Planta</span>
           </article>
           <article class="inicial">
-            <img class="inicial-imagen" src="../../img/pokemon/ilustraciones/cyndaquil.png" alt="Cyndaquil">
+            <img class="imagen-inicial" src="../../img/pokemon/ilustraciones/cyndaquil.png" alt="Cyndaquil">
             <h4>Cyndaquil</h4>
             <span class="tipo tipo-fuego">Fuego</span>
           </article>
           <article class="inicial">
-            <img class="inicial-imagen" src="../../img/pokemon/ilustraciones/totodile.png" alt="Totodile">
+            <img class="imagen-inicial" src="../../img/pokemon/ilustraciones/totodile.png" alt="Totodile">
             <h4>Totodile</h4>
             <span class="tipo tipo-agua">Agua</span>
           </article>
@@ -211,7 +212,7 @@
       </section>
 
       <!-- Enlaces a la generación anterior y a la siguiente -->
-      <nav class="navegacion-gen">
+      <nav class="anterior-siguiente">
         <a href="generacion-1.html">← Generación 1</a>
         <a href="generacion-3.html">Generación 3 →</a>
       </nav>
