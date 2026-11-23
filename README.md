@@ -106,7 +106,7 @@
 | Movimiento | Tipo | Efecto |
 | --- | :---: | --- |
 | **HTML5** | 🟠 Estructura | Esqueleto de todas las páginas. |
-| **CSS3** | 🔵 Estilo | Flexbox, grid, variables, Google Fonts, `@media` (primero móvil), transiciones con `:hover` y `@keyframes`. |
+| **CSS3** | 🔵 Estilo | Una sola hoja externa con variables en `:root`, Flexbox, Grid, Google Fonts, barra fija con `position: sticky`, consola sobre cada tarjeta con `position: absolute`, `@media` (primero móvil), transiciones con `:hover` y `:focus` y una animación con `@keyframes`. |
 
 </div>
 
